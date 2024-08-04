@@ -1,2 +1,3 @@
-# sis_biblioteca
-Repositório para o Trabalho de Conclusão de Curso (TCC) da Etec Zona Leste, no curso de Desenvolvimento de Sistemas, durante o 1º SEM de 2025.
+# 📚TCC - Desenvolvimento de sistema para bibliotecas
+
+Repositório para armazenar as versões do Trabalho de Conclusão de Curso, na Etec Zona Leste durante o 1º semestre de 2025.
