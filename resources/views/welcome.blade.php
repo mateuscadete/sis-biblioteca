@@ -39,7 +39,7 @@
             padding: 15px;
             position: absolute;
             left: 10%;
-            top:   7%;
+            top:   10%;
 
         }
         .links {
@@ -57,7 +57,7 @@
         .titulo {
             max-width: 50%;
             font-family: 'Roboto', sans-serif;
-            font-size: 40px;
+            font-size: 20px;
             padding-left: 10%;
             padding-top: 100px;
         }
@@ -86,7 +86,7 @@
             display: flex;
             gap: 25px;
             overflow-x: auto;
-            left:30%;
+            left:10%;
             position: relative;
         }
 
@@ -108,7 +108,7 @@
             flex-wrap: wrap;
             gap: 100px;
             justify-content: center;
-            left:30%;
+            left:10%;
             position: relative;
         }
 
@@ -152,15 +152,15 @@
             padding-top: 70px;
             border-radius: 5px;
             width: 100%;
-            height: 50%;
+            height: 60%;
             position: absolute ;
-            top: 200%;}
+            top: 220%;}
 
         .containerfeed{
             display: flex;
             gap: 25px;
             overflow-x: auto;
-            left:20%;
+            left:10%;
             position: relative;
         }
 
