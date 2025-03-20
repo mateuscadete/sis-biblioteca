@@ -22,8 +22,8 @@
             <ul class="links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Categorias</a></li>
+                <li><a href="#">Nossoe Acervo</a></li>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="#">Blog</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
 
