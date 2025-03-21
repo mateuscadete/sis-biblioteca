@@ -12,9 +12,9 @@
     <header>
 
     <ul class="forms">
-        <li><a href="teste.blade.php">Ajuda</a></li>
-        <li><a href="login.blade.php">Login</a></li>
-        <li><a href="#">Cadastrar</a></li>
+        <li><a href="{{ route('user.teste') }}">Ajuda</a></li>
+        <li><a href="{{ route('user.login') }}">Login</a></li>
+        <li><a href="{{ route('user.cadstro') }}">Cadastrar</a></li>
     </ul>
 
         <nav class="navbar">
