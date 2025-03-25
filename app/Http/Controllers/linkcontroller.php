@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class LinkController extends Controller
 {
-    
+
     // Redireciona para uma rota interna
     public function redirectToHome()
     {
