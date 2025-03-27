@@ -1,5 +1,5 @@
 .forms {
-    list-style: none;
+    padding-top: 10px;
     display: flex;
     gap: 15px;
 }
@@ -18,7 +18,7 @@
     padding: 15px;
     position: absolute;
     left: 10%;
-    top: 10%;
+    top: 8%;
     gap: 15px;
 }
 

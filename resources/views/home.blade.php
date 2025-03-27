@@ -14,20 +14,18 @@
 <body>
     <header>
 
-    <ul class="forms">
-        <li><a href="{{ route('user.teste') }}">Ajuda</a></li>
-        <li><a href="{{ route('user.login') }}">Login</a></li>
-        <li><a href="{{ route('user.cadstro') }}">Cadastrar</a></li>
-    </ul>
+        <ul class="forms">
+            <li><a href="{{ route('user.teste') }}">Ajuda</a></li>
+            <li><a href="{{ route('user.login') }}">Login</a></li>
+            <li><a href="{{ route('user.cadstro') }}">Cadastrar</a></li>
+        </ul>
 
         <nav class="navbar">
 
             <ul class="links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#">Categorias</a></li>
-                <li><a href="#">Nossoe Acervo</a></li>
+                <li><a href="#">Nosso Acervo</a></li>
                 <li><a href="#">Sobre</a></li>
-                <li><a href="#">Blog</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
 
