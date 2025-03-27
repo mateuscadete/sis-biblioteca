@@ -7,9 +7,130 @@
   
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
     <style>
-        .hidden {
-            display: none;
-        }
+       body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    max-width: 900px;
+    width: 100%;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.welcome-section {
+    flex: 1;
+    background: #177232;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.welcome-section h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.welcome-section button {
+    background: white;
+    color: #177232;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.welcome-section button:hover {
+    background: #e6e6e6;
+}
+
+.login-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.login-box {
+    width: 100%;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-box h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.login-box input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.login-box button {
+    width: 100%;
+    background: #177232;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-box button:hover {
+    background: #145a2f;
+}
+
+.terms {
+    font-size: 12px;
+    color: #666;
+    margin-top: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .welcome-section, .login-section {
+        flex: none;
+        width: 100%;
+        text-align: center;
+    }
+    .login-box {
+        max-width: 100%;
+        padding: 20px;
+    }
+}
     </style>
 </head>
 <body class="font-roboto bg-gray-100">

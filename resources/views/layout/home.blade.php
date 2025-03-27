@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Etec Zona Leste</title>
-    <link rel="stylesheet" href="../../public/css/navbar1.css">
-    <link rel="stylesheet" href="../../public/css/home.css">
+    <link rel="stylesheet" href="./../../public/css/navbar1.css">
+    <link rel="stylesheet" href="./../../public/css/home.css">
 
 
 </head>
@@ -15,9 +15,9 @@
     <header>
 
         <ul class="forms">
-            <li><a href="{{ route('user.teste') }}">Ajuda</a></li>
+            <li><a href="{{ route('user.ajuda') }}">Ajuda</a></li>
             <li><a href="{{ route('user.login') }}">Login</a></li>
-            <li><a href="{{ route('user.cadstro') }}">Cadastrar</a></li>
+            <li><a href="{{ route('user.cadastro') }}">Cadastrar</a></li>
         </ul>
 
         <nav class="navbar">
@@ -25,7 +25,7 @@
             <ul class="links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Nosso Acervo</a></li>
-                <li><a href="#">Sobre</a></li>
+                <li><a href="{{ route('layout.sobre') }}">Sobre</a></li>
                 <li><a href="#">Contato</a></li>
             </ul>
 

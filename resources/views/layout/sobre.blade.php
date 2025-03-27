@@ -85,6 +85,7 @@
                 margin-top: 10px;
             }
         }
+        
     </style>
 </head>
 <body>
@@ -110,5 +111,8 @@
             <span class="icon">&#128214;</span>
         </div>
     </nav>
+    <div class="container">
+        @yield('content')
+    </div>
 </body>
 </html>

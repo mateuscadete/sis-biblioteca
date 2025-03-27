@@ -23,10 +23,18 @@ class UserController extends Controller
         return view('users.login');
     }
 
+    public function sobre(){
+        return view('layout.sobre');
+    }
+
+    public function telas(){
+        return view('layout.telas')
+    }
+
     public function create()
     {
         // Carregar a VIEW
-        return view('users.cadstro');
+        return view('users.cadastro');
     }
 
     public function store(UserRequest $request)
@@ -46,10 +54,9 @@ class UserController extends Controller
 
     }
 
-    public function teste()
+    public function ajuda()
     {
-
-        return view('users.teste');
+        return view('users.ajuda');
 
     }
 
