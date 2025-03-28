@@ -7,6 +7,7 @@ Route::get('/', [UserController::class, 'index'])->name('user.index');
 Route::get('/login-user', [UserController::class, 'login'])->name('user.login');
 Route::get('/create-user', [UserController::class, 'create'])->name('user.cadastro');
 Route::post('/store-user', [UserController::class, 'store'])->name('user-store');
+Route::post('/login', [UserController::class, 'logar'])->name('login-user');
 Route::get('/ajuda-user', [UserController::class, 'ajuda'])->name('user.ajuda');
 Route::put('/update-user/{user}', [UserController::class, 'update'])->name('user-update');
 Route::delete('/destroy-user/{user}', [UserController::class, 'destroy'])->name('user.destroy');

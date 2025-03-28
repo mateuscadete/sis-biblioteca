@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\UserRequest;
+use App\Http\Requests\LoginRequest;
+use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 
 class UserController extends Controller
@@ -28,7 +30,7 @@ class UserController extends Controller
     }
 
     public function telas(){
-        return view('layout.telas')
+        return view('layout.telas');
     }
 
     public function create()
@@ -89,4 +91,27 @@ class UserController extends Controller
         return redirect()->route('user.index')->with('success', 'Usuário apagado com sucesso!');
 
     }
+
+    // Processa a tentativa de login
+    public function logar(LoginRequest $request)
+    {
+        // Validação dos dados enviados
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required|password',
+            'password' => 'required|min:6',
+        ]);
+
+        // Tentativa de login do usuário
+        if (Auth::attempt($request->only('email', 'password'))) {
+            // Login bem-sucedido, redireciona para a página inicial (home)
+            return redirect()->route('user.index')->with('success', 'Usuário logado com sucesso!'); // Certifique-se de ter a rota 'home' definida
+        }
+
+        // Se o login falhar, retorna com um erro
+        return back()->withErrors([
+            'email' => 'Credenciais inválidas.',
+        ]);
+    }
+    
 }

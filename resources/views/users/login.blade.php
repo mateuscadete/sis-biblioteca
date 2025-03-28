@@ -1,193 +1,119 @@
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Login and Signup</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-  
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
-    <style>
-       body {
+@extends('layout.telas')
+
+@section('content')
+<style>
+    body {
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
+    background-color: #f8f9fa;
     margin: 0;
+    padding: 0;
 }
 
 .container {
-    display: flex;
-    max-width: 900px;
-    width: 100%;
-    background: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    overflow: hidden;
     margin-top: 20px;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.welcome-section {
-    flex: 1;
-    background: #177232;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 40px;
-    text-align: center;
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
 }
 
-.welcome-section h2 {
-    margin-bottom: 10px;
-    font-size: 24px;
-}
-
-.welcome-section button {
-    background: white;
-    color: #177232;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 16px;
+.card-header {
+    background-color: #007bff;
+    color: #ffffff;
     font-weight: bold;
-}
-
-.welcome-section button:hover {
-    background: #e6e6e6;
-}
-
-.login-section {
-    flex: 1;
-    padding: 40px;
+    padding: 15px;
+    border-radius: 8px 8px 0 0;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: white;
-}
-
-.login-box {
-    width: 100%;
-    max-width: 350px;
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
-.login-box h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    color: #333;
-    text-align: center;
-}
-
-.login-box input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+.card-header a {
+    color: #ffffff;
+    text-decoration: none;
     font-size: 14px;
 }
 
-.login-box button {
-    width: 100%;
-    background: #177232;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    border-radius: 4px;
-    font-size: 16px;
+.form-label {
     font-weight: bold;
+    color: #333;
 }
 
-.login-box button:hover {
-    background: #145a2f;
+.form-control {
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    transition: all 0.3s;
 }
 
-.terms {
-    font-size: 12px;
-    color: #666;
-    margin-top: 10px;
-    text-align: center;
+.form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
 }
 
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-    .welcome-section, .login-section {
-        flex: none;
-        width: 100%;
-        text-align: center;
-    }
-    .login-box {
-        max-width: 100%;
-        padding: 20px;
-    }
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: #dc3545;
 }
-    </style>
-</head>
-<body class="font-roboto bg-gray-100">
-<header class="bg-gray-200 p-4 flex justify-between items-center">
-    <div class="flex items-center">
-        <img alt="Logo" class="mr-2" height="40" src="https://storage.googleapis.com/a1aa/image/9Uv1NNdH2k7r-d1gqDEHhwXor969oL3_oMiiPTjALYQ.jpg" width="40"/>
-        <nav class="space-x-4">
-            <a class="text-gray-700" href="home.blade.php">Home</a>
-            <a class="text-gray-700" href="#">Sobre</a>
-            <a class="text-gray-700" href="#">Categorias</a>
-            <a class="text-gray-700" href="#">Blog</a>
-            <a class="text-gray-700" href="#">Contato</a>
-        </nav>
-    </div>
-    <div class="flex items-center space-x-4">
-        <i class="fas fa-search text-gray-700"></i>
-        <i class="fas fa-heart text-gray-700"></i>
-        <i class="fas fa-user text-gray-700"></i>
-    </div>
-</header>
 
+.btn-sm {
+    padding: 8px 12px;
+    font-size: 0.875rem;
+    border-radius: 5px;
+}
 
-<main class="flex justify-center items-center min-h-screen">
- 
- 
-        <div class="bg-green-700 text-white p-8 rounded-lg shadow-lg w-1/2 flex flex-col justify-center items-center relative">
-            <div class="absolute top-0 left-0 h-full w-1/2 bg-green-700 rounded-r-full"></div>
-            <h2 class="text-3xl font-bold mb-6 z-10">Bem-Vindo De Volta</h2>
-            <p class="mb-6 z-10">Ainda não possui uma conta?</p>
-            <button class="bg-white text-green-700 p-2 rounded z-10" id="show-signup">Cadastrar</button>
+.btn-primary {
+    background-color: #007bff;
+}
+</style>
+
+<div class="card mt-4 mb-4 border-light shadow">
+
+<div class="card-header d-flex justify-content-between align-items-center">
+    <span>Login</span>
+    <a href="{{ route('user.cadastro') }}" class="btn btn-info btn-sm">Cadastrar</a>
+</div>
+
+<div class="card-body">
+    <x-alert />
+
+    <form action="{{ route('login-user') }}" method="POST" class="row g-3">
+        @csrf
+        @method('POST')
+
+        <!-- E-mail -->
+        <div class="col-md-12">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="E-mail do usuário" value="{{ old('email') }}">
+            @error('email')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
         </div>
-        <div class="bg-white p-8 rounded-lg shadow-lg w-1/2 flex flex-col justify-center">
-            <h2 class="text-2xl font-bold mb-6">Login</h2>
-            <form>
-                <div class="mb-4">
-                    <label class="block text-gray-700" for="username-email">Username ou Email</label>
-                    <input class="w-full p-2 border border-gray-300 rounded mt-1" id="username-email" type="text"/>
-                </div>
-                <div class="mb-4">
-                    <label class="block text-gray-700" for="password-login">Senha</label>
-                    <input class="w-full p-2 border border-gray-300 rounded mt-1" id="password-login" type="password"/>
-                </div>
-                <button class="w-full bg-green-700 text-white p-2 rounded" type="submit">Login</button>
-                <p class="text-gray-600 text-sm mt-2">Aceito os termos da biblioteca</p>
-            </form>
+
+        <!-- Senha -->
+        <div class="col-md-12">
+            <label for="password" class="form-label">Senha</label>
+            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Digite sua senha">
+            @error('password')
+                <div class="invalid-feedback">{{ $message }}</div>
+            @enderror
         </div>
-    </div>
-</main>
 
-<script>
-
-    document.getElementById('show-signup').addEventListener('click', function() {
-        document.getElementById('login-screen').classList.add('hidden');
-        document.getElementById('signup-screen').classList.remove('hidden');
-    });
-</script>
-</body>
-</html>
-
-
+        <!-- Botão de envio -->
+        <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-sm">Entrar</button>
+        </div>
+    </form>
+</div>
+</div>
+@endsection
