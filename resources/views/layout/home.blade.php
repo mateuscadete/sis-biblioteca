@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Etec Zona Leste</title>
-    <link rel="stylesheet" href="./../../public/css/navbar1.css">
-    <link rel="stylesheet" href="./../../public/css/home.css">
+    <link rel="stylesheet" href="{{ asset('css/navbar1.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+
 
 
 </head>

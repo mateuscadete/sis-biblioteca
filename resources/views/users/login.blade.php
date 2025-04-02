@@ -9,7 +9,30 @@
         src: url('fontes/idroid.otf') format('opentype');
         font-weight: normal;
     }
+    .navbar {
+    position: absolute; /* Fixa no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d3b58d; /* Cor similar à sua */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000; /* Garante que fique acima de outros elementos */
+}
+ .btn-container {
+    position: absolute; /* Fixa no topo */
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #d3b58d; /* Cor similar à sua */
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 
+}
     :root {
         --cor0: rgb(51, 96, 90);
         --cor1: rgb(26, 61, 57);

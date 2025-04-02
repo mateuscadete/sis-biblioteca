@@ -84,6 +84,7 @@
             .nav-icons {
                 margin-top: 10px;
             }
+            
         }
         
     </style>

@@ -3,6 +3,8 @@
 namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Validator;
 
 class LoginRequest extends FormRequest
 {
@@ -13,7 +15,7 @@ class LoginRequest extends FormRequest
      */
     public function authorize()
     {
-        return true; // Permite que todos os usuários façam a solicitação
+        return true;
     }
 
     /**
@@ -24,9 +26,8 @@ class LoginRequest extends FormRequest
     public function rules()
     {
         return [
-            'email' => 'required|email|exists:users,email', // Valida se o e-mail existe no banco de dados
+            'email' => 'required|email|exists:users,email',
             'password' => 'required|min:6',
-            'password' => 'required|password|exists:users,password', // Senha obrigatória e com mínimo de 6 caracteres
         ];
     }
 
@@ -39,7 +40,30 @@ class LoginRequest extends FormRequest
     {
         return [
             'email.exists' => 'Este e-mail não está registrado em nosso sistema.',
-            'password.exists' => 'Senha incorreta.',
+            'password.required' => 'A senha é obrigatória.',
+            'password.min' => 'A senha deve ter pelo menos 6 caracteres.',
         ];
+    }
+
+    /**
+     * Configuração de validação adicional depois das regras básicas.
+     */
+    protected function withValidator(Validator $validator)
+    {
+        $validator->after(function ($validator) {
+            if (!$this->attemptLogin()) {
+                $validator->errors()->add('password', 'Senha incorreta.');
+            }
+        });
+    }
+
+    /**
+     * Tenta autenticar o usuário com os dados fornecidos.
+     *
+     * @return bool
+     */
+    protected function attemptLogin()
+    {
+        return Auth::attempt(['email' => $this->email, 'password' => $this->password]);
     }
 }
