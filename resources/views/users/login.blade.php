@@ -2,118 +2,159 @@
 
 @section('content')
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
+
+    @font-face {
+        font-family: 'Android';
+        src: url('fontes/idroid.otf') format('opentype');
+        font-weight: normal;
+    }
+
+    :root {
+        --cor0: rgb(51, 96, 90);
+        --cor1: rgb(26, 61, 57);
+        --cor2: #91a398;
+        --cor3: #7d9987;
+        --cor4: #e9e0d1;
+        --cor5: #68462b;
+        --cor6: #382414;
+        --fonte0: arial, verdana, helvetica, sans-serif;
+        --fonte1: 'bebas neue', cursive;
+        --fonte2: 'Android', cursive;
+    }
+
     body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f5f5f5;
+    }
 
-.container {
-    margin-top: 20px;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-}
+    .container {
+        display: flex;
+        width: 800px;
+        background: white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        overflow: hidden;
+    }
 
-.card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    max-width: 600px;
-    margin: 40px auto;
-}
+    .left {
+        background-color: #2f4f4f;
+        color: white;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+    }
 
-.card-header {
-    background-color: #007bff;
-    color: #ffffff;
-    font-weight: bold;
-    padding: 15px;
-    border-radius: 8px 8px 0 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .cadastrar {
+        background: transparent;
+        border: 1px solid white;
+        border-radius: 5px;
+        text-decoration: none;
+        color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
 
-.card-header a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 14px;
-}
+    .right {
+        flex: 1;
+        padding: 40px;
+    }
 
-.form-label {
-    font-weight: bold;
-    color: #333;
-}
+    form {
+        display: flex;
+        flex-direction: column;
+    }
 
-.form-control {
-    border-radius: 5px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    transition: all 0.3s;
-}
+    input {
+        margin-bottom: 15px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
 
-.form-control:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-    outline: none;
-}
+    .logar {
+        background-color: #2f4f4f;
+        color: white;
+        border: 1px solid white;
+        padding: 10px;
+        cursor: pointer;
+        border-radius: 5px;
+    }
 
-.invalid-feedback {
-    font-size: 0.875rem;
-    color: #dc3545;
-}
+    .termos {
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+        color: var(--cor1);
+    }
 
-.btn-sm {
-    padding: 8px 12px;
-    font-size: 0.875rem;
-    border-radius: 5px;
-}
 
-.btn-primary {
-    background-color: #007bff;
-}
+
+
+
+
+
+
+
+    .invalid-feedback {
+        font-size: 0.875rem;
+        color: #dc3545;
+    }
 </style>
 
-<div class="card mt-4 mb-4 border-light shadow">
+<div class="container">
+    <div class="left">
+        <h1>Bem-Vindo<br>De Volta</h1>
+        <p>Ainda não possui uma conta?</p>
+        <a href="{{ route('user.cadastro') }}" class="cadastrar">Cadastrar</a>
+    </div>
 
-<div class="card-header d-flex justify-content-between align-items-center">
-    <span>Login</span>
-    <a href="{{ route('user.cadastro') }}" class="btn btn-info btn-sm">Cadastrar</a>
-</div>
+    <div class="right">
 
-<div class="card-body">
-    <x-alert />
+        <h2>Login</h2>
 
-    <form action="{{ route('login-user') }}" method="POST" class="row g-3">
-        @csrf
-        @method('POST')
+        <form action="{{ route('login-user') }}" method="POST">
+            @csrf
+            @method('POST')
 
-        <!-- E-mail -->
-        <div class="col-md-12">
-            <label for="email" class="form-label">E-mail</label>
-            <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" id="email" placeholder="E-mail do usuário" value="{{ old('email') }}">
+            <!-- E-mail -->
+
+            <label for="email">E-mail</label>
+
+            <input type="email" name="email" class="email @error('email') is-invalid @enderror" id="email" placeholder="Insira seu e-mail" value="{{ old('email') }}">
+
             @error('email')
-                <div class="invalid-feedback">{{ $message }}</div>
+            <div class="invalid-feedback">{{ $message }}</div>
             @enderror
-        </div>
 
-        <!-- Senha -->
-        <div class="col-md-12">
-            <label for="password" class="form-label">Senha</label>
-            <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" id="password" placeholder="Digite sua senha">
+
+            <!-- Senha -->
+
+            <label for="password">Senha</label>
+            <br><br>
+            <input type="password" name="password" class="senha @error('password') is-invalid @enderror" id="password" placeholder="Digite sua senha">
             @error('password')
-                <div class="invalid-feedback">{{ $message }}</div>
+            <div class="invalid-feedback">{{ $message }}</div>
             @enderror
-        </div>
 
-        <!-- Botão de envio -->
-        <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-sm">Entrar</button>
-        </div>
-    </form>
-</div>
+
+            <!-- Botão de envio -->
+
+            <button type="submit" class="logar">Entrar</button>
+            <a href="#" class="termos">Aceito os termos da biblioteca</a>
+
+
+
+        </form>
+    </div>
 </div>
 @endsection
