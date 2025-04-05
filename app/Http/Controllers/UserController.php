@@ -98,7 +98,6 @@ class UserController extends Controller
         // Validação dos dados enviados
         $request->validate([
             'email' => 'required|email',
-            'password' => 'required|password',
             'password' => 'required|min:6',
         ]);
 

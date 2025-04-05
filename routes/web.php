@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContatoController;
 
 Route::get('/', [UserController::class, 'index'])->name('user.index');
 Route::get('/login-user', [UserController::class, 'login'])->name('user.login');
@@ -13,3 +14,7 @@ Route::put('/update-user/{user}', [UserController::class, 'update'])->name('user
 Route::delete('/destroy-user/{user}', [UserController::class, 'destroy'])->name('user.destroy');
 Route::get('/sobre-layout', [UserController::class, 'sobre'])->name('layout.sobre');
 Route::get('/telas-layout', [UserController::class, 'telas'])->name('layout.telas');
+
+// Rotas para o formulário de contato
+Route::post('/contato', [ContatoController::class, 'submit'])->name('contato.submit');
+Route::get('/contato', [ContatoController::class, 'index'])->name('contato.index');

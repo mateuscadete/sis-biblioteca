@@ -27,7 +27,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Nosso Acervo</a></li>
                 <li><a href="{{ route('layout.sobre') }}">Sobre</a></li>
-                <li><a href="#">Contato</a></li>
+                <li><a href="{{ route('contato.submit') }}">Contato</a></li>
             </ul>
 
             <div class="menu">
