@@ -1,7 +1,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
-    <link rel="stylesheet" href="{{ url('css/navbar1.css') }}">
+    <link rel="stylesheet" href="{{ url('css/navbar.css') }}">
 </head>
 
 <nav class="navbar">

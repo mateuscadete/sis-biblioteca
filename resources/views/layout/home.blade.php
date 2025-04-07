@@ -21,7 +21,7 @@
             <li><a href="{{ route('user.cadastro') }}">Cadastrar</a></li>
         </ul>
 
-        @include('includes.navbar1')
+        @include('includes.navbar')
 
         <div class="titulo">
             <h1>Bem-Vindo à<br> biblioteca<br>Etec Zona Leste</h1>

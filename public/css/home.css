@@ -32,10 +32,21 @@ header {
     background-size: cover;
     background-position: center;
     position: absolute;
-
-
-
 }
+
+.forms {
+    padding-top: 10px;
+    display: flex;
+    gap: 15px;
+    list-style: none;
+}
+
+.forms a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+
 
 
 

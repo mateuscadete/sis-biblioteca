@@ -23,7 +23,7 @@
 
             <h2>Login</h2>
 
-            <form action="{{ route('login-user') }}" method="POST">
+            <form class="login" action="{{ route('login-user') }}" method="POST">
                 @csrf
                 @method('POST')
 
