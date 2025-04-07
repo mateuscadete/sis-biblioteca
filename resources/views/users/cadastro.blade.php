@@ -16,16 +16,12 @@
         @include('includes.navbar1')
     </header>
     <div class="container">
-        <div class="right">
-            <h1>Seja Bem-Vindo</h1>
-            <p>Já possui uma conta? </p>
-            <a href="{{ route('user.login') }}" class="logar">Login</a>
-        </div>
+
 
 
 
         <div class="left">
-            <x-alert />
+            <h2>Cadastro</h2>
 
             <form action="{{ route('user-store') }}" method="POST" class="row g-3">
                 @csrf
@@ -63,6 +59,14 @@
 
             </form>
         </div>
+
+        <div class="right">
+            <h1>Seja Bem-Vindo</h1>
+            <p>Já possui uma conta? </p>
+            <a href="{{ route('user.login') }}" class="logar">Login</a>
+        </div>
+
+
     </div>
 
 

@@ -1,0 +1,30 @@
+.footer {
+    background-color: #2D4F47;
+    color: white;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    position: absolute;
+    top: 300%;
+    width: 100%;
+}
+
+.footer div {
+    max-width: 250px;
+}
+
+.footer h3 {
+    color: white;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+.footer p,
+.footer a {
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 8px;
+}

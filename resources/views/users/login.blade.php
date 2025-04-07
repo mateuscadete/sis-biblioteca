@@ -41,7 +41,7 @@
                 <!-- Senha -->
 
                 <label for="password">Senha</label>
-                <br><br>
+
                 <input type="password" name="password" class="senha @error('password') is-invalid @enderror" id="password" placeholder="Digite sua senha">
                 @error('password')
                 <div class="invalid-feedback">{{ $message }}</div>
@@ -50,7 +50,7 @@
 
                 <!-- Botão de envio -->
 
-                <button type="submit" class="logar">Entrar</button>
+                <a href="" class="logar">Entrar</a>
                 <a href="#" class="termos">Aceito os termos da biblioteca</a>
 
 

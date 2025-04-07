@@ -26,6 +26,7 @@ body {
     background-color: #f5f5f5;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 
 }
 
@@ -52,7 +53,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
     text-align: center;
     padding: 40px;
 }
@@ -82,9 +82,10 @@ form {
     flex-direction: column;
 }
 
-input .name,
+.name,
 .email,
 .senha {
+    margin-top: 10px;
     margin-bottom: 15px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -92,14 +93,16 @@ input .name,
 }
 
 .cadastrar {
-    background-color: #2f4f4f;
-    color: white;
+    background-color: var(--cor1);
     border: 1px solid white;
-    padding: 5px;
-
     border-radius: 5px;
-    width: 100px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    ;
+    align-items: center;
     text-align: center;
+    width: 120px;
 }
 
 
