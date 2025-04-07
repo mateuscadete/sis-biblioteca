@@ -18,3 +18,13 @@ Route::get('/telas-layout', [UserController::class, 'telas'])->name('layout.tela
 // Rotas para o formulário de contato
 Route::post('/contato', [ContatoController::class, 'submit'])->name('contato.submit');
 Route::get('/contato', [ContatoController::class, 'index'])->name('contato.index');
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});

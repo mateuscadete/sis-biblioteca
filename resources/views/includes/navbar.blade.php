@@ -7,9 +7,9 @@
 <nav class="navbar">
 
     <ul class="links">
-        <li><a href="#">Home</a></li>
+        <li><a href="{{ route('user.index') }}">Home</a></li>
         <li><a href="#">Categorias</a></li>
-        <li><a href="#">Sobre</a></li>
+        <li><a href="{{ route('layout.sobre') }}">Sobre</a></li>
 
         <li><a href="{{ route('contato.submit') }}">Contato</a></li>
     </ul>
