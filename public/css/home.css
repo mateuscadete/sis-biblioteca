@@ -21,14 +21,13 @@
 
 body {
     margin: 0;
-
     font-family: Arial, sans-serif;
 }
 
 header {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(0, 15, 0, 0), rgba(0, 15, 0, 0)), url('imagens/biblioteca.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.452), rgba(0, 0, 0, 0.452)), url('imagens/biblioteca.jpg');
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -53,7 +52,7 @@ header {
 .titulo {
 
     font-family: var(--fonte0);
-    font-size: 40px;
+    font-size: 30px;
     position: absolute;
     top: 35%;
     left: 15%;
@@ -87,7 +86,6 @@ h3 {
 .cards {
     font-weight: bolder;
     color: white;
-
     padding: 15px;
     border-radius: 5px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
@@ -130,15 +128,7 @@ h3 {
     height: 150px;
 }
 
-.book button {
-    margin-top: 10px;
-    background: #808080;
-    color: white;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-}
+
 
 aside h2 {
     left: 20%;
@@ -175,4 +165,304 @@ aside h2 {
     text-align: center;
     width: 300px;
     height: 200px;
+}
+
+@media (max-width:1000px){
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    header {
+        width: 100%;
+        height: 100%;
+        
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+    }
+    
+    .forms {
+        padding-top: 10px;
+        display: flex;
+        gap: 15px;
+        list-style: none;
+    }
+    
+    .forms a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    
+    
+    
+    
+    .titulo {
+    
+        font-family: var(--fonte0);
+        font-size: 25px;
+        position: absolute;
+        top: 45%;
+        left: 15%;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    main {
+        top: 100%;
+        left: 10%;
+        position: absolute;
+    }
+    
+    
+    
+    .generos h2,
+    h3 {
+        color: rgb(70, 43, 22);
+    }
+    
+    .containergeneros {
+        display: flex;
+        gap: 25px;
+        overflow-x: hidden;
+        left: 5%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .cards {
+        font-weight: bolder;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .containerbooks {
+    
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+        justify-content: center;
+        overflow-x: hidden;
+        left: 5%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .livros h2,
+    h3 {
+        color: rgb(70, 44, 24);
+    }
+    
+    
+    
+    .book {
+        background: white;
+        color: black;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 200px;
+    }
+    
+    .book img {
+        width: 100px;
+        height: 150px;
+    }
+    
+    
+    
+    aside h2 {
+        left: 20%;
+        position: relative;
+    }
+    
+    .feedback {
+        background-color: #e9e0d1;
+        color: #68462b;
+        overflow-x: hidden;
+        border-radius: 5px;
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        top: 220%;
+    }
+    
+    .containerfeed {
+        display: flex;
+        gap: 25px;
+        overflow-x: auto;
+        left: 10%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .feed {
+        background-color: white;
+        font-weight: bolder;
+        color: #68462b;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media (max-width:500px){
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    header {
+        width: 100%;
+        height: 100%;
+        
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+    }
+    
+    .forms {
+        padding-top: 10px;
+        display: flex;
+        gap: 15px;
+        list-style: none;
+    }
+    
+    .forms a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    
+    
+    
+    
+    .titulo {
+    
+        font-family: var(--fonte0);
+        font-size: 25px;
+        position: absolute;
+        top: 45%;
+        left: 15%;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    main {
+        top: 100%;
+        left: 10%;
+        position: absolute;
+    }
+    
+    
+    
+    .generos h2,
+    h3 {
+        color: rgb(70, 43, 22);
+    }
+    
+    .containergeneros {
+        display: flex;
+        gap: 25px;
+        overflow-x: hidden;
+        left: 5%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .cards {
+        font-weight: bolder;
+        color: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 150px;
+        height: 150px;
+    }
+    
+    .containerbooks {
+    
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+        justify-content: center;
+        overflow-x: hidden;
+        left: 5%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .livros h2,
+    h3 {
+        color: rgb(70, 44, 24);
+    }
+    
+    
+    
+    .book {
+        background: white;
+        color: black;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 200px;
+    }
+    
+    .book img {
+        width: 100px;
+        height: 150px;
+    }
+    
+    
+    
+    aside h2 {
+        left: 20%;
+        position: relative;
+    }
+    
+    .feedback {
+        background-color: #e9e0d1;
+        color: #68462b;
+        overflow-x: hidden;
+        border-radius: 5px;
+        width: 100%;
+        height: 60%;
+        position: absolute;
+        top: 220%;
+    }
+    
+    .containerfeed {
+        display: flex;
+        gap: 25px;
+        overflow-x: auto;
+        left: 10%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .feed {
+        background-color: white;
+        font-weight: bolder;
+        color: #68462b;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+        height: 200px;
+    }
 }

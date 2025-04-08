@@ -103,7 +103,7 @@ button svg:hover {
 }
 
 
-@media (max-width:1524px) {
+@media (max-width:1500px) {
     .container-input {
         position: relative;
         left: 5%;
@@ -153,12 +153,66 @@ button svg:hover {
         display: flex;
         gap: 5px;
         left: -4%;
+        font-size: 15px;
 
     }
 
     .container-input {
         position: relative;
         left: -2%;
+        margin-top: 7px;
+
+    }
+
+    .input {
+        width: 75px;
+    }
+
+
+
+
+
+    .icones {
+        position: absolute;
+        padding-top: 5px;
+        top: 6vh;
+        right: 1%;
+        width: 15vw;
+        height: 20vh;
+        background-color: #e9e0d1;
+        flex-direction: column;
+
+
+    }
+}
+
+@media (max-width:500px){
+
+    .navbar {
+        display: flex;
+        border-radius: 10px;
+        width: 90%;
+        background: #e9e0d1;
+        padding: 5px;
+        position: absolute;
+        left: 5%;
+        top: 10%;
+        gap: 5px;
+    }
+
+    .links {
+        position: relative;
+        list-style: none;
+        display: flex;
+        gap: 5px;
+        left: -6%;
+        font-size: 15px;
+
+    }
+
+    .container-input {
+        position: relative;
+        left: -6%;
         margin-top: 7px;
 
     }
