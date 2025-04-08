@@ -29,9 +29,6 @@ class UserController extends Controller
         return view('layout.sobre');
     }
 
-    public function telas(){
-        return view('layout.telas');
-    }
 
     public function create()
     {
