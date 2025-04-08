@@ -38,11 +38,33 @@
             <h3>Acesse algum gênero</h3>
 
             <div class="containergeneros">
-                <div class="cards" style="background-color:#33605a;">Literatura Brasileira</div>
-                <div class="cards" style="background-color: #68462b;">História</div>
-                <div class="cards" style="background-color:#ccc591;">Economia</div>
-                <div class="cards" style="background-color:#0a3740">Tecnologia</div>
-                <div class="cards" style="background-color: #005bc5;">Ficção Científica</div>
+
+                <div class="card">
+                    <div class="caixaImg">
+                        <img src="../../../public/css/imagens/contabilidade.jpg">
+                    </div>
+                    <div class="conteudo">
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="caixaImg">
+                        <div class="conteudo">
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="caixaImg">
+                        <div class="conteudo">
+
+                        </div>
+                    </div>
+
+                </div>
 
             </div>
         </section>
@@ -108,7 +130,8 @@
     @include('includes.footer')
 
 
-
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
 </body>
 
 </html>

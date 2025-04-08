@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
 
+
 @font-face {
     font-family: 'Android';
     src: url('fontes/idroid.otf') format('opentype');
@@ -19,9 +20,14 @@
     --fonte2: 'Android', cursive;
 }
 
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+
+
 }
 
 header {
@@ -68,13 +74,16 @@ main {
 }
 
 
+.generos {
+    top: 100px;
+}
 
 .generos h2,
 h3 {
     color: rgb(70, 43, 22);
 }
 
-.containergeneros {
+/*.containergeneros {
     display: flex;
     gap: 25px;
     overflow-x: hidden;
@@ -92,6 +101,48 @@ h3 {
     text-align: center;
     width: 150px;
     height: 150px;
+}*/
+
+.containergeneros {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 100px 50px;
+    flex-wrap: wrap;
+}
+
+.containergeneros .card {
+    left: 10%;
+    position: relative;
+    width: 350px;
+    height: 300px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
+    transition: .5s;
+}
+
+.containergeneros .card:hover {
+    height: 400px;
+}
+
+.containergeneros .card .caixaImg {
+    position: absolute;
+    top: 20px;
+    width: 300px;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.containergeneros .card .caixaImg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
 }
 
 .containerbooks {
@@ -130,10 +181,7 @@ h3 {
 
 
 
-aside h2 {
-    left: 20%;
-    position: relative;
-}
+
 
 .feedback {
     background-color: #e9e0d1;
@@ -144,6 +192,11 @@ aside h2 {
     height: 60%;
     position: absolute;
     top: 220%;
+}
+
+aside h2 {
+    left: 20%;
+    position: relative;
 }
 
 .containerfeed {
@@ -167,39 +220,39 @@ aside h2 {
     height: 200px;
 }
 
-@media (max-width:1000px){
+@media (max-width:1000px) {
     body {
         margin: 0;
         font-family: Arial, sans-serif;
     }
-    
+
     header {
         width: 100%;
         height: 100%;
-        
+
         background-size: cover;
         background-position: center;
         position: absolute;
     }
-    
+
     .forms {
         padding-top: 10px;
         display: flex;
         gap: 15px;
         list-style: none;
     }
-    
+
     .forms a {
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-weight: bold;
     }
-    
-    
-    
-    
+
+
+
+
     .titulo {
-    
+
         font-family: var(--fonte0);
         font-size: 25px;
         position: absolute;
@@ -208,21 +261,21 @@ aside h2 {
         color: white;
         text-align: center;
     }
-    
-    
+
+
     main {
         top: 100%;
         left: 10%;
         position: absolute;
     }
-    
-    
-    
+
+
+
     .generos h2,
     h3 {
         color: rgb(70, 43, 22);
     }
-    
+
     .containergeneros {
         display: flex;
         gap: 25px;
@@ -231,7 +284,7 @@ aside h2 {
         position: relative;
         width: 100%;
     }
-    
+
     .cards {
         font-weight: bolder;
         color: white;
@@ -242,9 +295,9 @@ aside h2 {
         width: 150px;
         height: 150px;
     }
-    
+
     .containerbooks {
-    
+
         display: flex;
         flex-wrap: wrap;
         gap: 100px;
@@ -254,14 +307,14 @@ aside h2 {
         position: relative;
         width: 100%;
     }
-    
+
     .livros h2,
     h3 {
         color: rgb(70, 44, 24);
     }
-    
-    
-    
+
+
+
     .book {
         background: white;
         color: black;
@@ -271,19 +324,19 @@ aside h2 {
         text-align: center;
         width: 200px;
     }
-    
+
     .book img {
         width: 100px;
         height: 150px;
     }
-    
-    
-    
+
+
+
     aside h2 {
         left: 20%;
         position: relative;
     }
-    
+
     .feedback {
         background-color: #e9e0d1;
         color: #68462b;
@@ -294,7 +347,7 @@ aside h2 {
         position: absolute;
         top: 220%;
     }
-    
+
     .containerfeed {
         display: flex;
         gap: 25px;
@@ -303,7 +356,7 @@ aside h2 {
         position: relative;
         width: 100%;
     }
-    
+
     .feed {
         background-color: white;
         font-weight: bolder;
@@ -317,39 +370,39 @@ aside h2 {
     }
 }
 
-@media (max-width:500px){
+@media (max-width:500px) {
     body {
         margin: 0;
         font-family: Arial, sans-serif;
     }
-    
+
     header {
         width: 100%;
         height: 100%;
-        
+
         background-size: cover;
         background-position: center;
         position: absolute;
     }
-    
+
     .forms {
         padding-top: 10px;
         display: flex;
         gap: 15px;
         list-style: none;
     }
-    
+
     .forms a {
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-weight: bold;
     }
-    
-    
-    
-    
+
+
+
+
     .titulo {
-    
+
         font-family: var(--fonte0);
         font-size: 25px;
         position: absolute;
@@ -358,21 +411,21 @@ aside h2 {
         color: white;
         text-align: center;
     }
-    
-    
+
+
     main {
         top: 100%;
         left: 10%;
         position: absolute;
     }
-    
-    
-    
+
+
+
     .generos h2,
     h3 {
         color: rgb(70, 43, 22);
     }
-    
+
     .containergeneros {
         display: flex;
         gap: 25px;
@@ -381,7 +434,7 @@ aside h2 {
         position: relative;
         width: 100%;
     }
-    
+
     .cards {
         font-weight: bolder;
         color: white;
@@ -392,9 +445,9 @@ aside h2 {
         width: 150px;
         height: 150px;
     }
-    
+
     .containerbooks {
-    
+
         display: flex;
         flex-wrap: wrap;
         gap: 100px;
@@ -404,14 +457,14 @@ aside h2 {
         position: relative;
         width: 100%;
     }
-    
+
     .livros h2,
     h3 {
         color: rgb(70, 44, 24);
     }
-    
-    
-    
+
+
+
     .book {
         background: white;
         color: black;
@@ -421,19 +474,19 @@ aside h2 {
         text-align: center;
         width: 200px;
     }
-    
+
     .book img {
         width: 100px;
         height: 150px;
     }
-    
-    
-    
+
+
+
     aside h2 {
         left: 20%;
         position: relative;
     }
-    
+
     .feedback {
         background-color: #e9e0d1;
         color: #68462b;
@@ -444,7 +497,7 @@ aside h2 {
         position: absolute;
         top: 220%;
     }
-    
+
     .containerfeed {
         display: flex;
         gap: 25px;
@@ -453,7 +506,7 @@ aside h2 {
         position: relative;
         width: 100%;
     }
-    
+
     .feed {
         background-color: white;
         font-weight: bolder;
