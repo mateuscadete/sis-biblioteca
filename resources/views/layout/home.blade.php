@@ -32,12 +32,12 @@
     </header>
     <main>
 
-        <section class="generos">
+        <section class="assuntos">
 
-            <h2>Gêneros</h2>
-            <h3>Acesse algum gênero</h3>
+            <h2>Assunto</h2>
+            <h3>Acesse algum assunto didático</h3>
 
-            <div class="containergeneros">
+            <div class="container">
 
                 <div class="card">
                     <div class="caixaImg">

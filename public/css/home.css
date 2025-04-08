@@ -74,11 +74,11 @@ main {
 }
 
 
-.generos {
+.assuntos {
     top: 100px;
 }
 
-.generos h2,
+.assuntos h2,
 h3 {
     color: rgb(70, 43, 22);
 }
@@ -103,15 +103,16 @@ h3 {
     height: 150px;
 }*/
 
-.containergeneros {
+.container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 100px 50px;
     flex-wrap: wrap;
+
 }
 
-.containergeneros .card {
+.container .card {
     left: 10%;
     position: relative;
     width: 350px;
@@ -122,11 +123,11 @@ h3 {
     transition: .5s;
 }
 
-.containergeneros .card:hover {
+.container .card:hover {
     height: 400px;
 }
 
-.containergeneros .card .caixaImg {
+.container .card .caixaImg {
     position: absolute;
     top: 20px;
     width: 300px;
@@ -135,7 +136,7 @@ h3 {
     overflow: hidden;
 }
 
-.containergeneros .card .caixaImg img {
+.container .card .caixaImg img {
     position: absolute;
     top: 0;
     left: 0;
