@@ -35,8 +35,6 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/cadastro-livro', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/cadastro-livro', [LivroController::class, 'index'])->name('dashboard');
 });
 Route::post('/livro', [LivroController::class, 'submit'])->name('livro.submit');

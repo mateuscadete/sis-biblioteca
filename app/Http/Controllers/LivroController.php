@@ -20,7 +20,7 @@ class LivroController extends Controller
             'num_paginas' => 'required|integer',  
             'isbn' => 'required|string|max:255',
             'data' => 'required|date',  // Validação de data
-            'id' => 'required|unique:livros,id|string|max:255',  // Exemplo para garantir que o ID seja único
+            'descricao' => 'required|string|max:1000',
         ]);
 
         // Criar o livro no banco de dados usando o modelo Livro
@@ -34,10 +34,14 @@ class LivroController extends Controller
             'num_paginas' => $request->num_paginas,
             'isbn' => $request->isbn,
             'data' => $request->data,
-            'id' => $request->id,
+            'descricao' => $request->descricao,
         ]);
 
         // Redirecionar com uma mensagem de sucesso
         return redirect()->route('user.index')->with('success', 'Livro cadastrado com sucesso!');
     }
+    public function index(){
+        return view("dashboard");
+    }
+  
 }

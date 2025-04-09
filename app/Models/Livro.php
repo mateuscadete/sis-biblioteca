@@ -12,6 +12,6 @@ class Livro extends Model
     // Defina os campos que podem ser preenchidos em massa
     protected $fillable = [
         'titulo', 'genero', 'editora', 'tema', 'autor', 'edicao',
-        'num_paginas', 'isbn', 'data', 'id',
+        'num_paginas', 'isbn', 'data','descricao',
     ];
 }

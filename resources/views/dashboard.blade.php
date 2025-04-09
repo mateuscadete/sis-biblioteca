@@ -8,23 +8,23 @@
 <body>
 
 <h1>Cadastrar Novo Livro</h1>
-
 <form action="{{ route('livro.submit') }}" method="POST">
     @csrf
-    <label for="Tema">Tema:</label>
-    <input type="text" name="Tema" id="Tema" required><br><br>
 
-    <label for="Autor">Autor:</label>
-    <input type="text" name="Autor" id="Autor" required><br><br>
+    <label for="tema">Tema:</label>
+    <input type="text" name="tema" id="tema" required><br><br>
 
-    <label for="Titulo">Título:</label>
-    <input type="text" name="Titulo" id="Titulo" required><br><br>
+    <label for="autor">Autor:</label>
+    <input type="text" name="autor" id="autor" required><br><br>
 
-    <label for="ISBN">ISBN:</label>
-    <input type="text" name="ISBN" id="ISBN" required><br><br>
+    <label for="titulo">Título:</label>
+    <input type="text" name="titulo" id="titulo" required><br><br>
 
-    <label for="num_pagina">Número de Páginas:</label>
-    <input type="number" name="num_pagina" id="num_pagina" required><br><br>
+    <label for="isbn">ISBN:</label>
+    <input type="text" name="isbn" id="isbn" required><br><br>
+
+    <label for="num_paginas">Número de Páginas:</label>
+    <input type="number" name="num_paginas" id="num_paginas" required><br><br>
 
     <label for="edicao">Edição:</label>
     <input type="text" name="edicao" id="edicao" required><br><br>
@@ -32,13 +32,16 @@
     <label for="data">Data:</label>
     <input type="date" name="data" id="data" required><br><br>
 
-    <label for="Editora">Editora:</label>
-    <input type="text" name="Editora" id="Editora" required><br><br>
+    <label for="editora">Editora:</label>
+    <input type="text" name="editora" id="editora" required><br><br>
 
-    <label for="Genero">Gênero:</label>
-    <input type="text" name="Genero" id="Genero" required><br><br>
+    <label for="genero">Gênero:</label>
+    <input type="text" name="genero" id="genero" required><br><br>
 
-    <button type="submit">Salvar</button>
+    <label for="descricao">Descrição:</label>
+    <input type="text" name="descricao" id="descricao" required><br><br>
+
+    <button type="submit">Cadastrar</button>
 </form>
 
 </body>
