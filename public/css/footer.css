@@ -4,10 +4,11 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    position: absolute;
-    top: 300%;
+    position: absolute;    
     width: 100%;
+    top:200%;
 }
+
 
 .footer div {
     max-width: 250px;
