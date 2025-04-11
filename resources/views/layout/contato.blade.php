@@ -13,13 +13,18 @@
     @include('includes.navbar1')
 
     <div class="container">
-
+    
+    <div class="left">
     <h2>Entre em Contato com a nossa biblioteca</h2>
-
+    </div>
+    
+    <div class="right">
+        
+        <h2>Prencha as informações</h2>
     <form class="contato" action="{{ route('contato.submit') }}" method="POST">
         @csrf
        
-        
+       
             <label for="nome">Nome:</label>
             <input type="text" class="name" id="nome" name="nome" required>
         
@@ -32,7 +37,7 @@
             <button class="enviar" type="submit">Enviar</button>
         
     </form>
-
+        </div>
     </div>
     
 

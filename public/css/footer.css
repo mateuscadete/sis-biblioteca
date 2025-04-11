@@ -4,9 +4,12 @@
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
-    position: absolute;    
+    grid-row-start: 2;
+    grid-row-end: 3;
     width: 100%;
-    top:200%;
+    position: absolute;
+    top: 400%;
+    
 }
 
 
@@ -26,5 +29,116 @@
     color: white;
     text-decoration: none;
     display: block;
-    margin-bottom: 8px;
-}
+    margin-bottom: 8px;}
+
+
+    @media (max-width:1500px){
+        .footer {
+            background-color: #2D4F47;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            width: 100%;
+            position: absolute;
+            top: 600%;
+            
+        }
+        
+        
+        .footer div {
+            max-width: 250px;
+        }
+        
+        .footer h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .footer p,
+        .footer a {
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+    }
+    
+
+    
+
+    @media (max-width:1000px){
+        .footer {
+            background-color: #2D4F47;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            width: 100%;
+            position: absolute;
+            top: 600%;
+            
+        }
+        
+        
+        .footer div {
+            max-width: 250px;
+        }
+        
+        .footer h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .footer p,
+        .footer a {
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+    }
+
+    @media (max-width:500px){
+        .footer {
+            background-color: #2D4F47;
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            width: 100%;
+            position: absolute;
+            top: 600%;
+            
+        }
+        
+        
+        .footer div {
+            max-width: 250px;
+        }
+        
+        .footer h3 {
+            color: white;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+        
+        .footer p,
+        .footer a {
+            font-size: 14px;
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 8px;
+        }
+    }
