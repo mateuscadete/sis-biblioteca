@@ -5,7 +5,7 @@ Repositório para armazenar as versões do Trabalho de Conclusão de Curso, na E
 Comandos específicos do projeto:
 
 - composer install
-- copy .envexample .env
+- copy .env.example .env
 - composer require laravel/jetstream
 - npm install
 - npm run build
