@@ -14,6 +14,7 @@
 
 <body>
     <header>
+        <img src="{{url('imagens/biblioteca.jpg')}}">
 
         <ul class="forms">
             <li><a href="{{ route('user.ajuda') }}">Ajuda</a></li>
@@ -39,30 +40,41 @@
 
             <div class="container">
 
-                <div class="card">
+                <div class="card" style="color:var(--cor0)">
                     <div class="caixaImg">
-                        <img src="../../../public/css/imagens/contabilidade.jpg">
+                        <img src="{{url('imagens/contabilidade.jpg') }}">
                     </div>
                     <div class="conteudo">
+                        <h2>Contabilidade</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quod excepturi neque illum consectetur sequi sed. Quasi maxime obcaecati, non culpa tempora modi</p>
+                        <a href="#">Acessar Livros</a>
                     </div>
 
                 </div>
 
-                <div class="card">
+                <div class="card" style="color:#009688;">
                     <div class="caixaImg">
-                        <div class="conteudo">
+                        <img src="{{url('imagens/tecnologia.jpg')}}">
+                    </div>
+                    <div class="conteudo">
+                        <h2>Tecnologia</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos magni quo ad. Omnis quibusdam consequatur quod adipisci reprehenderit? Quis in aliquam dicta nobis </p>
+                        <a href="#">Acessar Livros</a>
 
-                        </div>
                     </div>
 
                 </div>
 
-                <div class="card">
+                <div class="card" style="color:var(--cor1)">
                     <div class="caixaImg">
-                        <div class="conteudo">
-
-                        </div>
+                        <img src="{{ url('imagens/natureza.jpg')}}">
                     </div>
+                    <div class="conteudo">
+                        <h2>Ciências Naturais</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum reiciendis culpa officiis ratione itaque quae corrupti maiores laborum quasi!</p>
+                        <a href="#">Acessar Livros</a>
+                    </div>
+
 
                 </div>
 
@@ -130,8 +142,7 @@
     @include('includes.footer')
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.min.js" integrity="sha384-VQqxDN0EQCkWoxt/0vsQvZswzTHUVOImccYmSyhJTp7kGtPed0Qcx8rK9h9YEgx+" crossorigin="anonymous"></script>
+
 </body>
 
 </html>

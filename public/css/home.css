@@ -35,7 +35,7 @@ body {
 header {
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.452), rgba(0, 0, 0, 0.452)), url('imagens/biblioteca.jpg');
+
     background-size: cover;
     background-position: center;
     position: absolute;
@@ -78,12 +78,13 @@ main {
 
 
 .assuntos {
-   margin-top: 100px;}
+    margin-top: 100px;
+}
 
 .assuntos h2,
 h3 {
     color: rgb(70, 43, 22);
-    
+
 }
 
 
@@ -99,6 +100,9 @@ h3 {
 }
 
 .container .card {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     left: 10%;
     position: relative;
     width: 350px;
@@ -120,6 +124,7 @@ h3 {
     height: 220px;
     border-radius: 12px;
     overflow: hidden;
+
 }
 
 .container .card .caixaImg img {
@@ -129,12 +134,57 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: .5s;
+}
+
+.container .card:hover .caixaImg {
+    top: -100px;
+    scale: .75;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
 
 }
 
-.livros{
+.container .card .conteudo {
+    position: absolute;
+    top: 200px;
+    width: 100%;
+    height: 35px;
+    text-align: center;
+    padding: 0 30px;
+    overflow: hidden;
+}
+
+.container .card:hover .conteudo {
+    top: 150px;
+    height: 250px;
+
+}
+
+.container .card .conteudo h2 {
+    font-size: 1.5;
+    font-weight: 700;
+    line-height: 3rem;
+    color: var(--color);
+}
+
+.container .card .conteudo p {
+    color: black;
+}
+
+.container .card .conteudo a {
+    display: inline-block;
+    margin-top: 12px;
+    background-color: var(--cor0);
+    text-decoration: none;
+    padding: 10px 20px;
+    color: white;
+    font-weight: 500;
+    border-radius: 8px;
+}
+
+.livros {
     margin-top: 100px;
-    
+
 }
 
 .containerbooks {
@@ -181,7 +231,7 @@ h3 {
     overflow-x: hidden;
     border-radius: 5px;
     width: 100%;
-    height: 60%;
+    height: 100%;
     position: absolute;
     top: 250%;
 }
@@ -267,9 +317,9 @@ aside h2 {
         align-items: center;
         gap: 100px 50px;
         flex-wrap: wrap;
-    
+
     }
-    
+
     .container .card {
         left: 10%;
         position: relative;
@@ -280,11 +330,11 @@ aside h2 {
         box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
         transition: .5s;
     }
-    
+
     .container .card:hover {
         height: 400px;
     }
-    
+
     .container .card .caixaImg {
         position: absolute;
         top: 20px;
@@ -293,7 +343,7 @@ aside h2 {
         border-radius: 12px;
         overflow: hidden;
     }
-    
+
     .container .card .caixaImg img {
         position: absolute;
         top: 0;
@@ -301,13 +351,13 @@ aside h2 {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    
+
     }
-    
 
-   
 
-   
+
+
+
 
     .containerbooks {
 
@@ -438,9 +488,9 @@ aside h2 {
         align-items: center;
         gap: 100px 50px;
         flex-wrap: wrap;
-    
+
     }
-    
+
     .container .card {
         left: 10%;
         position: relative;
@@ -451,11 +501,11 @@ aside h2 {
         box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
         transition: .5s;
     }
-    
+
     .container .card:hover {
         height: 400px;
     }
-    
+
     .container .card .caixaImg {
         position: absolute;
         top: 20px;
@@ -464,7 +514,7 @@ aside h2 {
         border-radius: 12px;
         overflow: hidden;
     }
-    
+
     .container .card .caixaImg img {
         position: absolute;
         top: 0;
@@ -472,13 +522,13 @@ aside h2 {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    
+
     }
-    
 
-   
 
-   
+
+
+
 
     .containerbooks {
 
@@ -496,6 +546,7 @@ aside h2 {
     h3 {
         color: rgb(70, 44, 24);
     }
+
     .book {
         background: white;
         color: black;
@@ -505,17 +556,19 @@ aside h2 {
         text-align: center;
         width: 200px;
     }
+
     .book img {
         width: 100px;
         height: 150px;
     }
+
     aside h2 {
         left: 20%;
         position: relative;
     }
 
     .feedback {
-        background-color:var(--cor4);
+        background-color: var(--cor4);
         color: var(--cor5);
         justify-content: center;
         overflow-x: hidden;
@@ -523,7 +576,7 @@ aside h2 {
         width: 100%;
         height: 60%;
         position: absolute;
-        
+
     }
 
     .containerfeed {
@@ -547,6 +600,7 @@ aside h2 {
         height: 200px;
     }
 }
+
 @media (max-width:500px) {
     body {
         margin: 0;
@@ -598,7 +652,7 @@ aside h2 {
 
 
 
-  
+
 
     .container {
         display: flex;
@@ -606,11 +660,11 @@ aside h2 {
         align-items: center;
         gap: 100px 50px;
         flex-wrap: wrap;
-    
+
     }
-    
+
     .container .card {
-       left:-3%;
+        left: -3%;
         position: relative;
         width: 250px;
         height: 200px;
@@ -619,11 +673,11 @@ aside h2 {
         box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
         transition: .5s;
     }
-    
+
     .container .card:hover {
         height: 400px;
     }
-    
+
     .container .card .caixaImg {
         position: absolute;
         top: 20px;
@@ -632,7 +686,7 @@ aside h2 {
         border-radius: 12px;
         overflow: hidden;
     }
-    
+
     .container .card .caixaImg img {
         position: absolute;
         top: 0;
@@ -640,9 +694,9 @@ aside h2 {
         width: 100%;
         height: 100%;
         object-fit: cover;
-    
+
     }
-    
+
 
     .containerbooks {
 
