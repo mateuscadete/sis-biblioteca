@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <img src="{{url('imagens/biblioteca.jpg')}}">
+        <img src="{{url('imagens/biblioteca.jpg')}}" style="object-fit: cover; width: 100%; height: 100%;">
 
         <ul class="forms">
             <li><a href="{{ route('user.ajuda') }}">Ajuda</a></li>
@@ -46,7 +46,7 @@
                     </div>
                     <div class="conteudo">
                         <h2>Contabilidade</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quod excepturi neque illum consectetur sequi sed. Quasi maxime obcaecati, non culpa tempora modi</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quod excepturi neque illum consectetur. Quasi maxime obcaecati, non culpa tempora modi</p>
                         <a href="#">Acessar Livros</a>
                     </div>
 
@@ -117,27 +117,68 @@
         </section>
     </main>
 
-    <aside class="feedback">
-        <h2>Feedback dos nossos acadêmicos</h2>
-        <div class="containerfeed">
-            <div class="feed">
-                <p>“A biblioteca da Etec Zona Leste é incrível! Sempre encontro o que procuro.”</p>
-                <p>– João Silva</p>
+    <section class="feedback-section">
+
+        <div class="title">
+
+            <h2>Feedback dos nossos acadêmicos</h2>
+        </div>
+
+        <div class="cards">
+            <div class="card">
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    maximus, nulla ut commodo sagittis, sapien dui mattis dui, non
+                    pulvinar lorem felis nec erat."
+                </p>
+                <div class="user">
+                    <img src="#" alt="Pedro Araújo" />
+                    <div class="info">
+                        Aluno Pedro Araújo
+                    </div>
+                </div>
             </div>
 
-            <div class="feed">
-                <p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione officia illo excepturi aliquam
-                    aspernatur modi, aliquid quidem deserunt amet error architecto iste facere, ea voluptates temporibus
-                    esse vero dolore eveniet."</p>
+            <div class="card">
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    maximus, nulla ut commodo sagittis, sapien dui mattis dui, non
+                    pulvinar lorem felis nec erat."
+                </p>
+                <div class="user">
+                    <img src="#" />
+                    <div class="info">
+                        <span class="role">Professor</span>
+                        <strong>Ana Clara</strong>
+                    </div>
+                </div>
             </div>
 
-            <div class="feed">
-                <p>"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Id, veritatis nisi nemo beatae, aliquam
-                    cumque iusto fugit dolorem sequi velit, reiciendis esse? Incidunt autem fuga dolorem quos, et
-                    facilis asperiores"</p>
+            <div class="card">
+                <p>
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+                    maximus, nulla ut commodo sagittis, sapien dui mattis dui, non
+                    pulvinar lorem felis nec erat."
+                </p>
+                <div class="user">
+                    <img src="#" alt="Mike Silva" />
+                    <div class="info">
+                        <span class="role">Aluno</span>
+                        <strong>Mike Silva</strong>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="nav-buttons">
+                <button>&larr;</button>
+                <button>&rarr;</button>
             </div>
         </div>
-    </aside>
+    </section>
+
+
+
 
     @include('includes.footer')
 

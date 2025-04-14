@@ -35,8 +35,6 @@ body {
 header {
     width: 100%;
     height: 100%;
-
-    background-size: cover;
     background-position: center;
     position: absolute;
 }
@@ -103,14 +101,14 @@ h3 {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    left: 10%;
+    left: 15%;
     position: relative;
     width: 350px;
     height: 300px;
     background-color: white;
     border-radius: 20px;
     box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
-    transition: .5s;
+    transition: .2s;
 }
 
 .container .card:hover {
@@ -134,7 +132,7 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: .5s;
+    transition: .2s;
 }
 
 .container .card:hover .caixaImg {
@@ -150,12 +148,12 @@ h3 {
     width: 100%;
     height: 35px;
     text-align: center;
-    padding: 0 30px;
+    padding: 0 20px;
     overflow: hidden;
 }
 
 .container .card:hover .conteudo {
-    top: 150px;
+    top: 100px;
     height: 250px;
 
 }
@@ -225,42 +223,103 @@ h3 {
 
 
 
-.feedback {
-    background-color: #e9e0d1;
-    color: #68462b;
-    overflow-x: hidden;
-    border-radius: 5px;
-    width: 100%;
-    height: 100%;
+.feedback-section {
+    padding: 60px 5vw;
     position: absolute;
     top: 250%;
-}
-
-aside h2 {
-    left: 20%;
-    position: relative;
-}
-
-.containerfeed {
-    display: flex;
-    gap: 25px;
-    overflow-x: auto;
-    left: 10%;
-    position: relative;
+    background-color: var(--cor4);
     width: 100%;
+    height: 100%;
 }
 
-.feed {
-    background-color: white;
-    font-weight: bolder;
-    color: #68462b;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 300px;
-    height: 200px;
+
+
+.title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
 }
+
+
+
+.title h2 {
+    font-size: 32px;
+    color: #5c3b15;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 24px;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 40px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid white;
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    gap: 12px;
+}
+
+.user img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+}
+
+.user .info {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.nav-buttons {
+    display: inline-flex;
+    gap: 12px;
+
+
+
+}
+
+.nav-buttons button {
+    padding: 12px 18px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: 0.2s;
+}
+
+.nav-buttons button:hover {
+    background-color: #f1f1f1;
+}
+
 
 @media (max-width:1500px) {
     body {
