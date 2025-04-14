@@ -35,6 +35,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/cadastro-livro', [LivroController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', [LivroController::class, 'index'])->name('dashboard');
 });
 Route::post('/livro', [LivroController::class, 'submit'])->name('livro.submit');
+Route::delete('/livros/{livro}', [LivroController::class, 'destroy'])->name('livros.destroy');

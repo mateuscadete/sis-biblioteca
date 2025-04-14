@@ -43,5 +43,16 @@ class LivroController extends Controller
     public function index(){
         return view("dashboard");
     }
+
+    public function destroy(Livro $livro)
+    {
+
+        // Apagar o registro no BD
+        $livro->delete();
+
+        // Redirecionar o usuário, enviar a mensagem de sucesso
+        return redirect()->route('user.index')->with('success', 'Livro apagado com sucesso!');
+
+    }
   
 }
