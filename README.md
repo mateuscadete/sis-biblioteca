@@ -6,6 +6,7 @@ Comandos específicos do projeto:
 
 - composer install
 - copy .env.example .env
+- php artisan key:generate
 - php artisan migrate
 - composer require laravel/jetstream
 - npm install
