@@ -273,7 +273,7 @@ h3 {
     min-height: 250px;
 }
 
-.card::after {
+.feedback::after {
     content: '';
     position: absolute;
     bottom: -10px;
@@ -334,23 +334,27 @@ h3 {
 
 
 @media (max-width:1500px) {
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
+    body{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+    height: 100%;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;}
 
     header {
         width: 100%;
         height: 100%;
 
-        background-size: cover;
+        
         background-position: center;
-        position: absolute;
+       
     }
 
     .forms {
         padding-top: 10px;
-        display: flex;
+        position: absolute;
         gap: 15px;
         list-style: none;
     }
@@ -469,208 +473,115 @@ h3 {
     aside h2 {
         left: 20%;
         position: relative;
-    }
-
-    .feedback {
-        background-color: #e9e0d1;
-        color: #68462b;
-        overflow-x: hidden;
-        border-radius: 5px;
-        width: 100%;
-        height: 60%;
-        position: absolute;
-        top: 220%;
     }
 
     .containerfeed {
-        display: flex;
-        gap: 25px;
-        overflow-x: auto;
-        left: 10%;
-        position: relative;
-        width: 100%;
-    }
-
-    .feed {
-        background-color: white;
-        font-weight: bolder;
-        color: #68462b;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 300px;
-        height: 200px;
-    }
-}
-
-@media (max-width:1500px) {
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    header {
-        width: 100%;
-        height: 100%;
-
-        background-size: cover;
-        background-position: center;
+        padding: 40px 4vw;
         position: absolute;
-    }
-
-    .forms {
-        padding-top: 10px;
-        display: flex;
-        gap: 15px;
-        list-style: none;
-    }
-
-    .forms a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-    }
-
-
-
-
-    .titulo {
-
-        font-family: var(--fonte0);
-        font-size: 25px;
-        position: absolute;
-        top: 45%;
-        left: 15%;
-        color: white;
-        text-align: center;
-    }
-
-
-    main {
-        top: 100%;
-        left: 10%;
-        position: absolute;
-    }
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 100px 50px;
-        flex-wrap: wrap;
-
-    }
-
-    .container .card {
-        left: 10%;
-        position: relative;
-        width: 250px;
-        height: 200px;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
-        transition: .5s;
-    }
-
-    .container .card:hover {
-        height: 400px;
-    }
-
-    .container .card .caixaImg {
-        position: absolute;
-        top: 20px;
-        width: 300px;
-        height: 220px;
-        border-radius: 12px;
-        overflow: hidden;
-    }
-
-    .container .card .caixaImg img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-    }
-
-
-
-
-
-
-    .containerbooks {
-
-        display: flex;
-        flex-wrap: wrap;
-        gap: 100px;
-        justify-content: center;
-        overflow-x: hidden;
-        left: 5%;
-        position: relative;
-        width: 100%;
-    }
-
-    .livros h2,
-    h3 {
-        color: rgb(70, 44, 24);
-    }
-
-    .book {
-        background: white;
-        color: black;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 200px;
-    }
-
-    .book img {
-        width: 100px;
-        height: 150px;
-    }
-
-    aside h2 {
-        left: 20%;
-        position: relative;
-    }
-
-    .feedback {
+        top: 350%;
         background-color: var(--cor4);
-        color: var(--cor5);
-        justify-content: center;
-        overflow-x: hidden;
-        border-radius: 5px;
         width: 100%;
-        height: 60%;
-        position: absolute;
-
+        height: 100%;
+        overflow: hidden;
     }
-
-    .containerfeed {
+    
+    
+    
+    .title {
         display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+    
+    
+    
+    .title h2 {
+        font-size: 32px;
+        color: #5c3b15;
+        margin: 0;
+        line-height: 1.4;
+    }
+    
+    .feedbacks {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 25px;
-        overflow-x: auto;
-        left: 10%;
-        position: relative;
-        width: 100%;
     }
-
-    .feed {
+    
+    .feedback {
         background-color: white;
-        font-weight: bolder;
-        color: #68462b;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 300px;
-        height: 200px;
+        border-radius: 12px;
+        padding: 24px;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        min-height: 250px;
     }
+    
+    .feedback::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 40px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid white;
+    }
+    
+    .user {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        gap: 12px;
+    }
+    
+    .user img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+    }
+    
+    .user .info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    
+    .nav-buttons {
+        display: flex;
+        gap: 12px;
+        position: relative;
+        top: 350px;
+        right: 300px;
+    
+    
+    
+    
+    }
+    
+    .nav-buttons button {
+        padding: 12px 18px;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: 0.2s;
+    }
+    
+    .nav-buttons button:hover {
+        background-color: #f1f1f1;
+    }
+    
+
+   
 }
+
+
 
 @media (max-width:500px) {
     body {
