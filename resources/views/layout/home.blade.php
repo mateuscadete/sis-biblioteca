@@ -117,29 +117,30 @@
         </section>
     </main>
 
-    <section class="feedback-section">
+    <section class="containerfeed">
 
         <div class="title">
 
             <h2>Feedback dos nossos acadêmicos</h2>
         </div>
 
-        <div class="cards">
-            <div class="card">
+        <div class="feedbacks">
+            <div class="feedback">
                 <p>
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                     maximus, nulla ut commodo sagittis, sapien dui mattis dui, non
                     pulvinar lorem felis nec erat."
                 </p>
                 <div class="user">
-                    <img src="#" alt="Pedro Araújo" />
+                    <img src="#" />
                     <div class="info">
-                        Aluno Pedro Araújo
+                        <span class="role">Aluno</span>
+                        <strong> Pedro Araújo</strong>
                     </div>
                 </div>
             </div>
 
-            <div class="card">
+            <div class="feedback">
                 <p>
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                     maximus, nulla ut commodo sagittis, sapien dui mattis dui, non
@@ -154,7 +155,7 @@
                 </div>
             </div>
 
-            <div class="card">
+            <div class="feedback">
                 <p>
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
                     maximus, nulla ut commodo sagittis, sapien dui mattis dui, non
