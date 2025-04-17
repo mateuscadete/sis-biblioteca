@@ -24,6 +24,7 @@ class CreateLivrosTable extends Migration
             $table->integer('num_paginas');
             $table->string('isbn');
             $table->date('data');
+            $table->integer('qtde');
             $table->date('descricao');
             $table->timestamps();
         });
