@@ -39,3 +39,12 @@ Route::middleware([
 });
 Route::post('/livro', [LivroController::class, 'submit'])->name('livro.submit');
 Route::delete('/livros/{livro}', [LivroController::class, 'destroy'])->name('livros.destroy');
+
+//show livro
+Route::get('/show-layout', [LivroController::class, 'show'])->name('layout.show');
+
+// Mostrar formulário de edição
+Route::get('editarlivro', [LivroController::class, 'edit'])->name('livros.edit');
+
+// Atualizar dados do livro
+Route::put('/livros', [LivroController::class, 'update'])->name('livros.update');

@@ -41,6 +41,9 @@
     <label for="descricao">Descrição:</label>
     <input type="text" name="descricao" id="descricao" required><br><br>
 
+    <label for="qtde">Quantidade:</label>
+    <input type="number" name="qtde" id="qtde" required><br><br>
+
     <button type="submit">Cadastrar</button>
 </form>
 

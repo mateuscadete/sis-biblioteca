@@ -15,21 +15,13 @@ class Livro extends Model
 {
     // Usa o trait HasFactory para permitir criar instâncias do model com dados fictícios (útil para testes e seeders)
     use HasFactory;
+ 
 
     // Define os campos que podem ser preenchidos em massa (mass assignment)
     // Isso é uma medida de segurança para evitar que atributos indesejados sejam atribuídos automaticamente
     protected $fillable = [
-        'titulo',       // Título do livro
-        'genero',       // Gênero literário (ex: romance, ficção, etc.)
-        'editora',      // Nome da editora
-        'tema',         // Tema principal da obra
-        'autor',        // Nome do autor
-        'edicao',       // Número ou descrição da edição
-        'num_paginas',  // Quantidade de páginas do livro
-        'isbn',         // Código ISBN que identifica o livro internacionalmente
-        'data',         // Data de publicação (ou outra data relevante)
-        'qtde',         // Quantidade de exemplares disponíveis
-        'descricao'     // Descrição ou sinopse do livro
+        'titulo', 'genero', 'editora', 'tema', 'autor', 'edicao',
+        'num_paginas', 'isbn', 'data','descricao',
     ];
 
     // Define o relacionamento entre Livro e Loan (empréstimos)
