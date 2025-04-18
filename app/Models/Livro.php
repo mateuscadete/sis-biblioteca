@@ -15,7 +15,7 @@ class Livro extends Model
 {
     // Usa o trait HasFactory para permitir criar instâncias do model com dados fictícios (útil para testes e seeders)
     use HasFactory;
-    protected $fillable = ['titulo', 'qtde'];
+ 
 
     // Define os campos que podem ser preenchidos em massa (mass assignment)
     // Isso é uma medida de segurança para evitar que atributos indesejados sejam atribuídos automaticamente

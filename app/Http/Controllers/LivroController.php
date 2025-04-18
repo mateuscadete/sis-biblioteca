@@ -60,6 +60,32 @@ class LivroController extends Controller
         $livros = Livro::all(); // busca todos os livros
         return view('layout.show_livro', compact('livros')); // passa para a view
     }
+    public function edit(Livro $livro)
+{
+    return view('livros.edit', compact('livro'));
+}
+
+public function update(Request $request, Livro $livro)
+{
+    $validated = $request->validate([
+        'titulo' => 'required|string|max:255',
+        'genero' => 'required|string|max:255',
+        'editora' => 'required|string|max:255',
+        'tema' => 'required|string|max:255',
+        'autor' => 'required|string|max:255',
+        'edicao' => 'required|string|max:255',
+        'num_paginas' => 'required|integer',  
+        'isbn' => 'required|string|max:255',
+        'qtde' => 'required|integer', 
+        'data' => 'required|date',
+        'descricao' => 'required|string|max:1000',
+    ]);
+
+    $livro->update($validated);
+
+    return redirect()->route('layout.show')->with('success', 'Livro atualizado com sucesso!');
+}
+
     
   
 }

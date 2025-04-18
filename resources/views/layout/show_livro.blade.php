@@ -48,6 +48,16 @@
                             @csrf
                             @method('DELETE')
                             <button class="btn btn-danger" type="submit" onclick="return confirm('Tem certeza que deseja apagar este livro?')">Excluir</button>
+                            
+                        </form>
+                        <form action="{{ route('livros.edit', $livro->id) }}" method="PUT">
+                            @csrf
+                            @method('PUT')
+                            <a href="{{ route('livros.edit', $livro->id) }}">
+    <button class="btn btn-primary btn-sm">Editar</button>
+</a>
+
+                            
                         </form>
                     </td>
                 </tr>
