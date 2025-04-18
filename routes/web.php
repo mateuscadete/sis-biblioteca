@@ -39,3 +39,6 @@ Route::middleware([
 });
 Route::post('/livro', [LivroController::class, 'submit'])->name('livro.submit');
 Route::delete('/livros/{livro}', [LivroController::class, 'destroy'])->name('livros.destroy');
+
+//show livro
+Route::get('/show-layout', [LivroController::class, 'show'])->name('layout.show');

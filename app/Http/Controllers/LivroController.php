@@ -19,6 +19,7 @@ class LivroController extends Controller
             'edicao' => 'required|string|max:255',
             'num_paginas' => 'required|integer',  
             'isbn' => 'required|string|max:255',
+            'qtde' => 'required|integer', 
             'data' => 'required|date',  // Validação de data
             'descricao' => 'required|string|max:1000',
         ]);
@@ -35,10 +36,11 @@ class LivroController extends Controller
             'isbn' => $request->isbn,
             'data' => $request->data,
             'descricao' => $request->descricao,
+            'qtde' => $request->qtde,
         ]);
 
         // Redirecionar com uma mensagem de sucesso
-        return redirect()->route('user.index')->with('success', 'Livro cadastrado com sucesso!');
+        return redirect()->route('layout.show')->with('success', 'Livro cadastrado com sucesso!');
     }
     public function index(){
         return view("dashboard");
@@ -51,8 +53,13 @@ class LivroController extends Controller
         $livro->delete();
 
         // Redirecionar o usuário, enviar a mensagem de sucesso
-        return redirect()->route('user.index')->with('success', 'Livro apagado com sucesso!');
+        return redirect()->route('layout.show')->with('success', 'Livro apagado com sucesso!');
 
     }
+    public function show() {
+        $livros = Livro::all(); // busca todos os livros
+        return view('layout.show_livro', compact('livros')); // passa para a view
+    }
+    
   
 }

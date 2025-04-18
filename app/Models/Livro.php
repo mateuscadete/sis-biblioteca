@@ -8,12 +8,12 @@ use Illuminate\Database\Eloquent\Model;
 class Livro extends Model
 {
     use HasFactory;
-    protected $fillable = ['titulo', 'qtde'];
+
 
     // Defina os campos que podem ser preenchidos em massa
     protected $fillable = [
         'titulo', 'genero', 'editora', 'tema', 'autor', 'edicao',
-        'num_paginas', 'isbn', 'data','descricao',
+        'num_paginas', 'isbn', 'data','descricao','qtde',
     ];
 
     public function loans()
