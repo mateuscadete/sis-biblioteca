@@ -4,6 +4,8 @@ use App\Http\Controllers\LivroController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContatoController;
+use App\Http\Controllers\LoanController;
+
 
 //Rota para a pagina home
 Route::get('/', [UserController::class, 'index'])->name('user.index');
@@ -48,3 +50,9 @@ Route::get('editarlivro', [LivroController::class, 'edit'])->name('livros.edit')
 
 // Atualizar dados do livro
 Route::put('/livros', [LivroController::class, 'update'])->name('livros.update');
+
+// Rota para registrar um empréstimo
+Route::post('/emprestimos', [LoanController::class, 'loanBook']);
+
+// Rota para devolver um livro
+Route::post('/emprestimos/{id}/devolver', [LoanController::class, 'returnBook']);
