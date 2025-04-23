@@ -51,7 +51,7 @@ class LoanController extends Controller
         $loan->update(['return_date' => now()]);
 
         // Aumenta a quantidade do livro em 1, já que foi devolvido
-        $loan->book->increment('quantity');
+        $loan->livro->increment('quantity');
 
         // Retorna resposta de sucesso em formato JSON
         return response()->json(['message' => 'Livro devolvido com sucesso.']);

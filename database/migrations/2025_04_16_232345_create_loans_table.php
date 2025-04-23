@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('loans', function (Blueprint $table) {
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('book_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('book_id')->constrained('livros')->onDelete('cascade');
             $table->date('loan_date');
             $table->date('return_date')->nullable(); // Só preenche na devolução
             $table->timestamps();

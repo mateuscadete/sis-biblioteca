@@ -14,7 +14,7 @@ class UserController extends Controller
     {
 
         // Recuperar os registros do banco dados
-        $users = User::orderByDesc('id')->get();
+        $users = User::orderByDesc('user_id')->get();
 
         // Carregar a VIEW
         return view('layout.home', ['user' => $users]);
