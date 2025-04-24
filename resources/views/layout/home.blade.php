@@ -14,7 +14,7 @@
 
 <body>
     <header>
-        <img src="{{url('imagens/biblioteca.jpg')}}" style="object-fit: cover; width: 100%; height: 100%;">
+        <img src="{{url('imagens/biblioteca.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
 
         <ul class="forms">
             <li><a href="{{ route('user.ajuda') }}">Ajuda</a></li>
@@ -96,20 +96,20 @@
                 <div class="book">
                     <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788536500317.154.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
                         alt="Livro 1">
-                    <h3>PHP 5: Conceitos e integração com banco de dados</h3>
+                    <h4>PHP 5: Conceitos e integração com banco de dados</h4>
                     <p>Autor: Wallace Soares</p>
 
                 </div>
                 <div class="book">
                     <img src="https://www.jurua.com.br/images/prod/s/22/22246.jpg?ts=20201205" alt="Livro 2">
-                    <h3>Contabilidade Geral</h3>
+                    <h4>Contabilidade Geral</h4>
                     <p>Autor: Anélio Berti</p>
 
                 </div>
                 <div class="book">
                     <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788502618350.170.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
                         alt="Livro 3">
-                    <h3>Administração da Produção</h3>
+                    <h4>Administração da Produção</h4>
                     <p>Autor: Petrônio Martins & Fernando Laugeni</p>
 
                 </div>
@@ -171,7 +171,7 @@
                 </div>
             </div>
 
-            <div class="nav-buttons">
+            <div class="buttonsfeed">
                 <button>&larr;</button>
                 <button>&rarr;</button>
             </div>
