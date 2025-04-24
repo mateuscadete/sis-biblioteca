@@ -14,10 +14,10 @@ class LoanController extends Controller
     {
         // Busca o livro pelo ID enviado na requisição.
         // Se não for encontrado, lança uma exceção (404).
-        $book = Livro::findOrFail($request->book_id);
+        $livro = Livro::findOrFail($request->livro_id);
 
         // Verifica se o livro está fora de estoque (quantidade menor que 1)
-        if ($book->quantity < 1) {
+        if ($livro->qtde < 1) {
             // Retorna um erro em formato JSON com status 400 (bad request)
             return response()->json(['error' => 'Livro fora de estoque.'], 400);
         }
@@ -25,12 +25,12 @@ class LoanController extends Controller
         // Cria um novo registro de empréstimo na tabela 'loans'
         Loan::create([
             'user_id' => $request->user_id,    // ID do usuário que está pegando o livro emprestado
-            'book_id' => $request->book_id,    // ID do livro emprestado
+            'livro_id' => $request->livro_id,    // ID do livro emprestado
             'loan_date' => now(),              // Data e hora atual como data do empréstimo
         ]);
 
         // Decrementa a quantidade de livros disponíveis em 1
-        $book->decrement('quantity');
+        $livro->decrement('qtde');
 
         // Retorna resposta de sucesso em formato JSON
         return response()->json(['message' => 'Empréstimo registrado com sucesso.']);
@@ -51,7 +51,7 @@ class LoanController extends Controller
         $loan->update(['return_date' => now()]);
 
         // Aumenta a quantidade do livro em 1, já que foi devolvido
-        $loan->livro->increment('quantity');
+        $loan->livro->increment('qtde');
 
         // Retorna resposta de sucesso em formato JSON
         return response()->json(['message' => 'Livro devolvido com sucesso.']);

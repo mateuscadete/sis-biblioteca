@@ -12,7 +12,12 @@ class Loan extends Model
 
     // Define os campos que podem ser preenchidos em massa (mass assignment)
     // Isso evita vulnerabilidades e permite criar ou atualizar registros com segurança
-    protected $fillable = ['user_id', 'book_id', 'loan_date', 'return_date'];
+    protected $fillable = [
+        'user_id',
+        'livro_id',
+        'loan_date',
+        'return_date',
+    ];
 
     // Define o relacionamento entre empréstimo e usuário
     // Um empréstimo pertence a um usuário
@@ -23,9 +28,10 @@ class Loan extends Model
 
     // Define o relacionamento entre empréstimo e livro
     // Um empréstimo pertence a um livro
-    public function book()
+    public function livro()
     {
-        return $this->belongsTo(Livro::class);
+        return $this->belongsTo(Livro::class, 'livro_id');
     }
+
 }
 

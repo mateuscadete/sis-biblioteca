@@ -21,7 +21,7 @@ class Livro extends Model
     // Isso é uma medida de segurança para evitar que atributos indesejados sejam atribuídos automaticamente
     protected $fillable = [
         'titulo', 'genero', 'editora', 'tema', 'autor', 'edicao',
-        'num_paginas', 'isbn', 'data','descricao',
+        'num_paginas', 'isbn', 'data', 'qtde', 'descricao' 
     ];
 
     // Define o relacionamento entre Livro e Loan (empréstimos)
