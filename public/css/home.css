@@ -337,84 +337,106 @@ h3 {
 }
 
 
-@media (max-width:1500px) {
+@media (max-width:1600px) {
     body {
         margin: 0;
-        font-family: Arial, sans-serif;
-        justify-content: center;
-        height: 100%;
-        min-height: 100%;
-        display: grid;
-        grid-template-rows: 1fr auto;
+        font-family: Raleway, sans-serif;
+    
     }
-
+    
+    
     header {
         width: 100%;
         height: 100%;
-
-
-        background-position: center;
-
+        display: flex;
+    
     }
-
+    
+    
     .forms {
+        display: flex;
         padding-top: 10px;
         position: absolute;
         gap: 15px;
         list-style: none;
     }
-
+    
     .forms a {
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-weight: bold;
     }
-
-
-
-
+    
     .titulo {
-
-        font-family: var(--fonte0);
-        font-size: 25px;
+        font-size: 30px;
         position: absolute;
-        top: 45%;
+        top: 35%;
         left: 15%;
         color: white;
         text-align: center;
     }
-
-
+    
+    
     main {
-        top: 100%;
+        top: 120%;
         left: 10%;
         position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .assuntos {
+        margin-top: 100px;
+    }
+    
+    .assuntos h2,
+    h3 {
+        color: var(--cor6);
+        font-size: 22px;
+    
+    }
+    
+    
     .container {
         display: flex;
         justify-content: center;
         align-items: center;
         gap: 100px 50px;
         flex-wrap: wrap;
-
+        margin-top: 100px;
+    
+    
     }
-
+    
     .container .card {
-        left: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        left: 5%;
         position: relative;
-        width: 250px;
-        height: 200px;
+        width: 350px;
+        height: 300px;
         background-color: white;
         border-radius: 20px;
         box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
-        transition: .5s;
+        transition: .2s;
     }
-
+    
     .container .card:hover {
         height: 400px;
     }
-
+    
     .container .card .caixaImg {
         position: absolute;
         top: 20px;
@@ -422,8 +444,9 @@ h3 {
         height: 220px;
         border-radius: 12px;
         overflow: hidden;
+    
     }
-
+    
     .container .card .caixaImg img {
         position: absolute;
         top: 0;
@@ -431,16 +454,71 @@ h3 {
         width: 100%;
         height: 100%;
         object-fit: cover;
-
+        transition: .2s;
     }
-
-
-
-
-
-
+    
+    .container .card:hover .caixaImg {
+        top: -100px;
+        scale: .75;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+    
+    }
+    
+    .container .card .conteudo {
+        position: absolute;
+        top: 200px;
+        width: 100%;
+        height: 35px;
+        text-align: center;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+    
+    .container .card:hover .conteudo {
+        top: 100px;
+        height: 250px;
+    
+    }
+    
+    .container .card .conteudo h2 {
+        font-size: 1.5;
+        font-weight: 700;
+        line-height: 3rem;
+        color: var(--color);
+    }
+    
+    .container .card .conteudo p {
+        color: black;
+    }
+    
+    .container .card .conteudo a {
+        display: inline-block;
+        margin-top: 12px;
+        background-color: var(--cor0);
+        text-decoration: none;
+        padding: 10px 20px;
+        color: white;
+        font-weight: 500;
+        border-radius: 8px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .livros {
+        margin-top: 100px;
+    
+    }
+    
     .containerbooks {
-
+        margin-top: 100px;
         display: flex;
         flex-wrap: wrap;
         gap: 100px;
@@ -450,14 +528,14 @@ h3 {
         position: relative;
         width: 100%;
     }
-
+    
     .livros h2,
     h3 {
-        color: rgb(70, 44, 24);
+        color: var(--cor6);
     }
-
-
-
+    
+    
+    
     .book {
         background: white;
         color: black;
@@ -467,62 +545,70 @@ h3 {
         text-align: center;
         width: 200px;
     }
-
+    
     .book img {
         width: 100px;
         height: 150px;
     }
-
-
-
-    aside h2 {
-        left: 20%;
-        position: relative;
-    }
-
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     .containerfeed {
-        padding: 40px 4vw;
+        width: 90%;
+        padding: 50px 76px;
+        height: 90%;
         position: absolute;
-        top: 350%;
+        top: 300%;
         background-color: var(--cor4);
-        width: 100%;
-        height: 100%;
-        overflow: hidden;
+    
+    
+    
     }
-
-
-
+    
+    
+    
     .title {
         display: flex;
         align-items: center;
         gap: 15px;
         margin-bottom: 40px;
     }
-
-
-
+    
+    
     .title h2 {
-        font-size: 32px;
-        color: #5c3b15;
+        font-size: 30px;
+        color: var(--cor6);
         margin: 0;
-        line-height: 1.4;
+        line-height: 1.7;
     }
-
+    
     .feedbacks {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 25px;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 35px;
+        left: 12%;
+        position: absolute;
+    
     }
-
+    
     .feedback {
         background-color: white;
         border-radius: 12px;
-        padding: 24px;
+        padding: 30px;
         position: relative;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        min-height: 250px;
+        min-height: 350px;
     }
-
+    
+    
     .feedback::after {
         content: '';
         position: absolute;
@@ -534,40 +620,34 @@ h3 {
         border-right: 10px solid transparent;
         border-top: 10px solid white;
     }
-
+    
     .user {
         display: flex;
         align-items: center;
         margin-top: 25px;
         gap: 12px;
     }
-
+    
     .user img {
         width: 52px;
         height: 52px;
         border-radius: 50%;
     }
-
+    
     .user .info {
         display: flex;
         flex-direction: column;
     }
-
-
-
-    .nav-buttons {
+    
+    .buttonsfeed {
         display: flex;
         gap: 12px;
         position: relative;
-        top: 350px;
-        right: 300px;
-
-
-
-
+        top: 50px;
+        left: 250%;
     }
-
-    .nav-buttons button {
+    
+    .buttonsfeed button {
         padding: 12px 18px;
         background-color: white;
         border: none;
@@ -577,18 +657,1007 @@ h3 {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         transition: 0.2s;
     }
-
-    .nav-buttons button:hover {
+    
+    .buttonsfeed button:hover {
         background-color: #f1f1f1;
     }
+    
+}
+ 
 
 
-
+@media (max-width:1300px) {
+    body {
+        margin: 0;
+        font-family: Raleway, sans-serif;
+    
+    }
+    
+    
+    header {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+    
+    }
+    
+    
+    .forms {
+        display: flex;
+        padding-top: 10px;
+        position: absolute;
+        gap: 15px;
+        list-style: none;
+    }
+    
+    .forms a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    
+    .titulo {
+        font-size: 30px;
+        position: absolute;
+        top: 35%;
+        left: 15%;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    main {
+        top: 100%;
+        left: 10%;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .assuntos {
+        margin-top: 100px;
+    }
+    
+    .assuntos h2,
+    h3 {
+        color: var(--cor6);
+        font-size: 22px;
+    
+    }
+    
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px 50px;
+        flex-wrap: wrap;
+        margin-top: 100px;
+    
+    
+    }
+    
+    .container .card {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        left:-5%;
+        position: relative;
+        width: 350px;
+        height: 300px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
+        transition: .2s;
+    }
+    
+    .container .card:hover {
+        height: 400px;
+    }
+    
+    .container .card .caixaImg {
+        position: absolute;
+        top: 20px;
+        width: 300px;
+        height: 220px;
+        border-radius: 12px;
+        overflow: hidden;
+    
+    }
+    
+    .container .card .caixaImg img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .2s;
+    }
+    
+    .container .card:hover .caixaImg {
+        top: -100px;
+        scale: .75;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+    
+    }
+    
+    .container .card .conteudo {
+        position: absolute;
+        top: 200px;
+        width: 100%;
+        height: 35px;
+        text-align: center;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+    
+    .container .card:hover .conteudo {
+        top: 100px;
+        height: 250px;
+    
+    }
+    
+    .container .card .conteudo h2 {
+        font-size: 1.5;
+        font-weight: 700;
+        line-height: 3rem;
+        color: var(--color);
+    }
+    
+    .container .card .conteudo p {
+        color: black;
+    }
+    
+    .container .card .conteudo a {
+        display: inline-block;
+        margin-top: 12px;
+        background-color: var(--cor0);
+        text-decoration: none;
+        padding: 10px 20px;
+        color: white;
+        font-weight: 500;
+        border-radius: 8px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .livros {
+        margin-top: 100px;
+    
+    }
+    
+    .containerbooks {
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+        justify-content: center;
+        overflow-x: hidden;
+        left: 5%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .livros h2,
+    h3 {
+        color: var(--cor6);
+    }
+    
+    
+    
+    .book {
+        background: white;
+        color: black;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 200px;
+    }
+    
+    .book img {
+        width: 100px;
+        height: 150px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .containerfeed {
+        width: 88%;
+        padding: 40px 74px;
+        height: 150%;
+        position: absolute;
+        top: 350%;
+        background-color: var(--cor4);
+    
+    
+    
+    }
+    
+    
+    
+    .title {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+    
+    
+    .title h2 {
+        font-size: 30px;
+        color: var(--cor6);
+        margin: 0;
+        line-height: 1.7;
+    }
+    
+    .feedbacks {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+        left: 6%;
+        position: absolute;
+    
+    }
+    
+    .feedback {
+        background-color: white;
+        border-radius: 12px;
+        padding: 20px;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        min-height: 300px;
+    }
+    
+    
+    .feedback::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 40px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid white;
+    }
+    
+    .user {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        gap: 12px;
+    }
+    
+    .user img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+    }
+    
+    .user .info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .buttonsfeed {
+        display: flex;
+        gap: 12px;
+        position: relative;
+        top: 450px;
+        left: -50%;
+    }
+    
+    .buttonsfeed button {
+        padding: 10px 15px;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: 0.2s;
+    }
+    
+    .buttonsfeed button:hover {
+        background-color: #f1f1f1;
+    }
+    
 }
 
+@media (max-width:1000px) {
+    body {
+        margin: 0;
+        font-family: Raleway, sans-serif;
+    
+    }
+    
+    
+    header {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+    
+    }
+    
+    
+    .forms {
+        display: flex;
+        padding-top: 10px;
+        position: absolute;
+        gap: 15px;
+        list-style: none;
+    }
+    
+    .forms a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    
+    .titulo {
+        font-size: 30px;
+        position: absolute;
+        top: 35%;
+        left: 15%;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    main {
+        top: 100%;
+        left: 10%;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .assuntos {
+        margin-top: 100px;
+    }
+    
+    .assuntos h2,
+    h3 {
+        color: var(--cor6);
+        font-size: 22px;
+    }
+    
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px 50px;
+        flex-wrap: wrap;
+        margin-top: 100px;
+    }
+    
+    .container .card {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        left: -5%;
+        position: relative;
+        width: 350px;
+        height: 300px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
+        transition: .2s;
+    }
+    
+    .container .card:hover {
+        height: 400px;
+    }
+    
+    .container .card .caixaImg {
+        position: absolute;
+        top: 20px;
+        width: 300px;
+        height: 220px;
+        border-radius: 12px;
+        overflow: hidden;
+    
+    }
+    
+    .container .card .caixaImg img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .2s;
+    }
+    
+    .container .card:hover .caixaImg {
+        top: -100px;
+        scale: .75;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+    
+    }
+    
+    .container .card .conteudo {
+        position: absolute;
+        top: 200px;
+        width: 100%;
+        height: 35px;
+        text-align: center;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+    
+    .container .card:hover .conteudo {
+        top: 100px;
+        height: 250px;
+    
+    }
+    
+    .container .card .conteudo h2 {
+        font-size: 1.5;
+        font-weight: 700;
+        line-height: 3rem;
+        color: var(--color);
+    }
+    
+    .container .card .conteudo p {
+        color: black;
+    }
+    
+    .container .card .conteudo a {
+        display: inline-block;
+        margin-top: 12px;
+        background-color: var(--cor0);
+        text-decoration: none;
+        padding: 10px 20px;
+        color: white;
+        font-weight: 500;
+        border-radius: 8px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .livros {
+        margin-top: 100px;
+    
+    }
+    
+    .containerbooks {
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+        justify-content: center;
+        overflow-x: hidden;
+        left: 5%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .livros h2,
+    h3 {
+        color: var(--cor6);
+    }
+    
+    
+    
+    .book {
+        background: white;
+        color: black;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 200px;
+    }
+    
+    .book img {
+        width: 100px;
+        height: 150px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .containerfeed {
+        width: 92%;
+        padding: 40px 76px;
+        height: 150%;
+        position: absolute;
+        top: 400%;
+        background-color: var(--cor4);
+    
+    
+    
+    }
+    
+    
+    
+    .title {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+    
+    
+    .title h2 {
+        font-size: 30px;
+        color: var(--cor6);
+        margin: 0;
+        line-height: 1.7;
+    }
+    
+    .feedbacks {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 35px;
+        left: 5%;
+        position: absolute;
+    
+    }
+    
+    .feedback {
+        background-color: white;
+        border-radius: 12px;
+        padding: 30px;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        min-height: 350px;
+    }
+    
+    
+    .feedback::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 40px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid white;
+    }
+    
+    .user {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        gap: 12px;
+    }
+    
+    .user img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+    }
+    
+    .user .info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .buttonsfeed {
+        display: flex;
+        gap: 12px;
+        position: relative;
+        top: 50px;
+        left: -5%;
+    }
+    
+    .buttonsfeed button {
+        padding: 12px 18px;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: 0.2s;
+    }
+    
+    .buttonsfeed button:hover {
+        background-color: #f1f1f1;
+    }
+    
+}
+ 
+
+@media (max-width:800px) {
+    body {
+        margin: 0;
+        font-family: Raleway, sans-serif;
+    
+    }
+    
+    
+    header {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+    
+    }
+    
+    
+    .forms {
+        display: flex;
+        padding-top: 10px;
+        position: absolute;
+        gap: 15px;
+        list-style: none;
+    }
+    
+    .forms a {
+        text-decoration: none;
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+    
+    .titulo {
+        font-size: 30px;
+        position: absolute;
+        top: 35%;
+        left: 15%;
+        color: white;
+        text-align: center;
+    }
+    
+    
+    main {
+        top: 100%;
+        left: 10%;
+        position: absolute;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .assuntos {
+        margin-top: 100px;
+    }
+    
+    .assuntos h2,
+    h3 {
+        color: var(--cor6);
+        font-size: 22px;
+    
+    }
+    
+    
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 100px 50px;
+        flex-wrap: wrap;
+        margin-top: 100px;
+    
+    
+    }
+    
+    .container .card {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        left: -3%;
+        position: relative;
+        width: 350px;
+        height: 300px;
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
+        transition: .2s;
+    }
+    
+    .container .card:hover {
+        height: 400px;
+    }
+    
+    .container .card .caixaImg {
+        position: absolute;
+        top: 20px;
+        width: 300px;
+        height: 220px;
+        border-radius: 12px;
+        overflow: hidden;
+    
+    }
+    
+    .container .card .caixaImg img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: .2s;
+    }
+    
+    .container .card:hover .caixaImg {
+        top: -100px;
+        scale: .75;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+    
+    }
+    
+    .container .card .conteudo {
+        position: absolute;
+        top: 200px;
+        width: 100%;
+        height: 35px;
+        text-align: center;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+    
+    .container .card:hover .conteudo {
+        top: 100px;
+        height: 250px;
+    
+    }
+    
+    .container .card .conteudo h2 {
+        font-size: 1.5;
+        font-weight: 700;
+        line-height: 3rem;
+        color: var(--color);
+    }
+    
+    .container .card .conteudo p {
+        color: black;
+    }
+    
+    .container .card .conteudo a {
+        display: inline-block;
+        margin-top: 12px;
+        background-color: var(--cor0);
+        text-decoration: none;
+        padding: 10px 20px;
+        color: white;
+        font-weight: 500;
+        border-radius: 8px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .livros {
+        margin-top: 100px;
+    
+    }
+    
+    .containerbooks {
+        margin-top: 100px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 100px;
+        justify-content: center;
+        overflow-x: hidden;
+        left: 5%;
+        position: relative;
+        width: 100%;
+    }
+    
+    .livros h2,
+    h3 {
+        color: var(--cor6);
+    }
+    
+    
+    
+    .book {
+        background: white;
+        color: black;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 200px;
+    }
+    
+    .book img {
+        width: 100px;
+        height: 150px;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    .containerfeed {
+        width: 92%;
+        padding: 40px 76px;
+        height: 200%;
+        position: absolute;
+        top: 450%;
+        background-color: var(--cor4);
+    
+    
+    
+    }
+    
+    
+    
+    .title {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+    
+    
+    .title h2 {
+        font-size: 30px;
+        color: var(--cor6);
+        margin: 0;
+        line-height: 1.7;
+    }
+    
+    .feedbacks {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 35px;
+        left: 18%;
+        position: absolute;
+    
+    }
+    
+    .feedback {
+        background-color: white;
+        border-radius: 12px;
+        padding: 30px;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        min-height: 350px;
+    }
+    
+    
+    .feedback::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 40px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid white;
+    }
+    
+    .user {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        gap: 12px;
+    }
+    
+    .user img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+    }
+    
+    .user .info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .buttonsfeed {
+        display: flex;
+        gap: 12px;
+        position: relative;
+        top: 50px;
+        left: 250%;
+    }
+    
+    .buttonsfeed button {
+        padding: 12px 18px;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: 0.2s;
+    }
+    
+    .buttonsfeed button:hover {
+        background-color: #f1f1f1;
+    }
+    
+}
+ 
 
 
-@media (max-width:500px) {
+
+@media (max-width:600px) {
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -720,41 +1789,112 @@ h3 {
     }
 
 
-
-    aside h2 {
-        left: 20%;
-        position: relative;
-    }
-
-    .feedback {
-        background-color: #e9e0d1;
-        color: #68462b;
-        overflow-x: hidden;
-        border-radius: 5px;
-        width: 100%;
-        height: 60%;
-        position: absolute;
-        top: 220%;
-    }
-
     .containerfeed {
+        width: 92%;
+        padding: 40px 76px;
+        height: 300%;
+        position: absolute;
+        top: 500%;
+        background-color: var(--cor4);
+    
+    
+    
+    }
+    
+    
+    
+    .title {
         display: flex;
-        gap: 25px;
-        overflow-x: auto;
-        left: 10%;
-        position: relative;
-        width: 100%;
+        align-items: center;
+        gap: 15px;
+        margin-bottom: 40px;
     }
-
-    .feed {
+    
+    
+    .title h2 {
+        font-size: 30px;
+        color: var(--cor6);
+        margin: 0;
+        line-height: 1.7;
+    }
+    
+    .feedbacks {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 35px;
+        left: 18%;
+        position: absolute;
+    
+    }
+    
+    .feedback {
         background-color: white;
-        font-weight: bolder;
-        color: #68462b;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 300px;
-        height: 200px;
+        border-radius: 12px;
+        padding: 30px;
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        min-height: 350px;
     }
+    
+    
+    .feedback::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 40px;
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid white;
+    }
+    
+    .user {
+        display: flex;
+        align-items: center;
+        margin-top: 25px;
+        gap: 12px;
+    }
+    
+    .user img {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+    }
+    
+    .user .info {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .buttonsfeed {
+        display: flex;
+        gap: 12px;
+        position: relative;
+        top: 50px;
+        left: 250%;
+    }
+    
+    .buttonsfeed button {
+        padding: 12px 18px;
+        background-color: white;
+        border: none;
+        border-radius: 10px;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: 0.2s;
+    }
+    
+    .buttonsfeed button:hover {
+        background-color: #f1f1f1;
+    }
+    
 }
+
+
+
+   
+
+
+
