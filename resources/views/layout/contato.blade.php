@@ -14,7 +14,7 @@
 
     <div class="container">
     
-    <div class="left">
+    <div class="left" style=" background-image: url(imagens/contact.jpg)">
     <h2>Entre em Contato com a nossa biblioteca</h2>
     </div>
     

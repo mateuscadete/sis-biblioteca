@@ -1722,8 +1722,8 @@ h3 {
     .container .card {
         left: -3%;
         position: relative;
-        width: 250px;
-        height: 200px;
+        width: 300px;
+        height: 300px;
         background-color: white;
         border-radius: 20px;
         box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
@@ -1737,21 +1737,73 @@ h3 {
     .container .card .caixaImg {
         position: absolute;
         top: 20px;
-        width: 300px;
-        height: 220px;
+        width: 250px;
+        height: 170px;
         border-radius: 12px;
         overflow: hidden;
     }
 
     .container .card .caixaImg img {
         position: absolute;
-        top: 0;
+        top: 10px;
         left: 0;
         width: 100%;
         height: 100%;
         object-fit: cover;
 
     }
+
+    .container .card:hover .caixaImg {
+        top: -100px;
+        scale: .55;
+        box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
+    
+    }
+    
+    .container .card .conteudo {
+        position: absolute;
+        top: 150px;
+        width: 100%;
+        height: 35px;
+        text-align: center;
+        padding: 0 20px;
+        overflow: hidden;
+    }
+    
+    .container .card:hover .conteudo {
+        top: 110px;
+        height: 250px;
+        font-size: 1.2;
+        padding: 0px 100px;
+    
+    }
+    
+    .container .card .conteudo h2 {
+        font-size: 1.5;
+        font-weight: 700;
+        line-height: 3rem;
+        color: var(--color);
+    }
+    
+    .container .card .conteudo p {
+        color: black;
+    }
+    
+    .container .card .conteudo a {
+        display: inline-block;
+        margin-top: 12px;
+        background-color: var(--cor0);
+        text-decoration: none;
+        padding: 10px 20px;
+        color: white;
+        font-weight: 500;
+        border-radius: 8px;
+    }
+
+    
+
+
+
 
 
     .containerbooks {

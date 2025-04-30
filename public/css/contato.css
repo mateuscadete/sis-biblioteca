@@ -52,7 +52,7 @@ h2{
 .left {
     width: auto;
     background-size: cover;
-    background-image: url(imagens/contact.jpg);
+   
     color: white;
     flex: 1;
     display: flex;
