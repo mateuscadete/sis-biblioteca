@@ -46,7 +46,7 @@ Route::delete('/livros/{livro}', [LivroController::class, 'destroy'])->name('liv
 Route::get('/show-layout', [LivroController::class, 'show'])->name('layout.show');
 
 // Mostrar formulário de edição
-Route::get('editar-livro/{livro}', [LivroController::class, 'edit'])->name('layout.edit');
+Route::get('editar-livro/{livro}', [LivroController::class, 'edit'])->name('layout.edit');    
 
 // Atualizar dados do livro
 Route::put('/livros/{livro}', [LivroController::class, 'update'])->name('livros.update');
