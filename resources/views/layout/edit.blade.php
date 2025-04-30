@@ -47,7 +47,7 @@
     <input type="text" name="isbn" value="{{ old('isbn', $livro->isbn) }}" required><br><br>
 
     <label for="data">Data:</label>
-    <input type="date" name="data" value="{{ old('data', $livro->data->format('Y-m-d')) }}" required><br><br>
+    <input type="date" name="data" value="{{ old('data', \Carbon\Carbon::parse($livro->data)->format('Y-m-d')) }}"" required><br><br>
 
     <label for="qtde">Quantidade:</label>
     <input type="number" name="qtde" value="{{ old('qtde', $livro->qtde) }}" required><br><br>

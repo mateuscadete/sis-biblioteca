@@ -46,10 +46,11 @@ Route::delete('/livros/{livro}', [LivroController::class, 'destroy'])->name('liv
 Route::get('/show-layout', [LivroController::class, 'show'])->name('layout.show');
 
 // Mostrar formulário de edição
-Route::get('editarlivro', [LivroController::class, 'edit'])->name('livros.edit');
+Route::get('editar-livro/{livro}', [LivroController::class, 'edit'])->name('layout.edit');
 
 // Atualizar dados do livro
-Route::put('/livros', [LivroController::class, 'update'])->name('livros.update');
+Route::put('/livros/{livro}', [LivroController::class, 'update'])->name('livros.update');
+
 
 // Rota para registrar um empréstimo
 Route::post('/emprestimos', [LoanController::class, 'loanBook']);
