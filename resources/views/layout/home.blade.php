@@ -114,10 +114,8 @@
 
                 </div>
 
-                <br>
-                <br>
 
-                
+
             </div>
         </section>
     </main>
@@ -132,24 +130,24 @@
         <div class="feedbacks">
             <div class="feedback">
                 <p>
-                "O software facilitou muito o meu trabalho diário.
-                 Agora consigo organizar os livros com mais eficiência e tenho acesso rápido às informações dos usuários. 
-                 A interface é simples e intuitiva, o que torna o processo de cadastro e empréstimo bem ágil."
+                    "O software facilitou muito o meu trabalho diário.
+                    Agora consigo organizar os livros com mais eficiência e tenho acesso rápido às informações dos usuários.
+                    A interface é simples e intuitiva, o que torna o processo de cadastro e empréstimo bem ágil."
                 </p>
                 <div class="user">
                     <img src="#" />
                     <div class="info">
                         <span class="role">Aluno</span>
-                        <strong> Maria/strong>
+                        <strong> Maria</strong>
                     </div>
                 </div>
             </div>
 
             <div class="feedback">
                 <p>
-                "Gostei bastante de como o sistema agiliza a busca por livros. 
-                Antes era difícil encontrar o que eu queria, mas agora posso fazer tudo pelo computador, 
-                e o empréstimo também ficou bem mais rápido."
+                    "Gostei bastante de como o sistema agiliza a busca por livros.
+                    Antes era difícil encontrar o que eu queria, mas agora posso fazer tudo pelo computador,
+                    e o empréstimo também ficou bem mais rápido."
                 </p>
                 <div class="user">
                     <img src="#" />
@@ -162,9 +160,9 @@
 
             <div class="feedback">
                 <p>
-                "O software trouxe mais controle e transparência para a biblioteca.
-                 Consigo monitorar o uso dos recursos e gerenciar os empréstimos de forma mais eficaz. 
-                 A funcionalidade de relatórios é excelente para a tomada de decisões."
+                    "O software trouxe mais controle e transparência para a biblioteca.
+                    Consigo monitorar o uso dos recursos e gerenciar os empréstimos de forma mais eficaz.
+                    A funcionalidade de relatórios é excelente para a tomada de decisões."
                 </p>
                 <div class="user">
                     <img src="#" alt="Mike Silva" />

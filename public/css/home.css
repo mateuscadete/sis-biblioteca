@@ -268,7 +268,7 @@ h3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 35px;
-    left: 18%;
+    left: 8%;
     position: absolute;
 
 }
@@ -279,7 +279,7 @@ h3 {
     padding: 30px;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-height: 350px;
+    min-height: 300px;
 }
 
 
@@ -317,8 +317,8 @@ h3 {
     display: flex;
     gap: 12px;
     position: relative;
-    top: 50px;
-    left: 250%;
+    top: 450px;
+    left: -50%;
 }
 
 .buttonsfeed button {
@@ -341,18 +341,18 @@ h3 {
     body {
         margin: 0;
         font-family: Raleway, sans-serif;
-    
+
     }
-    
-    
+
+
     header {
         width: 100%;
         height: 100%;
         display: flex;
-    
+
     }
-    
-    
+
+
     .forms {
         display: flex;
         padding-top: 10px;
@@ -360,13 +360,13 @@ h3 {
         gap: 15px;
         list-style: none;
     }
-    
+
     .forms a {
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-weight: bold;
     }
-    
+
     .titulo {
         font-size: 30px;
         position: absolute;
@@ -375,8 +375,8 @@ h3 {
         color: white;
         text-align: center;
     }
-    
-    
+
+
     main {
         top: 120%;
         left: 10%;
@@ -385,29 +385,29 @@ h3 {
         display: flex;
         flex-direction: column;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .assuntos {
         margin-top: 100px;
     }
-    
+
     .assuntos h2,
     h3 {
         color: var(--cor6);
         font-size: 22px;
-    
+
     }
-    
-    
+
+
     .container {
         display: flex;
         justify-content: center;
@@ -415,10 +415,10 @@ h3 {
         gap: 100px 50px;
         flex-wrap: wrap;
         margin-top: 100px;
-    
-    
+
+
     }
-    
+
     .container .card {
         display: flex;
         justify-content: center;
@@ -432,11 +432,11 @@ h3 {
         box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
         transition: .2s;
     }
-    
+
     .container .card:hover {
         height: 400px;
     }
-    
+
     .container .card .caixaImg {
         position: absolute;
         top: 20px;
@@ -444,9 +444,9 @@ h3 {
         height: 220px;
         border-radius: 12px;
         overflow: hidden;
-    
+
     }
-    
+
     .container .card .caixaImg img {
         position: absolute;
         top: 0;
@@ -456,14 +456,14 @@ h3 {
         object-fit: cover;
         transition: .2s;
     }
-    
+
     .container .card:hover .caixaImg {
         top: -100px;
         scale: .75;
         box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-    
+
     }
-    
+
     .container .card .conteudo {
         position: absolute;
         top: 200px;
@@ -473,24 +473,24 @@ h3 {
         padding: 0 20px;
         overflow: hidden;
     }
-    
+
     .container .card:hover .conteudo {
         top: 100px;
         height: 250px;
-    
+
     }
-    
+
     .container .card .conteudo h2 {
         font-size: 1.5;
         font-weight: 700;
         line-height: 3rem;
         color: var(--color);
     }
-    
+
     .container .card .conteudo p {
         color: black;
     }
-    
+
     .container .card .conteudo a {
         display: inline-block;
         margin-top: 12px;
@@ -501,22 +501,22 @@ h3 {
         font-weight: 500;
         border-radius: 8px;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .livros {
         margin-top: 100px;
-    
+
     }
-    
+
     .containerbooks {
         margin-top: 100px;
         display: flex;
@@ -528,14 +528,14 @@ h3 {
         position: relative;
         width: 100%;
     }
-    
+
     .livros h2,
     h3 {
         color: var(--cor6);
     }
-    
-    
-    
+
+
+
     .book {
         background: white;
         color: black;
@@ -545,22 +545,22 @@ h3 {
         text-align: center;
         width: 200px;
     }
-    
+
     .book img {
         width: 100px;
         height: 150px;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .containerfeed {
         width: 90%;
         padding: 50px 76px;
@@ -568,37 +568,37 @@ h3 {
         position: absolute;
         top: 300%;
         background-color: var(--cor4);
-    
-    
-    
+
+
+
     }
-    
-    
-    
+
+
+
     .title {
         display: flex;
         align-items: center;
         gap: 15px;
         margin-bottom: 40px;
     }
-    
-    
+
+
     .title h2 {
         font-size: 30px;
         color: var(--cor6);
         margin: 0;
         line-height: 1.7;
     }
-    
+
     .feedbacks {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 35px;
-        left: 12%;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        left: 2%;
         position: absolute;
-    
+
     }
-    
+
     .feedback {
         background-color: white;
         border-radius: 12px;
@@ -607,8 +607,8 @@ h3 {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-height: 350px;
     }
-    
-    
+
+
     .feedback::after {
         content: '';
         position: absolute;
@@ -620,33 +620,33 @@ h3 {
         border-right: 10px solid transparent;
         border-top: 10px solid white;
     }
-    
+
     .user {
         display: flex;
         align-items: center;
         margin-top: 25px;
         gap: 12px;
     }
-    
+
     .user img {
         width: 52px;
         height: 52px;
         border-radius: 50%;
     }
-    
+
     .user .info {
         display: flex;
         flex-direction: column;
     }
-    
+
     .buttonsfeed {
         display: flex;
         gap: 12px;
         position: relative;
-        top: 50px;
-        left: 250%;
+        top: 450px;
+        left: -50%;
     }
-    
+
     .buttonsfeed button {
         padding: 12px 18px;
         background-color: white;
@@ -657,23 +657,23 @@ h3 {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         transition: 0.2s;
     }
-    
+
     .buttonsfeed button:hover {
         background-color: #f1f1f1;
     }
-    
+
 }
- 
+
 
 
 @media (max-width:1300px) {
     body {
         margin: 0;
         font-family: Raleway, sans-serif;
-    
+
     }
-    
-    
+
+
     header {
         width: 100%;
         height: 100%;
@@ -681,10 +681,10 @@ h3 {
         background-size: cover;
         background-position: center;
         position: absolute;
-    
+
     }
-    
-    
+
+
     .forms {
         display: flex;
         padding-top: 10px;
@@ -692,13 +692,13 @@ h3 {
         gap: 15px;
         list-style: none;
     }
-    
+
     .forms a {
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-weight: bold;
     }
-    
+
     .titulo {
         font-size: 30px;
         position: absolute;
@@ -707,8 +707,8 @@ h3 {
         color: white;
         text-align: center;
     }
-    
-    
+
+
     main {
         top: 100%;
         left: 10%;
@@ -717,29 +717,29 @@ h3 {
         display: flex;
         flex-direction: column;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .assuntos {
         margin-top: 100px;
     }
-    
+
     .assuntos h2,
     h3 {
         color: var(--cor6);
         font-size: 22px;
-    
+
     }
-    
-    
+
+
     .container {
         display: flex;
         justify-content: center;
@@ -747,15 +747,15 @@ h3 {
         gap: 100px 50px;
         flex-wrap: wrap;
         margin-top: 100px;
-    
-    
+
+
     }
-    
+
     .container .card {
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        left:-5%;
+        left: -5%;
         position: relative;
         width: 350px;
         height: 300px;
@@ -764,11 +764,11 @@ h3 {
         box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
         transition: .2s;
     }
-    
+
     .container .card:hover {
         height: 400px;
     }
-    
+
     .container .card .caixaImg {
         position: absolute;
         top: 20px;
@@ -776,9 +776,9 @@ h3 {
         height: 220px;
         border-radius: 12px;
         overflow: hidden;
-    
+
     }
-    
+
     .container .card .caixaImg img {
         position: absolute;
         top: 0;
@@ -788,14 +788,14 @@ h3 {
         object-fit: cover;
         transition: .2s;
     }
-    
+
     .container .card:hover .caixaImg {
         top: -100px;
         scale: .75;
         box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-    
+
     }
-    
+
     .container .card .conteudo {
         position: absolute;
         top: 200px;
@@ -805,24 +805,24 @@ h3 {
         padding: 0 20px;
         overflow: hidden;
     }
-    
+
     .container .card:hover .conteudo {
         top: 100px;
         height: 250px;
-    
+
     }
-    
+
     .container .card .conteudo h2 {
         font-size: 1.5;
         font-weight: 700;
         line-height: 3rem;
         color: var(--color);
     }
-    
+
     .container .card .conteudo p {
         color: black;
     }
-    
+
     .container .card .conteudo a {
         display: inline-block;
         margin-top: 12px;
@@ -833,22 +833,22 @@ h3 {
         font-weight: 500;
         border-radius: 8px;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .livros {
         margin-top: 100px;
-    
+
     }
-    
+
     .containerbooks {
         margin-top: 100px;
         display: flex;
@@ -860,14 +860,14 @@ h3 {
         position: relative;
         width: 100%;
     }
-    
+
     .livros h2,
     h3 {
         color: var(--cor6);
     }
-    
-    
-    
+
+
+
     .book {
         background: white;
         color: black;
@@ -877,22 +877,22 @@ h3 {
         text-align: center;
         width: 200px;
     }
-    
+
     .book img {
         width: 100px;
         height: 150px;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .containerfeed {
         width: 88%;
         padding: 40px 74px;
@@ -900,37 +900,37 @@ h3 {
         position: absolute;
         top: 350%;
         background-color: var(--cor4);
-    
-    
-    
+
+
+
     }
-    
-    
-    
+
+
+
     .title {
         display: flex;
         align-items: center;
         gap: 15px;
         margin-bottom: 40px;
     }
-    
-    
+
+
     .title h2 {
         font-size: 30px;
         color: var(--cor6);
         margin: 0;
         line-height: 1.7;
     }
-    
+
     .feedbacks {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
-        left: 6%;
+        left: 2%;
         position: absolute;
-    
+
     }
-    
+
     .feedback {
         background-color: white;
         border-radius: 12px;
@@ -939,8 +939,8 @@ h3 {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-height: 300px;
     }
-    
-    
+
+
     .feedback::after {
         content: '';
         position: absolute;
@@ -952,25 +952,25 @@ h3 {
         border-right: 10px solid transparent;
         border-top: 10px solid white;
     }
-    
+
     .user {
         display: flex;
         align-items: center;
         margin-top: 25px;
         gap: 12px;
     }
-    
+
     .user img {
         width: 52px;
         height: 52px;
         border-radius: 50%;
     }
-    
+
     .user .info {
         display: flex;
         flex-direction: column;
     }
-    
+
     .buttonsfeed {
         display: flex;
         gap: 12px;
@@ -978,7 +978,7 @@ h3 {
         top: 450px;
         left: -50%;
     }
-    
+
     .buttonsfeed button {
         padding: 10px 15px;
         background-color: white;
@@ -989,21 +989,21 @@ h3 {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         transition: 0.2s;
     }
-    
+
     .buttonsfeed button:hover {
         background-color: #f1f1f1;
     }
-    
+
 }
 
 @media (max-width:1000px) {
     body {
         margin: 0;
         font-family: Raleway, sans-serif;
-    
+
     }
-    
-    
+
+
     header {
         width: 100%;
         height: 100%;
@@ -1011,10 +1011,10 @@ h3 {
         background-size: cover;
         background-position: center;
         position: absolute;
-    
+
     }
-    
-    
+
+
     .forms {
         display: flex;
         padding-top: 10px;
@@ -1022,13 +1022,13 @@ h3 {
         gap: 15px;
         list-style: none;
     }
-    
+
     .forms a {
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-weight: bold;
     }
-    
+
     .titulo {
         font-size: 30px;
         position: absolute;
@@ -1037,8 +1037,8 @@ h3 {
         color: white;
         text-align: center;
     }
-    
-    
+
+
     main {
         top: 100%;
         left: 10%;
@@ -1047,28 +1047,28 @@ h3 {
         display: flex;
         flex-direction: column;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .assuntos {
         margin-top: 100px;
     }
-    
+
     .assuntos h2,
     h3 {
         color: var(--cor6);
         font-size: 22px;
     }
-    
-    
+
+
     .container {
         display: flex;
         justify-content: center;
@@ -1077,7 +1077,7 @@ h3 {
         flex-wrap: wrap;
         margin-top: 100px;
     }
-    
+
     .container .card {
         display: flex;
         justify-content: center;
@@ -1091,11 +1091,11 @@ h3 {
         box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
         transition: .2s;
     }
-    
+
     .container .card:hover {
         height: 400px;
     }
-    
+
     .container .card .caixaImg {
         position: absolute;
         top: 20px;
@@ -1103,9 +1103,9 @@ h3 {
         height: 220px;
         border-radius: 12px;
         overflow: hidden;
-    
+
     }
-    
+
     .container .card .caixaImg img {
         position: absolute;
         top: 0;
@@ -1115,14 +1115,14 @@ h3 {
         object-fit: cover;
         transition: .2s;
     }
-    
+
     .container .card:hover .caixaImg {
         top: -100px;
         scale: .75;
         box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-    
+
     }
-    
+
     .container .card .conteudo {
         position: absolute;
         top: 200px;
@@ -1132,24 +1132,24 @@ h3 {
         padding: 0 20px;
         overflow: hidden;
     }
-    
+
     .container .card:hover .conteudo {
         top: 100px;
         height: 250px;
-    
+
     }
-    
+
     .container .card .conteudo h2 {
         font-size: 1.5;
         font-weight: 700;
         line-height: 3rem;
         color: var(--color);
     }
-    
+
     .container .card .conteudo p {
         color: black;
     }
-    
+
     .container .card .conteudo a {
         display: inline-block;
         margin-top: 12px;
@@ -1160,22 +1160,22 @@ h3 {
         font-weight: 500;
         border-radius: 8px;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .livros {
         margin-top: 100px;
-    
+
     }
-    
+
     .containerbooks {
         margin-top: 100px;
         display: flex;
@@ -1187,14 +1187,14 @@ h3 {
         position: relative;
         width: 100%;
     }
-    
+
     .livros h2,
     h3 {
         color: var(--cor6);
     }
-    
-    
-    
+
+
+
     .book {
         background: white;
         color: black;
@@ -1204,22 +1204,22 @@ h3 {
         text-align: center;
         width: 200px;
     }
-    
+
     .book img {
         width: 100px;
         height: 150px;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .containerfeed {
         width: 92%;
         padding: 40px 76px;
@@ -1227,47 +1227,47 @@ h3 {
         position: absolute;
         top: 400%;
         background-color: var(--cor4);
-    
-    
-    
+
+
+
     }
-    
-    
-    
+
+
+
     .title {
         display: flex;
         align-items: center;
         gap: 15px;
         margin-bottom: 40px;
     }
-    
-    
+
+
     .title h2 {
         font-size: 30px;
         color: var(--cor6);
         margin: 0;
         line-height: 1.7;
     }
-    
+
     .feedbacks {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 35px;
-        left: 5%;
+        left: 2%;
         position: absolute;
-    
+
     }
-    
+
     .feedback {
         background-color: white;
         border-radius: 12px;
-        padding: 30px;
+        padding: 20px;
         position: relative;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        min-height: 350px;
+        min-height: 450px;
     }
-    
-    
+
+
     .feedback::after {
         content: '';
         position: absolute;
@@ -1279,25 +1279,25 @@ h3 {
         border-right: 10px solid transparent;
         border-top: 10px solid white;
     }
-    
+
     .user {
         display: flex;
         align-items: center;
         margin-top: 25px;
         gap: 12px;
     }
-    
+
     .user img {
         width: 52px;
         height: 52px;
         border-radius: 50%;
     }
-    
+
     .user .info {
         display: flex;
         flex-direction: column;
     }
-    
+
     .buttonsfeed {
         display: flex;
         gap: 12px;
@@ -1305,7 +1305,7 @@ h3 {
         top: 50px;
         left: -5%;
     }
-    
+
     .buttonsfeed button {
         padding: 12px 18px;
         background-color: white;
@@ -1316,22 +1316,22 @@ h3 {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         transition: 0.2s;
     }
-    
+
     .buttonsfeed button:hover {
         background-color: #f1f1f1;
     }
-    
+
 }
- 
+
 
 @media (max-width:800px) {
     body {
         margin: 0;
         font-family: Raleway, sans-serif;
-    
+
     }
-    
-    
+
+
     header {
         width: 100%;
         height: 100%;
@@ -1339,10 +1339,10 @@ h3 {
         background-size: cover;
         background-position: center;
         position: absolute;
-    
+
     }
-    
-    
+
+
     .forms {
         display: flex;
         padding-top: 10px;
@@ -1350,13 +1350,13 @@ h3 {
         gap: 15px;
         list-style: none;
     }
-    
+
     .forms a {
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-weight: bold;
     }
-    
+
     .titulo {
         font-size: 30px;
         position: absolute;
@@ -1365,8 +1365,8 @@ h3 {
         color: white;
         text-align: center;
     }
-    
-    
+
+
     main {
         top: 100%;
         left: 10%;
@@ -1375,29 +1375,29 @@ h3 {
         display: flex;
         flex-direction: column;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .assuntos {
         margin-top: 100px;
     }
-    
+
     .assuntos h2,
     h3 {
         color: var(--cor6);
         font-size: 22px;
-    
+
     }
-    
-    
+
+
     .container {
         display: flex;
         justify-content: center;
@@ -1405,10 +1405,10 @@ h3 {
         gap: 100px 50px;
         flex-wrap: wrap;
         margin-top: 100px;
-    
-    
+
+
     }
-    
+
     .container .card {
         display: flex;
         justify-content: center;
@@ -1422,11 +1422,11 @@ h3 {
         box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
         transition: .2s;
     }
-    
+
     .container .card:hover {
         height: 400px;
     }
-    
+
     .container .card .caixaImg {
         position: absolute;
         top: 20px;
@@ -1434,9 +1434,9 @@ h3 {
         height: 220px;
         border-radius: 12px;
         overflow: hidden;
-    
+
     }
-    
+
     .container .card .caixaImg img {
         position: absolute;
         top: 0;
@@ -1446,14 +1446,14 @@ h3 {
         object-fit: cover;
         transition: .2s;
     }
-    
+
     .container .card:hover .caixaImg {
         top: -100px;
         scale: .75;
         box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-    
+
     }
-    
+
     .container .card .conteudo {
         position: absolute;
         top: 200px;
@@ -1463,24 +1463,24 @@ h3 {
         padding: 0 20px;
         overflow: hidden;
     }
-    
+
     .container .card:hover .conteudo {
         top: 100px;
         height: 250px;
-    
+
     }
-    
+
     .container .card .conteudo h2 {
         font-size: 1.5;
         font-weight: 700;
         line-height: 3rem;
         color: var(--color);
     }
-    
+
     .container .card .conteudo p {
         color: black;
     }
-    
+
     .container .card .conteudo a {
         display: inline-block;
         margin-top: 12px;
@@ -1491,22 +1491,22 @@ h3 {
         font-weight: 500;
         border-radius: 8px;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .livros {
         margin-top: 100px;
-    
+
     }
-    
+
     .containerbooks {
         margin-top: 100px;
         display: flex;
@@ -1518,14 +1518,14 @@ h3 {
         position: relative;
         width: 100%;
     }
-    
+
     .livros h2,
     h3 {
         color: var(--cor6);
     }
-    
-    
-    
+
+
+
     .book {
         background: white;
         color: black;
@@ -1535,22 +1535,22 @@ h3 {
         text-align: center;
         width: 200px;
     }
-    
+
     .book img {
         width: 100px;
         height: 150px;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
+
+
+
+
+
+
+
+
+
+
     .containerfeed {
         width: 92%;
         padding: 40px 76px;
@@ -1558,47 +1558,48 @@ h3 {
         position: absolute;
         top: 450%;
         background-color: var(--cor4);
-    
-    
-    
+
+
+
     }
-    
-    
-    
+
+
+
     .title {
         display: flex;
         align-items: center;
         gap: 15px;
         margin-bottom: 40px;
     }
-    
-    
+
+
     .title h2 {
         font-size: 30px;
         color: var(--cor6);
         margin: 0;
         line-height: 1.7;
     }
-    
+
     .feedbacks {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 35px;
-        left: 18%;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 40px;
+        left: 2%;
         position: absolute;
-    
+
     }
-    
+
     .feedback {
         background-color: white;
         border-radius: 12px;
         padding: 30px;
         position: relative;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        min-height: 350px;
+        min-height: 400px;
+        min-width: 400px;
     }
-    
-    
+
+
     .feedback::after {
         content: '';
         position: absolute;
@@ -1610,33 +1611,33 @@ h3 {
         border-right: 10px solid transparent;
         border-top: 10px solid white;
     }
-    
+
     .user {
         display: flex;
         align-items: center;
         margin-top: 25px;
         gap: 12px;
     }
-    
+
     .user img {
         width: 52px;
         height: 52px;
         border-radius: 50%;
     }
-    
+
     .user .info {
         display: flex;
         flex-direction: column;
     }
-    
+
     .buttonsfeed {
         display: flex;
         gap: 12px;
         position: relative;
-        top: 50px;
-        left: 250%;
+        top: 600px;
+        left: -100%;
     }
-    
+
     .buttonsfeed button {
         padding: 12px 18px;
         background-color: white;
@@ -1647,13 +1648,13 @@ h3 {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         transition: 0.2s;
     }
-    
+
     .buttonsfeed button:hover {
         background-color: #f1f1f1;
     }
-    
+
 }
- 
+
 
 
 
@@ -1757,9 +1758,9 @@ h3 {
         top: -100px;
         scale: .55;
         box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-    
+
     }
-    
+
     .container .card .conteudo {
         position: absolute;
         top: 150px;
@@ -1769,26 +1770,26 @@ h3 {
         padding: 0 20px;
         overflow: hidden;
     }
-    
+
     .container .card:hover .conteudo {
         top: 110px;
         height: 250px;
         font-size: 1.2;
         padding: 0px 100px;
-    
+
     }
-    
+
     .container .card .conteudo h2 {
         font-size: 1.5;
         font-weight: 700;
         line-height: 3rem;
         color: var(--color);
     }
-    
+
     .container .card .conteudo p {
         color: black;
     }
-    
+
     .container .card .conteudo a {
         display: inline-block;
         margin-top: 12px;
@@ -1800,7 +1801,7 @@ h3 {
         border-radius: 8px;
     }
 
-    
+
 
 
 
@@ -1848,37 +1849,37 @@ h3 {
         position: absolute;
         top: 500%;
         background-color: var(--cor4);
-    
-    
-    
+
+
+
     }
-    
-    
-    
+
+
+
     .title {
         display: flex;
         align-items: center;
         gap: 15px;
         margin-bottom: 40px;
     }
-    
-    
+
+
     .title h2 {
         font-size: 30px;
         color: var(--cor6);
         margin: 0;
         line-height: 1.7;
     }
-    
+
     .feedbacks {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 35px;
         left: 18%;
         position: absolute;
-    
+
     }
-    
+
     .feedback {
         background-color: white;
         border-radius: 12px;
@@ -1887,8 +1888,8 @@ h3 {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-height: 350px;
     }
-    
-    
+
+
     .feedback::after {
         content: '';
         position: absolute;
@@ -1900,25 +1901,25 @@ h3 {
         border-right: 10px solid transparent;
         border-top: 10px solid white;
     }
-    
+
     .user {
         display: flex;
         align-items: center;
         margin-top: 25px;
         gap: 12px;
     }
-    
+
     .user img {
         width: 52px;
         height: 52px;
         border-radius: 50%;
     }
-    
+
     .user .info {
         display: flex;
         flex-direction: column;
     }
-    
+
     .buttonsfeed {
         display: flex;
         gap: 12px;
@@ -1926,7 +1927,7 @@ h3 {
         top: 50px;
         left: 250%;
     }
-    
+
     .buttonsfeed button {
         padding: 12px 18px;
         background-color: white;
@@ -1937,16 +1938,9 @@ h3 {
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         transition: 0.2s;
     }
-    
+
     .buttonsfeed button:hover {
         background-color: #f1f1f1;
     }
-    
+
 }
-
-
-
-   
-
-
-
