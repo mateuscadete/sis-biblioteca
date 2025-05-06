@@ -975,7 +975,7 @@ h3 {
         display: flex;
         gap: 12px;
         position: relative;
-        top: 450px;
+        top: 475px;
         left: -50%;
     }
 
@@ -1221,7 +1221,7 @@ h3 {
 
 
     .containerfeed {
-        width: 92%;
+        width: 86%;
         padding: 40px 76px;
         height: 150%;
         position: absolute;
@@ -1596,7 +1596,7 @@ h3 {
         position: relative;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-height: 400px;
-        min-width: 400px;
+       
     }
 
 
