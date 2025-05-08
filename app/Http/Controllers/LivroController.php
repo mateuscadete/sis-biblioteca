@@ -1,10 +1,10 @@
 <?php
-
+ 
 namespace App\Http\Controllers;
-
+ 
 use App\Models\Livro; // Certifique-se de que você tem um modelo Livro
 use Illuminate\Http\Request;
-
+ 
 class LivroController extends Controller
 {
     public function submit(Request $request)
@@ -19,11 +19,17 @@ class LivroController extends Controller
             'edicao' => 'required|string|max:255',
             'num_paginas' => 'required|integer',  
             'isbn' => 'required|string|max:255',
-            'qtde' => 'required|integer', 
+            'qtde' => 'required|integer',
             'data' => 'required|date',  // Validação de data
             'descricao' => 'required|string|max:1000',
+            'imagem' => 'required|image|mimes:jpg,jpeg,png|max:2048',
         ]);
+ 
+        // Armazenar a imagem no storage/app/public/livros
+$caminhoImagem = $request->file('imagem')->store('livros', 'public');
 
+
+ 
         // Criar o livro no banco de dados usando o modelo Livro
         Livro::create([
             'titulo' => $request->titulo,
@@ -37,24 +43,25 @@ class LivroController extends Controller
             'data' => $request->data,
             'descricao' => $request->descricao,
             'qtde' => $request->qtde,
+            'imagem' => $caminhoImagem,
         ]);
-
+ 
         // Redirecionar com uma mensagem de sucesso
         return redirect()->route('layout.show')->with('success', 'Livro cadastrado com sucesso!');
     }
     public function index(){
         return view("dashboard");
     }
-
+ 
     public function destroy(Livro $livro)
     {
-
+ 
         // Apagar o registro no BD
         $livro->delete();
-
+ 
         // Redirecionar o usuário, enviar a mensagem de sucesso
         return redirect()->route('layout.show')->with('success', 'Livro apagado com sucesso!');
-
+ 
     }
     public function show() {
         $livros = Livro::all(); // busca todos os livros
@@ -64,7 +71,7 @@ class LivroController extends Controller
 {
     return view('layout.edit', compact('livro'));
 }
-
+ 
 public function update(Request $request, Livro $livro)
 {
     $validated = $request->validate([
@@ -76,16 +83,16 @@ public function update(Request $request, Livro $livro)
         'edicao' => 'required|string|max:255',
         'num_paginas' => 'required|integer',  
         'isbn' => 'required|string|max:255',
-        'qtde' => 'required|integer', 
+        'qtde' => 'required|integer',
         'data' => 'required|date',
         'descricao' => 'required|string|max:1000',
     ]);
-
+ 
     $livro->update($validated);
-
+ 
     return redirect()->route('layout.show')->with('success', 'Livro atualizado com sucesso!');
 }
-
-    
-  
+ 
+   
+ 
 }
