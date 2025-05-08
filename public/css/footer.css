@@ -83,7 +83,7 @@
         grid-row-end: 3;
         width: 100%;
         position: absolute;
-        top: 600%;
+        top: 900%;
 
     }
 
@@ -108,7 +108,7 @@
     }
 }
 
-@media (max-width:500px) {
+@media (max-width:600px) {
     .footer {
         background-color: #2D4F47;
         color: white;
@@ -119,7 +119,7 @@
         grid-row-end: 3;
         width: 100%;
         position: absolute;
-        top: 600%;
+        top: 1200%;
 
     }
 
