@@ -8,7 +8,8 @@
 <body>
 
 <h1>Cadastrar Novo Livro</h1>
-<form action="{{ route('livro.submit') }}" method="POST">
+<form action="{{ route('livro.submit') }}" method="POST" enctype="multipart/form-data">
+
     @csrf
 
     <label for="tema">Tema:</label>
@@ -43,6 +44,9 @@
 
     <label for="qtde">Quantidade:</label>
     <input type="number" name="qtde" id="qtde" required><br><br>
+
+    <label for="imagem">Imagem da capa:</label>
+    <input type="file" name="imagem" id="imagem" accept="image/*" required><br><br>
 
     <button type="submit">Cadastrar</button>
 </form>
