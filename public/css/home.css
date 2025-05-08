@@ -1556,7 +1556,7 @@ h3 {
     .containerfeed {
         width: 92%;
         padding: 40px 76px;
-        height: 200%;
+        height: 300%;
         position: absolute;
         top: 450%;
         background-color: var(--cor4);
@@ -1636,8 +1636,8 @@ h3 {
         display: flex;
         gap: 12px;
         position: relative;
-        top: 600px;
-        left: -100%;
+        top: 100px;
+        left: 2%;
     }
 
     .buttonsfeed button {
@@ -1877,7 +1877,7 @@ h3 {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 35px;
-        left: 18%;
+        left: 2%;
         position: absolute;
 
     }
@@ -1888,7 +1888,7 @@ h3 {
         padding: 30px;
         position: relative;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        min-height: 350px;
+        min-height: 450px;
     }
 
 
@@ -1927,7 +1927,7 @@ h3 {
         gap: 12px;
         position: relative;
         top: 50px;
-        left: 250%;
+        left: -2%;
     }
 
     .buttonsfeed button {
