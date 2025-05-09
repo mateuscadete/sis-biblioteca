@@ -1,8 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-*{
 
-}
 
 :root {
     --cor0: rgb(51, 96, 90);
@@ -1556,7 +1554,7 @@ h3 {
     .containerfeed {
         width: 92%;
         padding: 40px 76px;
-        height: 300%;
+        height: 220%;
         position: absolute;
         top: 450%;
         background-color: var(--cor4);
@@ -1598,7 +1596,7 @@ h3 {
         position: relative;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-height: 400px;
-       
+
     }
 
 
@@ -1847,7 +1845,7 @@ h3 {
     .containerfeed {
         width: 92%;
         padding: 40px 76px;
-        height: 300%;
+        height: 250%;
         position: absolute;
         top: 500%;
         background-color: var(--cor4);
@@ -1948,7 +1946,7 @@ h3 {
 }
 
 
-@media (max-width:200px) {
+@media (max-width:400px) {
     body {
         margin: 0;
         font-family: Arial, sans-serif;
@@ -2133,7 +2131,7 @@ h3 {
 
 
     .containerfeed {
-        width: 92%;
+        width: 67%;
         padding: 40px 76px;
         height: 300%;
         position: absolute;
@@ -2165,7 +2163,7 @@ h3 {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 35px;
-        left: 18%;
+        left: 1%;
         position: absolute;
 
     }
@@ -2215,7 +2213,7 @@ h3 {
         gap: 12px;
         position: relative;
         top: 50px;
-        left: 250%;
+        left: 5%;
     }
 
     .buttonsfeed button {
@@ -2234,4 +2232,3 @@ h3 {
     }
 
 }
-
