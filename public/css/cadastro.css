@@ -32,7 +32,7 @@ body {
 
 .container {
     position: absolute;
-    left: 25%;
+    left: 20%;
 
     display: flex;
     justify-content: center;
@@ -110,4 +110,503 @@ form {
 .invalid-feedback {
     font-size: 0.875rem;
     color: #dc3545;
+}
+
+@media (max-width:1500px){
+    .container {
+    position: absolute;
+    left: 20%;
+    display: flex;
+    justify-content: center;
+    top: 20%;
+    width: 1000px;
+    height: 500px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.right {
+    flex: 1;
+    background-color: var(--cor1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.logar {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.left {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name,
+.email,
+.senha {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cadastrar {
+    background-color: var(--cor1);
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    ;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+}
+
+
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+}
+
+
+@media (max-width:1300px){
+    .container {
+    position: absolute;
+    left: 15%;
+    display: flex;
+    justify-content: center;
+    top: 20%;
+    width: 1000px;
+    height: 500px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.right {
+    flex: 1;
+    background-color: var(--cor1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.logar {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.left {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name,
+.email,
+.senha {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cadastrar {
+    background-color: var(--cor1);
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    ;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+}
+
+
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+}
+
+@media (max-width:1000px){
+    .container {
+    position: absolute;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    top: 20%;
+    width: 800px;
+    height: 500px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.right {
+    flex: 1;
+    background-color: var(--cor1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.logar {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.left {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name,
+.email,
+.senha {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cadastrar {
+    background-color: var(--cor1);
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    ;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+}
+
+
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+}
+
+@media (max-width:800px){
+    .container {
+    position: absolute;
+    left: 10%;
+    display: flex;
+    justify-content: center;
+    top: 20%;
+    width: 600px;
+    height: 500px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.right {
+    flex: 1;
+    background-color: var(--cor1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+.logar {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.left {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name,
+.email,
+.senha {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cadastrar {
+    background-color: var(--cor1);
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    ;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+}
+
+
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+}
+
+@media (max-width:600px){
+    .container {
+    position: absolute;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    top: 20%;
+    width: 450px;
+    height: 500px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.right {
+    flex: 1;
+    background-color: var(--cor1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.logar {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name,
+.email,
+.senha {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cadastrar {
+    background-color: var(--cor1);
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    ;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+}
+
+
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: #dc3545;
+}
+}
+
+@media (max-width:200px){
+    .container {
+    position: absolute;
+    left: 5%;
+    display: flex;
+    justify-content: center;
+    top: 20%;
+    width: 450px;
+    height: 500px;
+    background: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.right {
+    flex: 1;
+    background-color: var(--cor1);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.logar {
+    background: transparent;
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.left {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.name,
+.email,
+.senha {
+    margin-top: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.cadastrar {
+    background-color: var(--cor1);
+    border: 1px solid white;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    ;
+    align-items: center;
+    text-align: center;
+    width: 120px;
+}
+
+
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: #dc3545;
+}
 }
