@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
 use App\Models\Livro;
 use App\Models\Loan;
 use Illuminate\Http\Request;
@@ -56,6 +57,31 @@ class LoanController extends Controller
         // Retorna resposta de sucesso em formato JSON
         return response()->json(['message' => 'Livro devolvido com sucesso.']);
     }
+
+    public function listarEmprestimos()
+    {
+        // Obtém o usuário atualmente autenticado
+        $user = Auth::user();
+
+        if ($user->is_admin) {
+            // Se o usuário for um administrador,
+            // ele pode ver todos os empréstimos que ainda não foram devolvidos (return_date é nulo)
+            // Também carrega os relacionamentos com os modelos 'livro' e 'user' para evitar múltiplas consultas ao banco (eager loading)
+            $emprestimos = Loan::with('livro', 'user')->whereNull('return_date')->get();
+        } else {
+            // Se for um usuário comum,
+            // ele só pode ver os seus próprios empréstimos que ainda não foram devolvidos
+            // Também carrega o relacionamento com o modelo 'livro'
+            $emprestimos = Loan::with('livro')
+                ->where('user_id', $user->id) // filtra os empréstimos do usuário logado
+                ->whereNull('return_date')   // somente empréstimos ainda não devolvidos
+                ->get();
+        }
+
+        // Retorna a view 'layout.emprestimos' passando a variável $emprestimos para ser usada na visualização
+        return view('layout.emprestimos', compact('emprestimos'));
+    }
+
 }
 
 
