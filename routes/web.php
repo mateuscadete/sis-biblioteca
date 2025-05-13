@@ -51,9 +51,11 @@ Route::get('editar-livro/{livro}', [LivroController::class, 'edit'])->name('layo
 // Atualizar dados do livro
 Route::put('/livros/{livro}', [LivroController::class, 'update'])->name('livros.update');
 
-
 // Rota para registrar um empréstimo
 Route::post('/emprestimos', [LoanController::class, 'loanBook']);
 
 // Rota para devolver um livro
 Route::post('/emprestimos/{id}/devolver', [LoanController::class, 'returnBook']);
+
+// Rota para listar todos os empréstimos    
+Route::get('/emprestimos', [LoanController::class, 'listarEmprestimos'])->name('emprestimos.index');

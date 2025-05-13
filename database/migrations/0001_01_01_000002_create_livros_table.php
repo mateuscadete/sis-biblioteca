@@ -26,6 +26,7 @@ class CreateLivrosTable extends Migration
             $table->date('data');
             $table->integer('qtde');
             $table->string('descricao');
+            $table->string('imagem')->nullable();
             $table->timestamps();
         });
     }
