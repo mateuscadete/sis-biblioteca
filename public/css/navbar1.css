@@ -428,3 +428,115 @@ button svg:hover {
 }
 
 
+
+@media (max-width:300px){
+    .navbar {
+        display: flex;
+        width: 100%;
+        background: #e9e0d1;
+        padding: 15px;
+        position: absolute;
+        gap: 12px;
+    }
+    
+    .links {
+        position: relative;
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        font-size: 15px;
+        left: -6%;
+        
+    
+    }
+    
+    .links a {
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+    }
+    
+    .container-input {
+        position: relative;
+        left: -54;
+        margin-top: 9px;
+        display: flex;
+    }
+    
+    .input {
+        width: 100px;
+        padding: 10px 0px 10px 40px;
+        border-radius: 9999px;
+        border: solid 1px #e9e0d1;
+        transition: all .2s ease-in-out;
+        outline: none;
+        opacity: 0.8;
+    }
+    
+    .container-input svg {
+        position: absolute;
+        top: 47%;
+        left: 13px;
+        transform: translate(0, -50%);
+    }
+    
+    .input:focus {
+        opacity: 1;
+        width: 150px;
+    }
+    
+    .icones {
+        display: flex;
+        gap: 1px;
+        position: absolute;
+        left: 75%;
+    }
+    
+    button {
+        background-color: #e9e0d1;
+        position: relative;
+        list-style: none;
+        width: 60px;
+        height: 60px;
+        border: #e9e0d1;
+        left: 25%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+        gap: 15px;
+    
+    
+    }
+    
+    button svg {
+        color: black;
+        width: auto;
+        height: 30px;
+    
+    }
+    
+    button svg:hover {
+        transition: 0.5s;
+        transform: scale(1.1);
+    }
+    
+    .menu {
+        display: none;
+        cursor: pointer;
+    }
+    
+    .menu div {
+        background: black;
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        transition: 0.5s;
+    }
+    
+    
+    
+}
+
+
