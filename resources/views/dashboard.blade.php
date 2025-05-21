@@ -62,6 +62,14 @@
                 </div>
             </div>
 
+            <div class="input_box">
+            <label for="imagem">Imagem da capa:</label>
+            <div class="input_field">
+            <input type="file" name="imagem" id="imagem" accept="image/*" required>
+</div>
+
+        </div>
+
             <h3>2. Informações Adicionais</h3>
 
             <div class="input_box">
@@ -88,28 +96,17 @@
                     </div>
                 </div>
 
-                <h3>3. Informações para a Biblioteca</h3>
-
+               
                 <div class="input_box">
-                    <label for="id-livro" class="form_label">Id(caso haja mais de um)</label>
+                <label for="qtde">Quantidade:</label>
 
                     <div class="input_field">
-                        <input class="form-control" type="number" id="id-livro">
+                    <input type="number" name="qtde" id="qtde" required><br><br>
                     </div>
                 </div>
 
-                <div class="radio-container">
-                    <label class="form_label">Uso do Livro</label>
-                    <div class="radio-box">
-                        <input type="radio" id="local" value="local" class="form_control">
-                        <label class="form-label" for="local">Local</label>
-                    </div>
-
-                    <div class="radio-box">
-                        <input type="radio" id="emprestimo" value="emprestimo" class="form_control">
-                        <label class="form-label" for="emprestimo">Empréstimo</label>
-                    </div>
-                </div>
+                
+                
 
 
 

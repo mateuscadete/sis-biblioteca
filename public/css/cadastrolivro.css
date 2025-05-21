@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
+:root {
+    --cor0: rgb(51, 96, 90);
+    --cor1: rgb(26, 61, 57);
+    --cor2: #91a398;
+    --cor3: #7d9987;
+    --cor4: #e9e0d1;
+    --cor5: #68462b;
+    --cor6: #382414;
+}
 
 * {
     margin: 0;
@@ -13,6 +22,12 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-
-
+    background-color: whitesmoke;
 }
+
+form{
+    border: var(--cor6) 3px solid;
+    border-radius: 5px;
+    padding: 10px;
+}
+
