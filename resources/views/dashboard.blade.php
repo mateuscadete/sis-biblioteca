@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,51 +8,118 @@
     <link rel="stylesheet" href="{{ asset('css/navbar1.css') }}">
     <link rel="stylesheet" href="{{ asset('css/cadastrolivro.css') }}">
 </head>
+
 <body>
 
-<h1>Cadastrar Novo Livro</h1>
-<form action="{{ route('livro.submit') }}" method="POST" enctype="multipart/form-data">
 
-    @csrf
 
-    <label for="tema">Tema:</label>
-    <input type="text" name="tema" id="tema" required><br><br>
 
-    <label for="autor">Autor:</label>
-    <input type="text" name="autor" id="autor" required><br><br>
+    <form action="{{ route('livro.submit') }}" method="POST" enctype="multipart/form-data">
 
-    <label for="titulo">Título:</label>
-    <input type="text" name="titulo" id="titulo" required><br><br>
+        @csrf
 
-    <label for="isbn">ISBN:</label>
-    <input type="text" name="isbn" id="isbn" required><br><br>
+        <h1>Cadastrar Novo Livro</h1>
 
-    <label for="num_paginas">Número de Páginas:</label>
-    <input type="number" name="num_paginas" id="num_paginas" required><br><br>
+        <h3>1. Informações Principais</h3>
 
-    <label for="edicao">Edição:</label>
-    <input type="text" name="edicao" id="edicao" required><br><br>
+        <div id="input_container">
+            <div class="input_box">
+                <label for="titulo" class="form_label">Título</label>
 
-    <label for="data">Data:</label>
-    <input type="date" name="data" id="data" required><br><br>
+                <div class="input_field">
+                    <input class="form-control" type="text" id="titulo" placeholder="Nome do Livro">
+                </div>
+            </div>
 
-    <label for="editora">Editora:</label>
-    <input type="text" name="editora" id="editora" required><br><br>
+            <div class="input_box">
+                <label for="editora" class="form_label">Gênero</label>
+                <div class="input_field">
+                    <input class="form-control" type="text" id="genero" placeholder="Ex:Romance, Informativo">
+                </div>
+            </div>
 
-    <label for="genero">Gênero:</label>
-    <input type="text" name="genero" id="genero" required><br><br>
 
-    <label for="descricao">Descrição:</label>
-    <input type="text" name="descricao" id="descricao" required><br><br>
+            <div class="input_box">
+                <label for="editora" class="form_label">Editora</label>
+                <div class="input_field">
+                    <input class="form-control" type="text" id="editora" placeholder="Ex: Arqueiro, Saraiva">
+                </div>
+            </div>
 
-    <label for="qtde">Quantidade:</label>
-    <input type="number" name="qtde" id="qtde" required><br><br>
+            <div class="input_box">
+                <label for="tema" class="form_label">Tema</label>
 
-    <label for="imagem">Imagem da capa:</label>
-    <input type="file" name="imagem" id="imagem" accept="image/*" required><br><br>
+                <div class="input_field">
+                    <input class="form-control" type="text" id="tema" placeholder="Ex: Tecnologia, Economia">
+                </div>
+            </div>
 
-    <button type="submit">Cadastrar</button>
-</form>
+            <div class="input_box">
+                <label for="autor" class="form_label">Autor(a)</label>
+
+                <div class="input_field">
+                    <input class="form-control" type="text" id="autor" placeholder="Nome do Autor(a)">
+                </div>
+            </div>
+
+            <h3>2. Informações Adicionais</h3>
+
+            <div class="input_box">
+                <label for="paginas" class="form_label">Número de Páginas</label>
+
+                <div class="input_field">
+                    <input type="number" class="form-control" id="paginas"></input>
+                </div>
+            </div>
+
+            <div class="input_box">
+                <label for="isbn" class="form_label">ISBN</label>
+
+                <div class="input_field">
+                    <input class="form-control" type="text" id="isbn" placeholder="Ex: 978-85-7522-000-0">
+                </div>
+
+                <div class="input_box">
+                    <label for="data" class="form_label">Data de Publicação</label>
+
+                    <div class="input_field">
+                        <input class="form-control" type="date" id="data">
+
+                    </div>
+                </div>
+
+                <h3>3. Informações para a Biblioteca</h3>
+
+                <div class="input_box">
+                    <label for="id-livro" class="form_label">Id(caso haja mais de um)</label>
+
+                    <div class="input_field">
+                        <input class="form-control" type="number" id="id-livro">
+                    </div>
+                </div>
+
+                <div class="radio-container">
+                    <label class="form_label">Uso do Livro</label>
+                    <div class="radio-box">
+                        <input type="radio" id="local" value="local" class="form_control">
+                        <label class="form-label" for="local">Local</label>
+                    </div>
+
+                    <div class="radio-box">
+                        <input type="radio" id="emprestimo" value="emprestimo" class="form_control">
+                        <label class="form-label" for="emprestimo">Empréstimo</label>
+                    </div>
+                </div>
+
+
+
+                <button type="submit" class="cadastrar">Cadastrar</button>
+
+            </div>
+    </form>
+
+
 
 </body>
+
 </html>

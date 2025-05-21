@@ -10,6 +10,9 @@ use App\Http\Controllers\LoanController;
 //Rota para a pagina home
 Route::get('/', [UserController::class, 'index'])->name('user.index');
 
+//Rota para a pagina de acervo
+Route::get('/acervo-layout', [UserController::class, 'acervo'])->name('layout.acervo');
+
 //Rotas para a pagina de login
 Route::get('/login-user', [UserController::class, 'login'])->name('user.login');
 Route::post('/login', [UserController::class, 'logar'])->name('login-user');
@@ -46,7 +49,7 @@ Route::delete('/livros/{livro}', [LivroController::class, 'destroy'])->name('liv
 Route::get('/show-layout', [LivroController::class, 'show'])->name('layout.show');
 
 // Mostrar formulário de edição
-Route::get('editar-livro/{livro}', [LivroController::class, 'edit'])->name('layout.edit');    
+Route::get('editar-livro/{livro}', [LivroController::class, 'edit'])->name('layout.edit');
 
 // Atualizar dados do livro
 Route::put('/livros/{livro}', [LivroController::class, 'update'])->name('livros.update');
@@ -57,5 +60,5 @@ Route::post('/emprestimos', [LoanController::class, 'loanBook']);
 // Rota para devolver um livro
 Route::post('/emprestimos/{id}/devolver', [LoanController::class, 'returnBook']);
 
-// Rota para listar todos os empréstimos    
+// Rota para listar todos os empréstimos
 Route::get('/emprestimos', [LoanController::class, 'listarEmprestimos'])->name('emprestimos.index');
