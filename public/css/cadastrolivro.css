@@ -31,3 +31,16 @@ form{
     padding: 10px;
 }
 
+.cadastrar{
+    background-color: var(--cor6);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    width:50%;
+    border-radius: 5px;
+}
+
+.cadastrar:hover{
+    background-color:var(--cor5);
+}
+

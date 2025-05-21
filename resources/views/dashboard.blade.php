@@ -27,14 +27,14 @@
                 <label for="titulo" class="form_label">Título</label>
 
                 <div class="input_field">
-                    <input class="form-control" type="text" id="titulo" placeholder="Nome do Livro">
+                    <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Nome do Livro" required>
                 </div>
             </div>
 
             <div class="input_box">
                 <label for="editora" class="form_label">Gênero</label>
                 <div class="input_field">
-                    <input class="form-control" type="text" id="genero" placeholder="Ex:Romance, Informativo">
+                    <input class="form-control" type="text" name="genero" id="genero" placeholder="Ex:Romance, Informativo" required>
                 </div>
             </div>
 
@@ -42,7 +42,7 @@
             <div class="input_box">
                 <label for="editora" class="form_label">Editora</label>
                 <div class="input_field">
-                    <input class="form-control" type="text" id="editora" placeholder="Ex: Arqueiro, Saraiva">
+                    <input class="form-control" type="text" name="editora"id="editora" placeholder="Ex: Arqueiro, Saraiva" required>
                 </div>
             </div>
 
@@ -50,7 +50,7 @@
                 <label for="tema" class="form_label">Tema</label>
 
                 <div class="input_field">
-                    <input class="form-control" type="text" id="tema" placeholder="Ex: Tecnologia, Economia">
+                    <input class="form-control" type="text" nmae="tema" id="tema" placeholder="Ex: Tecnologia, Economia" required>
                 </div>
             </div>
 
@@ -58,7 +58,7 @@
                 <label for="autor" class="form_label">Autor(a)</label>
 
                 <div class="input_field">
-                    <input class="form-control" type="text" id="autor" placeholder="Nome do Autor(a)">
+                    <input class="form-control" type="text" name="autor" id="autor" placeholder="Nome do Autor(a)" required>
                 </div>
             </div>
 
@@ -76,7 +76,7 @@
                 <label for="paginas" class="form_label">Número de Páginas</label>
 
                 <div class="input_field">
-                    <input type="number" class="form-control" id="paginas"></input>
+                    <input type="number" class="form-control" name="paginas" id="paginas"required>
                 </div>
             </div>
 
@@ -84,14 +84,14 @@
                 <label for="isbn" class="form_label">ISBN</label>
 
                 <div class="input_field">
-                    <input class="form-control" type="text" id="isbn" placeholder="Ex: 978-85-7522-000-0">
+                    <input class="form-control" type="text" name="isbn" id="isbn" placeholder="Ex: 978-85-7522-000-0" required>
                 </div>
 
                 <div class="input_box">
                     <label for="data" class="form_label">Data de Publicação</label>
 
                     <div class="input_field">
-                        <input class="form-control" type="date" id="data">
+                        <input class="form-control" type="date" name="data" id="data" required>
 
                     </div>
                 </div>
