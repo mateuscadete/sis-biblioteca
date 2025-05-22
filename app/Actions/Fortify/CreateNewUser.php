@@ -33,6 +33,7 @@ class CreateNewUser implements CreatesNewUsers
                 'name' => $input['name'],
                 'email' => $input['email'],
                 'password' => Hash::make($input['password']),
+                'is_admin' => true, // valida novo usuário como admin
             ]), function (User $user) {
                 $this->createTeam($user);
             });

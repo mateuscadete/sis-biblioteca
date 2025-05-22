@@ -61,4 +61,6 @@ Route::post('/emprestimos', [LoanController::class, 'loanBook']);
 Route::post('/emprestimos/{id}/devolver', [LoanController::class, 'returnBook']);
 
 // Rota para listar todos os empréstimos
-Route::get('/emprestimos', [LoanController::class, 'listarEmprestimos'])->name('emprestimos.index');
+Route::middleware('auth')->group(function () {
+    Route::get('/emprestimos', [LoanController::class, 'listarEmprestimos'])->name('emprestimos.index');
+});
