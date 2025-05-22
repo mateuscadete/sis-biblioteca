@@ -11,6 +11,8 @@
 
 <body>
 
+@include ('includes.navbar1')
+
 
 
 
@@ -18,7 +20,7 @@
 
         @csrf
 
-        <h1>Cadastrar Novo Livro</h1>
+        <h2>Cadastrar Livro</h2>
 
         <h3>1. Informações Principais</h3>
 
@@ -70,7 +72,13 @@
 
         </div>
 
-            <h3>2. Informações Adicionais</h3>
+
+
+
+
+
+
+            <h3 >2. Informações Adicionais</h3>
 
             <div class="input_box">
                 <label for="paginas" class="form_label">Número de Páginas</label>
@@ -101,10 +109,17 @@
                 <label for="qtde">Quantidade:</label>
 
                     <div class="input_field">
-                    <input type="number" name="qtde" id="qtde" required><br><br>
+                    <input class="form-control" type="number" name="qtde" id="qtde" required>
                     </div>
                 </div>
 
+                <div class="input_box">
+                <label for="descricao">Descrição:</label>
+
+                    <div class="input_field">
+                <input class="form-control" type="text" name="descricao" id="descricao" required>
+                </div>    
+            </div>
                 
                 
 
