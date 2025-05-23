@@ -12,94 +12,39 @@
 <body>
     @include ('includes.navbar1')
 
-    <main id="form_container">
-        <div id="form_header">
-            <h1 id="form_title">Cadastrar Livro</h1>
+    @if (session('success'))
+        <div style="color: green; padding: 10px;">
+            {{ session('success') }}
         </div>
+    @endif
 
-        <form action="" id="form">
-            <div id="input_container">
-                <div class="input_box">
-                    <label for="titulo" class="form_label">Título</label>
-
-                    <div class="input_field">
-                        <input class="form-control" type="text" id="titulo" placeholder="Nome do Livro">
-                    </div>
-                </div>
-
-                <div class="input_box">
-                    <label for="editora" class="form_label">Gênero</label>
-                    <div class="input_field">
-                        <input class="form-control" type="text" id="genero" placeholder="Ex:Romance, Informativo">
-                    </div>
-                </div>
+    @if (session('error'))
+        <div style="color: red; padding: 10px;">
+            {{ session('error') }}
+        </div>
+    @endif
 
 
-                <div class="input_box">
-                    <label for="editora" class="form_label">Editora</label>
-                    <div class="input_field">
-                        <input class="form-control" type="text" id="editora" placeholder="Ex: Arqueiro, Saraiva">
-                    </div>
-                </div>
+    @foreach ($livros as $livro)
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ $livro->titulo }}</h5>
+                <p class="card-text">Autor: {{ $livro->autor }}</p>
+                <p class="card-text">Quantidade disponível: {{ $livro->qtde }}</p>
 
-                <div class="input_box">
-                    <label for="tema" class="form_label">Tema</label>
+                @if($livro->qtde > 0)
+                    <form action="{{ url('/emprestimos') }}" method="POST">
+                        @csrf
+                        <input type="hidden" name="livro_id" value="{{ $livro->id }}">
+                        <button type="submit" class="btn btn-primary">Solicitar Empréstimo</button>
+                    </form>
+                @else
+                    <p class="text-danger">Fora de estoque</p>
+                @endif
+            </div>
+        </div>
+    @endforeach
 
-                    <div class="input_field">
-                        <input class="form-control" type="text" id="tema" placeholder="Ex: Tecnologia, Economia">
-                    </div>
-                </div>
-
-                <div class="input_box">
-                    <label for="autor" class="form_label">Autor(a)</label>
-
-                    <div class="input_field">
-                        <input class="form-control" type="text" id="autor" placeholder="Nome do Autor(a)">
-                    </div>
-                </div>
-
-
-
-
-                <div class="input_box">
-                    <label for="data" class="form_label">Data de Publicação</label>
-
-                    <div class="input_field">
-                        <input class="form-control" type="date" id="data">
-
-                    </div>
-                </div>
-
-
-                <div class="input_box">
-                    <label for="id-livro" class="form_label">Id(caso haja mais de um)</label>
-
-                    <div class="input_field">
-                        <input class="form-control" type="number" id="id-livro">
-                    </div>
-                </div>
-
-                <div class="radio-container">
-                    <label class="form_label">Uso do Livro</label>
-                    <div class="radio-box">
-                        <input type="radio" id="local" value="local" class="form_control">
-                        <label class="form-label" for="local">Local</label>
-                    </div>
-
-                    <div class="radio-box">
-                        <input type="radio" id="emprestimo" value="emprestimo" class="form_control">
-                        <label class="form-label" for="emprestimo">Empréstimo</label>
-                    </div>
-                </div>
-
-
-
-                <button type="submit" class="cadastrar">Cadastrar</button>
-
-
-        </form>
-
-    </main>
 
 </body>
 

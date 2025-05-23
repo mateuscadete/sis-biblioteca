@@ -9,7 +9,7 @@ use App\Models\User;
 
 class UserController extends Controller
 {
-    
+
     public function index()
     {
 
@@ -25,7 +25,8 @@ class UserController extends Controller
         return view('users.login');
     }
 
-    public function sobre(){
+    public function sobre()
+    {
         return view('layout.sobre');
     }
 
@@ -40,12 +41,12 @@ class UserController extends Controller
     {
         // Validar o formulário
         $request->validated();
-        
+
         // Cadastrar o usuário no BD
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request->password,
+            'password' => bcrypt($request->password),
         ]);
 
         // Redirecionar o usuário, enviar a mensagem de sucesso
@@ -72,9 +73,9 @@ class UserController extends Controller
             'password' => $request->password,
         ]);
 
-        
+
         // Redirecionar o usuário, enviar a mensagem de sucesso
-        return redirect()->route('user.show', ['user' => $user->id ])->with('success', 'Usuário editado com sucesso!');
+        return redirect()->route('user.show', ['user' => $user->id])->with('success', 'Usuário editado com sucesso!');
 
     }
 
@@ -109,5 +110,15 @@ class UserController extends Controller
             'email' => 'Credenciais inválidas.',
         ]);
     }
-    
+
+    public function acervo()
+    {
+        // Busca os livros para passar para a view
+        $livros = \App\Models\Livro::all();
+
+        // Retorna a view onde a lista de livros será mostrada (exemplo: 'acervo')
+        return view('acervo', compact('livros'));
+    }
+
+
 }

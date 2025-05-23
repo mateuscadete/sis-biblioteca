@@ -20,12 +20,12 @@ class LoanController extends Controller
         // Verifica se o livro está fora de estoque (quantidade menor que 1)
         if ($livro->qtde < 1) {
             // Retorna um erro em formato JSON com status 400 (bad request)
-            return response()->json(['error' => 'Livro fora de estoque.'], 400);
+            return redirect()->back()->with('error', 'Livro fora de estoque.');
         }
 
         // Cria um novo registro de empréstimo na tabela 'loans'
         Loan::create([
-            'user_id' => $request->user_id,    // ID do usuário que está pegando o livro emprestado
+            'user_id' => Auth::id(),    // ID do usuário que está pegando o livro emprestado
             'livro_id' => $request->livro_id,    // ID do livro emprestado
             'loan_date' => now(),              // Data e hora atual como data do empréstimo
         ]);
@@ -34,7 +34,7 @@ class LoanController extends Controller
         $livro->decrement('qtde');
 
         // Retorna resposta de sucesso em formato JSON
-        return response()->json(['message' => 'Empréstimo registrado com sucesso.']);
+        return redirect()->back()->with('success', 'Empréstimo registrado com sucesso.');
     }
 
     // Método responsável por registrar a devolução de um livro
@@ -79,7 +79,7 @@ class LoanController extends Controller
         }
 
         // Retorna a view 'layout.emprestimos' passando a variável $emprestimos para ser usada na visualização
-        return view('layout.emprestimos', compact('emprestimos'));
+        return view('emprestimos.index', compact('emprestimos'));
     }
 
 }

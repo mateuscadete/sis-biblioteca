@@ -65,4 +65,10 @@ class User extends Authenticatable
         'is_admin' => 'boolean',
         'password' => 'hashed',
     ];
+
+    public function loans()
+    {
+        return $this->hasMany(Loan::class);
+    }
+
 }

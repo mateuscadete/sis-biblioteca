@@ -54,13 +54,27 @@ Route::get('editar-livro/{livro}', [LivroController::class, 'edit'])->name('layo
 // Atualizar dados do livro
 Route::put('/livros/{livro}', [LivroController::class, 'update'])->name('livros.update');
 
-// Rota para registrar um empréstimo
-Route::post('/emprestimos', [LoanController::class, 'loanBook']);
-
-// Rota para devolver um livro
-Route::post('/emprestimos/{id}/devolver', [LoanController::class, 'returnBook']);
-
-// Rota para listar todos os empréstimos
+// Agrupa as rotas que precisam de autenticação do usuário para serem acessadas
 Route::middleware('auth')->group(function () {
+    
+    // Rota GET para listar todos os empréstimos
+    // Aponta para o método 'index' do LoanController
+    // Nome da rota: 'emprestimos.index'
     Route::get('/emprestimos', [LoanController::class, 'listarEmprestimos'])->name('emprestimos.index');
+    
+    // Rota POST para realizar um novo empréstimo de livro
+    // Aponta para o método 'loanBook' do LoanController
+    // Nome da rota: 'emprestimos.store'
+    Route::post('/emprestimos', [LoanController::class, 'loanBook'])->name('emprestimos.store');
+    
+    // Rota POST para registrar a devolução de um livro emprestado
+    // Recebe o ID do empréstimo via parâmetro na URL
+    // Aponta para o método 'returnBook' do LoanController
+    // Nome da rota: 'emprestimos.return'
+    Route::post('/emprestimos/{id}/devolver', [LoanController::class, 'returnBook'])->name('emprestimos.return');
 });
+
+// Rota para a página de acervo
+Route::get('/acervo-layout', [UserController::class, 'acervo'])->name('layout.acervo');
+
+
