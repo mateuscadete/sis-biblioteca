@@ -51,7 +51,7 @@
                 <!-- Botão de envio -->
 
                 <a href="" class="logar">Entrar</a>
-                <a href="#" class="termos">Aceito os termos da biblioteca</a>
+               
                 <a href="/login" class="termos">Entrar como adiministrador </a>
 
 
