@@ -294,36 +294,22 @@ h3 {
 
 
 @media (max-width:1600px) {
+
     .titulo {
         font-size: 30px;
-        position: absolute;
         top: 35%;
         left: 15%;
-        color: white;
-        text-align: center;
     }
 
     main {
         top: 120%;
         left: 10%;
-        position: absolute;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
     }
 
     .container .card {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
         left: 5%;
-        position: relative;
         width: 350px;
         height: 300px;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
-        transition: .2s;
     }
 
     .containerbooks {
@@ -334,17 +320,13 @@ h3 {
         width: 90%;
         padding: 50px 76px;
         height: 90%;
-        position: absolute;
         top: 300%;
-        background-color: var(--cor4);
     }
 
     .feedbacks {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 25px;
         left: 2%;
-        position: absolute;
     }
 
     .feedback {
@@ -354,9 +336,7 @@ h3 {
     }
 
     .buttonsfeed {
-        display: flex;
         gap: 12px;
-        position: relative;
         top: 450px;
         left: -50%;
     }
@@ -371,37 +351,20 @@ h3 {
 @media (max-width:1300px) {
     .titulo {
         font-size: 30px;
-        position: absolute;
         top: 35%;
         left: 15%;
-        color: white;
-        text-align: center;
     }
 
     main {
         top: 100%;
         left: 10%;
-        position: absolute;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
     }
 
     .container .card {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
         left: -5%;
-        position: relative;
         width: 350px;
         height: 300px;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
-        transition: .2s;
     }
-
-
 
     .containerbooks {
         left: 5%;
@@ -411,19 +374,13 @@ h3 {
         width: 88%;
         padding: 40px 74px;
         height: 150%;
-        position: absolute;
         top: 400%;
-        background-color: var(--cor4);
     }
 
-
     .feedbacks {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 20px;
         left: 2%;
-        position: absolute;
-
     }
 
     .feedback {
@@ -433,9 +390,7 @@ h3 {
     }
 
     .buttonsfeed {
-        display: flex;
         gap: 12px;
-        position: relative;
         top: 475px;
         left: -50%;
     }
@@ -449,36 +404,22 @@ h3 {
 @media (max-width:1000px) {
     .titulo {
         font-size: 30px;
-        position: absolute;
         top: 35%;
         left: 15%;
-        color: white;
-        text-align: center;
     }
 
     main {
         top: 100%;
         left: 10%;
-        position: absolute;
         height: 100%;
-        display: flex;
-        flex-direction: column;
+
     }
 
     .container .card {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
         left: -5%;
-        position: relative;
         width: 350px;
         height: 300px;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
-        transition: .2s;
     }
-
 
     .containerbooks {
         left: 5%;
@@ -488,17 +429,13 @@ h3 {
         width: 86%;
         padding: 40px 76px;
         height: 150%;
-        position: absolute;
         top: 450%;
-        background-color: var(--cor4);
     }
 
     .feedbacks {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
         gap: 35px;
         left: 2%;
-        position: absolute;
     }
 
     .feedback {
@@ -508,9 +445,7 @@ h3 {
     }
 
     .buttonsfeed {
-        display: flex;
         gap: 12px;
-        position: relative;
         top: 50px;
         left: -5%;
     }
@@ -520,37 +455,22 @@ h3 {
 @media (max-width:800px) {
     .titulo {
         font-size: 30px;
-        position: absolute;
         top: 35%;
         left: 15%;
-        color: white;
-        text-align: center;
+
     }
 
     main {
         top: 100%;
         left: 10%;
-        position: absolute;
         height: 100%;
-        display: flex;
-        flex-direction: column;
     }
 
     .container .card {
-        display: flex;
-        justify-content: center;
-        align-items: flex-start;
         left: -3%;
-        position: relative;
         width: 350px;
         height: 300px;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
-        transition: .2s;
     }
-
-
 
     .containerbooks {
         left: 5%;
@@ -560,18 +480,13 @@ h3 {
         width: 92%;
         padding: 40px 76px;
         height: 220%;
-        position: absolute;
         top: 550%;
-        background-color: var(--cor4);
     }
 
     .feedbacks {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
         gap: 40px;
         left: 2%;
-        position: absolute;
-
     }
 
     .feedback {
@@ -581,9 +496,7 @@ h3 {
     }
 
     .buttonsfeed {
-        display: flex;
         gap: 12px;
-        position: relative;
         top: 100px;
         left: 2%;
     }
@@ -593,39 +506,26 @@ h3 {
 
 @media (max-width:600px) {
     .titulo {
-        font-family: var(--fonte0);
         font-size: 25px;
-        position: absolute;
         top: 45%;
         left: 15%;
-        color: white;
-        text-align: center;
     }
 
     .container .card {
         left: -3%;
-        position: relative;
         width: 300px;
         height: 300px;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
-        transition: .5s;
     }
 
     .container .card .caixaImg {
-        position: absolute;
         top: 20px;
         width: 250px;
         height: 170px;
-        border-radius: 12px;
-        overflow: hidden;
     }
 
     .container .card:hover .caixaImg {
         top: -100px;
         scale: .55;
-        box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
     }
 
     .container .card:hover .conteudo {
@@ -643,32 +543,23 @@ h3 {
         width: 92%;
         padding: 40px 76px;
         height: 250%;
-        position: absolute;
         top: 600%;
-        background-color: var(--cor4);
     }
 
     .feedbacks {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 35px;
         left: 2%;
-        position: absolute;
     }
 
     .feedback {
-        background-color: white;
         border-radius: 12px;
         padding: 30px;
-        position: relative;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-height: 450px;
     }
 
     .buttonsfeed {
-        display: flex;
         gap: 12px;
-        position: relative;
         top: 50px;
         left: -2%;
     }
@@ -682,41 +573,26 @@ h3 {
 
 @media (max-width:400px) {
     .titulo {
-
-        font-family: var(--fonte0);
         font-size: 25px;
-        position: absolute;
         top: 45%;
         left: 15%;
-        color: white;
-        text-align: center;
     }
 
     .container .card {
         left: -3%;
-        position: relative;
         width: 300px;
         height: 300px;
-        background-color: white;
-        border-radius: 20px;
-        box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
-        transition: .5s;
     }
 
     .container .card .caixaImg {
-        position: absolute;
         top: 20px;
         width: 250px;
         height: 170px;
-        border-radius: 12px;
-        overflow: hidden;
     }
 
     .container .card:hover .caixaImg {
         top: -100px;
         scale: .55;
-        box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-
     }
 
     .container .card:hover .conteudo {
@@ -734,17 +610,13 @@ h3 {
         width: 67%;
         padding: 40px 76px;
         height: 300%;
-        position: absolute;
         top: 500%;
-        background-color: var(--cor4);
     }
 
     .feedbacks {
-        display: grid;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
         gap: 35px;
         left: 1%;
-        position: absolute;
     }
 
     .feedback {
@@ -754,9 +626,7 @@ h3 {
     }
 
     .buttonsfeed {
-        display: flex;
         gap: 12px;
-        position: relative;
         top: 50px;
         left: 5%;
     }
