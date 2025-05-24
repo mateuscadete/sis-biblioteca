@@ -5,8 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Biblioteca Etec Zona Leste</title>
-
+    <link rel="manifest" href="{{ asset('manifest.json') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js')
+      .then(reg => console.log('SW registrado:', reg))
+      .catch(err => console.log('Erro ao registrar o SW:', err));
+  }
+</script>
+
 
 
 
@@ -180,6 +188,7 @@
             </div>
         </div>
     </section>
+    
 
 
 
