@@ -34,7 +34,8 @@
                 <label for="titulo" class="form_label">Título</label>
 
                 <div class="input_field">
-                    <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Nome do Livro" required>
+                <input class="form-control" type="text" name="tema" id="tema" placeholder="Ex: Tecnologia, Economia" required>
+
                 </div>
             </div>
 
@@ -49,7 +50,7 @@
             <div class="input_box">
                 <label for="editora" class="form_label">Editora</label>
                 <div class="input_field">
-                    <input class="form-control" type="text" name="editora" id="editora" placeholder="Ex: Arqueiro, Saraiva" required>
+                    <input class="form-control" type="text" name="edicao" id="edicao" placeholder="Ex: Arqueiro, Saraiva" required>
                 </div>
             </div>
 
@@ -67,6 +68,13 @@
                     <input class="form-control" type="text" name="autor" id="autor" placeholder="Nome do Autor(a)" required>
                 </div>
             </div>
+
+            <div class="input_box">
+    <label for="edicao" class="form_label">Edição</label>
+    <div class="input_field">
+        <input class="form-control" type="text" name="edicao" id="edicao" placeholder="Ex: 1ª edição" required>
+    </div>
+</div>
 
             <div class="input_box">
                 <label for="imagem" class="form_label">Imagem da capa:</label>

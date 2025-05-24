@@ -20,8 +20,8 @@ class Livro extends Model
     // Define os campos que podem ser preenchidos em massa (mass assignment)
     // Isso é uma medida de segurança para evitar que atributos indesejados sejam atribuídos automaticamente
     protected $fillable = [
-        'titulo', 'genero', 'editora', 'tema', 'autor', 'edicao',
-        'num_paginas', 'isbn', 'data', 'qtde', 'descricao', 'imagem'
+        'titulo', 'genero', 'editora', 'tema', 'autor', 'edicao','imagem',
+        'num_paginas', 'isbn', 'data', 'qtde', 'descricao', 
     ];
 
     // Define o relacionamento entre Livro e Loan (empréstimos)

@@ -17,12 +17,13 @@ class LivroController extends Controller
             'tema' => 'required|string|max:255',
             'autor' => 'required|string|max:255',
             'edicao' => 'required|string|max:255',
+            'imagem' => 'required|image|mimes:jpg,jpeg,png|max:2048',
             'num_paginas' => 'required|integer',  
             'isbn' => 'required|string|max:255',
             'qtde' => 'required|integer',
             'data' => 'required|date',  // Validação de data
             'descricao' => 'required|string|max:1000',
-            'imagem' => 'required|image|mimes:jpg,jpeg,png|max:2048',
+            
         ]);
  
         // Armazenar a imagem no storage/app/public/livros
@@ -38,12 +39,13 @@ $caminhoImagem = $request->file('imagem')->store('livros', 'public');
             'tema' => $request->tema,
             'autor' => $request->autor,
             'edicao' => $request->edicao,
+            'imagem' => $caminhoImagem,
             'num_paginas' => $request->num_paginas,
             'isbn' => $request->isbn,
             'data' => $request->data,
             'descricao' => $request->descricao,
             'qtde' => $request->qtde,
-            'imagem' => $caminhoImagem,
+            
         ]);
  
         // Redirecionar com uma mensagem de sucesso

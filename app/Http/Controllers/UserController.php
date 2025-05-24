@@ -117,7 +117,7 @@ class UserController extends Controller
         $livros = \App\Models\Livro::all();
 
         // Retorna a view onde a lista de livros será mostrada (exemplo: 'acervo')
-        return view('acervo', compact('livros'));
+        return view('layout.acervo', compact('livros'));
     }
 
 
