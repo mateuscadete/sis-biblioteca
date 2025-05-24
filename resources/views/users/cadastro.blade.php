@@ -23,7 +23,7 @@
         <div class="left">
             <h2>Cadastro</h2>
 
-            <form action="{{ route('user-store') }}" method="POST" class="row g-3">
+            <form action="{{ route('user-store') }}" method="POST" class="form">
                 @csrf
                 @method('POST')
 
@@ -55,7 +55,7 @@
 
                 <!-- Botão de envio -->
 
-                <button type="submit" class="cadastrar">Cadastrar</button>
+                <a href="#" class="cadastrar">Cadastrar</a>
 
             </form>
         </div>

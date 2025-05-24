@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@100..900&family=League+Spartan:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-@font-face {
-    font-family: 'Android';
-    src: url('fontes/idroid.otf') format('opentype');
-    font-weight: normal;
+*{
+    font-family: 'raleway', sans-serif;
 }
-
 
 :root {
     --cor0: rgb(51, 96, 90);
@@ -15,25 +12,20 @@
     --cor4: #e9e0d1;
     --cor5: #68462b;
     --cor6: #382414;
-    --fonte0: arial, verdana, helvetica, sans-serif;
-    --fonte1: 'bebas neue', cursive;
-    --fonte2: 'Android', cursive;
 }
 
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'raleway', sans-serif;
     background-color: #f5f5f5;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-
 }
 
 .container {
     position: absolute;
     left: 20%;
-
     display: flex;
     justify-content: center;
     top: 20%;
@@ -46,14 +38,13 @@ body {
 }
 
 .right {
-    flex: 1;
     background-color: var(--cor1);
     color: white;
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 40px;
 }
 
@@ -66,18 +57,24 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     margin-top: 10px;
+    font-weight: 600;
+}
+
+.logar:hover{
+    background-color: var(--cor0);
+    transform: scale(0.9);
 }
 
 .left {
+    display: flex;
     flex: 1;
     padding: 40px;
-    display: flex;
     flex-direction: column;
     justify-content: center;
-
+    
 }
 
-form {
+.form {
     display: flex;
     flex-direction: column;
 }
@@ -98,11 +95,18 @@ form {
     border-radius: 5px;
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    ;
+    padding: 10px;
+    justify-content: center;
     align-items: center;
     text-align: center;
-    width: 120px;
+    width: 100px;
+font-weight: 600;
+transition: all 0.5s;
+}
+
+.cadastrar:hover{
+    background-color: var(--cor0);
+    transform: scale(0.9);
 }
 
 
@@ -115,11 +119,11 @@ form {
 @media (max-width:1500px){
     .container {
     position: absolute;
-    left: 20%;
+    left: 25%;
     display: flex;
     justify-content: center;
     top: 20%;
-    width: 1000px;
+    width: 800px;
     height: 500px;
     background: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -135,7 +139,6 @@ form {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
     padding: 40px;
 }
 

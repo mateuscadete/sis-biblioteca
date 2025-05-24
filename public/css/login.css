@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 *{
     font-family: 'raleway', sans-serif;
 }
@@ -13,7 +12,6 @@
     --cor4: #e9e0d1;
     --cor5: #68462b;
     --cor6: #382414;
-   
 }
 
 body {
@@ -73,28 +71,25 @@ body {
     padding: 40px;
     flex-direction: column;
     justify-content: center;
+    color: var(--cor1);
 }
 
-.login {
+.form {
     display: flex;
     flex-direction: column;
 }
 
-.email {
-    margin-bottom: 25px;
+.email,
+.senha {
     margin-top: 10px;
+    margin-bottom: 15px;
     padding: 10px;
     border: 1px solid var(--cor2);
     border-radius: 5px;
+    font-weight: 500;
+    color: var(--cor1);
 }
 
-.senha {
-    margin-bottom: 25px;
-    margin-top: 10px;
-    padding: 10px;
-    border: 1px solid var(--cor2);
-    border-radius: 5px;
-}
 
 .logar {
     background-color: var(--cor1);
@@ -106,8 +101,8 @@ body {
     align-items: center;
     text-align: center;
     width: 100px;
-font-weight: 600;
-transition: all 0.5s;
+    font-weight: 600;
+    transition: all 0.5s;
 
 }
 
@@ -162,16 +157,8 @@ transition: all 0.5s;
         padding: 40px;
     }
     
-    .cadastrar {
-        background: transparent;
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px 20px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
+    
+    
     
     .right {
         display: flex;
@@ -181,49 +168,10 @@ transition: all 0.5s;
         justify-content: center;
     }
     
-    .login {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .email {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .senha {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .logar {
-        background-color: var(--cor1);
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-        align-items: center;
-        text-align: center;
-        width: 100px;
-    
-    }
-    
-    .termos {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        color: var(--cor1);
-    }
+}
     
 
-}
+
 
 @media (max-width:1200px) {
   
@@ -253,16 +201,7 @@ transition: all 0.5s;
         padding: 40px;
     }
     
-    .cadastrar {
-        background: transparent;
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px 20px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
+    
     
     .right {
         display: flex;
@@ -272,46 +211,7 @@ transition: all 0.5s;
         justify-content: center;
     }
     
-    .login {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .email {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .senha {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .logar {
-        background-color: var(--cor1);
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-        align-items: center;
-        text-align: center;
-        width: 100px;
-    
-    }
-    
-    .termos {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        color: var(--cor1);
-    }
+ 
     
 
 }
@@ -344,16 +244,6 @@ transition: all 0.5s;
         padding: 40px;
     }
     
-    .cadastrar {
-        background: transparent;
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px 20px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
     
     .right {
         display: flex;
@@ -363,48 +253,6 @@ transition: all 0.5s;
         justify-content: center;
     }
     
-    .login {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .email {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .senha {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .logar {
-        background-color: var(--cor1);
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-        align-items: center;
-        text-align: center;
-        width: 100px;
-    
-    }
-    
-    .termos {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        color: var(--cor1);
-    }
-    
-
 }
 
 
@@ -434,18 +282,7 @@ transition: all 0.5s;
         justify-content: center;
         align-items: center;
         padding: 40px;
-    }
-    
-    .cadastrar {
-        background: transparent;
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px 20px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
+    }  
     
     .right {
         display: flex;
@@ -455,50 +292,7 @@ transition: all 0.5s;
         justify-content: center;
     }
     
-    .login {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .email {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .senha {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .logar {
-        background-color: var(--cor1);
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-        align-items: center;
-        text-align: center;
-        width: 100px;
-    
-    }
-    
-    .termos {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        color: var(--cor1);
-    }
-    
-
 }
-    
 
 
 @media (max-width:630px){
@@ -540,64 +334,10 @@ transition: all 0.5s;
         left: 0;
     }
     
-    .cadastrar {
-        background: transparent;
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px 20px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
-    
-    
-    .login {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .email {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .senha {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .logar {
-        background-color: var(--cor1);
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-        align-items: center;
-        text-align: center;
-        width: 100px;
-    
-    }
-    
-    .termos {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        color: var(--cor1);
-    }
-    
-
 }
 
 
-@media (max-width:200px){
+@media (max-width:300px){
     
 
     .container {
@@ -625,16 +365,7 @@ transition: all 0.5s;
         padding: 40px;
     }
     
-    .cadastrar {
-        background: transparent;
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px 20px;
-        cursor: pointer;
-        margin-top: 10px;
-    }
+    
     
     .right {
         display: flex;
@@ -644,46 +375,6 @@ transition: all 0.5s;
         justify-content: center;
     }
     
-    .login {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .email {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .senha {
-        margin-bottom: 25px;
-        margin-top: 10px;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-    
-    .logar {
-        background-color: var(--cor1);
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-        align-items: center;
-        text-align: center;
-        width: 100px;
-    
-    }
-    
-    .termos {
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        color: var(--cor1);
-    }
-    
+   
 
 }
