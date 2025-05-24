@@ -8,12 +8,12 @@
     <link rel="manifest" href="{{ asset('manifest.json') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js')
-      .then(reg => console.log('SW registrado:', reg))
-      .catch(err => console.log('Erro ao registrar o SW:', err));
-  }
-</script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW registrado:', reg))
+                .catch(err => console.log('Erro ao registrar o SW:', err));
+        }
+    </script>
 
 
 
@@ -44,7 +44,7 @@
         <section class="assuntos">
 
             <h2>Assunto</h2>
-            <h3>Acesse algum assunto didático</h3>
+            <h3>Acesse livros para os seus estudos </h3>
 
             <div class="container">
 
@@ -188,7 +188,7 @@
             </div>
         </div>
     </section>
-    
+
 
 
 

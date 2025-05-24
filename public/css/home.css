@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
 :root {
     --cor0: rgb(51, 96, 90);
     --cor1: rgb(26, 61, 57);
@@ -14,18 +13,18 @@
 
 body {
     margin: 0;
-    font-family: Raleway, sans-serif;
-
+    font-family: 'Raleway', sans-serif;
+    display: flex;
 }
-
 
 header {
     width: 100%;
     height: 100%;
     display: flex;
-
+    background-size: cover;
+    background-position: center;
+    position: absolute;
 }
-
 
 .forms {
     display: flex;
@@ -41,6 +40,10 @@ header {
     font-weight: bold;
 }
 
+.forms a:hover {
+    color: var(--cor5);
+}
+
 .titulo {
     font-size: 30px;
     position: absolute;
@@ -49,7 +52,6 @@ header {
     color: white;
     text-align: center;
 }
-
 
 main {
     top: 120%;
@@ -60,16 +62,6 @@ main {
     flex-direction: column;
 }
 
-
-
-
-
-
-
-
-
-
-
 .assuntos {
     margin-top: 100px;
 }
@@ -78,9 +70,7 @@ main {
 h3 {
     color: var(--cor6);
     font-size: 22px;
-
 }
-
 
 .container {
     display: flex;
@@ -89,8 +79,6 @@ h3 {
     gap: 100px 50px;
     flex-wrap: wrap;
     margin-top: 100px;
-
-
 }
 
 .container .card {
@@ -118,7 +106,6 @@ h3 {
     height: 220px;
     border-radius: 12px;
     overflow: hidden;
-
 }
 
 .container .card .caixaImg img {
@@ -135,7 +122,6 @@ h3 {
     top: -100px;
     scale: .75;
     box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-
 }
 
 .container .card .conteudo {
@@ -151,7 +137,6 @@ h3 {
 .container .card:hover .conteudo {
     top: 100px;
     height: 250px;
-
 }
 
 .container .card .conteudo h2 {
@@ -176,16 +161,6 @@ h3 {
     border-radius: 8px;
 }
 
-
-
-
-
-
-
-
-
-
-
 .livros {
     margin-top: 100px;
 
@@ -209,7 +184,6 @@ h3 {
 }
 
 
-
 .book {
     background: white;
     color: black;
@@ -225,16 +199,6 @@ h3 {
     height: 150px;
 }
 
-
-
-
-
-
-
-
-
-
-
 .containerfeed {
     width: 92%;
     padding: 40px 76px;
@@ -242,12 +206,7 @@ h3 {
     position: absolute;
     top: 290%;
     background-color: var(--cor4);
-
-
-
 }
-
-
 
 .title {
     display: flex;
@@ -255,7 +214,6 @@ h3 {
     gap: 15px;
     margin-bottom: 40px;
 }
-
 
 .title h2 {
     font-size: 30px;
@@ -270,7 +228,6 @@ h3 {
     gap: 35px;
     left: 8%;
     position: absolute;
-
 }
 
 .feedback {
@@ -281,7 +238,6 @@ h3 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     min-height: 300px;
 }
-
 
 .feedback::after {
     content: '';
@@ -338,35 +294,6 @@ h3 {
 
 
 @media (max-width:1600px) {
-    body {
-        margin: 0;
-        font-family: Raleway, sans-serif;
-
-    }
-
-
-    header {
-        width: 100%;
-        height: 100%;
-        display: flex;
-
-    }
-
-
-    .forms {
-        display: flex;
-        padding-top: 10px;
-        position: absolute;
-        gap: 15px;
-        list-style: none;
-    }
-
-    .forms a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-    }
-
     .titulo {
         font-size: 30px;
         position: absolute;
@@ -376,7 +303,6 @@ h3 {
         text-align: center;
     }
 
-
     main {
         top: 120%;
         left: 10%;
@@ -384,39 +310,6 @@ h3 {
         height: 100%;
         display: flex;
         flex-direction: column;
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .assuntos {
-        margin-top: 100px;
-    }
-
-    .assuntos h2,
-    h3 {
-        color: var(--cor6);
-        font-size: 22px;
-
-    }
-
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 100px 50px;
-        flex-wrap: wrap;
-        margin-top: 100px;
-
-
     }
 
     .container .card {
@@ -433,133 +326,9 @@ h3 {
         transition: .2s;
     }
 
-    .container .card:hover {
-        height: 400px;
-    }
-
-    .container .card .caixaImg {
-        position: absolute;
-        top: 20px;
-        width: 300px;
-        height: 220px;
-        border-radius: 12px;
-        overflow: hidden;
-
-    }
-
-    .container .card .caixaImg img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: .2s;
-    }
-
-    .container .card:hover .caixaImg {
-        top: -100px;
-        scale: .75;
-        box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-
-    }
-
-    .container .card .conteudo {
-        position: absolute;
-        top: 200px;
-        width: 100%;
-        height: 35px;
-        text-align: center;
-        padding: 0 20px;
-        overflow: hidden;
-    }
-
-    .container .card:hover .conteudo {
-        top: 100px;
-        height: 250px;
-
-    }
-
-    .container .card .conteudo h2 {
-        font-size: 1.5;
-        font-weight: 700;
-        line-height: 3rem;
-        color: var(--color);
-    }
-
-    .container .card .conteudo p {
-        color: black;
-    }
-
-    .container .card .conteudo a {
-        display: inline-block;
-        margin-top: 12px;
-        background-color: var(--cor0);
-        text-decoration: none;
-        padding: 10px 20px;
-        color: white;
-        font-weight: 500;
-        border-radius: 8px;
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .livros {
-        margin-top: 100px;
-
-    }
-
     .containerbooks {
-        margin-top: 100px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 100px;
-        justify-content: center;
-        overflow-x: hidden;
         left: 5%;
-        position: relative;
-        width: 100%;
     }
-
-    .livros h2,
-    h3 {
-        color: var(--cor6);
-    }
-
-
-
-    .book {
-        background: white;
-        color: black;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 200px;
-    }
-
-    .book img {
-        width: 100px;
-        height: 150px;
-    }
-
-
-
-
-
-
-
-
-
-
 
     .containerfeed {
         width: 90%;
@@ -568,26 +337,6 @@ h3 {
         position: absolute;
         top: 300%;
         background-color: var(--cor4);
-
-
-
-    }
-
-
-
-    .title {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 40px;
-    }
-
-
-    .title h2 {
-        font-size: 30px;
-        color: var(--cor6);
-        margin: 0;
-        line-height: 1.7;
     }
 
     .feedbacks {
@@ -596,47 +345,12 @@ h3 {
         gap: 25px;
         left: 2%;
         position: absolute;
-
     }
 
     .feedback {
-        background-color: white;
         border-radius: 12px;
         padding: 30px;
-        position: relative;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-height: 350px;
-    }
-
-
-    .feedback::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 40px;
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid white;
-    }
-
-    .user {
-        display: flex;
-        align-items: center;
-        margin-top: 25px;
-        gap: 12px;
-    }
-
-    .user img {
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-    }
-
-    .user .info {
-        display: flex;
-        flex-direction: column;
     }
 
     .buttonsfeed {
@@ -649,56 +363,12 @@ h3 {
 
     .buttonsfeed button {
         padding: 12px 18px;
-        background-color: white;
-        border: none;
-        border-radius: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: 0.2s;
     }
-
-    .buttonsfeed button:hover {
-        background-color: #f1f1f1;
-    }
-
 }
 
 
 
 @media (max-width:1300px) {
-    body {
-        margin: 0;
-        font-family: Raleway, sans-serif;
-
-    }
-
-
-    header {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-
-    }
-
-
-    .forms {
-        display: flex;
-        padding-top: 10px;
-        position: absolute;
-        gap: 15px;
-        list-style: none;
-    }
-
-    .forms a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-    }
-
     .titulo {
         font-size: 30px;
         position: absolute;
@@ -708,7 +378,6 @@ h3 {
         text-align: center;
     }
 
-
     main {
         top: 100%;
         left: 10%;
@@ -716,39 +385,6 @@ h3 {
         height: 100%;
         display: flex;
         flex-direction: column;
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .assuntos {
-        margin-top: 100px;
-    }
-
-    .assuntos h2,
-    h3 {
-        color: var(--cor6);
-        font-size: 22px;
-
-    }
-
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 100px 50px;
-        flex-wrap: wrap;
-        margin-top: 100px;
-
-
     }
 
     .container .card {
@@ -765,133 +401,11 @@ h3 {
         transition: .2s;
     }
 
-    .container .card:hover {
-        height: 400px;
-    }
 
-    .container .card .caixaImg {
-        position: absolute;
-        top: 20px;
-        width: 300px;
-        height: 220px;
-        border-radius: 12px;
-        overflow: hidden;
-
-    }
-
-    .container .card .caixaImg img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: .2s;
-    }
-
-    .container .card:hover .caixaImg {
-        top: -100px;
-        scale: .75;
-        box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-
-    }
-
-    .container .card .conteudo {
-        position: absolute;
-        top: 200px;
-        width: 100%;
-        height: 35px;
-        text-align: center;
-        padding: 0 20px;
-        overflow: hidden;
-    }
-
-    .container .card:hover .conteudo {
-        top: 100px;
-        height: 250px;
-
-    }
-
-    .container .card .conteudo h2 {
-        font-size: 1.5;
-        font-weight: 700;
-        line-height: 3rem;
-        color: var(--color);
-    }
-
-    .container .card .conteudo p {
-        color: black;
-    }
-
-    .container .card .conteudo a {
-        display: inline-block;
-        margin-top: 12px;
-        background-color: var(--cor0);
-        text-decoration: none;
-        padding: 10px 20px;
-        color: white;
-        font-weight: 500;
-        border-radius: 8px;
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .livros {
-        margin-top: 100px;
-
-    }
 
     .containerbooks {
-        margin-top: 100px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 100px;
-        justify-content: center;
-        overflow-x: hidden;
         left: 5%;
-        position: relative;
-        width: 100%;
     }
-
-    .livros h2,
-    h3 {
-        color: var(--cor6);
-    }
-
-
-
-    .book {
-        background: white;
-        color: black;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 200px;
-    }
-
-    .book img {
-        width: 100px;
-        height: 150px;
-    }
-
-
-
-
-
-
-
-
-
-
 
     .containerfeed {
         width: 88%;
@@ -900,27 +414,8 @@ h3 {
         position: absolute;
         top: 400%;
         background-color: var(--cor4);
-
-
-
     }
 
-
-
-    .title {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 40px;
-    }
-
-
-    .title h2 {
-        font-size: 30px;
-        color: var(--cor6);
-        margin: 0;
-        line-height: 1.7;
-    }
 
     .feedbacks {
         display: grid;
@@ -932,43 +427,9 @@ h3 {
     }
 
     .feedback {
-        background-color: white;
         border-radius: 12px;
         padding: 20px;
-        position: relative;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-height: 300px;
-    }
-
-
-    .feedback::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 40px;
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid white;
-    }
-
-    .user {
-        display: flex;
-        align-items: center;
-        margin-top: 25px;
-        gap: 12px;
-    }
-
-    .user img {
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-    }
-
-    .user .info {
-        display: flex;
-        flex-direction: column;
     }
 
     .buttonsfeed {
@@ -981,54 +442,11 @@ h3 {
 
     .buttonsfeed button {
         padding: 10px 15px;
-        background-color: white;
-        border: none;
-        border-radius: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: 0.2s;
-    }
 
-    .buttonsfeed button:hover {
-        background-color: #f1f1f1;
     }
-
 }
 
 @media (max-width:1000px) {
-    body {
-        margin: 0;
-        font-family: Raleway, sans-serif;
-
-    }
-
-
-    header {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-
-    }
-
-
-    .forms {
-        display: flex;
-        padding-top: 10px;
-        position: absolute;
-        gap: 15px;
-        list-style: none;
-    }
-
-    .forms a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-    }
-
     .titulo {
         font-size: 30px;
         position: absolute;
@@ -1038,7 +456,6 @@ h3 {
         text-align: center;
     }
 
-
     main {
         top: 100%;
         left: 10%;
@@ -1046,36 +463,6 @@ h3 {
         height: 100%;
         display: flex;
         flex-direction: column;
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .assuntos {
-        margin-top: 100px;
-    }
-
-    .assuntos h2,
-    h3 {
-        color: var(--cor6);
-        font-size: 22px;
-    }
-
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 100px 50px;
-        flex-wrap: wrap;
-        margin-top: 100px;
     }
 
     .container .card {
@@ -1092,133 +479,10 @@ h3 {
         transition: .2s;
     }
 
-    .container .card:hover {
-        height: 400px;
-    }
-
-    .container .card .caixaImg {
-        position: absolute;
-        top: 20px;
-        width: 300px;
-        height: 220px;
-        border-radius: 12px;
-        overflow: hidden;
-
-    }
-
-    .container .card .caixaImg img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: .2s;
-    }
-
-    .container .card:hover .caixaImg {
-        top: -100px;
-        scale: .75;
-        box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-
-    }
-
-    .container .card .conteudo {
-        position: absolute;
-        top: 200px;
-        width: 100%;
-        height: 35px;
-        text-align: center;
-        padding: 0 20px;
-        overflow: hidden;
-    }
-
-    .container .card:hover .conteudo {
-        top: 100px;
-        height: 250px;
-
-    }
-
-    .container .card .conteudo h2 {
-        font-size: 1.5;
-        font-weight: 700;
-        line-height: 3rem;
-        color: var(--color);
-    }
-
-    .container .card .conteudo p {
-        color: black;
-    }
-
-    .container .card .conteudo a {
-        display: inline-block;
-        margin-top: 12px;
-        background-color: var(--cor0);
-        text-decoration: none;
-        padding: 10px 20px;
-        color: white;
-        font-weight: 500;
-        border-radius: 8px;
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .livros {
-        margin-top: 100px;
-
-    }
 
     .containerbooks {
-        margin-top: 100px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 100px;
-        justify-content: center;
-        overflow-x: hidden;
         left: 5%;
-        position: relative;
-        width: 100%;
     }
-
-    .livros h2,
-    h3 {
-        color: var(--cor6);
-    }
-
-
-
-    .book {
-        background: white;
-        color: black;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 200px;
-    }
-
-    .book img {
-        width: 100px;
-        height: 150px;
-    }
-
-
-
-
-
-
-
-
-
-
 
     .containerfeed {
         width: 86%;
@@ -1227,26 +491,6 @@ h3 {
         position: absolute;
         top: 450%;
         background-color: var(--cor4);
-
-
-
-    }
-
-
-
-    .title {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 40px;
-    }
-
-
-    .title h2 {
-        font-size: 30px;
-        color: var(--cor6);
-        margin: 0;
-        line-height: 1.7;
     }
 
     .feedbacks {
@@ -1255,47 +499,12 @@ h3 {
         gap: 35px;
         left: 2%;
         position: absolute;
-
     }
 
     .feedback {
-        background-color: white;
         border-radius: 12px;
         padding: 20px;
-        position: relative;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-height: 450px;
-    }
-
-
-    .feedback::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 40px;
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid white;
-    }
-
-    .user {
-        display: flex;
-        align-items: center;
-        margin-top: 25px;
-        gap: 12px;
-    }
-
-    .user img {
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-    }
-
-    .user .info {
-        display: flex;
-        flex-direction: column;
     }
 
     .buttonsfeed {
@@ -1305,58 +514,10 @@ h3 {
         top: 50px;
         left: -5%;
     }
-
-    .buttonsfeed button {
-        padding: 12px 18px;
-        background-color: white;
-        border: none;
-        border-radius: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: 0.2s;
-    }
-
-    .buttonsfeed button:hover {
-        background-color: #f1f1f1;
-    }
-
 }
 
 
 @media (max-width:800px) {
-    body {
-        margin: 0;
-        font-family: Raleway, sans-serif;
-
-    }
-
-
-    header {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-
-    }
-
-
-    .forms {
-        display: flex;
-        padding-top: 10px;
-        position: absolute;
-        gap: 15px;
-        list-style: none;
-    }
-
-    .forms a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-    }
-
     .titulo {
         font-size: 30px;
         position: absolute;
@@ -1366,7 +527,6 @@ h3 {
         text-align: center;
     }
 
-
     main {
         top: 100%;
         left: 10%;
@@ -1374,39 +534,6 @@ h3 {
         height: 100%;
         display: flex;
         flex-direction: column;
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .assuntos {
-        margin-top: 100px;
-    }
-
-    .assuntos h2,
-    h3 {
-        color: var(--cor6);
-        font-size: 22px;
-
-    }
-
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 100px 50px;
-        flex-wrap: wrap;
-        margin-top: 100px;
-
-
     }
 
     .container .card {
@@ -1423,133 +550,11 @@ h3 {
         transition: .2s;
     }
 
-    .container .card:hover {
-        height: 400px;
-    }
 
-    .container .card .caixaImg {
-        position: absolute;
-        top: 20px;
-        width: 300px;
-        height: 220px;
-        border-radius: 12px;
-        overflow: hidden;
-
-    }
-
-    .container .card .caixaImg img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: .2s;
-    }
-
-    .container .card:hover .caixaImg {
-        top: -100px;
-        scale: .75;
-        box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-
-    }
-
-    .container .card .conteudo {
-        position: absolute;
-        top: 200px;
-        width: 100%;
-        height: 35px;
-        text-align: center;
-        padding: 0 20px;
-        overflow: hidden;
-    }
-
-    .container .card:hover .conteudo {
-        top: 100px;
-        height: 250px;
-
-    }
-
-    .container .card .conteudo h2 {
-        font-size: 1.5;
-        font-weight: 700;
-        line-height: 3rem;
-        color: var(--color);
-    }
-
-    .container .card .conteudo p {
-        color: black;
-    }
-
-    .container .card .conteudo a {
-        display: inline-block;
-        margin-top: 12px;
-        background-color: var(--cor0);
-        text-decoration: none;
-        padding: 10px 20px;
-        color: white;
-        font-weight: 500;
-        border-radius: 8px;
-    }
-
-
-
-
-
-
-
-
-
-
-
-    .livros {
-        margin-top: 100px;
-
-    }
 
     .containerbooks {
-        margin-top: 100px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 100px;
-        justify-content: center;
-        overflow-x: hidden;
         left: 5%;
-        position: relative;
-        width: 100%;
     }
-
-    .livros h2,
-    h3 {
-        color: var(--cor6);
-    }
-
-
-
-    .book {
-        background: white;
-        color: black;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 200px;
-    }
-
-    .book img {
-        width: 100px;
-        height: 150px;
-    }
-
-
-
-
-
-
-
-
-
-
 
     .containerfeed {
         width: 92%;
@@ -1558,26 +563,6 @@ h3 {
         position: absolute;
         top: 550%;
         background-color: var(--cor4);
-
-
-
-    }
-
-
-
-    .title {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 40px;
-    }
-
-
-    .title h2 {
-        font-size: 30px;
-        color: var(--cor6);
-        margin: 0;
-        line-height: 1.7;
     }
 
     .feedbacks {
@@ -1590,44 +575,9 @@ h3 {
     }
 
     .feedback {
-        background-color: white;
         border-radius: 12px;
-        padding: 30px;
-        position: relative;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 15px;
         min-height: 400px;
-
-    }
-
-
-    .feedback::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 40px;
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid white;
-    }
-
-    .user {
-        display: flex;
-        align-items: center;
-        margin-top: 25px;
-        gap: 12px;
-    }
-
-    .user img {
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-    }
-
-    .user .info {
-        display: flex;
-        flex-direction: column;
     }
 
     .buttonsfeed {
@@ -1638,59 +588,11 @@ h3 {
         left: 2%;
     }
 
-    .buttonsfeed button {
-        padding: 12px 18px;
-        background-color: white;
-        border: none;
-        border-radius: 10px;
-        font-size: 20px;
-        cursor: pointer;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: 0.2s;
-    }
-
-    .buttonsfeed button:hover {
-        background-color: #f1f1f1;
-    }
-
 }
 
 
-
-
 @media (max-width:600px) {
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    header {
-        width: 100%;
-        height: 100%;
-
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-    }
-
-    .forms {
-        padding-top: 10px;
-        display: flex;
-        gap: 15px;
-        list-style: none;
-    }
-
-    .forms a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-    }
-
-
-
-
     .titulo {
-
         font-family: var(--fonte0);
         font-size: 25px;
         position: absolute;
@@ -1698,26 +600,6 @@ h3 {
         left: 15%;
         color: white;
         text-align: center;
-    }
-
-
-    main {
-        top: 100%;
-        left: 10%;
-        position: absolute;
-    }
-
-
-
-
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 100px 50px;
-        flex-wrap: wrap;
-
     }
 
     .container .card {
@@ -1731,10 +613,6 @@ h3 {
         transition: .5s;
     }
 
-    .container .card:hover {
-        height: 400px;
-    }
-
     .container .card .caixaImg {
         position: absolute;
         top: 20px;
@@ -1744,31 +622,10 @@ h3 {
         overflow: hidden;
     }
 
-    .container .card .caixaImg img {
-        position: absolute;
-        top: 10px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-    }
-
     .container .card:hover .caixaImg {
         top: -100px;
         scale: .55;
         box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-
-    }
-
-    .container .card .conteudo {
-        position: absolute;
-        top: 150px;
-        width: 100%;
-        height: 35px;
-        text-align: center;
-        padding: 0 20px;
-        overflow: hidden;
     }
 
     .container .card:hover .conteudo {
@@ -1776,71 +633,11 @@ h3 {
         height: 250px;
         font-size: 1.2;
         padding: 0px 100px;
-
     }
-
-    .container .card .conteudo h2 {
-        font-size: 1.5;
-        font-weight: 700;
-        line-height: 3rem;
-        color: var(--color);
-    }
-
-    .container .card .conteudo p {
-        color: black;
-    }
-
-    .container .card .conteudo a {
-        display: inline-block;
-        margin-top: 12px;
-        background-color: var(--cor0);
-        text-decoration: none;
-        padding: 10px 20px;
-        color: white;
-        font-weight: 500;
-        border-radius: 8px;
-    }
-
-
-
-
-
-
 
     .containerbooks {
-
-        display: flex;
-        flex-wrap: wrap;
-        gap: 100px;
-        justify-content: center;
-        overflow-x: hidden;
         left: 5%;
-        position: relative;
-        width: 100%;
     }
-
-    .livros h2,
-    h3 {
-        color: rgb(70, 44, 24);
-    }
-
-
-
-    .book {
-        background: white;
-        color: black;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 200px;
-    }
-
-    .book img {
-        width: 100px;
-        height: 150px;
-    }
-
 
     .containerfeed {
         width: 92%;
@@ -1849,26 +646,6 @@ h3 {
         position: absolute;
         top: 600%;
         background-color: var(--cor4);
-
-
-
-    }
-
-
-
-    .title {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 40px;
-    }
-
-
-    .title h2 {
-        font-size: 30px;
-        color: var(--cor6);
-        margin: 0;
-        line-height: 1.7;
     }
 
     .feedbacks {
@@ -1877,7 +654,6 @@ h3 {
         gap: 35px;
         left: 2%;
         position: absolute;
-
     }
 
     .feedback {
@@ -1887,37 +663,6 @@ h3 {
         position: relative;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-height: 450px;
-    }
-
-
-    .feedback::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 40px;
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid white;
-    }
-
-    .user {
-        display: flex;
-        align-items: center;
-        margin-top: 25px;
-        gap: 12px;
-    }
-
-    .user img {
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-    }
-
-    .user .info {
-        display: flex;
-        flex-direction: column;
     }
 
     .buttonsfeed {
@@ -1930,53 +675,12 @@ h3 {
 
     .buttonsfeed button {
         padding: 12px 18px;
-        background-color: white;
-        border: none;
-        border-radius: 10px;
         font-size: 20px;
-        cursor: pointer;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: 0.2s;
     }
-
-    .buttonsfeed button:hover {
-        background-color: #f1f1f1;
-    }
-
 }
 
 
 @media (max-width:400px) {
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-
-    header {
-        width: 100%;
-        height: 100%;
-
-        background-size: cover;
-        background-position: center;
-        position: absolute;
-    }
-
-    .forms {
-        padding-top: 10px;
-        display: flex;
-        gap: 15px;
-        list-style: none;
-    }
-
-    .forms a {
-        text-decoration: none;
-        color: rgb(255, 255, 255);
-        font-weight: bold;
-    }
-
-
-
-
     .titulo {
 
         font-family: var(--fonte0);
@@ -1986,26 +690,6 @@ h3 {
         left: 15%;
         color: white;
         text-align: center;
-    }
-
-
-    main {
-        top: 100%;
-        left: 10%;
-        position: absolute;
-    }
-
-
-
-
-
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 100px 50px;
-        flex-wrap: wrap;
-
     }
 
     .container .card {
@@ -2019,10 +703,6 @@ h3 {
         transition: .5s;
     }
 
-    .container .card:hover {
-        height: 400px;
-    }
-
     .container .card .caixaImg {
         position: absolute;
         top: 20px;
@@ -2032,16 +712,6 @@ h3 {
         overflow: hidden;
     }
 
-    .container .card .caixaImg img {
-        position: absolute;
-        top: 10px;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-
-    }
-
     .container .card:hover .caixaImg {
         top: -100px;
         scale: .55;
@@ -2049,86 +719,16 @@ h3 {
 
     }
 
-    .container .card .conteudo {
-        position: absolute;
-        top: 150px;
-        width: 100%;
-        height: 35px;
-        text-align: center;
-        padding: 0 20px;
-        overflow: hidden;
-    }
-
     .container .card:hover .conteudo {
         top: 110px;
         height: 250px;
         font-size: 1.2;
         padding: 0px 100px;
-
     }
-
-    .container .card .conteudo h2 {
-        font-size: 1.5;
-        font-weight: 700;
-        line-height: 3rem;
-        color: var(--color);
-    }
-
-    .container .card .conteudo p {
-        color: black;
-    }
-
-    .container .card .conteudo a {
-        display: inline-block;
-        margin-top: 12px;
-        background-color: var(--cor0);
-        text-decoration: none;
-        padding: 10px 20px;
-        color: white;
-        font-weight: 500;
-        border-radius: 8px;
-    }
-
-
-
-
-
-
 
     .containerbooks {
-
-        display: flex;
-        flex-wrap: wrap;
-        gap: 100px;
-        justify-content: center;
-        overflow-x: hidden;
         left: 5%;
-        position: relative;
-        width: 100%;
     }
-
-    .livros h2,
-    h3 {
-        color: rgb(70, 44, 24);
-    }
-
-
-
-    .book {
-        background: white;
-        color: black;
-        padding: 15px;
-        border-radius: 5px;
-        box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        width: 200px;
-    }
-
-    .book img {
-        width: 100px;
-        height: 150px;
-    }
-
 
     .containerfeed {
         width: 67%;
@@ -2137,26 +737,6 @@ h3 {
         position: absolute;
         top: 500%;
         background-color: var(--cor4);
-
-
-
-    }
-
-
-
-    .title {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        margin-bottom: 40px;
-    }
-
-
-    .title h2 {
-        font-size: 30px;
-        color: var(--cor6);
-        margin: 0;
-        line-height: 1.7;
     }
 
     .feedbacks {
@@ -2165,47 +745,12 @@ h3 {
         gap: 35px;
         left: 1%;
         position: absolute;
-
     }
 
     .feedback {
-        background-color: white;
         border-radius: 12px;
         padding: 30px;
-        position: relative;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         min-height: 350px;
-    }
-
-
-    .feedback::after {
-        content: '';
-        position: absolute;
-        bottom: -10px;
-        left: 40px;
-        width: 0;
-        height: 0;
-        border-left: 10px solid transparent;
-        border-right: 10px solid transparent;
-        border-top: 10px solid white;
-    }
-
-    .user {
-        display: flex;
-        align-items: center;
-        margin-top: 25px;
-        gap: 12px;
-    }
-
-    .user img {
-        width: 52px;
-        height: 52px;
-        border-radius: 50%;
-    }
-
-    .user .info {
-        display: flex;
-        flex-direction: column;
     }
 
     .buttonsfeed {
@@ -2218,17 +763,6 @@ h3 {
 
     .buttonsfeed button {
         padding: 12px 18px;
-        background-color: white;
-        border: none;
-        border-radius: 10px;
         font-size: 20px;
-        cursor: pointer;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        transition: 0.2s;
     }
-
-    .buttonsfeed button:hover {
-        background-color: #f1f1f1;
-    }
-
 }
