@@ -48,7 +48,7 @@
 
             <div class="container">
 
-                <div class="card" style="color:var(--cor0)">
+                <div class="card">
                     <div class="caixaImg">
                         <img src="{{url('imagens/contabilidade.jpg') }}">
                     </div>
@@ -60,7 +60,7 @@
 
                 </div>
 
-                <div class="card" style="color:#009688;">
+                <div class="card">
                     <div class="caixaImg">
                         <img src="{{url('imagens/tecnologia.jpg')}}">
                     </div>
@@ -73,7 +73,7 @@
 
                 </div>
 
-                <div class="card" style="color:var(--cor1)">
+                <div class="card">
                     <div class="caixaImg">
                         <img src="{{ url('imagens/natureza.jpg')}}">
                     </div>
