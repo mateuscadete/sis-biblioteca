@@ -102,16 +102,18 @@
 
             <div class="containerbooks">
                 <div class="book">
-                    <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788536500317.154.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
+                    <img src="https://m.media-amazon.com/images/I/316Rn0ogOBL._SY445_SX342_.jpg"
                         alt="Livro 1">
-                    <h4>PHP 5: Conceitos e integração com banco de dados</h4>
-                    <p>Autor: Wallace Soares</p>
+                    <h4>PHP&MySql: Desenvolvimento Web no lado do servidor</h4>
+                    <p>Autor: Jon Duckett</p>
+                    <a href="#">Ver Detalhes</a>
 
                 </div>
                 <div class="book">
                     <img src="https://www.jurua.com.br/images/prod/s/22/22246.jpg?ts=20201205" alt="Livro 2">
-                    <h4>Contabilidade Geral</h4>
+                    <h4>Contabilidade Geral:Noções do Sistema Contábil</h4>
                     <p>Autor: Anélio Berti</p>
+                    <a href="#">Ver Detalhes</a>
 
                 </div>
                 <div class="book">
@@ -119,6 +121,34 @@
                         alt="Livro 3">
                     <h4>Administração da Produção</h4>
                     <p>Autor: Petrônio Martins & Fernando Laugeni</p>
+                    <a href="#">Ver Detalhes</a>
+
+                </div>
+
+                <div class="book">
+                    <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788502618350.170.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
+                        alt="Livro 3">
+                    <h4>Administração da Produção</h4>
+                    <p>Autor: Petrônio Martins & Fernando Laugeni</p>
+                    <a href="#">Ver Detalhes</a>
+
+                </div>
+
+                <div class="book">
+                    <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788502618350.170.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
+                        alt="Livro 3">
+                    <h4>Administração da Produção</h4>
+                    <p>Autor: Petrônio Martins & Fernando Laugeni</p>
+                    <a href="#">Ver Detalhes</a>
+
+                </div>
+
+                <div class="book">
+                    <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788502618350.170.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
+                        alt="Livro 3">
+                    <h4>Administração da Produção</h4>
+                    <p>Autor: Petrônio Martins & Fernando Laugeni</p>
+                    <a href="#">Ver Detalhes</a>
 
                 </div>
 
@@ -182,10 +212,7 @@
                 </div>
             </div>
 
-            <div class="buttonsfeed">
-                <button>&larr;</button>
-                <button>&rarr;</button>
-            </div>
+
         </div>
     </section>
 

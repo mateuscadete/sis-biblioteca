@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 :root {
     --cor0: rgb(51, 96, 90);
     --cor1: rgb(26, 61, 57);
@@ -15,29 +14,49 @@ body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     display: flex;
+    flex-direction: column;
+
 }
+
 
 header {
     width: 100%;
     height: 100%;
-    display: flex;
-    background-size: cover;
-    background-position: center;
     position: absolute;
+    display: flex;
+
+
+    color: white;
+    background-position: center;
+    background-size: cover;
+
+}
+
+header img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    display: block;
+
 }
 
 .forms {
     display: flex;
-    padding-top: 10px;
+    padding: 20px 30px;
     position: absolute;
+    top: 0;
+    left: 0;
     gap: 15px;
     list-style: none;
+    margin: 0;
+
 }
 
 .forms a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: bold;
+
 }
 
 .forms a:hover {
@@ -47,65 +66,94 @@ header {
 .titulo {
     font-size: 30px;
     position: absolute;
-    top: 35%;
-    left: 15%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
     text-align: center;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    width: 80%;
+    max-width: 600px;
+
 }
 
 main {
-    top: 120%;
-    left: 10%;
-    position: absolute;
-    height: 100%;
+    margin-top: 50%;
+    width: 100%;
+
+    padding: 40px 20px;
+
+    box-sizing: border-box;
+
     display: flex;
     flex-direction: column;
+    align-items: center;
+
+    background-color: #ffffff;
+
 }
 
 .assuntos {
-    margin-top: 100px;
+    margin-top: 50px;
+    width: 100%;
+    max-width: 1200px;
+    text-align: center;
 }
 
 .assuntos h2,
 h3 {
     color: var(--cor6);
-    font-size: 22px;
+    font-size: 2em;
+    margin-bottom: 0.5em;
+}
+
+.assuntos h3 {
+    font-size: 1.2em;
+    margin-bottom: 2em;
 }
 
 .container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    gap: 100px 50px;
+    gap: 150px 100px;
     flex-wrap: wrap;
     margin-top: 100px;
+    left: auto;
+    width: 100%;
+
 }
 
 .container .card {
     display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    left: 15%;
-    position: relative;
-    width: 350px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 320px;
     height: 300px;
     background-color: whitesmoke;
     border-radius: 20px;
     box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
-    transition: .2s;
+    transition: .3s;
+    padding-top: 15px;
+    box-sizing: border-box;
+    position: relative;
+    left: auto;
+
 }
 
 .container .card:hover {
-    height: 400px;
+    height: 420px;
+
 }
 
 .container .card .caixaImg {
     position: absolute;
-    top: 20px;
-    width: 300px;
-    height: 220px;
+    top: 15px;
+    width: 290px;
+    height: 200px;
     border-radius: 12px;
     overflow: hidden;
+    transition: all .3s ease;
 }
 
 .container .card .caixaImg img {
@@ -115,14 +163,15 @@ h3 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: .2s;
+    transition: all .3s ease;
 }
 
 .container .card:hover .caixaImg {
-    top: -100px;
-    scale: .75;
+    top: -80px;
+    scale: .8;
     box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
 }
+
 
 .container .card .conteudo {
     position: absolute;
@@ -159,30 +208,45 @@ h3 {
     color: white;
     font-weight: 500;
     border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
+}
+
+.container .card .conteudo a:hover {
+    background-color: var(--cor3);
+    scale: 1.05;
 }
 
 .livros {
     margin-top: 100px;
-
-}
-
-.containerbooks {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 100px;
-    justify-content: center;
-    overflow-x: hidden;
-    left: 5%;
-    position: relative;
     width: 100%;
+    max-width: 1200px;
+    text-align: center;
 }
 
 .livros h2,
 h3 {
     color: var(--cor6);
+    font-size: 2em;
+    margin-bottom: 0.5em;
 }
 
+.livros h3 {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.containerbooks {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    left: auto;
+    position: static;
+    width: 100%;
+    height: auto;
+
+}
 
 .book {
     background: white;
@@ -192,51 +256,95 @@ h3 {
     box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.book:hover {
+    transform: scale(1.03);
+
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.15);
+
+}
+
+.book a {
+    display: inline-block;
+    margin-top: auto;
+    background-color: var(--cor6);
+    text-decoration: none;
+    padding: 8px 18px;
+    color: white;
+    font-weight: 500;
+    border-radius: 6px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, scale 0.2s ease;
+}
+
+.book a:hover {
+    background-color: var(--cor5);
+    scale: 1.05;
 }
 
 .book img {
-    width: 100px;
-    height: 150px;
+    width: 100%;
+    max-width: 150px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto 15px auto;
+    display: block;
+
 }
+
 
 .containerfeed {
-    width: 92%;
-    padding: 40px 76px;
-    height: 80%;
-    position: absolute;
-    top: 290%;
+    width: 100%;
+    padding: 40px 20px;
+    box-sizing: border-box;
+    position: static;
     background-color: var(--cor4);
+    margin-top: 150px;
+    text-align: center;
 }
 
-.title {
-    display: flex;
-    align-items: center;
-    gap: 15px;
+.containerfeed .title {
+    display: block;
+    text-align: center;
     margin-bottom: 40px;
 }
 
-.title h2 {
-    font-size: 30px;
+.containerfeed .title h2 {
+    font-size: 2.2em;
     color: var(--cor6);
     margin: 0;
-    line-height: 1.7;
+    line-height: 1.4;
 }
 
 .feedbacks {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 35px;
-    left: 8%;
-    position: absolute;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    justify-content: center;
+    left: auto;
+    position: static;
+    max-width: 1200px;
+    margin: 0 auto;
+
 }
 
 .feedback {
     background-color: white;
     border-radius: 12px;
-    padding: 30px;
+    padding: 25px;
     position: relative;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-height: 300px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;
+
 }
 
 .feedback::after {
@@ -251,10 +359,19 @@ h3 {
     border-top: 10px solid white;
 }
 
+.feedback p {
+    font-size: 0.95em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+
+}
+
 .user {
     display: flex;
     align-items: center;
-    margin-top: 25px;
+    margin-top: auto;
+
     gap: 12px;
 }
 
@@ -262,6 +379,13 @@ h3 {
     width: 52px;
     height: 52px;
     border-radius: 50%;
+    background-color: #ccc;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.8em;
 }
 
 .user .info {
@@ -269,368 +393,266 @@ h3 {
     flex-direction: column;
 }
 
-.buttonsfeed {
-    display: flex;
-    gap: 12px;
-    position: relative;
-    top: 450px;
-    left: -50%;
+.user .info .role {
+    font-size: 0.8em;
+    color: #888;
 }
 
-.buttonsfeed button {
-    padding: 12px 18px;
-    background-color: white;
-    border: none;
-    border-radius: 10px;
-    font-size: 20px;
-    cursor: pointer;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: 0.2s;
-}
-
-.buttonsfeed button:hover {
-    background-color: #f1f1f1;
+.user .info strong {
+    font-size: 1em;
+    color: #333;
 }
 
 
-@media (max-width:1600px) {
 
+@media (max-width: 1624px) {
+    main {
+        margin-top: 70%;
+    }
+}
+
+@media (max-width: 1324px) {
+    main {
+        margin-top: 80%;
+    }
+}
+
+@media (max-width: 1024px) {
     .titulo {
-        font-size: 30px;
-        top: 35%;
-        left: 15%;
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
     }
 
     main {
-        top: 120%;
-        left: 10%;
+        margin-top: 90%;
     }
 
     .container .card {
-        left: 5%;
-        width: 350px;
-        height: 300px;
-    }
-
-    .containerbooks {
-        left: 5%;
-    }
-
-    .containerfeed {
-        width: 90%;
-        padding: 50px 76px;
-        height: 90%;
-        top: 300%;
-    }
-
-    .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 25px;
-        left: 2%;
-    }
-
-    .feedback {
-        border-radius: 12px;
-        padding: 30px;
-        min-height: 350px;
-    }
-
-    .buttonsfeed {
-        gap: 12px;
-        top: 450px;
-        left: -50%;
-    }
-
-    .buttonsfeed button {
-        padding: 12px 18px;
-    }
-}
-
-
-
-@media (max-width:1300px) {
-    .titulo {
-        font-size: 30px;
-        top: 35%;
-        left: 15%;
-    }
-
-    main {
-        top: 100%;
-        left: 10%;
-    }
-
-    .container .card {
-        left: -5%;
-        width: 350px;
-        height: 300px;
-    }
-
-    .containerbooks {
-        left: 5%;
-    }
-
-    .containerfeed {
-        width: 88%;
-        padding: 40px 74px;
-        height: 150%;
-        top: 400%;
-    }
-
-    .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        left: 2%;
-    }
-
-    .feedback {
-        border-radius: 12px;
-        padding: 20px;
-        min-height: 300px;
-    }
-
-    .buttonsfeed {
-        gap: 12px;
-        top: 475px;
-        left: -50%;
-    }
-
-    .buttonsfeed button {
-        padding: 10px 15px;
-
-    }
-}
-
-@media (max-width:1000px) {
-    .titulo {
-        font-size: 30px;
-        top: 35%;
-        left: 15%;
-    }
-
-    main {
-        top: 100%;
-        left: 10%;
-        height: 100%;
-    }
-
-    .container .card {
-        left: -5%;
-        width: 350px;
-        height: 300px;
-    }
-
-    .containerbooks {
-        left: 5%;
-    }
-
-    .containerfeed {
-        width: 86%;
-        padding: 40px 76px;
-        height: 150%;
-        top: 450%;
-    }
-
-    .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 35px;
-        left: 2%;
-    }
-
-    .feedback {
-        border-radius: 12px;
-        padding: 20px;
-        min-height: 450px;
-    }
-
-    .buttonsfeed {
-        gap: 12px;
-        top: 50px;
-        left: -5%;
-    }
-}
-
-
-@media (max-width:800px) {
-    .titulo {
-        font-size: 30px;
-        top: 35%;
-        left: 15%;
-    }
-
-    main {
-        top: 100%;
-        left: 10%;
-        height: 100%;
-    }
-
-    .container .card {
-        left: -3%;
-        width: 350px;
-        height: 300px;
-    }
-
-    .containerbooks {
-        left: 5%;
-    }
-
-    .containerfeed {
-        width: 92%;
-        padding: 40px 76px;
-        height: 220%;
-        top: 550%;
-    }
-
-    .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 40px;
-        left: 2%;
-    }
-
-    .feedback {
-        border-radius: 12px;
-        padding: 15px;
-        min-height: 400px;
-    }
-
-    .buttonsfeed {
-        gap: 12px;
-        top: 100px;
-        left: 2%;
-    }
-
-}
-
-
-@media (max-width:600px) {
-    .titulo {
-        font-size: 25px;
-        top: 45%;
-        left: 15%;
-    }
-
-    .container .card {
-        left: -3%;
         width: 300px;
-        height: 300px;
     }
 
     .container .card .caixaImg {
-        top: 20px;
-        width: 250px;
-        height: 170px;
+        width: 270px;
+        height: 180px;
     }
 
     .container .card:hover .caixaImg {
         top: -70px;
-        scale: 1;
+        scale: 0.9;
     }
 
     .container .card:hover .conteudo {
-        top: 110px;
-        height: 250px;
-        font-size: 1.2;
-        padding: 0px 100px;
+        top: 100px;
+        padding: 0 15px;
     }
 
-    .containerbooks {
-        left: 5%;
+    .book {
+        width: 180px;
     }
 
     .containerfeed {
-        width: 92%;
-        padding: 40px 76px;
-        height: 250%;
-        top: 600%;
+        padding: 30px 15px;
     }
 
     .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 35px;
-        left: 2%;
-    }
-
-    .feedback {
-        border-radius: 12px;
-        padding: 30px;
-        min-height: 450px;
-    }
-
-    .buttonsfeed {
-        gap: 12px;
-        top: 50px;
-        left: -2%;
-    }
-
-    .buttonsfeed button {
-        padding: 12px 18px;
-        font-size: 20px;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
 }
 
+@media (max-width: 768px) {
 
-@media (max-width:400px) {
+
     .titulo {
-        font-size: 25px;
-        top: 45%;
-        left: 15%;
+        font-size: 15px;
+    }
+
+
+
+    main {
+        padding: 30px 10px;
+        margin-top: 150%;
+    }
+
+    .assuntos h2,
+    .livros h2 {
+        font-size: 1.8em;
+    }
+
+    .assuntos h3,
+    .livros h3 {
+        font-size: 1em;
+    }
+
+    .container {
+        gap: 20px;
     }
 
     .container .card {
-        left: -3%;
-        width: 300px;
-        height: 300px;
+        width: 280px;
+        height: 280px;
+    }
+
+    .container .card:hover {
+        height: 400px;
     }
 
     .container .card .caixaImg {
-        top: 20px;
         width: 250px;
-        height: 170px;
+        height: 160px;
     }
 
     .container .card:hover .caixaImg {
-        top: -100px;
-        scale: .55;
+        top: -60px;
+        scale: 0.95;
+    }
+
+    .container .card .conteudo {
+        top: 200px;
     }
 
     .container .card:hover .conteudo {
         top: 110px;
-        height: 250px;
-        font-size: 1.2;
-        padding: 0px 100px;
     }
 
     .containerbooks {
-        left: 5%;
+        gap: 20px;
     }
 
-    .containerfeed {
-        width: 67%;
-        padding: 40px 76px;
-        height: 300%;
-        top: 500%;
+    .book {
+        width: 160px;
+        padding: 10px;
+    }
+
+    .book img {
+        max-width: 120px;
+        height: 180px;
+    }
+
+    .containerfeed .title h2 {
+        font-size: 1.8em;
     }
 
     .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 35px;
-        left: 1%;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
     }
 
     .feedback {
-        border-radius: 12px;
-        padding: 30px;
-        min-height: 350px;
+        min-height: 200px;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+
+
+
+
+    main {
+        padding: 20px 5px;
+        margin-top: 220%;
     }
 
-    .buttonsfeed {
-        gap: 12px;
-        top: 50px;
-        left: 5%;
+    .assuntos h2,
+    .livros h2,
+    .containerfeed .title h2 {
+        font-size: 1.5em;
     }
 
-    .buttonsfeed button {
-        padding: 12px 18px;
-        font-size: 20px;
+    .assuntos h3,
+    .livros h3 {
+        font-size: 0.9em;
+    }
+
+    .container {
+        gap: 15px;
+    }
+
+    .container .card {
+        width: 90%;
+        /* Take more width on small screens */
+        max-width: 300px;
+        height: 250px;
+    }
+
+    .container .card:hover {
+        height: 380px;
+    }
+
+    .container .card .caixaImg {
+        width: 90%;
+        height: 150px;
+        top: 10px;
+    }
+
+    .container .card:hover .caixaImg {
+        top: -50px;
+        scale: 1;
+        /* Don't scale down much on hover for small screens */
+    }
+
+    .container .card .conteudo {
+        top: 180px;
+        padding: 0 10px;
+    }
+
+    .container .card:hover .conteudo {
+        top: 100px;
+    }
+
+    .container .card .conteudo h2 {
+        font-size: 1.3em;
+    }
+
+    .container .card .conteudo p {
+        font-size: 0.8em;
+    }
+
+    .container .card .conteudo a {
+        padding: 8px 15px;
+        font-size: 0.85em;
+    }
+
+    .containerbooks {
+        gap: 15px;
+    }
+
+    .book {
+        width: 140px;
+        padding: 8px;
+    }
+
+    .book img {
+        max-width: 100px;
+        height: 160px;
+    }
+
+    .book h4 {
+        font-size: 0.9em;
+    }
+
+    .book p {
+        font-size: 0.8em;
+    }
+
+    .book a {
+        padding: 6px 12px;
+        font-size: 0.8em;
+    }
+
+    .feedbacks {
+        grid-template-columns: 1fr;
+        /* Single column on very small screens */
+        gap: 15px;
+    }
+
+    .feedback {
+        min-height: 180px;
+        padding: 15px;
+    }
+
+    .feedback p {
+        font-size: 0.9em;
     }
 }
