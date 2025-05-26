@@ -25,7 +25,7 @@
         <img src="{{url('imagens/biblioteca.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
 
         <ul class="forms">
-            <li><a href="{{ route('user.ajuda') }}">Ajuda</a></li>
+            <li><a href="{{ route('user.ajuda') }}">Admin</a></li>
             <li><a href="{{ route('user.login') }}">Login</a></li>
             <li><a href="{{ route('user.cadastro') }}">Cadastrar</a></li>
         </ul>
@@ -126,10 +126,10 @@
                 </div>
 
                 <div class="book">
-                    <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788502618350.170.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
-                        alt="Livro 3">
-                    <h4>Administração da Produção</h4>
-                    <p>Autor: Petrônio Martins & Fernando Laugeni</p>
+                    <img src="https://m.media-amazon.com/images/I/419GCs0Mw7L._SY445_SX342_.jpg"
+                        alt="Livro 4">
+                    <h4>Quimica Essencial Para Leigos</h4>
+                    <p>Autor: John T. Moore</p>
                     <a href="#">Ver Detalhes</a>
 
                 </div>
@@ -144,10 +144,10 @@
                 </div>
 
                 <div class="book">
-                    <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788502618350.170.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
-                        alt="Livro 3">
-                    <h4>Administração da Produção</h4>
-                    <p>Autor: Petrônio Martins & Fernando Laugeni</p>
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg"
+                        alt="Livro 6">
+                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
+                    <p>Autor: Rosivaldo Toscano</p>
                     <a href="#">Ver Detalhes</a>
 
                 </div>
@@ -173,10 +173,11 @@
                     A interface é simples e intuitiva, o que torna o processo de cadastro e empréstimo bem ágil."
                 </p>
                 <div class="user">
-                    <img src="#" />
+                    <img src="{{url('imagens/cadete.jpg')}}" />
                     <div class="info">
                         <span class="role">Aluno</span>
-                        <strong> Maria</strong>
+                        <strong> Mateus Cadete</strong>
+                        <strong>Desenvolvimento de Sistemas</strong>
                     </div>
                 </div>
             </div>
@@ -203,10 +204,11 @@
                     A funcionalidade de relatórios é excelente para a tomada de decisões."
                 </p>
                 <div class="user">
-                    <img src="#" alt="Mike Silva" />
+                    <img src="{{url('imagens/davi.png')}}" alt="Davi Lucas" />
                     <div class="info">
                         <span class="role">Aluno</span>
-                        <strong>Ana</strong>
+                        <strong>Davi Lucas</strong>
+                        <strong>Desenvolvimento de Sistemas</strong>
                     </div>
 
                 </div>

@@ -1,24 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-
 :root {
-    --cor0: rgb(51, 96, 90);
-    --cor1: rgb(26, 61, 57);
+    --cor0: #33605a;
+    --cor1: #1a3d39;
     --cor2: #91a398;
     --cor3: #7d9987;
     --cor4: #e9e0d1;
     --cor5: #68462b;
-    --cor6: #382414;
-    
+    --cor6: #382414;   
 }
 
 body {
-    margin: 0;
-    font-family: Raleway, sans-serif;
+    display: flex;
+    font-family: 'Raleway', sans-serif;
+    align-items: center;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container{
@@ -26,14 +25,14 @@ body {
     top:15%;
     left: 18%;
     display: flex;
+    align-items: center;
    justify-content: center;
     width: 1200px;
     height: 600px;
     background: white;
     box-shadow: 0 4px 7px var(--cor6);
     border-radius: 7px;
-    overflow: hidden;
-    
+    overflow: hidden;   
 }
 
 h2{
@@ -209,18 +208,11 @@ h2{
 
 @media (max-width:1300px){
     .container{
-        position:absolute;
-        top:15%;
-        left: 6%;
-        display: flex;
-       justify-content: center;
-        width: 1000px;
-        height: 600px;
-        background: white;
-        box-shadow: 0 4px 7px var(--cor6);
-        border-radius: 7px;
-        overflow: hidden;
         
+        top:25%;
+        left: 15%;
+        width: 800px;
+        height: 400px;    
     }
     
     h2{
@@ -230,14 +222,8 @@ h2{
     }
     
     .left {
-        width: auto;
-        background-size: cover;
-        color: white;
+        width: auto;       
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         padding: 40px;
     }
     
@@ -259,16 +245,12 @@ h2{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
     }
     
     .email{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
         width:300px
     }
     
@@ -276,21 +258,11 @@ h2{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
     }
     
-    .enviar {
-        background-color: var(--cor6);
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
+    .enviar {     
         padding: 10px;
-        align-items: center;
-        text-align: center;
         width: 100px;
-        font-weight: bold;
         left: 40%;
     
     }
@@ -299,67 +271,40 @@ h2{
 
 
 @media (max-width:1024px){
-    .container{
-        position:absolute;
+    .container{        
         top:15%;
-        left: 3%;
-        display: flex;
-       justify-content: center;
+        left: 3%;     
         width: 800px;
-        height: 600px;
-        background: white;
-        box-shadow: 0 4px 7px var(--cor6);
-        border-radius: 7px;
-        overflow: hidden;
-        
+        height: 600px;                
     }
     
     h2{
         text-align: center;
-        justify-content: center;
-    
+        justify-content: center;    
     }
     
     .left {
         width: auto;
-        background-size: cover;
-        color: white;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
-    
-    .right {
-        display: flex;
         flex: 1;
         padding: 20px;
-        flex-direction: column;
-        justify-content: center;
     }
     
-    
-    .contato{  
-        display: flex;
-        flex-direction: column;
+    .right {     
+        flex: 1;
+        padding: 20px;      
     }
+    
     
     .name{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
     }
     
     .email{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
         width:300px
     }
     
@@ -367,89 +312,46 @@ h2{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
     }
     
-    .enviar {
-        background-color: var(--cor6);
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
+    .enviar {      
         padding: 10px;
-        align-items: center;
-        text-align: center;
-        width: 100px;
-        font-weight: bold;
-        left: 40%;
-    
+        width: 100px;       
+        left: 40%;  
     }
     
 }
 
 @media (max-width:800px){
     .container{
-        position:absolute;
-        top:15%;
+         top:15%;
         left: 1%;
-        display: flex;
-       justify-content: center;
         width: 700px;
-        height: 600px;
-        background: white;
-        box-shadow: 0 4px 7px var(--cor6);
-        border-radius: 7px;
-        overflow: hidden;
-        
-    }
-    
-    h2{
-        text-align: center;
-        justify-content: center;
-    
+        height: 600px;              
     }
     
     .left {
         width: auto;
-        background-size: cover;
-        color: white;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        flex: 1;        
         padding: 20px;
     }
     
-    .right {
-        display: flex;
+    .right {       
         flex: 1;
         padding: 20px;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    
-    .contato{  
-        display: flex;
-        flex-direction: column;
+       
     }
     
     .name{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
     }
     
     .email{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
         width:300px
     }
     
@@ -457,89 +359,48 @@ h2{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
     }
     
-    .enviar {
-        background-color: var(--cor6);
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
+    .enviar {      
         padding: 10px;
-        align-items: center;
-        text-align: center;
         width: 100px;
-        font-weight: bold;
-        left: 40%;
-    
+     left: 40%;   
     }
     
 }
 
 @media (max-width:600px){
     .container{
-        position:absolute;
+      
         top:15%;
         left: 1%;
-        display: flex;
-       justify-content: center;
+      
         width: 700px;
         height: 600px;
-        background: white;
-        box-shadow: 0 4px 7px var(--cor6);
-        border-radius: 7px;
-        overflow: hidden;
-        
     }
     
-    h2{
-        text-align: center;
-        justify-content: center;
-    
-    }
     
     .left {
-        width: auto;
-        background-size: cover;
-        color: white;
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px;
-    }
-    
-    .right {
-        display: flex;
+        width: auto;      
         flex: 1;
         padding: 20px;
-        flex-direction: column;
-        justify-content: center;
     }
     
-    
-    .contato{  
-        display: flex;
-        flex-direction: column;
+    .right {     
+        flex: 1;
+        padding: 20px;
     }
-    
+      
     .name{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
     }
     
     .email{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
         width:300px
     }
     
@@ -547,21 +408,12 @@ h2{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
     }
     
     .enviar {
-        background-color: var(--cor6);
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
-        padding: 10px;
-        align-items: center;
-        text-align: center;
-        width: 100px;
-        font-weight: bold;
+        background-color: var(--cor6);      
+        padding: 10px;  
+        width: 100px;       
         left: 40%;
     
     }
@@ -569,67 +421,37 @@ h2{
 }
 
 @media (max-width:300px){
-    .container{
-        position:absolute;
+    .container{       
         top:20%;
-        left: 1%;
-        display: flexbox;
-       justify-content: center;
+        left: 1%;         
         width: 500px;
         height: 600px;
-        background: white;
-        box-shadow: 0 4px 7px var(--cor6);
-        border-radius: 7px;
-        overflow: hidden;
         
-    }
-    
-    h2{
-        text-align: center;
-        justify-content: center;
-    
+        
     }
     
     .left {
         width: auto;
-        background-size: cover;
-        color: white;
         flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         padding: 10px;
     }
     
     .right {
-        display: flex;
+       
         flex: 1;
         padding: 10px;
-        flex-direction: column;
-        justify-content: center;
     }
-    
-    
-    .contato{  
-        display: flex;
-        flex-direction: column;
-    }
-    
+     
     .name{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
     }
     
     .email{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
         width:300px
     }
     
@@ -637,23 +459,12 @@ h2{
         margin-bottom: 25px;
         margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
     }
     
-    .enviar {
-        background-color: var(--cor6);
-        border: 1px solid white;
-        border-radius: 5px;
-        text-decoration: none;
-        color: white;
+    .enviar {     
         padding: 10px;
-        align-items: center;
-        text-align: center;
         width: 100px;
-        font-weight: bold;
         left: 40%;
-        font-family: raleway, sans-serif;
     
     }
     
