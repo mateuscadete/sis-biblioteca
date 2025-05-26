@@ -76,5 +76,8 @@ Route::middleware('auth')->group(function () {
 
 // Rota para a página de acervo
 Route::get('/acervo-layout', [UserController::class, 'acervo'])->name('layout.acervo');
+//Rota aba de pesquisa
+Route::get('/buscar-pagina', [App\Http\Controllers\BuscaController::class, 'redirecionar'])->name('buscar.pagina');
+
 
 

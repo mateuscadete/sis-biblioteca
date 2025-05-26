@@ -6,6 +6,8 @@ use App\Http\Requests\UserRequest;
 use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
+use Illuminate\Http\Request;
+
 
 class UserController extends Controller
 {
@@ -119,6 +121,19 @@ class UserController extends Controller
         // Retorna a view onde a lista de livros será mostrada (exemplo: 'acervo')
         return view('layout.acervo', compact('livros'));
     }
+    //Logica da aba de pesquisa
+    public function pesquisar(Request $request)
+    {
+        $termo = $request->input('termo');
+    
+        $usuarios = User::where('name', 'like', "%$termo%")
+                        ->orWhere('email', 'like', "%$termo%")
+                        ->get();
+    
+        return view('user.sobre', compact('usuarios'));
+    }
+    
+
 
 
 }
