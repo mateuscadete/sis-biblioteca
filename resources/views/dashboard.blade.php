@@ -34,7 +34,7 @@
                 <label for="titulo" class="form_label">Título</label>
 
                 <div class="input_field">
-                <input class="form-control" type="text" name="tema" id="tema" placeholder="Ex: Tecnologia, Economia" required>
+                <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Ex: Nome do Livro" required>
 
                 </div>
             </div>
@@ -50,7 +50,7 @@
             <div class="input_box">
                 <label for="editora" class="form_label">Editora</label>
                 <div class="input_field">
-                    <input class="form-control" type="text" name="edicao" id="edicao" placeholder="Ex: Arqueiro, Saraiva" required>
+                <input class="form-control" type="text" name="editora" id="editora" placeholder="Ex: Arqueiro, Saraiva" required>
                 </div>
             </div>
 
@@ -58,7 +58,7 @@
                 <label for="tema" class="form_label">Tema</label>
 
                 <div class="input_field">
-                    <input class="form-control" type="text" nmae="tema" id="tema" placeholder="Ex: Tecnologia, Economia" required>
+                    <input class="form-control" type="text" name="tema" id="tema" placeholder="Ex: Tecnologia, Economia" required>
                 </div>
             </div>
 
@@ -94,7 +94,7 @@
             <div class="input_box">
                 <label for="paginas" class="form_label">Número de Páginas</label>
                 <div class="input_field">
-                    <input class="form-control" type="number" name="paginas" id="paginas" required>
+                <input class="form-control" type="number" name="num_paginas" id="num_paginas" required>
                 </div>
             </div>
 
