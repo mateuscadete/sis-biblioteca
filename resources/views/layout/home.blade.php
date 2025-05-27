@@ -224,7 +224,21 @@
 
     @include('includes.footer')
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navLinks = document.querySelector('.links');
+            const navbarRight = document.querySelector('.navbar-right');
 
+            if (mobileMenu && navLinks && navbarRight) {
+                mobileMenu.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    navbarRight.classList.toggle('active');
+                });
+            }
+        });
+    </script>
 
 </body>
 
