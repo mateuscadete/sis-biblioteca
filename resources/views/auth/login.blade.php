@@ -1,48 +1,78 @@
-<x-guest-layout>
-    <x-authentication-card>
-        <x-slot name="logo">
-            <x-authentication-card-logo />
-        </x-slot>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    @vite('resources/css/app.css') <!-- Certifique-se de usar Vite corretamente -->
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-        <x-validation-errors class="mb-4" />
 
-        @session('status')
-            <div class="mb-4 font-medium text-sm text-green-600">
-                {{ $value }}
-            </div>
-        @endsession
+    <div class="flex w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
+        <!-- Coluna da esquerda (boas-vindas) -->
+        <div class="w-1/2 bg-green-900 text-white flex flex-col items-center justify-center p-10">
+            <h2 class="text-3xl font-bold mb-4 text-center">Bem-Vindo<br>De Volta</h2>
+            
+        
+        </div>
 
-        <form method="POST" action="{{ route('login') }}">
-            @csrf
+        <!-- Coluna da direita (formulário de login) -->
+        <div class="w-1/2 p-10">
+            <h2 class="text-2xl font-bold text-green-900 mb-6">Login</h2>
 
-            <div>
-                <x-label for="email" value="{{ __('Email') }}" />
-                <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-            </div>
+            @if (session('status'))
+                <div class="mb-4 text-green-600 text-sm">
+                    {{ session('status') }}
+                </div>
+            @endif
 
-            <div class="mt-4">
-                <x-label for="password" value="{{ __('Password') }}" />
-                <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-            </div>
+            @if ($errors->any())
+                <div class="mb-4 text-red-600 text-sm">
+                    <ul class="list-disc list-inside">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
-            <div class="block mt-4">
-                <label for="remember_me" class="flex items-center">
-                    <x-checkbox id="remember_me" name="remember" />
-                    <span class="ms-2 text-sm text-gray-600">{{ __('Remember me') }}</span>
-                </label>
-            </div>
+            <form method="POST" action="{{ route('login') }}">
+                @csrf
 
-            <div class="flex items-center justify-end mt-4">
-                @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('password.request') }}">
-                        {{ __('Forgot your password?') }}
-                    </a>
-                @endif
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
+                    <input
+                        id="email"
+                        name="email"
+                        type="email"
+                        placeholder="Insira seu e-mail"
+                        autocomplete="email"
+                        required
+                        class="mt-1 block w-full rounded-md border border-green-900 focus:ring-green-900 focus:border-green-900"
+                    >
+                </div>
 
-                <x-button class="ms-4">
-                    {{ __('Log in') }}
-                </x-button>
-            </div>
-        </form>
-    </x-authentication-card>
-</x-guest-layout>
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium text-gray-700">Senha</label>
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        required
+                        class="mt-1 block w-full rounded-md border border-green-900 focus:ring-green-900 focus:border-green-900"
+                    >
+                </div>
+
+                <button
+                    type="submit"
+                    class="mt-4 w-full bg-green-900 text-white py-2 px-4 rounded hover:bg-green-800 transition"
+                >
+                    Entrar
+                </button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
