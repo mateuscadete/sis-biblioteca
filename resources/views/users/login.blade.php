@@ -50,7 +50,8 @@
 
                 <!-- Botão de envio -->
 
-                <a href="" class="logar">Entrar</a>
+                <button type="submit" class="logar">Entrar</button>
+
                
                 <a href="/login" class="termos">Entrar como adiministrador </a>
 

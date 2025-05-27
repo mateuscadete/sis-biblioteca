@@ -55,7 +55,8 @@
 
                 <!-- Botão de envio -->
 
-                <a href="#" class="cadastrar">Cadastrar</a>
+                <button type="submit" class="cadastrar">Cadastrar</button>
+
 
             </form>
         </div>

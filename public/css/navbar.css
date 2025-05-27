@@ -1,9 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 *{
-    font-family: raleway, sans-serif;
+    font-family: 'raleway', sans-serif;
 }
+
+:root {
+    --cor0: rgb(51, 96, 90);
+    --cor1: rgb(26, 61, 57);
+    --cor2: #91a398;
+    --cor3: #7d9987;
+    --cor4: #e9e0d1;
+    --cor5: #68462b;
+    --cor6: #382414;
+}
+
+
+
 .navbar {
     display: flex;
     border-radius: 10px;
@@ -14,6 +26,7 @@
     left: 10%;
     top: 8%;
     gap: 15px;
+   
 }
 
 .links {
@@ -25,9 +38,16 @@
 
 .links a {
     text-decoration: none;
-    color: black;
+    color: var(--cor6);
     font-weight: bold;
 }
+
+.links a:hover {
+    
+    color: var(--cor5);
+    
+}
+
 
 .container-input {
     position: relative;
@@ -35,7 +55,7 @@
     margin-top: 9px;
 }
 
-.input {
+.search-input {
     width: 150px;
     padding: 10px 0px 10px 40px;
     border-radius: 9999px;
@@ -52,7 +72,7 @@
     transform: translate(0, -50%);
 }
 
-.input:focus {
+.search-input:focus {
     opacity: 1;
     width: 250px;
 }
@@ -83,7 +103,7 @@ button {
 }
 
 button svg {
-    color: black;
+    color: var(--cor6);
     width: auto;
     height: 30px;
 
