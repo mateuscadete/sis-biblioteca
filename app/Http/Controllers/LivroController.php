@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
  
 use App\Models\Livro; // Certifique-se de que você tem um modelo Livro
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
  
 class LivroController extends Controller
 {
@@ -57,7 +58,10 @@ $caminhoImagem = $request->file('imagem')->store('livros', 'public');
  
     public function destroy(Livro $livro)
     {
- 
+        if(!Auth::user()->is_admin){
+            abort(403, 'Acesso negado.');
+
+        }
         // Apagar o registro no BD
         $livro->delete();
  
