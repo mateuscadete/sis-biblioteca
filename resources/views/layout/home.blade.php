@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
     <title>Biblioteca Etec Zona Leste</title>
     <link rel="manifest" href="{{ asset('manifest.json') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
@@ -219,9 +220,9 @@
     </section>
 
 
-     <section class="adicionais">
+    <section class="adicionais">
         <div class="map">
-            
+
             <div class="card-text">
                 <h2>Conheça nossa biblioteca</h2>
                 <p>Localização</p>
@@ -234,7 +235,7 @@
                 <h2>Novidades do mundo literário</h2>
             </div>
             <div class="new-image">
-                <img src="{{ asset('imagens/') }}" >
+                <img src="{{ asset('imagens/') }}">
             </div>
         </div>
     </section>
@@ -243,10 +244,10 @@
 
     <section class="sugestão">
         <div class="sugestão-card">
-            
-                
-                <p>Queremos melhorar!</p>
-          
+
+
+            <p>Queremos melhorar!</p>
+
             <h2>Mande alguma sugestão</h2>
             <form action="" method="POST" class="sugestão-form">
                 <input type="text" name="sugestao" placeholder="Digite sua sugestão aqui..." class="sugestão-input" required>

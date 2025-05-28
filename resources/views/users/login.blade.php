@@ -4,6 +4,7 @@
 <head>
     <title>Login</title>
     <link rel="stylesheet" href="{{asset('css/login.css')}}">
+    <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
 </head>
 
 <body>
@@ -52,7 +53,7 @@
 
                 <button type="submit" class="logar">Entrar</button>
 
-               
+
                 <a href="/login" class="termos">Entrar como adiministrador </a>
 
 
@@ -60,7 +61,7 @@
             </form>
         </div>
     </div>
- 
+
 </body>
 
 </html>

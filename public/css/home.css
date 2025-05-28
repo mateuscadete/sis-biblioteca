@@ -294,17 +294,17 @@ h3 {
 
 }
 
-.book h4{
-    margin-bottom:10px;
+.book h4 {
+    margin-bottom: 10px;
 }
 
-.book p{
-    margin-bottom:15px;
+.book p {
+    margin-bottom: 15px;
 }
 
 .containerfeed {
     width: 100%;
-    padding: 30px 20px 300px ;
+    padding: 30px 20px 300px;
     box-sizing: border-box;
     position: static;
     background-color: var(--cor4);
@@ -412,43 +412,43 @@ h3 {
 
 .adicionais {
     display: flex;
-    flex-wrap: wrap; 
-    justify-content: center; 
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 30px;
-    padding: 40px 20px; 
-    max-width: 1200px; 
-    margin: 60px auto 20px auto; 
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 60px auto 20px auto;
 }
 
 
 .map,
 .noticias {
-    border-radius: 15px; 
-    overflow: hidden; 
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
-    flex-direction: column; 
-    flex: 1; 
-    min-width: 300px; 
+    flex-direction: column;
+    flex: 1;
+    min-width: 300px;
 }
 
 .map:hover,
 .noticias:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-5px);
     box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
 }
 
 .map {
     background-color: var(--cor1);
-    max-width: 600px; 
+    max-width: 600px;
 }
 
 .card-text {
     padding: 25px;
     color: white;
-    flex-grow: 1; 
-    background-color:var(--cor1);
+    flex-grow: 1;
+    background-color: var(--cor1);
 }
 
 .card-text h2 {
@@ -471,20 +471,20 @@ h3 {
 
 .noticias {
     background-color: var(--cor1);
-    max-width: 450px; 
-    display: flex; 
-    flex-direction: row; 
-    align-items: center; 
-    justify-content: space-between; 
+    max-width: 450px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .noticias .card-text {
-    flex: 1; 
-    padding-right: 15px; 
+    flex: 1;
+    padding-right: 15px;
 }
 
 .new-image {
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .new-image img {
@@ -502,15 +502,15 @@ h3 {
     display: flex;
     justify-content: center;
     width: 100%;
-    margin-bottom: 60px; 
+    margin-bottom: 60px;
 }
 
 .sugestão-card {
-    background-color: var(--cor4); 
+    background-color: var(--cor4);
     border-radius: 15px;
     padding: 35px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    max-width: 700px; 
+    max-width: 700px;
     width: 100%;
     text-align: center;
 }
@@ -519,7 +519,7 @@ h3 {
     font-size: 1.1em;
     color: var(--cor6);
     font-weight: 500;
-     display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 15px;
@@ -536,15 +536,15 @@ h3 {
     display: flex;
     justify-content: center;
     gap: 15px;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 .sugestão-input {
     flex: 1;
-    min-width: 250px; 
+    min-width: 250px;
     padding: 15px 20px;
     border-radius: 10px;
-    border: 2px solid var(--cor3); 
+    border: 2px solid var(--cor3);
     font-size: 1em;
     color: var(--cor6);
     outline: none;
@@ -556,12 +556,12 @@ h3 {
 }
 
 .sugestão-input:focus {
-    border-color: var(--cor5); 
-    box-shadow: 0 0 0 3px rgba(104, 70, 43, 0.2); 
+    border-color: var(--cor5);
+    box-shadow: 0 0 0 3px rgba(104, 70, 43, 0.2);
 }
 
 .enviar {
-    background-color: var(--cor1); 
+    background-color: var(--cor1);
     color: white;
     padding: 15px 30px;
     border: none;
@@ -570,12 +570,12 @@ h3 {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    flex-shrink: 0; 
+    flex-shrink: 0;
 }
 
 .enviar:hover {
-    background-color: var(--cor0); 
-    transform: translateY(-2px); 
+    background-color: var(--cor0);
+    transform: translateY(-2px);
 }
 
 
@@ -835,5 +835,37 @@ h3 {
 
     .feedback p {
         font-size: 0.9em;
+    }
+}
+
+@media (max-height: 600px) {
+    header img {
+        height: 300px;
+    }
+
+    .titulo {
+        font-size: 25px;
+        top: 60%;
+        left: 50%;
+    }
+
+    main {
+        margin-top: 50%;
+    }
+}
+
+@media (max-height: 700px) {
+    header img {
+        height: 300px;
+    }
+
+    .titulo {
+        font-size: 25px;
+        top: 60%;
+        left: 50%;
+    }
+
+    main {
+        margin-top: 70%;
     }
 }

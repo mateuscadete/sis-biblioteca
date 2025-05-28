@@ -4,6 +4,7 @@
 <head>
     <title>Cadastro</title>
     <link rel="stylesheet" href="{{asset('css/cadastro.css')}}">
+    <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
 </head>
 
 

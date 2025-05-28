@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Editar Livro</title>
+    <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
     <link rel="stylesheet" href="{{ asset('css/edit.css') }}">
 </head>
 
