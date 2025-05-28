@@ -15,7 +15,7 @@
 
     <div class="container">
 
-        <div class="left" style="background-image: url(imagens/contact.jpg);">
+        <div class="left" style="background-image: url(imagens/contact.jpg)" style="object-fit: cover; width: 100%; height: 100%; ">
             <h2>Entre em Contato com a nossa biblioteca</h2>
         </div>
 
@@ -42,7 +42,7 @@
     </div>
 
 
-    @include('includes.footer')
+ 
 
 </body>
 

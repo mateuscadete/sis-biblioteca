@@ -606,7 +606,7 @@ h3 {
     }
 
     main {
-        margin-top: 90%;
+        margin-top: 70%;
     }
 
     .container .card {
@@ -652,7 +652,7 @@ h3 {
 
     main {
         padding: 30px 10px;
-        margin-top: 150%;
+        margin-top: 80%;
     }
 
     .assuntos h2,
@@ -725,6 +725,22 @@ h3 {
     }
 }
 
+@media (max-width: 600px) {
+    header img {
+        height: 300px;
+    }
+
+    .titulo {
+        font-size: 25px;
+        top: 60%;
+        left: 50%;
+    }
+
+    main {
+        margin-top: 120%;
+    }
+}
+
 @media (max-width: 480px) {
 
 
@@ -732,7 +748,7 @@ h3 {
 
     main {
         padding: 20px 5px;
-        margin-top: 220%;
+        margin-top: 140%;
     }
 
     .assuntos h2,
@@ -838,34 +854,4 @@ h3 {
     }
 }
 
-@media (max-height: 600px) {
-    header img {
-        height: 300px;
-    }
 
-    .titulo {
-        font-size: 25px;
-        top: 60%;
-        left: 50%;
-    }
-
-    main {
-        margin-top: 50%;
-    }
-}
-
-@media (max-height: 700px) {
-    header img {
-        height: 300px;
-    }
-
-    .titulo {
-        font-size: 25px;
-        top: 60%;
-        left: 50%;
-    }
-
-    main {
-        margin-top: 70%;
-    }
-}
