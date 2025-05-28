@@ -219,6 +219,44 @@
     </section>
 
 
+     <section class="adicionais">
+        <div class="map">
+            
+            <div class="card-text">
+                <h2>Conheça nossa biblioteca</h2>
+                <p>Localização</p>
+            </div>
+        </div>
+
+        <div class="noticias">
+            <div class="card-text ">
+                <h3>Fique por dentro!</h3>
+                <h2>Novidades do mundo literário</h2>
+            </div>
+            <div class="new-image">
+                <img src="{{ asset('imagens/') }}" >
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="sugestão">
+        <div class="sugestão-card">
+            
+                
+                <p>Queremos melhorar!</p>
+          
+            <h2>Mande alguma sugestão</h2>
+            <form action="" method="POST" class="sugestão-form">
+                <input type="text" name="sugestao" placeholder="Digite sua sugestão aqui..." class="sugestão-input" required>
+                <button type="submit" class="enviar">Enviar</button>
+            </form>
+        </div>
+    </section>
+
+
+
 
 
 

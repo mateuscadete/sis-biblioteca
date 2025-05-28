@@ -24,7 +24,6 @@ header {
     height: 100%;
     position: absolute;
     display: flex;
-
     margin: 0;
     color: white;
     background-position: center;
@@ -56,11 +55,13 @@ header img {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
 
 }
 
 .forms a:hover {
     color: var(--cor5);
+    transform: translateX(5px);
 }
 
 .titulo {
@@ -80,15 +81,11 @@ header img {
 main {
     margin-top: 50%;
     width: 100%;
-
     padding: 40px 20px;
-
     box-sizing: border-box;
-
     display: flex;
     flex-direction: column;
     align-items: center;
-
     background-color: #ffffff;
 
 }
@@ -307,11 +304,12 @@ h3 {
 
 .containerfeed {
     width: 100%;
-    padding: 40px 20px;
+    padding: 30px 20px 300px ;
     box-sizing: border-box;
     position: static;
     background-color: var(--cor4);
     margin-top: 150px;
+
     text-align: center;
 }
 
@@ -409,6 +407,177 @@ h3 {
     font-size: 1em;
     color: #333;
 }
+
+
+
+.adicionais {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 30px;
+    padding: 40px 20px; 
+    max-width: 1200px; 
+    margin: 60px auto 20px auto; 
+}
+
+
+.map,
+.noticias {
+    border-radius: 15px; 
+    overflow: hidden; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; 
+    flex: 1; 
+    min-width: 300px; 
+}
+
+.map:hover,
+.noticias:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.map {
+    background-color: var(--cor1);
+    max-width: 600px; 
+}
+
+.card-text {
+    padding: 25px;
+    color: white;
+    flex-grow: 1; 
+    background-color:var(--cor1);
+}
+
+.card-text h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.card-text h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.card-text p {
+    font-size: 1em;
+    opacity: 0.9;
+}
+
+.noticias {
+    background-color: var(--cor1);
+    max-width: 450px; 
+    display: flex; 
+    flex-direction: row; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+.noticias .card-text {
+    flex: 1; 
+    padding-right: 15px; 
+}
+
+.new-image {
+    flex-shrink: 0; 
+}
+
+.new-image img {
+    max-width: 150px;
+    height: auto;
+    display: block;
+}
+
+
+
+
+
+.sugestão {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 60px; 
+}
+
+.sugestão-card {
+    background-color: var(--cor4); 
+    border-radius: 15px;
+    padding: 35px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    max-width: 700px; 
+    width: 100%;
+    text-align: center;
+}
+
+.sugestão-card p {
+    font-size: 1.1em;
+    color: var(--cor6);
+    font-weight: 500;
+     display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.sugestão-card h2 {
+    font-size: 2em;
+    color: var(--cor6);
+    margin-bottom: 25px;
+    font-weight: 700;
+}
+
+.sugestão-form {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap; 
+}
+
+.sugestão-input {
+    flex: 1;
+    min-width: 250px; 
+    padding: 15px 20px;
+    border-radius: 10px;
+    border: 2px solid var(--cor3); 
+    font-size: 1em;
+    color: var(--cor6);
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sugestão-input::placeholder {
+    color: var(--cor2);
+}
+
+.sugestão-input:focus {
+    border-color: var(--cor5); 
+    box-shadow: 0 0 0 3px rgba(104, 70, 43, 0.2); 
+}
+
+.enviar {
+    background-color: var(--cor1); 
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    flex-shrink: 0; 
+}
+
+.enviar:hover {
+    background-color: var(--cor0); 
+    transform: translateY(-2px); 
+}
+
 
 
 

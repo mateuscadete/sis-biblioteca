@@ -13,13 +13,13 @@
         <p>Acesse Nossas Redes e Repositório</p>
         <div class="icones">
             <a href="https://www.facebook.com/seuperfil" target="_blank" aria-label="Link para o Facebook">
-                <img src="{{ asset('imagens/facebook.png') }}" alt="Facebook">
+                <img src="{{ asset('imagens/facebook.svg') }}" alt="Facebook">
             </a>
             <a href="https://www.instagram.com/seuperfil" target="_blank" aria-label="Link para o Instagram">
-                <img src="{{ asset('imagens/instagram.png') }}" alt="Instagram">
+                <img src="{{ asset('imagens/instagram.svg') }}" alt="Instagram">
             </a>
-            <a href="https://github.com/seurepositorio" target="_blank" aria-label="Link para o GitHub">
-                <img src="{{ asset('imagens/git.png') }}" alt="GitHub">
+            <a href="https://github.com/mateuscadete/sis_biblioteca" target="_blank" aria-label="Link para o GitHub">
+                <img src="{{ asset('imagens/git.svg') }}" alt="GitHub">
             </a>
         </div>
     </div>

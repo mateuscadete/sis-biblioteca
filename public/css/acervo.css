@@ -56,11 +56,13 @@ header img {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: bold;
+    transition: color 0.3s ease, transform 0.3s ease;
 
 }
 
 .forms a:hover {
     color: var(--cor5);
+    transform: translateX(5px);
 }
 
 .titulo {
