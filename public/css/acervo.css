@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
-
 :root {
     --cor0: rgb(51, 96, 90);
     --cor1: rgb(26, 61, 57);
@@ -16,30 +15,48 @@ body {
     font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
+
 }
+
 
 header {
     width: 100%;
     height: 100%;
-    display: flex;
-    background-size: cover;
-    background-position: center;
     position: absolute;
+    display: flex;
+
+    margin: 0;
+    color: white;
+    background-position: center;
+    background-size: cover;
+
+}
+
+header img {
+    object-fit: cover;
+    width: 100%;
+    height: 400px;
+    display: block;
+
 }
 
 .forms {
     display: flex;
-    padding-top: 10px;
+    padding: 30px 40px;
     position: absolute;
+    top: 0;
+    left: 0;
     gap: 15px;
     list-style: none;
+    margin: 0;
+
 }
 
 .forms a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-weight: bold;
+
 }
 
 .forms a:hover {
@@ -47,160 +64,64 @@ header {
 }
 
 .titulo {
-    font-size: 35px;
+    font-size: 30px;
     position: absolute;
-    top: 55%;
-    left: 45%;
+    top: 50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     text-align: center;
-    text-shadow: 2px 7px 10px rgba(0, 0, 0, 0.815);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     width: 80%;
     max-width: 600px;
+
 }
 
 main {
+    margin-top: 50%;
     width: 100%;
-    /* Take full width */
     padding: 40px 20px;
-    /* Add padding for content */
     box-sizing: border-box;
-    /* Include padding in width */
-    /* No top/left here, it will flow after the header */
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #ffffff;
+
 }
 
-.assuntos {
-    margin-top: 100px;
-}
 
-.assuntos h2,
-h3 {
-    color: var(--cor6);
-    font-size: 22px;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 100px 50px;
-    flex-wrap: wrap;
-    margin-top: 100px;
-}
-
-.container .card {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    left: 15%;
-    position: relative;
-    width: 350px;
-    height: 300px;
-    background-color: whitesmoke;
-    border-radius: 20px;
-    box-shadow: 0 35px 60px rgba(0, 0, 0, 0.1);
-    transition: .2s;
-}
-
-.container .card:hover {
-    height: 400px;
-}
-
-.container .card .caixaImg {
-    position: absolute;
-    top: 20px;
-    width: 300px;
-    height: 220px;
-    border-radius: 12px;
-    overflow: hidden;
-}
-
-.container .card .caixaImg img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: .2s;
-}
-
-.container .card:hover .caixaImg {
-    top: -100px;
-    scale: .75;
-    box-shadow: 0 15px 45px rgba(0, 0, 0, .2);
-}
-
-.container .card .conteudo {
-    position: absolute;
-    top: 200px;
-    width: 100%;
-    height: 35px;
-    text-align: center;
-    padding: 0 20px;
-    overflow: hidden;
-}
-
-.container .card:hover .conteudo {
-    top: 100px;
-    height: 250px;
-}
-
-.container .card .conteudo h2 {
-    font-size: 1.5;
-    font-weight: 700;
-    line-height: 3rem;
-    color: var(--cor1);
-}
-
-.container .card .conteudo p {
-    color: var(--cor1);
-}
-
-.container .card .conteudo a {
-    display: inline-block;
-    margin-top: 12px;
-    background-color: var(--cor0);
-    text-decoration: none;
-    padding: 10px 20px;
-    color: white;
-    font-weight: 500;
-    border-radius: 8px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.26);
-}
-
-.container .card .conteudo a:hover {
-    background-color: var(--cor3);
-    scale: 1.05;
-}
 
 .livros {
     margin-top: 100px;
-    height: auto;
-}
-
-.containerbooks {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 120px;
-    justify-content: center;
-
-
-    left: 5%;
-    position: relative;
     width: 100%;
-    height: auto;
+    max-width: 1200px;
+    text-align: center;
 }
 
 .livros h2,
 h3 {
     color: var(--cor6);
+    font-size: 2em;
+    margin-bottom: 0.5em;
 }
 
+.livros h3 {
+    font-size: 1.2em;
+    margin-bottom: 2em;
+}
+
+.containerbooks {
+    margin-top: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 60px;
+    justify-content: center;
+    left: auto;
+    position: static;
+    width: 100%;
+    height: auto;
+
+}
 
 .book {
     background: white;
@@ -210,17 +131,22 @@ h3 {
     box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 200px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .book:hover {
-    transform: scale(1.05);
-    transition: transform 0.2s ease-in-out;
+    transform: scale(1.03);
+
+    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.15);
+
 }
 
 .book a {
     display: inline-block;
-    margin-top: 12px;
+    margin-top: auto 10px;
     background-color: var(--cor6);
     text-decoration: none;
     padding: 8px 18px;
@@ -228,6 +154,7 @@ h3 {
     font-weight: 500;
     border-radius: 6px;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.2s ease, scale 0.2s ease;
 }
 
 .book a:hover {
@@ -236,379 +163,135 @@ h3 {
 }
 
 .book img {
-    width: 100px;
-    height: 150px;
+    width: 100%;
+    max-width: 150px;
+    height: 200px;
+    object-fit: contain;
+    margin: 0 auto 25px auto;
+    display: block;
+
 }
 
-.containerfeed {
-    width: 92%;
-    padding: 40px 76px;
-    height: 80%;
-    position: absolute;
-    top: 290%;
-    background-color: var(--cor4);
+.book h4{
+    margin-bottom:10px;
 }
 
-.title {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 40px;
-}
-
-.title h2 {
-    font-size: 30px;
-    color: var(--cor6);
-    margin: 0;
-    line-height: 1.7;
-}
-
-.feedbacks {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-    left: 1%;
-    position: absolute;
-}
-
-.feedback {
-    background-color: white;
-    border-radius: 12px;
-    padding: 20px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    min-height: 300px;
-}
-
-.feedback::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 40px;
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-top: 10px solid white;
-}
-
-.user {
-    display: flex;
-    align-items: center;
-    margin-top: 25px;
-    gap: 12px;
-}
-
-.user img {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-}
-
-.user .info {
-    display: flex;
-    flex-direction: column;
+.book p{
+    margin-bottom:15px;
 }
 
 
 
-@media (max-width:1600px) {
 
+@media (max-width: 1624px) {
+    main {
+        margin-top: 70%;
+    }
+}
+
+@media (max-width: 1324px) {
+    main {
+        margin-top: 50%;
+    }
+
+    .forms {
+        padding: 20px 30px;
+    }
+}
+
+@media (max-width: 1024px) {
     .titulo {
-        font-size: 30px;
-        top: 55%;
-        left: 45%;
+        font-size: 20px;
+        top: 50%;
+        left: 50%;
     }
 
     main {
-        top: 120%;
-        left: 10%;
+        margin-top: 90%;
     }
 
-    .container .card {
-        left: 5%;
-        width: 350px;
-        height: 300px;
+    .book {
+        width: 180px;
+    }
+
+
+}
+
+@media (max-width: 768px) {
+
+    .titulo {
+        font-size: 15px;
+    }
+
+    main {
+        padding: 30px 10px;
+        margin-top: 150%;
+    }
+
+    .livros h2 {
+        font-size: 1.8em;
+    }
+
+    .livros h3 {
+        font-size: 1em;
     }
 
     .containerbooks {
-        left: 5%;
-    }
-
-    .containerfeed {
-        width: 90%;
-        padding: 50px 76px;
-        height: 90%;
-        top: 300%;
-    }
-
-    .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
         gap: 20px;
-        left: 1%;
     }
 
-    .feedback {
-        border-radius: 12px;
-        padding: 30px;
-        min-height: 350px;
+    .book {
+        width: 160px;
+        padding: 10px;
     }
 
-
+    .book img {
+        max-width: 120px;
+        height: 180px;
+    }
 }
 
-
-
-@media (max-width:1300px) {
-    .titulo {
-        font-size: 30px;
-        top: 55%;
-        left: 45%;
-    }
+@media (max-width: 480px) {
 
     main {
-        top: 100%;
-        left: 10%;
+        padding: 20px 5px;
+        margin-top: 220%;
     }
 
-    .container .card {
-        left: -5%;
-        width: 350px;
-        height: 300px;
+    .livros h2,
+     {
+        font-size: 1.5em;
     }
 
-    .containerbooks {
-        left: 5%;
-    }
-
-    .containerfeed {
-        width: 88%;
-        padding: 40px 74px;
-        height: 150%;
-        top: 400%;
-    }
-
-    .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        left: 2%;
-    }
-
-    .feedback {
-        border-radius: 12px;
-        padding: 20px;
-        min-height: 300px;
-    }
-
-
-}
-
-@media (max-width:1000px) {
-    .titulo {
-        font-size: 30px;
-        top: 55%;
-        left: 50%;
-    }
-
-    main {
-        top: 100%;
-        left: 10%;
-        height: 100%;
-    }
-
-    .container .card {
-        left: -5%;
-        width: 350px;
-        height: 300px;
+    .livros h3 {
+        font-size: 0.9em;
     }
 
     .containerbooks {
-        left: 5%;
+        gap: 15px;
     }
 
-    .containerfeed {
-        width: 86%;
-        padding: 40px 76px;
-        height: 150%;
-        top: 450%;
+    .book {
+        width: 140px;
+        padding: 8px;
     }
 
-    .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-        gap: 35px;
-        left: 2%;
+    .book img {
+        max-width: 100px;
+        height: 160px;
     }
 
-    .feedback {
-        border-radius: 12px;
-        padding: 20px;
-        min-height: 450px;
+    .book h4 {
+        font-size: 0.9em;
     }
 
-}
-
-
-
-@media (max-width:800px) {
-    .titulo {
-        font-size: 30px;
-        top: 55%;
-        left: 50%;
+    .book p {
+        font-size: 0.8em;
     }
 
-    main {
-        top: 100%;
-        left: 10%;
-        height: 100%;
+    .book a {
+        padding: 6px 12px;
+        font-size: 0.8em;
     }
-
-    .container .card {
-        left: -3%;
-        width: 350px;
-        height: 300px;
-    }
-
-    .containerbooks {
-        left: 5%;
-    }
-
-    .containerfeed {
-        width: 92%;
-        padding: 40px 76px;
-        height: 220%;
-        top: 550%;
-    }
-
-    .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        gap: 40px;
-        left: 2%;
-    }
-
-    .feedback {
-        border-radius: 12px;
-        padding: 15px;
-        min-height: 400px;
-    }
-
-
-
-}
-
-
-@media (max-width:600px) {
-
-    .titulo {
-        font-size: 25px;
-        top: 55%;
-        left: 50%;
-    }
-
-
-    .container .card {
-        left: -3%;
-        width: 300px;
-        height: 300px;
-    }
-
-    .container .card .caixaImg {
-        top: 20px;
-        width: 250px;
-        height: 170px;
-    }
-
-    .container .card:hover .caixaImg {
-        top: -70px;
-        scale: 1;
-    }
-
-    .container .card:hover .conteudo {
-        top: 110px;
-        height: 250px;
-        font-size: 1.2;
-        padding: 0px 100px;
-    }
-
-    .containerbooks {
-        left: -5%;
-    }
-
-    .containerfeed {
-        width: 92%;
-        padding: 40px 76px;
-        height: 250%;
-        top: 600%;
-    }
-
-    .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 35px;
-        left: 2%;
-    }
-
-    .feedback {
-        border-radius: 12px;
-        padding: 30px;
-        min-height: 450px;
-    }
-
-}
-
-
-@media (max-width:400px) {
-    .titulo {
-        font-size: 25px;
-        top: 55%;
-        left: 50%;
-
-    }
-
-    .container .card {
-        left: -3%;
-        width: 300px;
-        height: 300px;
-    }
-
-    .container .card .caixaImg {
-        top: 20px;
-        width: 250px;
-        height: 170px;
-    }
-
-    .container .card:hover .caixaImg {
-        top: -100px;
-        scale: .55;
-    }
-
-    .container .card:hover .conteudo {
-        top: 110px;
-        height: 250px;
-        font-size: 1.2;
-        padding: 0px 100px;
-    }
-
-    .containerbooks {
-        left: 5%;
-    }
-
-    .containerfeed {
-        width: 67%;
-        padding: 40px 76px;
-        height: 300%;
-        top: 500%;
-    }
-
-    .feedbacks {
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 35px;
-        left: 1%;
-    }
-
-    .feedback {
-        border-radius: 12px;
-        padding: 30px;
-        min-height: 350px;
-    }
-
 
 }

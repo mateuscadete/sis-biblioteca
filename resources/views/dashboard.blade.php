@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Livro</title>
-    <link rel="stylesheet" href="{{ asset('css/navbar1.css') }}">
+
     <link rel="stylesheet" href="{{ asset('css/cadastrolivro.css') }}">
 
 </head>
@@ -14,7 +14,7 @@
 
 <body>
 
-    <!--@include ('includes.navbar1')-->
+
 
 
 
@@ -34,7 +34,7 @@
                 <label for="titulo" class="form_label">Título</label>
 
                 <div class="input_field">
-                <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Ex: Nome do Livro" required>
+                    <input class="form-control" type="text" name="titulo" id="titulo" placeholder="Ex: Nome do Livro" required>
 
                 </div>
             </div>
@@ -50,7 +50,7 @@
             <div class="input_box">
                 <label for="editora" class="form_label">Editora</label>
                 <div class="input_field">
-                <input class="form-control" type="text" name="editora" id="editora" placeholder="Ex: Arqueiro, Saraiva" required>
+                    <input class="form-control" type="text" name="editora" id="editora" placeholder="Ex: Arqueiro, Saraiva" required>
                 </div>
             </div>
 
@@ -70,11 +70,11 @@
             </div>
 
             <div class="input_box">
-    <label for="edicao" class="form_label">Edição</label>
-    <div class="input_field">
-        <input class="form-control" type="text" name="edicao" id="edicao" placeholder="Ex: 1ª edição" required>
-    </div>
-</div>
+                <label for="edicao" class="form_label">Edição</label>
+                <div class="input_field">
+                    <input class="form-control" type="text" name="edicao" id="edicao" placeholder="Ex: 1ª edição" required>
+                </div>
+            </div>
 
             <div class="input_box">
                 <label for="imagem" class="form_label">Imagem da capa:</label>
@@ -94,7 +94,7 @@
             <div class="input_box">
                 <label for="paginas" class="form_label">Número de Páginas</label>
                 <div class="input_field">
-                <input class="form-control" type="number" name="num_paginas" id="num_paginas" required>
+                    <input class="form-control" type="number" name="num_paginas" id="num_paginas" required>
                 </div>
             </div>
 
