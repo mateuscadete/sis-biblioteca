@@ -88,3 +88,186 @@ main {
     background-color: #ffffff;
 
 }
+
+.main-section {
+    width: 100%;
+    max-width: 1200px;
+
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+
+.top-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    gap: 50px;
+
+    padding-bottom: 80px;
+
+}
+
+.top-content .text-block {
+    flex: 1;
+
+}
+
+.top-content h2 {
+    font-size: 2.5em;
+    color: var(--cor6);
+    line-height: 1.2;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.top-content p {
+    font-size: 1.1em;
+    color: var(--cor5);
+    line-height: 1.6;
+}
+
+
+.objective-section {
+    background-color: var(--cor4);
+
+    text-align: center;
+    padding: 80px 20px;
+    /
+}
+
+.objective-section .objective-header h2 {
+    font-size: 2.8em;
+
+    color: var(--cor6);
+    margin-bottom: 40px;
+    max-width: 800px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.objective-section .objective-paragraphs {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+
+}
+
+.objective-section .objective-paragraphs .text-block {
+    flex: 1;
+    min-width: 300px;
+
+    max-width: 450px;
+    text-align: left;
+}
+
+
+.objective-section .objective-paragraphs p {
+    font-size: 1.1em;
+    color: var(--cor5);
+    line-height: 1.6;
+}
+
+
+
+.features-section {
+    text-align: center;
+    padding-top: 80px;
+
+    padding-bottom: 80px;
+
+}
+
+.features-section h3 {
+    font-size: 2.2em;
+    color: var(--cor6);
+    margin-bottom: 60px;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+
+}
+
+.feature-cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 280px;
+
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.feature-cards .card .icon {
+    font-size: 3em;
+
+    color: var(--cor5);
+
+    margin-bottom: 15px;
+}
+
+.feature-cards .card h4 {
+    font-size: 1.2em;
+    color: var(--cor5);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.feature-cards .card p {
+    font-size: 0.95em;
+    color: var(--cor5);
+    line-height: 1.5;
+}
+
+
+@media (max-width: 900px) {
+    .top-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .top-content .text-block {
+        max-width: 600px;
+
+    }
+
+    .objective-section .objective-paragraphs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .objective-section .objective-paragraphs .text-block {
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .top-content h2 {
+        font-size: 2em;
+    }
+
+    .objective-section .objective-header h2 {
+        font-size: 2em;
+    }
+
+    .features-section h3 {
+        font-size: 1.8em;
+    }
+
+    main {
+        padding: 20px 10px;
+    }
+
+    .main-section {
+        padding: 30px 15px;
+    }
+}
