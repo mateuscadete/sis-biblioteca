@@ -50,16 +50,30 @@
                 </div>
 
                 <div class="mb-6">
-                    <label for="password" class="block text-sm font-medium text-gray-700">Senha</label>
-                    <input
-                        type="password"
-                        name="password"
-                        id="password"
-                        placeholder="Senha com no mínimo 6 caracteres"
-                        required
-                        class="mt-1 block w-full rounded-md border border-gray-300 focus:border-green-900 focus:ring-green-900"
-                    >
-                </div>
+    <label for="password" class="block text-sm font-medium text-gray-700">Senha</label>
+    <input
+        type="password"
+        name="password"
+        id="password"
+        placeholder="Senha com no mínimo 6 caracteres"
+        required
+        class="mt-1 block w-full rounded-md border border-gray-300 focus:border-green-900 focus:ring-green-900"
+    >
+</div>
+
+<!-- Campo de confirmação de senha adicionado -->
+<div class="mb-6">
+    <label for="password_confirmation" class="block text-sm font-medium text-gray-700">Confirme a Senha</label>
+    <input
+        type="password"
+        name="password_confirmation"
+        id="password_confirmation"
+        placeholder="Repita a senha"
+        required
+        class="mt-1 block w-full rounded-md border border-gray-300 focus:border-green-900 focus:ring-green-900"
+    >
+</div>
+
 
                 <button
                     type="submit"
