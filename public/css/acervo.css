@@ -77,6 +77,12 @@ header img {
 
 }
 
+.span-titulo {
+    background-color: rgba(0, 0, 0, 0.815);
+    border-radius: 5px;
+    padding: 7px;
+}
+
 main {
     margin-top: 50%;
     width: 100%;
@@ -172,12 +178,12 @@ h3 {
 
 }
 
-.book h4{
-    margin-bottom:10px;
+.book h4 {
+    margin-bottom: 10px;
 }
 
-.book p{
-    margin-bottom:15px;
+.book p {
+    margin-bottom: 15px;
 }
 
 
@@ -258,8 +264,7 @@ h3 {
         margin-top: 220%;
     }
 
-    .livros h2,
-     {
+    .livros h2 {
         font-size: 1.5em;
     }
 

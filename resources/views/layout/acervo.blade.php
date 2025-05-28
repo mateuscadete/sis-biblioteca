@@ -60,7 +60,7 @@
 
 
         <div class="titulo">
-            <h1>Explore o Acervo<br>da Nossa Biblioteca</h1>
+            <h1><span class="span-titulo">Explore</span> o Acervo<br>da Nossa <span class="span-titulo">Biblioteca</span></h1>
 
         </div>
 
