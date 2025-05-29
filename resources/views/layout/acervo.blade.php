@@ -12,40 +12,6 @@
 
 <body>
 
-
-    @if (session('success'))
-    <div style="color: green; padding: 10px;">
-        {{ session('success') }}
-    </div>
-    @endif
-
-    @if (session('error'))
-    <div style="color: red; padding: 10px;">
-        {{ session('error') }}
-    </div>
-    @endif
-
-
-    @foreach ($livros as $livro)
-    <div class="card mb-3">
-        <div class="card-body">
-            <h5 class="card-title">{{ $livro->titulo }}</h5>
-            <p class="card-text">Autor: {{ $livro->autor }}</p>
-            <p class="card-text">Quantidade disponível: {{ $livro->qtde }}</p>
-
-            @if($livro->qtde > 0)
-            <form action="{{ url('/emprestimos') }}" method="POST">
-                @csrf
-                <input type="hidden" name="livro_id" value="{{ $livro->id }}">
-                <button type="submit" class="btn btn-primary">Solicitar Empréstimo</button>
-            </form>
-            @else
-            <p class="text-danger">Fora de estoque</p>
-            @endif
-        </div>
-    </div>
-    @endforeach
-
     <header>
 
         <img src="{{url('imagens/acervo.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
@@ -61,7 +27,8 @@
 
 
         <div class="titulo">
-            <h1><span class="span-titulo">Explore</span> o Acervo<br>da Nossa <span class="span-titulo">Biblioteca</span></h1>
+            <h1><span class="span-titulo">Explore</span> o Acervo<br>da Nossa <span
+                    class="span-titulo">Biblioteca</span></h1>
 
         </div>
 
@@ -71,70 +38,108 @@
 
     <main>
 
-
-
-
-
-
-
         <section class="livros">
 
-            <h2>Livros mais buscados</h2>
-            <h3>Explore nossa biblioteca</h3>
-
-
             <div class="containerbooks">
-                <div class="book">
-                    <img src="https://m.media-amazon.com/images/I/316Rn0ogOBL._SY445_SX342_.jpg"
-                        alt="Livro 1">
-                    <h4>PHP&MySql: Desenvolvimento Web no lado do servidor</h4>
-                    <p>Autor: Jon Duckett</p>
-                    <a href="#">Ver Detalhes</a>
+                {{-- resources/views/layout/show.blade.php --}}
+                <!DOCTYPE html>
+                <html lang="pt-br">
 
-                </div>
-                <div class="book">
-                    <img src="https://www.jurua.com.br/images/prod/s/22/22246.jpg?ts=20201205" alt="Livro 2">
-                    <h4>Contabilidade Geral:Noções do Sistema Contábil</h4>
-                    <p>Autor: Anélio Berti</p>
-                    <a href="#">Ver Detalhes</a>
+                <head>
+                    <meta charset="UTF-8">
+                    <title>Lista de Livros</title>
+                    <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
+                    <link rel="stylesheet"
+                        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+                </head>
 
-                </div>
-                <div class="book">
-                    <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788502618350.170.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
-                        alt="Livro 3">
-                    <h4>Administração da Produção</h4>
-                    <p>Autor: Petrônio Martins & Fernando Laugeni</p>
-                    <a href="#">Ver Detalhes</a>
+                <body>
+                    <div class="container mt-4">
+                        @if(session('success'))
+                            <div class="alert alert-success">
+                                {{ session('success') }}
+                            </div>
+                        @endif
 
-                </div>
+                        <h2>Lista de Livros</h2>
 
-                <div class="book">
-                    <img src="https://m.media-amazon.com/images/I/419GCs0Mw7L._SY445_SX342_.jpg"
-                        alt="Livro 4">
-                    <h4>Quimica Essencial Para Leigos</h4>
-                    <p>Autor: John T. Moore</p>
-                    <a href="#">Ver Detalhes</a>
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Capa</th>
+                                    <th>Título</th>
+                                    <th>Autor</th>
+                                    <th>Editora</th>
+                                    <th>Gênero</th>
+                                    <th>Edição</th>
+                                    <th>Páginas</th>
+                                    <th>ISBN</th>
+                                    <th>Data</th>
+                                    <th>Descrição</th>
+                                </tr>
+                            </thead>
 
-                </div>
+                            <tbody>
+                                @foreach($livros as $livro)
+                                    <tr>
+                                        <td>
+                                            @if ($livro->imagem)
+                                                <img src="{{ asset('storage/' . $livro->imagem) }}" alt="Imagem do livro"
+                                                    style="max-width: 80px;">
+                                            @else
+                                                <span>Sem imagem</span>
+                                            @endif
+                                        </td>
+                                        <td>{{ $livro->titulo }}</td>
+                                        <td>{{ $livro->autor }}</td>
+                                        <td>{{ $livro->editora }}</td>
+                                        <td>{{ $livro->genero }}</td>
+                                        <td>{{ $livro->edicao }}</td>
+                                        <td>{{ $livro->num_paginas }}</td>
+                                        <td>{{ $livro->isbn }}</td>
+                                        <td>{{ \Carbon\Carbon::parse($livro->data)->format('d/m/Y') }}</td>
+                                        <td>{{ $livro->descricao }}</td>
+                                    </tr>
+                                @endforeach
 
-                <div class="book">
-                    <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788502618350.170.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
-                        alt="Livro 3">
-                    <h4>Administração da Produção</h4>
-                    <p>Autor: Petrônio Martins & Fernando Laugeni</p>
-                    <a href="#">Ver Detalhes</a>
+                                @if (session('success'))
+                                    <div style="color: green; padding: 10px;">
+                                        {{ session('success') }}
+                                    </div>
+                                @endif
 
-                </div>
+                                @if (session('error'))
+                                    <div style="color: red; padding: 10px;">
+                                        {{ session('error') }}
+                                    </div>
+                                @endif
 
-                <div class="book">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg"
-                        alt="Livro 6">
-                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
-                    <p>Autor: Rosivaldo Toscano</p>
-                    <a href="#">Ver Detalhes</a>
 
-                </div>
+                                @foreach ($livros as $livro)
+                                    <div class="card mb-3">
+                                        <div class="card-body">
+                                            <h5 class="card-title">{{ $livro->titulo }}</h5>
+                                            <p class="card-text">Autor: {{ $livro->autor }}</p>
+                                            <p class="card-text">Quantidade disponível: {{ $livro->qtde }}</p>
 
+                                            @if($livro->qtde > 0)
+                                                <form action="{{ url('/emprestimos') }}" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" name="livro_id" value="{{ $livro->id }}">
+                                                    <button type="submit" class="btn btn-primary">Solicitar Empréstimo</button>
+                                                </form>
+                                            @else
+                                                <p class="text-danger">Fora de estoque</p>
+                                            @endif
+                                        </div>
+                                    </div>
+                                @endforeach
+                            </tbody>
+                        </table>
+                    </div>
+                </body>
+
+                </html>
 
 
             </div>
