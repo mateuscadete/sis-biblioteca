@@ -41,6 +41,27 @@
                         </svg>
                     </span>
                 </button>
+                <form method="POST" action="{{ route('logout') }}" style="margin-left: 1rem;">
+    @csrf
+    <button type="submit" style="background: none; border: none; color: black; cursor: pointer;">
+        Logout
+    </button>
+</form>
+
+<div class="nome-usuario" style="margin-left: 10px; color: #fff;">
+    @auth
+        @if (!Auth::user()->is_admin)
+            Olá, {{ Auth::user()->name }}
+        @endif
+    @endauth
+</div>
+
+
+
+</div>
+
+
+
             </div>
         </div>
 
@@ -49,5 +70,6 @@
             <div class="line"></div>
             <div class="line"></div>
         </div>
+        
     </nav>
 </body>

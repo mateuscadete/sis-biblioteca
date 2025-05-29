@@ -79,5 +79,16 @@ Route::get('/acervo-layout', [UserController::class, 'acervo'])->name('layout.ac
 //Rota aba de pesquisa
 Route::get('/buscar-pagina', [App\Http\Controllers\BuscaController::class, 'redirecionar'])->name('buscar.pagina');
 
+//Rota para logout
+Route::post('/logout', function () {
+    Auth::logout();
+    request()->session()->invalidate(); // invalida a sessão
+    request()->session()->regenerateToken(); // regenera o token CSRF
+    return redirect('/'); // ou onde quiser redirecionar
+})->name('logout');
+
+
+
+
 
 
