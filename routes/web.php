@@ -87,6 +87,9 @@ Route::post('/logout', function () {
     return redirect('/'); // ou onde quiser redirecionar
 })->name('logout');
 
+//Rota para página individual do livro
+Route::get('/livros/{id}', [LivroController::class, 'show'])->name('livros.show');
+Route::post('/livros/{id}/emprestar', [App\Http\Controllers\LoanController::class, 'loanBook'])->middleware('auth')->name('livros.emprestar');
 
 
 
