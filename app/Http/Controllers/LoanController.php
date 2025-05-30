@@ -23,6 +23,9 @@ class LoanController extends Controller
             return redirect()->back()->with('error', 'Livro fora de estoque.');
         }
 
+        // Força a data atual, mesmo que o frontend envie outro valor
+        $request->merge(['loan_date' => now()]);
+
         // Cria um novo registro de empréstimo na tabela 'loans'
         Loan::create([
             'user_id' => Auth::id(),    // ID do usuário que está pegando o livro emprestado

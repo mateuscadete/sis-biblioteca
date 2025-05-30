@@ -58,10 +58,6 @@ $caminhoImagem = $request->file('imagem')->store('livros', 'public');
  
     public function destroy(Livro $livro)
     {
-        if(!Auth::user()->is_admin){
-            abort(403, 'Acesso negado.');
-
-        }
         // Apagar o registro no BD
         $livro->delete();
  

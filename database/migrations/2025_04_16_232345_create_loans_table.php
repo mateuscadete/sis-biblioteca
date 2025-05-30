@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('livro_id')->constrained('livros')->onDelete('cascade');
-            $table->date('loan_date');
+            $table->timestamp('loan_date', 3)->nullable();
             $table->date('return_date')->nullable(); // Só preenche na devolução
             $table->timestamps();
         });        
