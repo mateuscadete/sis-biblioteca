@@ -24,13 +24,13 @@
 <body>
     <header>
         <img src="{{url('imagens/biblioteca.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
-
+@guest
         <ul class="forms">
             <li><a href="{{ route('user.ajuda') }}">Admin</a></li>
             <li><a href="{{ route('user.login') }}">Login</a></li>
             <li><a href="{{ route('user.cadastro') }}">Cadastrar</a></li>
         </ul>
-
+@endguest
         @include('includes.navbar')
 
         <div class="titulo">

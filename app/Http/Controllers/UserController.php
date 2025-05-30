@@ -47,7 +47,7 @@ class UserController extends Controller
         ]);
 
         // Redirecionar o usuário, enviar a mensagem de sucesso
-        return redirect()->route('user.index')->with('success', 'Usuário cadastrado com sucesso!');
+        return redirect()->route('user.login')->with('success', 'Usuário cadastrado com sucesso!');
 
     }
 

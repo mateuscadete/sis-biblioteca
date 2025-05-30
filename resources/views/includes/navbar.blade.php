@@ -7,7 +7,6 @@
 <body>
     <nav class="navbar">
 
-
         <ul class="links">
             <li><a href="{{ route('user.index') }}">Home</a></li>
             <li><a href="{{ route('layout.acervo') }}">Nosso Acervo</a></li>
@@ -40,27 +39,24 @@
                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
                         </svg>
                     </span>
+
+                    <div class="nome-usuario" style="margin-left: 10px; color: #fff;">
+                        @auth
+                            @if (!Auth::user()->is_admin)
+                                <div style="color: black;">
+                                    Olá, {{ Auth::user()->name }}
+                                </div>
+                            @endif
+
+                            <form method="POST" action="{{ route('logout') }}" style="margin-top: 5px;">
+                                @csrf
+                                <button type="submit" style="background: none; border: none; color: black; cursor: pointer;">
+                                    Logout
+                                </button>
+                            </form>
+                        @endauth
+                    </div>
                 </button>
-                <form method="POST" action="{{ route('logout') }}" style="margin-left: 1rem;">
-    @csrf
-    <button type="submit" style="background: none; border: none; color: black; cursor: pointer;">
-        Logout
-    </button>
-</form>
-
-<div class="nome-usuario" style="margin-left: 10px; color: #fff;">
-<div class="nome-usuario" style="margin-left: 10px; color: #fff;">
-@auth
-    Olá, {{ Auth::user()->users }}
-@endauth
-</div>
-</div>
-
-
-
-</div>
-
-
 
             </div>
         </div>
@@ -70,6 +66,6 @@
             <div class="line"></div>
             <div class="line"></div>
         </div>
-        
+
     </nav>
 </body>
