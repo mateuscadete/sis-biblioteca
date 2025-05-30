@@ -12,16 +12,11 @@ use Illuminate\Http\Request;
 class UserController extends Controller
 {
 
-    public function index()
-    {
-
-        // Recuperar os registros do banco dados
-        $users = User::orderByDesc('id')->get();
-
-        // Carregar a VIEW
-        return view('layout.home', ['user' => $users]);
+    public function index() {
+        $user = Auth::user();  // pega o usuário autenticado
+    
+        return view('layout.home', compact('user'));
     }
-
     public function login()
     {
         return view('users.login');

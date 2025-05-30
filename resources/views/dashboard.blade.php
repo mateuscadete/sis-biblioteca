@@ -17,7 +17,7 @@
 
 
 
-
+@include('includes.navbar')
 
 
     <form action="{{ route('livro.submit') }}" method="POST" enctype="multipart/form-data">

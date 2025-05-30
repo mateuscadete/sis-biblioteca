@@ -49,11 +49,11 @@
 </form>
 
 <div class="nome-usuario" style="margin-left: 10px; color: #fff;">
-    @auth
-        @if (!Auth::user()->is_admin)
-            Olá, {{ Auth::user()->name }}
-        @endif
-    @endauth
+<div class="nome-usuario" style="margin-left: 10px; color: #fff;">
+@auth
+    Olá, {{ Auth::user()->users }}
+@endauth
+</div>
 </div>
 
 
