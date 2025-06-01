@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\LoanController;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\IAController;
 
 
 //Rota para a pagina home
@@ -90,6 +91,15 @@ Route::post('/livros/{id}/emprestar', [App\Http\Controllers\LoanController::clas
 
 // Rota para filtrar livros e acervo
 Route::get('/acervo-layout', [LivroController::class, 'filtro'])->name('layout.acervo');
+
+/// Rota para a página de IA
+Route::get('/assistente-ia', function () {
+    return view('layout.ia');
+})->name('assistente.ia');
+
+// Rota para a API de chat com IA
+Route::post('/api/ai-chat', [IAController::class, 'chat'])->name('ai.chat');
+
 
 
 
