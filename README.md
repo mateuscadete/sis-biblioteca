@@ -1,5 +1,3 @@
----
-
 # 📖 Sistema para Bibliotecas
 
 Este repositório contém as versões do Trabalho de Conclusão de Curso desenvolvido na Etec Zona Leste no 1º semestre de 2025. O projeto é um sistema para gerenciamento de bibliotecas.
