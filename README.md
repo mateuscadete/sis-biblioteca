@@ -2,9 +2,6 @@
 
 Este repositório contém as versões do Trabalho de Conclusão de Curso desenvolvido na Etec Zona Leste no 1º semestre de 2025. O projeto é um sistema para gerenciamento de bibliotecas.
 
----
-
-📚 Sobre o Projeto
 Este sistema digital para bibliotecas facilita o empréstimo e a devolução de livros, melhora a organização do acervo e envia notificações automáticas aos usuários. O objetivo é agilizar o atendimento e reduzir o trabalho manual dos funcionários, tornando o acesso aos livros mais rápido e eficiente para alunos, professores e equipe.
 
 ---
