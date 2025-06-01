@@ -98,7 +98,7 @@ Route::get('/assistente-ia', function () {
 })->name('assistente.ia');
 
 // Rota para a API de chat com IA
-Route::post('/api/ai-chat', [IAController::class, 'chat'])->name('ai.chat');
+Route::post('/api/ai-chat', [IAController::class, 'chat'])->middleware('auth')->name('ai.chat');
 
 
 

@@ -4,42 +4,44 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use Illuminate\Support\Facades\Log;
 
 class IAController extends Controller
 {
     public function chat(Request $request)
     {
         $request->validate([
-            'message' => 'required|string'
+            'message' => 'required|string',
         ]);
 
-        // Aqui você pode integrar com diferentes APIs de IA
-        // Exemplo com OpenAI (você precisará configurar sua chave API no .env)
         try {
-            $response = Http::withHeaders([
-                'Authorization' => 'Bearer ' . env('OPENAI_API_KEY'),
-                'Content-Type' => 'application/json',
-            ])->post('https://api.openai.com/v1/chat/completions', [
-                'model' => 'gpt-3.5-turbo',
-                'messages' => [
+            $apiKey = env('GEMINI_API_KEY');
+
+            $response = Http::post("https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={$apiKey}", [
+                'contents' => [
                     [
-                        'role' => 'system',
-                        'content' => 'Você é um assistente útil de uma biblioteca. Responda perguntas sobre livros, autores e assuntos relacionados à biblioteca de forma educada e informativa.'
-                    ],
-                    [
-                        'role' => 'user',
-                        'content' => $request->message
+                        'parts' => [
+                            ['text' => $request->message]
+                        ]
                     ]
-                ],
-                'temperature' => 0.7
+                ]
             ]);
 
-            $aiResponse = $response->json()['choices'][0]['message']['content'] ?? 'Desculpe, não consegui processar sua pergunta.';
-
-            return response()->json(['response' => $aiResponse]);
-
+            if ($response->successful() && isset($response['candidates'][0]['content']['parts'][0]['text'])) {
+                return response()->json([
+                    'response' => $response['candidates'][0]['content']['parts'][0]['text']
+                ]);
+            } else {
+                Log::error('Erro na resposta da Gemini API:', ['response' => $response->json()]);
+                return response()->json([
+                    'response' => 'Erro ao processar a resposta da IA.'
+                ], 500);
+            }
         } catch (\Exception $e) {
-            return response()->json(['response' => 'Erro ao conectar com o serviço de IA: ' . $e->getMessage()], 500);
+            Log::error('Erro na requisição da Gemini API:', ['exception' => $e]);
+            return response()->json([
+                'response' => 'Erro ao conectar com a API da Google: ' . $e->getMessage()
+            ], 500);
         }
     }
 }
