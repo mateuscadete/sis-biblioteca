@@ -7,6 +7,7 @@ use App\Http\Requests\LoginRequest;
 use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use Illuminate\Http\Request;
+use App\Models\Livro;
 
 
 class UserController extends Controller
@@ -111,7 +112,7 @@ class UserController extends Controller
     public function acervo()
     {
         // Busca os livros para passar para a view
-        $livros = \App\Models\Livro::all();
+        $livros = Livro::all();
 
         // Retorna a view onde a lista de livros será mostrada (exemplo: 'acervo')
         return view('layout.acervo', compact('livros'));

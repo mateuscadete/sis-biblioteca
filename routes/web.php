@@ -5,13 +5,11 @@ use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContatoController;
 use App\Http\Controllers\LoanController;
+use Illuminate\Support\Facades\Auth;
 
 
 //Rota para a pagina home
 Route::get('/', [UserController::class, 'index'])->name('user.index');
-
-//Rota para a pagina de acervo
-Route::get('/acervo-layout', [UserController::class, 'acervo'])->name('layout.acervo');
 
 //Rotas para a pagina de login
 Route::get('/login-user', [UserController::class, 'login'])->name('user.login');
@@ -23,7 +21,6 @@ Route::post('/store-user', [UserController::class, 'store'])->name('user-store')
 
 //Rota pra pagina ajuda
 Route::get('/ajuda-user', [UserController::class, 'ajuda'])->name('user.ajuda');
-
 
 //Rota para pagina sobre
 Route::get('/sobre-layout', [UserController::class, 'sobre'])->name('layout.sobre');
@@ -91,6 +88,8 @@ Route::post('/logout', function () {
 Route::get('/livros/{id}', [LivroController::class, 'show'])->name('livros.show');
 Route::post('/livros/{id}/emprestar', [App\Http\Controllers\LoanController::class, 'loanBook'])->middleware('auth')->name('livros.emprestar');
 
+// Rota para filtrar livros e acervo
+Route::get('/acervo-layout', [LivroController::class, 'filtro'])->name('layout.acervo');
 
 
 

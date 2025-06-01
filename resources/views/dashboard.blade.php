@@ -15,11 +15,6 @@
 
 <body>
 
-
-
-@include('includes.navbar1')
-
-
     <form action="{{ route('livro.submit') }}" method="POST" enctype="multipart/form-data">
 
         @csrf

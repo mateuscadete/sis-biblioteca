@@ -48,7 +48,7 @@ class LoanController extends Controller
 
         // Verifica se o livro já foi devolvido (campo return_date preenchido)
         if ($loan->return_date) {
-            return response()->json(['error' => 'Livro já foi devolvido.'], 400);
+            return redirect()->back()->with('error', 'Livro já foi devolvido.');
         }
 
         // Atualiza a data de devolução com a data e hora atual
@@ -58,33 +58,57 @@ class LoanController extends Controller
         $loan->livro->increment('qtde');
 
         // Retorna resposta de sucesso em formato JSON
-        return response()->json(['message' => 'Livro devolvido com sucesso.']);
+        return redirect()->back()->with('success', 'Livro devolvido com sucesso.');
     }
 
-    public function listarEmprestimos()
+    public function listarEmprestimos(Request $request)
     {
-        // Obtém o usuário atualmente autenticado
         $user = Auth::user();
+        $search = $request->input('search');
 
-        if ($user->is_admin) {
-            // Se o usuário for um administrador,
-            // ele pode ver todos os empréstimos que ainda não foram devolvidos (return_date é nulo)
-            // Também carrega os relacionamentos com os modelos 'livro' e 'user' para evitar múltiplas consultas ao banco (eager loading)
-            $emprestimos = Loan::with('livro', 'user')->whereNull('return_date')->get();
-        } else {
-            // Se for um usuário comum,
-            // ele só pode ver os seus próprios empréstimos que ainda não foram devolvidos
-            // Também carrega o relacionamento com o modelo 'livro'
-            $emprestimos = Loan::with('livro')
-                ->where('user_id', $user->id) // filtra os empréstimos do usuário logado
-                ->whereNull('return_date')   // somente empréstimos ainda não devolvidos
-                ->get();
+        $query = Loan::with('livro', 'user')->whereNull('return_date');
+
+        // Restringe para usuários comuns (não-admin)
+        if (!$user->is_admin) {
+            $query->where('user_id', $user->id);
         }
 
-        // Retorna a view 'layout.emprestimos' passando a variável $emprestimos para ser usada na visualização
+        if ($search) {
+            // Aplica filtros nos atributos do livro
+            $query->where(function ($q) use ($search, $user) {
+                $q->whereHas('livro', function ($subQ) use ($search) {
+                    $subQ->where('titulo', 'like', "%{$search}%")
+                        ->orWhere('autor', 'like', "%{$search}%")
+                        ->orWhere('editora', 'like', "%{$search}%")
+                        ->orWhere('genero', 'like', "%{$search}%")
+                        ->orWhere('edicao', 'like', "%{$search}%")
+                        ->orWhere('num_paginas', 'like', "%{$search}%")
+                        ->orWhere('isbn', 'like', "%{$search}%")
+                        ->orWhere('data', 'like', "%{$search}%")
+                        ->orWhere('descricao', 'like', "%{$search}%")
+                        ->orWhere('imagem', 'like', "%{$search}%");
+                });
+
+                // Admin também pode buscar pelo nome do usuário
+                if ($user->is_admin) {
+                    $q->orWhereHas('user', function ($subQ) use ($search) {
+                        $subQ->where('name', 'like', "%{$search}%");
+                    });
+                }
+
+                // Filtro por status textual (pendente, atrasado, devolvido)
+                if (str_contains(strtolower($search), 'pendente')) {
+                    $q->whereRaw('DATEDIFF(NOW(), loan_date) <= 7')->whereNull('return_date');
+                } elseif (str_contains(strtolower($search), 'atrasado')) {
+                    $q->whereRaw('DATEDIFF(NOW(), loan_date) > 7')->whereNull('return_date');
+                } elseif (str_contains(strtolower($search), 'devolvido')) {
+                    $q->whereNotNull('return_date');
+                }
+            });
+        }
+
+        $emprestimos = $query->get();
+
         return view('emprestimos.index', compact('emprestimos'));
     }
-
 }
-
-
