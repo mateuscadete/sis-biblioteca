@@ -4,8 +4,6 @@ Este repositório contém as versões do Trabalho de Conclusão de Curso desenvo
 
 Este sistema digital para bibliotecas facilita o empréstimo e a devolução de livros, melhora a organização do acervo e envia notificações automáticas aos usuários. O objetivo é agilizar o atendimento e reduzir o trabalho manual dos funcionários, tornando o acesso aos livros mais rápido e eficiente para alunos, professores e equipe.
 
----
-
 ## 🚀 Como rodar o projeto localmente
 
 ### Pré-requisitos
