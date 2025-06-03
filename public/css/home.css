@@ -15,9 +15,7 @@ body {
     font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: column;
-
 }
-
 
 header {
     width: 100%;
@@ -28,7 +26,6 @@ header {
     color: white;
     background-position: center;
     background-size: cover;
-
 }
 
 header img {
@@ -36,33 +33,8 @@ header img {
     width: 100%;
     height: 400px;
     display: block;
-
 }
 
-.forms {
-    display: flex;
-    padding: 30px 40px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    gap: 15px;
-    list-style: none;
-    margin: 0;
-
-}
-
-.forms a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
-
-}
-
-.forms a:hover {
-    color: var(--cor5);
-    transform: translateX(5px);
-}
 
 .titulo {
     font-size: 30px;
@@ -75,7 +47,6 @@ header img {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     width: 80%;
     max-width: 600px;
-
 }
 
 main {
@@ -87,7 +58,6 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: #ffffff;
-
 }
 
 .assuntos {
@@ -117,7 +87,6 @@ h3 {
     margin-top: 100px;
     left: auto;
     width: 100%;
-
 }
 
 .container .card {
@@ -135,12 +104,10 @@ h3 {
     box-sizing: border-box;
     position: relative;
     left: auto;
-
 }
 
 .container .card:hover {
     height: 400px;
-
 }
 
 .container .card .caixaImg {
@@ -497,86 +464,7 @@ h3 {
 
 
 
-.sugestão {
-    padding: 40px 20px;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 60px;
-}
 
-.sugestão-card {
-    background-color: var(--cor4);
-    border-radius: 15px;
-    padding: 35px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
-    max-width: 700px;
-    width: 100%;
-    text-align: center;
-}
-
-.sugestão-card p {
-    font-size: 1.1em;
-    color: var(--cor6);
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-.sugestão-card h2 {
-    font-size: 2em;
-    color: var(--cor6);
-    margin-bottom: 25px;
-    font-weight: 700;
-}
-
-.sugestão-form {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.sugestão-input {
-    flex: 1;
-    min-width: 250px;
-    padding: 15px 20px;
-    border-radius: 10px;
-    border: 2px solid var(--cor3);
-    font-size: 1em;
-    color: var(--cor6);
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.sugestão-input::placeholder {
-    color: var(--cor2);
-}
-
-.sugestão-input:focus {
-    border-color: var(--cor5);
-    box-shadow: 0 0 0 3px rgba(104, 70, 43, 0.2);
-}
-
-.enviar {
-    background-color: var(--cor1);
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 10px;
-    font-size: 1em;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    flex-shrink: 0;
-}
-
-.enviar:hover {
-    background-color: var(--cor0);
-    transform: translateY(-2px);
-}
 
 
 
@@ -768,7 +656,7 @@ h3 {
 
     .container .card {
         width: 90%;
-        /* Take more width on small screens */
+       
         max-width: 300px;
         height: 250px;
     }
@@ -786,7 +674,7 @@ h3 {
     .container .card:hover .caixaImg {
         top: -50px;
         scale: 1;
-        /* Don't scale down much on hover for small screens */
+      
     }
 
     .container .card .conteudo {
@@ -840,7 +728,6 @@ h3 {
 
     .feedbacks {
         grid-template-columns: 1fr;
-        /* Single column on very small screens */
         gap: 15px;
     }
 

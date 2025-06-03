@@ -25,17 +25,12 @@
     <header>
         <img src="{{url('imagens/biblioteca.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
 @guest
-        <ul class="forms">
-            <li><a href="{{ route('user.ajuda') }}">Admin</a></li>
-            <li><a href="{{ route('user.login') }}">Login</a></li>
-            <li><a href="{{ route('user.cadastro') }}">Cadastrar</a></li>
-        </ul>
+       
 @endguest
         @include('includes.navbar')
 
         <div class="titulo">
             <h1>Bem-Vindo à<br> biblioteca<br>Etec Zona Leste</h1>
-
         </div>
 
 
@@ -107,14 +102,14 @@
                         alt="Livro 1">
                     <h4>PHP&MySql: Desenvolvimento Web no lado do servidor</h4>
                     <p>Autor: Jon Duckett</p>
-                    <a href="#">Ver Detalhes</a>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
 
                 </div>
                 <div class="book">
                     <img src="https://www.jurua.com.br/images/prod/s/22/22246.jpg?ts=20201205" alt="Livro 2">
                     <h4>Contabilidade Geral:Noções do Sistema Contábil</h4>
                     <p>Autor: Anélio Berti</p>
-                    <a href="#">Ver Detalhes</a>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
 
                 </div>
                 <div class="book">
@@ -122,7 +117,7 @@
                         alt="Livro 3">
                     <h4>Administração da Produção</h4>
                     <p>Autor: Petrônio Martins & Fernando Laugeni</p>
-                    <a href="#">Ver Detalhes</a>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
 
                 </div>
 
@@ -131,16 +126,16 @@
                         alt="Livro 4">
                     <h4>Quimica Essencial Para Leigos</h4>
                     <p>Autor: John T. Moore</p>
-                    <a href="#">Ver Detalhes</a>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
 
                 </div>
 
                 <div class="book">
-                    <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788502618350.170.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
+                    <img src="https://static.dinamize.com.br/dinamizeszmsdg3x/uploads/2024/06/livro-biblia-marketing-digital.png"
                         alt="Livro 3">
-                    <h4>Administração da Produção</h4>
-                    <p>Autor: Petrônio Martins & Fernando Laugeni</p>
-                    <a href="#">Ver Detalhes</a>
+                    <h4>A Bíblia do Marketing Digital</h4>
+                    <p>Autor: Cláudio Torres</p>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
 
                 </div>
 
@@ -149,7 +144,7 @@
                         alt="Livro 6">
                     <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
                     <p>Autor: Rosivaldo Toscano</p>
-                    <a href="#">Ver Detalhes</a>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
 
                 </div>
 
@@ -242,20 +237,7 @@
 
 
 
-    <section class="sugestão">
-        <div class="sugestão-card">
-
-
-            <p>Queremos melhorar!</p>
-
-            <h2>Mande alguma sugestão</h2>
-            <form action="" method="POST" class="sugestão-form">
-                <input type="text" name="sugestao" placeholder="Digite sua sugestão aqui..." class="sugestão-input" required>
-                <button type="submit" class="enviar">Enviar</button>
-            </form>
-        </div>
-    </section>
-
+   
 
 
 

@@ -12,10 +12,10 @@
         <h2>Uma Plataforma Para Sua Biblioteca</h2>
         <p>Acesse Nossas Redes e Repositório</p>
         <div class="icones">
-            <a href="https://www.facebook.com/seuperfil" target="_blank" aria-label="Link para o Facebook">
+            <a href="https://www.facebook.com" target="_blank" aria-label="Link para o Facebook">
                 <img src="{{ asset('imagens/facebook.svg') }}" alt="Facebook">
             </a>
-            <a href="https://www.instagram.com/seuperfil" target="_blank" aria-label="Link para o Instagram">
+            <a href="https://www.instagram.com" target="_blank" aria-label="Link para o Instagram">
                 <img src="{{ asset('imagens/instagram.svg') }}" alt="Instagram">
             </a>
             <a href="https://github.com/mateuscadete/sis_biblioteca" target="_blank" aria-label="Link para o GitHub">
@@ -25,11 +25,11 @@
     </div>
 
     <div class="footer-section">
-        <h3>COMPANHIA</h3>
+        <h3>CONTAS</h3>
         <ul>
-            <li><a href="{{ route('layout.sobre') }}">Sobre</a></li>
-            <li><a href="#">Criadores</a></li>
-            <li><a href="#">Blog</a></li>
+        <li><a href="{{ route('dashboard') }}">Administrador</a></li>
+            <li><a href="{{ route('user.login') }}">Login</a></li>
+            <li><a href="{{ route('user.cadastro') }}">Cadastrar</a></li>
         </ul>
     </div>
 
@@ -38,7 +38,7 @@
         <ul>
             <li><a href="#">Etec</a></li>
             <li><a href="{{ route('layout.acervo') }}">Livros</a></li>
-            <li><a href="#">Como funciona</a></li>
+            <li><a href="{{route('layout.sobre')}}">Sobre</a></li>
         </ul>
     </div>
 
