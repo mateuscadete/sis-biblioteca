@@ -53,8 +53,8 @@
                             <button type="submit" class="logout-button">Sair</button>
                         </form>
                         @else
-                        <a href="{{ route('login') }}" class="login-button">Login</a>
-                        <a href="{{ route('register') }}" class="register-button">Registrar</a>
+                        <a href="{{ route('user.login') }}" class="login-button">Login</a>
+                        <a href="{{ route('user.cadastro') }}" class="register-button">Registrar</a>
                         @endauth
                     </div>
                 </div>

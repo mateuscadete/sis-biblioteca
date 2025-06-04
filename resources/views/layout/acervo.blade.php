@@ -16,12 +16,6 @@
 
         <img src="{{url('imagens/acervo.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
 
-        <ul class="forms">
-            <li><a href="{{ route('user.ajuda') }}">Admin</a></li>
-            <li><a href="{{ route('user.login') }}">Login</a></li>
-            <li><a href="{{ route('user.cadastro') }}">Cadastrar</a></li>
-        </ul>
-
         @include('includes.navbar')
 
 
@@ -96,7 +90,7 @@
                                     <form action="{{ url( '/emprestimos') }}" method="POST">
                                         @csrf
                                         <input type="hidden" name="livro_id" value="{{ $livro->id }}">
-                                        <button type="submit" class="btn btn-primary btn-sm">Solicitar</button>
+                                       <button type="submit" class="btn btn-primary btn-sm">Solicitar</button>
                                     </form>
                                     @else
                                     <span class="text-danger">Fora de estoque</span>

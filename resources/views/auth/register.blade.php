@@ -6,6 +6,7 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+@include('includes.navbar')
 
     <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden flex">
         <!-- Lado esquerdo: Formulário -->

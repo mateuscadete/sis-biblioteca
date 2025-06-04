@@ -6,11 +6,12 @@
     @vite('resources/css/app.css') <!-- Certifique-se de usar Vite corretamente -->
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
+@include('includes.navbar')
 
 
     <div class="flex w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
         <!-- Coluna da esquerda (boas-vindas) -->
-        <div class="w-1/2 bg-green-900 text-white flex flex-col items-center justify-center p-10">
+        <div class="w-1/2 bg-green-950 text-white flex flex-col items-center justify-center p-10">
             <h2 class="text-3xl font-bold mb-4 text-center">Bem-Vindo<br>De Volta</h2>
             
         
