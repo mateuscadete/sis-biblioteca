@@ -22,18 +22,18 @@
 </head>
 
 <body>
+    @include('includes.navbar')
+
     <header>
-        <img src="{{url('imagens/biblioteca.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
-@guest
-       
-@endguest
-        @include('includes.navbar')
+        <img src="{{ asset('imagens/biblioteca.jpg') }}" alt="Logo da Biblioteca Etec Zona Leste" style="width: 100%; height: 100vh; object-fit: cover;">
+
+
+        @guest
+        @endguest
 
         <div class="titulo">
             <h1>Bem-Vindo à<br> biblioteca<br>Etec Zona Leste</h1>
         </div>
-
-
     </header>
     <main>
 
@@ -237,7 +237,7 @@
 
 
 
-   
+
 
 
 

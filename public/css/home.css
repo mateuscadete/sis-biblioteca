@@ -20,21 +20,18 @@ body {
 header {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     display: flex;
     margin: 0;
     color: white;
-    background-position: center;
     background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-header img {
-    object-fit: cover;
-    width: 100%;
-    height: 400px;
-    display: block;
-}
-
 
 .titulo {
     font-size: 30px;
@@ -50,7 +47,7 @@ header img {
 }
 
 main {
-    margin-top: 50%;
+    margin-top: 0;
     width: 100%;
     padding: 40px 20px;
     box-sizing: border-box;
@@ -469,32 +466,13 @@ h3 {
 
 
 
-@media (max-width: 1624px) {
-    main {
-        margin-top: 70%;
-    }
-}
 
-@media (max-width: 1324px) {
-    main {
-        margin-top: 50%;
-
-    }
-
-    .forms {
-        padding: 20px 30px;
-    }
-}
 
 @media (max-width: 1024px) {
     .titulo {
-        font-size: 20px;
+        font-size: 25px;
         top: 50%;
         left: 50%;
-    }
-
-    main {
-        margin-top: 70%;
     }
 
     .container .card {
@@ -521,7 +499,7 @@ h3 {
     }
 
     .containerfeed {
-        padding: 30px 15px;
+        padding: 30px 15px 250px;
     }
 
     .feedbacks {
@@ -531,16 +509,9 @@ h3 {
 
 @media (max-width: 768px) {
 
-
-    .titulo {
-        font-size: 15px;
-    }
-
-
-
     main {
         padding: 30px 10px;
-        margin-top: 80%;
+
     }
 
     .assuntos h2,
@@ -624,9 +595,9 @@ h3 {
         left: 50%;
     }
 
-    main {
-        margin-top: 120%;
-    }
+
+
+
 }
 
 @media (max-width: 480px) {
@@ -636,7 +607,7 @@ h3 {
 
     main {
         padding: 20px 5px;
-        margin-top: 140%;
+
     }
 
     .assuntos h2,
@@ -656,7 +627,7 @@ h3 {
 
     .container .card {
         width: 90%;
-       
+
         max-width: 300px;
         height: 250px;
     }
@@ -674,7 +645,7 @@ h3 {
     .container .card:hover .caixaImg {
         top: -50px;
         scale: 1;
-      
+
     }
 
     .container .card .conteudo {
@@ -740,5 +711,3 @@ h3 {
         font-size: 0.9em;
     }
 }
-
-
