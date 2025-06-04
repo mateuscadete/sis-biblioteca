@@ -19,25 +19,18 @@
     --cor4: #e9e0d1;
     --cor5: #68462b;
     --cor6: #382414;
-    --navbar-height: 70px;
-    /* Altura padrão da navbar */
+
+
 }
 
-/* --- Estilos Gerais --- */
+
 * {
     font-family: 'Raleway', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    /* Garante que padding e border sejam incluídos na largura/altura */
 }
 
-body {
-    padding-top: var(--navbar-height);
-    /* Adiciona padding no topo para o conteúdo não ficar por baixo da navbar fixa */
-}
-
-/* --- Navbar Principal --- */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -45,18 +38,15 @@ body {
     border-radius: 10px;
     width: 100%;
     background: var(--cor4);
-    padding: 10px 25px;
-    /* Ajustado um pouco o padding */
-    position: fixed;
-    /* Fixa a navbar no topo */
+    padding: 15px 25px;
+    position: relative;
     top: 0;
     left: 0;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     z-index: 1000;
-    height: var(--navbar-height);
 }
 
-.navbar-brand {
+.navbar-logo {
     display: flex;
     align-items: center;
     text-decoration: none;
@@ -66,19 +56,19 @@ body {
     gap: 10px;
 }
 
-.navbar-logo {
+.navbar-img {
     height: 40px;
-    /* Tamanho do logo */
     width: auto;
 }
 
-/* --- Links de Navegação --- */
+
 .links {
     list-style: none;
     display: flex;
     gap: 25px;
     margin: 0 30px;
-    /* Centraliza ligeiramente e ajusta margens */
+    font-size: 18px;
+
 }
 
 .links a {
@@ -86,20 +76,18 @@ body {
     color: var(--cor6);
     font-weight: bold;
     padding: 8px 0;
-    /* Aumentado o padding para área clicável */
     transition: color 0.3s ease, transform 0.2s ease;
     position: relative;
-    /* Para o efeito de sublinhado */
+
 }
 
 .links a:hover {
     color: var(--cor5);
     transform: translateY(-2px);
-    /* Pequeno efeito ao passar o mouse */
+
 }
 
 .links a::after {
-    /* Efeito de sublinhado animado */
     content: '';
     position: absolute;
     width: 0;
@@ -114,8 +102,7 @@ body {
     width: 100%;
 }
 
-/* --- Ações do Lado Direito (Busca e Usuário) --- */
-.navbar-actions {
+.navbar-right {
     display: flex;
     align-items: center;
     gap: 25px;
@@ -138,7 +125,6 @@ body {
     padding: 10px 15px 10px 40px;
     border-radius: 9999px;
     border: solid 1px var(--cor2);
-    /* Ajustado para uma cor mais suave */
     background-color: white;
     transition: all .3s ease-in-out;
     outline: none;
@@ -147,16 +133,14 @@ body {
 }
 
 .search-container svg {
-    /* Usei .search-container para o ícone, não .container-input */
     position: absolute;
-    left: 15px;
+    left: 5px;
     top: 50%;
     transform: translateY(-50%);
     color: var(--cor6);
     pointer-events: none;
-    /* Garante que o clique passe para o input */
     z-index: 1;
-    /* Garante que o SVG esteja acima do input */
+
 }
 
 .search-input:focus {
@@ -167,81 +151,66 @@ body {
 }
 
 .search-button {
-    /* Novo estilo para o botão de pesquisa dentro do form */
     background: none;
     border: none;
     cursor: pointer;
     padding: 0;
     position: absolute;
-    /* Posiciona o botão sobre o SVG */
     left: 10px;
-    /* Ajuste conforme necessário para o clique */
     top: 50%;
     transform: translateY(-50%);
     width: 30px;
-    /* Área clicável do botão */
     height: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: transparent;
-    /* Esconde o texto do botão, mas mantém o SVG */
 }
 
-/* O SVG dentro de .search-button terá a cor definida pelo próprio SVG */
-
-
-/* --- Ícones de Ação (Empréstimo, Usuário) --- */
-.user-interactions {
+.icones {
+    position: relative;
     display: flex;
     gap: 5px;
+    bottom: 8px;
 }
 
 .icon-button {
     background-color: transparent;
     border: none;
     width: 50px;
-    /* Tamanho ajustado */
     height: 50px;
-    /* Tamanho ajustado */
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
     transition: background-color 0.3s ease, transform 0.3s ease;
-    padding: 0;
     text-decoration: none;
-    /* Para links, remove sublinhado */
 }
 
 .icon-button:hover {
-    background-color: var(--cor3);
-    /* Cor de hover ajustada */
+    background-color: var(--cor5);
     transform: translateY(-2px);
 }
 
 .icon-button svg {
     color: var(--cor6);
     width: 28px;
-    /* Tamanho ajustado */
     height: 28px;
-    /* Tamanho ajustado */
     transition: transform 0.3s ease;
 }
 
 .icon-button:hover svg {
     transform: scale(1.1);
+    color: var(--cor4);
 }
 
-/* --- Dropdown do Usuário --- */
-.user-account-dropdown {
+.user-conta {
     position: relative;
 }
 
-.dropdown-content {
+.logado {
     display: none;
-    /* Escondido por padrão */
     position: absolute;
     background-color: white;
     min-width: 160px;
@@ -249,29 +218,26 @@ body {
     z-index: 1;
     border-radius: 8px;
     right: 0;
-    /* Alinha o dropdown à direita do botão */
     top: calc(100% + 10px);
-    /* Posiciona abaixo do botão, com um pequeno espaço */
     padding: 10px 0;
 }
 
-.dropdown-content.show {
+.logado.show {
     display: flex;
     flex-direction: column;
     gap: 5px;
 }
 
-.dropdown-content .user-greeting {
+.logado .user-logado {
     color: var(--cor6);
     padding: 5px 15px;
     font-size: 0.9em;
     white-space: nowrap;
-    /* Evita que o nome quebre a linha */
 }
 
-.dropdown-content .logout-button,
-.dropdown-content .login-button,
-.dropdown-content .register-button {
+.logado .sair,
+.logado .logar,
+.logado .cadastrar {
     background: none;
     border: none;
     color: var(--cor6);
@@ -285,18 +251,15 @@ body {
     transition: background-color 0.2s ease, color 0.2s ease;
 }
 
-.dropdown-content .logout-button:hover,
-.dropdown-content .login-button:hover,
-.dropdown-content .register-button:hover {
+.logado .sair:hover,
+.logado .logar:hover,
+.logado .cadastrar:hover {
     background-color: var(--cor4);
     color: var(--cor1);
 }
 
-
-/* --- Menu Hamburguer (Mobile) --- */
-.menu-toggle {
+.menu {
     display: none;
-    /* Escondido por padrão em desktop */
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
@@ -304,10 +267,9 @@ body {
     cursor: pointer;
     z-index: 1001;
     position: relative;
-    /* Para garantir que o menu hamburguer esteja sempre no topo */
 }
 
-.menu-toggle .line {
+.menu .line {
     background: var(--cor6);
     width: 100%;
     height: 3px;
@@ -315,23 +277,23 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
-.menu-toggle.active .line:nth-child(1) {
+.menu.active .line:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
 
-.menu-toggle.active .line:nth-child(2) {
+.menu.active .line:nth-child(2) {
     opacity: 0;
 }
 
-.menu-toggle.active .line:nth-child(3) {
+.menu.active .line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* --- Media Queries (Responsividade) --- */
+
 
 @media (max-width: 992px) {
 
-    /* Ajuste o breakpoint conforme necessário */
+
     .navbar {
         padding: 10px 15px;
     }
@@ -339,7 +301,7 @@ body {
     .links {
         position: fixed;
         /* Permite que o menu mobile "deslize" */
-        top: var(--navbar-height);
+        top: 85px;
         /* Começa abaixo da navbar */
         left: 0;
         width: 100%;
@@ -347,71 +309,44 @@ body {
         flex-direction: column;
         align-items: center;
         padding: 20px 0;
-        height: calc(100vh - var(--navbar-height));
-        /* Ocupa o resto da altura da tela */
         overflow-y: auto;
-        /* Adiciona scroll se o conteúdo for muito grande */
         transform: translateX(-100%);
-        /* Escondido à esquerda por padrão */
         transition: transform 0.3s ease-in-out;
         z-index: 999;
-        /* Abaixo do menu-toggle, mas acima do conteúdo */
         gap: 15px;
     }
 
     .links.active {
         transform: translateX(0);
-        /* Mostra o menu */
+
     }
 
     .links li {
         margin: 10px 0;
     }
 
-    .navbar-actions {
+    .navbar-right {
         order: 1;
-        /* Mantém as ações do lado direito, mas antes do toggle em algumas layouts */
         margin-left: auto;
-        /* Empurra as ações para a direita */
     }
 
-    .menu-toggle {
+    .menu {
         display: flex;
-        /* Mostra o menu hamburguer */
         margin-left: 20px;
-        /* Espaçamento do lado direito */
-    }
-
-    /* Esconde elementos que não são necessários no menu mobile */
-    .search-container,
-    .user-interactions {
-        /* Você pode ajustar se quer mostrá-los no mobile */
-        /* display: none; */
-        /* Descomente para esconder */
-    }
-
-    /* Se quiser a busca e ícones na navbar mobile, mas antes do toggle */
-    .navbar-actions {
-        order: 2;
-    }
-
-    .menu-toggle {
         order: 3;
-        /* Garante que o menu toggle esteja no final */
     }
 
-    /* Se o menu mobile tiver links, eles podem precisar de um tamanho maior */
     .links a {
         font-size: 1.2em;
     }
 }
 
 @media (max-width: 768px) {
-    .navbar-brand {
+    .navbar-logo {
         font-size: 1em;
     }
 
-    .navbar-logo {
+    .navbar-img {
         height: 35px;
     }
 
@@ -425,7 +360,7 @@ body {
     }
 
     .search-container svg {
-        left: 10px;
+        left: 3px;
         width: 18px;
         height: 18px;
     }
@@ -446,7 +381,7 @@ body {
         padding: 8px 10px;
     }
 
-    .navbar-actions {
+    .navbar-right {
         gap: 10px;
     }
 
@@ -460,7 +395,7 @@ body {
     }
 
     .search-container svg {
-        left: 8px;
+        left: 3px;
         width: 16px;
         height: 16px;
     }
@@ -475,7 +410,7 @@ body {
         height: 20px;
     }
 
-    .menu-toggle {
+    .menu {
         width: 25px;
         height: 18px;
         margin-left: 15px;
