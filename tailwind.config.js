@@ -28,7 +28,11 @@ module.exports = {
       "./resources/**/*.vue",
     ],
     theme: {
-      extend: {},
+      extend: {
+            colors: {
+        'custom-green': 'rgb(26, 61, 57)',
+      },
+      },
     },
     plugins: [],
   };

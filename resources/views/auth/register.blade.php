@@ -78,7 +78,7 @@
 
                 <button
                     type="submit"
-                    class="w-full bg-green-900 text-white py-2 px-4 rounded hover:bg-green-800 transition"
+                    class="mt-4 w-full bg-custom-green text-white py-2 px-4 rounded hover:bg-custom-green-hover transition"
                 >
                     Cadastrar
                 </button>

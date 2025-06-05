@@ -8,9 +8,10 @@
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
 
+
     <div class="flex w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
         <!-- Coluna da esquerda (boas-vindas) -->
-        <div class="w-1/2 bg-green-900 text-white flex flex-col items-center justify-center p-10">
+       <div class="w-1/2 bg-custom-green text-white flex flex-col items-center justify-center p-10">
             <h2 class="text-3xl font-bold mb-4 text-center">Bem-Vindo<br>De Volta</h2>
             
         
@@ -67,7 +68,7 @@
 
                 <button
                     type="submit"
-                    class="mt-4 w-full bg-green-900 text-white py-2 px-4 rounded hover:bg-green-800 transition"
+                    class="mt-4 w-full bg-custom-green text-white py-2 px-4 rounded hover:bg-custom-green-hover transition"
                 >
                     Entrar
                 </button>
