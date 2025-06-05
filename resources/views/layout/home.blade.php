@@ -17,11 +17,11 @@
     </script>
 
 
-@if(session('success'))
+    @if(session('success'))
     <script>
         alert("{{ session('success') }}");
     </script>
-@endif
+    @endif
 
 
 </head>
@@ -30,7 +30,7 @@
     @include('includes.navbar')
 
     <header>
-        <img src="{{ asset('imagens/biblioteca.jpg') }}" alt="Logo da Biblioteca Etec Zona Leste" style="width: 100%; height: 100vh; object-fit: cover;">
+        <img src="{{ asset('imagens/biblioteca1.jpg') }}" alt="Logo da Biblioteca Etec Zona Leste" style="width: 100%; height: 100vh; object-fit: cover;">
 
 
         @guest
