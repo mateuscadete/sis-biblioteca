@@ -6,7 +6,7 @@
     @vite('resources/css/app.css')
 </head>
 <body class="bg-gray-100 flex items-center justify-center min-h-screen">
-@include('includes.navbar')
+
 
     <div class="w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden flex">
         <!-- Lado esquerdo: Formulário -->
@@ -86,7 +86,7 @@
         </div>
 
         <!-- Lado direito: mensagem de boas-vindas (sem botão de login) -->
-        <div class="w-1/2 bg-green-900 text-white flex items-center justify-center p-10">
+         <div class="w-1/2 bg-custom-green text-white flex flex-col items-center justify-center p-10">
             <div class="text-center">
                 <h2 class="text-2xl font-bold mb-2">Seja Bem-Vindo</h2>
                 <p class="text-sm"> </p> <!-- Texto pode ser ajustado ou removido -->
