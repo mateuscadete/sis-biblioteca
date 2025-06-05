@@ -33,7 +33,7 @@ Este sistema digital para bibliotecas facilita o empréstimo e a devolução de 
 3. Copie o arquivo de configuração do ambiente:
 
    ```bash
-   cp .env.example .env
+   copy .env.example .env
    ```
 
 4. Gere a chave da aplicação Laravel:
