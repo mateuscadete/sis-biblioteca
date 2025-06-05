@@ -53,9 +53,8 @@
                             <button type="submit" class="sair">Sair</button>
                         </form>
                         @else
-                        <a href="{{ route('user.login') }}" class="logar">Login</a>
-                        <a href="{{ route('user.cadastro') }}" class="cadastrar">Cadastro</a>
-                        <a href="{{ route('dashboard') }}" class="logar">Área do Administrador</a>
+                        <a href="{{ route('login') }}" class="login-button">Login</a>
+                        <a href="{{ route('register') }}" class="register-button">Registrar</a>
                         @endauth
                     </div>
                 </div>

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    @include('includes.navbar1')
+    @include('includes.navbar')
 
     <div class="container">
 
