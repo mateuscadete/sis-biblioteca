@@ -247,45 +247,7 @@
 
     @include('includes.footer')
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenu = document.getElementById('mobile-menu');
-            const navbarLinks = document.getElementById('navbar-links');
-            const navbarActions = document.querySelector('.navbar-right');
 
-            if (mobileMenu && navbarLinks && navbarActions) {
-                mobileMenu.addEventListener('click', function() {
-                    mobileMenu.classList.toggle('active');
-                    navbarLinks.classList.toggle('active');
-                    navbarActions.classList.toggle('active');
-                });
-            }
-
-
-            const userMenuButton = document.getElementById('user-menu-button');
-            const userDropdownContent = document.getElementById('user-dropdown-content');
-
-            if (userMenuButton && userDropdownContent) {
-                userMenuButton.addEventListener('click', function(event) {
-                    event.stopPropagation();
-                    userDropdownContent.classList.toggle('show');
-
-                    const isExpanded = userMenuButton.getAttribute('aria-expanded') === 'true';
-                    userMenuButton.setAttribute('aria-expanded', !isExpanded);
-                });
-
-
-                document.addEventListener('click', function(event) {
-                    if (!userMenuButton.contains(event.target) && !userDropdownContent.contains(event.target)) {
-                        if (userDropdownContent.classList.contains('show')) {
-                            userDropdownContent.classList.remove('show');
-                            userMenuButton.setAttribute('aria-expanded', 'false');
-                        }
-                    }
-                });
-            }
-        });
-    </script>
 
 </body>
 

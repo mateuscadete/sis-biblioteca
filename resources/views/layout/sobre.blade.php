@@ -15,7 +15,7 @@
 <body>
     @include('includes.navbar')
     <header>
-        <img src="{{url('imagens/sobre2.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
+        <img src="{{url('imagens/sobre3.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
 
 
         <div class="titulo">

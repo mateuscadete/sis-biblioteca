@@ -48,9 +48,10 @@ header {
 }
 
 .span-titulo {
-    background-color: rgba(0, 0, 0, 0.815);
-    border-radius: 5px;
-    padding: 7px;
+    color: var(--cor4);
+
+
+    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
 main {

@@ -43,11 +43,11 @@
                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
                         </svg>
                     </button>
-@if(session('logout'))
-    <script>
-        alert("{{ session('logout') }}");
-    </script>
-@endif
+                    @if(session('logout'))
+                    <script>
+                        alert("{{ session('logout') }}");
+                    </script>
+                    @endif
 
                     <div class="logado" id="user-dropdown-content">
                         @auth
@@ -59,8 +59,9 @@
                             <button type="submit" class="sair">Sair</button>
                         </form>
                         @else
-                        <a href="{{ route('user.login') }}" class="login-button">Login</a>
-                        <a href="{{ route('user.cadastro') }}" class="register-button">Registrar</a>
+                        <a href="{{ route('user.login') }}" class="logar">Login</a>
+                        <a href="{{ route('user.cadastro') }}" class="cadastrar">Cadastro</a>
+                        <a href="{{route('dashboard')}}" class="logar">Administrador</a>
                         @endauth
                     </div>
                 </div>
@@ -75,7 +76,45 @@
     </nav>
 
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navbarLinks = document.getElementById('navbar-links');
+            const navbarActions = document.querySelector('.navbar-actions');
 
+            if (mobileMenu && navbarLinks && navbarActions) {
+                mobileMenu.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                    navbarLinks.classList.toggle('active');
+                    navbarActions.classList.toggle('active');
+                });
+            }
+
+
+            const userMenuButton = document.getElementById('user-menu-button');
+            const userDropdownContent = document.getElementById('user-dropdown-content');
+
+            if (userMenuButton && userDropdownContent) {
+                userMenuButton.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    userDropdownContent.classList.toggle('show');
+
+                    const isExpanded = userMenuButton.getAttribute('aria-expanded') === 'true';
+                    userMenuButton.setAttribute('aria-expanded', !isExpanded);
+                });
+
+
+                document.addEventListener('click', function(event) {
+                    if (!userMenuButton.contains(event.target) && !userDropdownContent.contains(event.target)) {
+                        if (userDropdownContent.classList.contains('show')) {
+                            userDropdownContent.classList.remove('show');
+                            userMenuButton.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 
 
 </body>

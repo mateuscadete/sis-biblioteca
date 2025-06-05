@@ -22,7 +22,7 @@
     @include('includes.navbar')
     <header>
 
-        <img src="{{url('imagens/acervo.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
+        <img src="{{url('imagens/acervo1.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
 
         @guest
         @endguest
