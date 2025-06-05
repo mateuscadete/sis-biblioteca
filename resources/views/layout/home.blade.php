@@ -90,11 +90,6 @@
             </div>
         </section>
 
-
-
-
-
-
         <section class="livros">
 
             <h2>Livros mais buscados</h2>
@@ -228,16 +223,17 @@
                 <p>Localização</p>
             </div>
         </div>
-
-        <div class="noticias">
-            <div class="card-text ">
-                <h3>Fique por dentro!</h3>
-                <h2>Novidades do mundo literário</h2>
+        <a href="https://oglobo.globo.com/cultura/livros/ " target="_blank">
+            <div class="noticias">
+                <div class="card-text ">
+                    <h3>Fique por dentro!</h3>
+                    <h2>Novidades do mundo literário</h2>
+                </div>
+                <div class="new-image">
+                    <img src="{{ asset('imagens/books.png') }}">
+                </div>
             </div>
-            <div class="new-image">
-                <img src="{{ asset('imagens/') }}">
-            </div>
-        </div>
+        </a>
     </section>
 
 
@@ -254,14 +250,38 @@
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenu = document.getElementById('mobile-menu');
-            const navLinks = document.querySelector('.links');
-            const navbarRight = document.querySelector('.navbar-right');
+            const navbarLinks = document.getElementById('navbar-links');
+            const navbarActions = document.querySelector('.navbar-right');
 
-            if (mobileMenu && navLinks && navbarRight) {
+            if (mobileMenu && navbarLinks && navbarActions) {
                 mobileMenu.addEventListener('click', function() {
                     mobileMenu.classList.toggle('active');
-                    navLinks.classList.toggle('active');
-                    navbarRight.classList.toggle('active');
+                    navbarLinks.classList.toggle('active');
+                    navbarActions.classList.toggle('active');
+                });
+            }
+
+
+            const userMenuButton = document.getElementById('user-menu-button');
+            const userDropdownContent = document.getElementById('user-dropdown-content');
+
+            if (userMenuButton && userDropdownContent) {
+                userMenuButton.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    userDropdownContent.classList.toggle('show');
+
+                    const isExpanded = userMenuButton.getAttribute('aria-expanded') === 'true';
+                    userMenuButton.setAttribute('aria-expanded', !isExpanded);
+                });
+
+
+                document.addEventListener('click', function(event) {
+                    if (!userMenuButton.contains(event.target) && !userDropdownContent.contains(event.target)) {
+                        if (userDropdownContent.classList.contains('show')) {
+                            userDropdownContent.classList.remove('show');
+                            userMenuButton.setAttribute('aria-expanded', 'false');
+                        }
+                    }
                 });
             }
         });

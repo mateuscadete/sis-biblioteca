@@ -18,57 +18,26 @@ body {
 
 }
 
-
 header {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: relative;
     display: flex;
-
     margin: 0;
     color: white;
-    background-position: center;
     background-size: cover;
-
-}
-
-header img {
-    object-fit: cover;
-    width: 100%;
-    height: 400px;
-    display: block;
-
-}
-
-.forms {
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: -1;
     display: flex;
-    padding: 30px 40px;
-    position: absolute;
-    top: 0;
-    left: 0;
-    gap: 15px;
-    list-style: none;
-    margin: 0;
-
-}
-
-.forms a {
-    text-decoration: none;
-    color: rgb(255, 255, 255);
-    font-weight: bold;
-    transition: color 0.3s ease, transform 0.3s ease;
-
-}
-
-.forms a:hover {
-    color: var(--cor5);
-    transform: translateX(5px);
+    justify-content: center;
+    align-items: center;
 }
 
 .titulo {
     font-size: 30px;
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
@@ -76,7 +45,6 @@ header img {
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
     width: 80%;
     max-width: 600px;
-
 }
 
 .span-titulo {
@@ -86,7 +54,7 @@ header img {
 }
 
 main {
-    margin-top: 50%;
+    margin-top: 0;
     width: 100%;
     padding: 40px 20px;
     box-sizing: border-box;
@@ -100,7 +68,7 @@ main {
 
 
 .livros {
-    margin-top: 100px;
+    margin-top: 50px;
     width: 100%;
     max-width: 1200px;
     text-align: center;
@@ -191,31 +159,14 @@ h3 {
 
 
 
-@media (max-width: 1624px) {
-    main {
-        margin-top: 70%;
-    }
-}
 
-@media (max-width: 1324px) {
-    main {
-        margin-top: 50%;
-    }
 
-    .forms {
-        padding: 20px 30px;
-    }
-}
 
 @media (max-width: 1024px) {
     .titulo {
-        font-size: 20px;
-        top: 50%;
+        font-size: 25px;
+        top: 40%;
         left: 50%;
-    }
-
-    main {
-        margin-top: 90%;
     }
 
     .book {
@@ -233,7 +184,7 @@ h3 {
 
     main {
         padding: 30px 10px;
-        margin-top: 150%;
+
     }
 
     .livros h2 {
@@ -259,11 +210,22 @@ h3 {
     }
 }
 
+@media (max-width: 600px) {
+
+
+    .titulo {
+
+        top: 45%;
+        left: 50%;
+    }
+
+}
+
 @media (max-width: 480px) {
 
     main {
         padding: 20px 5px;
-        margin-top: 220%;
+
     }
 
     .livros h2 {
