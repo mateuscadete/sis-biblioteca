@@ -82,7 +82,7 @@ Route::post('/logout', function () {
     Auth::logout();
     request()->session()->invalidate(); // invalida a sessão
     request()->session()->regenerateToken(); // regenera o token CSRF
-    return redirect('/'); // ou onde quiser redirecionar
+    return redirect('/')->with('logout', 'Logout realizado com sucesso!');
 })->name('logout');
 
 //Rota para página individual do livro
