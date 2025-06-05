@@ -1,4 +1,3 @@
-/* Adicione esta classe para esconder elementos visualmente, mas mantê-los para leitores de tela */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -171,7 +170,7 @@
     position: relative;
     display: flex;
     gap: 5px;
-    bottom: 8px;
+    bottom: 10px;
 }
 
 .icon-button {
@@ -220,6 +219,7 @@
     right: 0;
     top: calc(100% + 10px);
     padding: 10px 0;
+    box-sizing: border-box;
 }
 
 .logado.show {
@@ -233,6 +233,11 @@
     padding: 5px 15px;
     font-size: 0.9em;
     white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-weight: bold;
+    border-bottom: 1px solid var(--cor2);
+    margin-bottom: 5px;
 }
 
 .logado .sair,
@@ -258,7 +263,7 @@
     color: var(--cor1);
 }
 
-.menu {
+.menu-toggle {
     display: none;
     flex-direction: column;
     justify-content: space-between;
@@ -269,7 +274,7 @@
     position: relative;
 }
 
-.menu .line {
+.menu-toggle .line {
     background: var(--cor6);
     width: 100%;
     height: 3px;
@@ -277,15 +282,15 @@
     transition: all 0.3s ease-in-out;
 }
 
-.menu.active .line:nth-child(1) {
+.menu-toggle.active .line:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
 
-.menu.active .line:nth-child(2) {
+.menu-toggle.active .line:nth-child(2) {
     opacity: 0;
 }
 
-.menu.active .line:nth-child(3) {
+.menu-toggle.active .line:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
 }
 
@@ -295,34 +300,50 @@
 
 
     .navbar {
+        top: 0;
         padding: 10px 15px;
     }
 
     .links {
-        position: fixed;
-        /* Permite que o menu mobile "deslize" */
-        top: 85px;
-        /* Começa abaixo da navbar */
-        left: 0;
+        display: none;
+        /* Esconde por padrão */
+        flex-direction: column;
+        /* Para empilhar os links */
         width: 100%;
         background-color: var(--cor4);
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 0;
-        overflow-y: auto;
-        transform: translateX(-100%);
-        transition: transform 0.3s ease-in-out;
-        z-index: 999;
-        gap: 15px;
+        padding: 0;
+        /* Começa com padding zero */
+        overflow: hidden;
+        /* Esconde conteúdo extra quando max-height é 0 */
+        max-height: 0;
+        /* A altura inicial é zero */
+        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        order: 2;
+        /* Garante que os links apareçam depois do logo e menu */
+        margin-top: 10px;
+        /* Espaço entre a navbar e o menu que desce */
     }
 
     .links.active {
-        transform: translateX(0);
-
+        display: flex;
+        /* Mostra os links */
+        max-height: 500px;
+        /* Um valor alto o suficiente para caber todos os links */
+        padding: 20px 0;
+        /* Padding quando o menu está aberto */
+        top: 100px;
     }
+
 
     .links li {
         margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .links a {
+        display: block;
+        padding: 10px 0;
     }
 
     .navbar-right {
@@ -330,7 +351,7 @@
         margin-left: auto;
     }
 
-    .menu {
+    .menu-toggle {
         display: flex;
         margin-left: 20px;
         order: 3;
@@ -410,7 +431,7 @@
         height: 20px;
     }
 
-    .menu {
+    .menu-toggle {
         width: 25px;
         height: 18px;
         margin-left: 15px;

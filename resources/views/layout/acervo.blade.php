@@ -6,26 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
     <title>Nosso Acervo</title>
-    <link rel="stylesheet" href="{{ asset('css/navbar.css') }}">
+    <link rel="manifest" href="{{ asset('manifest.json') }}">
     <link rel="stylesheet" href="{{ asset('css/acervo.css') }}">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"></head>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js')
+                .then(reg => console.log('SW registrado:', reg))
+                .catch(err => console.log('Erro ao registrar o SW:', err));
+        }
+    </script>
+</head>
 
 <body>
-
+    @include('includes.navbar')
     <header>
 
         <img src="{{url('imagens/acervo.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
 
-        <ul class="forms">
-            <li><a href="{{ route('user.ajuda') }}">Admin</a></li>
-            <li><a href="{{ route('user.login') }}">Login</a></li>
-            <li><a href="{{ route('user.cadastro') }}">Cadastrar</a></li>
-        </ul>
-
-        @include('includes.navbar')
-
-
-
+        @guest
+        @endguest
         <div class="titulo">
             <h1><span class="span-titulo">Explore</span> o Acervo<br>da Nossa <span
                     class="span-titulo">Biblioteca</span></h1>
@@ -120,18 +120,54 @@
                         </tbody>
                     </table>
                 </div>
-</body>
-
-</html>
 
 
-</div>
-</section>
-</main>
+
+            </div>
+        </section>
+    </main>
 
 
-@include('includes.footer')
+    @include('includes.footer')
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const navbarLinks = document.getElementById('navbar-links');
+            const navbarActions = document.querySelector('.navbar-actions');
 
+            if (mobileMenu && navbarLinks && navbarActions) {
+                mobileMenu.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('active');
+                    navbarLinks.classList.toggle('active');
+                    navbarActions.classList.toggle('active');
+                });
+            }
+
+
+            const userMenuButton = document.getElementById('user-menu-button');
+            const userDropdownContent = document.getElementById('user-dropdown-content');
+
+            if (userMenuButton && userDropdownContent) {
+                userMenuButton.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    userDropdownContent.classList.toggle('show');
+
+                    const isExpanded = userMenuButton.getAttribute('aria-expanded') === 'true';
+                    userMenuButton.setAttribute('aria-expanded', !isExpanded);
+                });
+
+
+                document.addEventListener('click', function(event) {
+                    if (!userMenuButton.contains(event.target) && !userDropdownContent.contains(event.target)) {
+                        if (userDropdownContent.classList.contains('show')) {
+                            userDropdownContent.classList.remove('show');
+                            userMenuButton.setAttribute('aria-expanded', 'false');
+                        }
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
 
