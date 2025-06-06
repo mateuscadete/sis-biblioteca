@@ -130,6 +130,7 @@ class LoanController extends Controller
         // Lógica para verificar empréstimos atrasados
         $overdueLoansCount = $user->loans()->whereNull('return_date')->where('loan_date', '<', now()->subDays(7))->count();
 
+        $adminOverdueUsers = collect();
         // Se o usuário for admin, busca todos os usuários com empréstimos atrasados
         if ($user->is_admin) {
             $adminOverdueUsers = User::whereHas('loans', function ($query) {
