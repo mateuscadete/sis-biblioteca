@@ -89,13 +89,27 @@ class LivroController extends Controller
             'qtde' => 'required|integer',
             'data' => 'required|date',
             'descricao' => 'required|string|max:1000',
+            'imagem' => 'nullable|image|mimes:jpg,jpeg,png|max:2048', // imagem opcional na edição
         ]);
-
+    
+        // Se enviou uma imagem nova, processa ela
+        if ($request->hasFile('imagem')) {
+            // Apaga a imagem antiga se existir
+            if ($livro->imagem) {
+                \Storage::delete('public/' . $livro->imagem);
+            }
+            // Armazena a nova imagem
+            $validated['imagem'] = $request->file('imagem')->store('livros', 'public');
+        } else {
+            // Mantém a imagem antiga (não altera no banco)
+            $validated['imagem'] = $livro->imagem;
+        }
+    
+        // Atualiza o livro com todos os dados (inclusive imagem atualizada ou mantida)
         $livro->update($validated);
-
+    
         return redirect()->route('layout.show')->with('success', 'Livro atualizado com sucesso!');
     }
-
     /**
      * Filtra os livros com base no termo de busca fornecido.
      *
