@@ -186,7 +186,8 @@ h3 {
 }
 
 
-.solicitar {
+.excluir
+.editar {
     background-color: var(--cor0);
     color: white;
     padding: 8px 12px;

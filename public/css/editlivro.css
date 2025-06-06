@@ -25,7 +25,18 @@ body {
     background-color: whitesmoke;
 }
 
-form {
+.navbar{
+    margin-bottom: 50px;
+}
+
+
+.icon-button {
+    position: relative;
+    top: 12px;
+}
+
+
+.form {
     display: flex;
     flex-direction: column;
     justify-content: space-between;

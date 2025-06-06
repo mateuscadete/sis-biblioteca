@@ -41,7 +41,7 @@
         <section class="livros">
 
             <h2>Lista de Livros</h2>
-            <h3>Procuro os livros de acordo ao seu interesse</h3>
+            <h3>Procure os livros de acordo a sua classificação</h3>
             <div class="containerbooks">
 
                 <form method="GET" action="{{ route('layout.acervo') }}" class="form-livros">

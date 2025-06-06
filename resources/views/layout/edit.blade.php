@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <title>Editar Livro</title>
     <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ asset('css/edit.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/editlivro.css') }}">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
     </div>
     @endif
 
-    <form action="{{ route('livros.update', $livro->id) }}" method="POST">
+    <form class="form" action="{{ route('livros.update', $livro->id) }}" method="POST">
         @csrf
         @method('PUT')
 

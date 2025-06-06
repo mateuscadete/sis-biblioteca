@@ -1,18 +1,19 @@
-{{-- resources/views/layout/show.blade.php --}}
 <!DOCTYPE html>
 <html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Livros</title>
     <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
-    <link rel="stylesheet" href="{{ asset('css/acervo.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/listalivros.css') }}">
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
 </head>
 
 <body>
 @include('includes.navbar')
+
+
     <div class="container mt-4">
         @if(session('success'))
         <div class="alert alert-success">
@@ -21,8 +22,9 @@
         @endif
 
         <h2>Lista de Livros</h2>
+        <h3>Aqui estão os livros cadastrados!</h3>
 
-        <table class="table table-bordered">
+        <table class="informações">
             <thead>
                 <tr>
                     <th>Capa</th>
@@ -62,15 +64,17 @@
                         <form action="{{ route('livros.destroy', $livro->id) }}" method="POST" style="display:inline-block">
                             @csrf
                             @method('DELETE')
-                            <button class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja apagar este livro?')">Excluir</button>
+                            <button class="excluir" onclick="return confirm('Tem certeza que deseja apagar este livro?')">Excluir</button>
                         </form>
-                        <a href="{{ route('layout.edit', $livro->id) }}" class="btn btn-primary btn-sm mt-1">Editar</a>
+                        <a href="{{ route('layout.edit', $livro->id) }}" class="editar">Editar</a>
                     </td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
     </div>
+
+    @include('includes.footer')
 </body>
 
 </html>
