@@ -15,7 +15,6 @@ body {
     font-family: 'Raleway', sans-serif;
     display: flex;
     flex-direction: column;
-
 }
 
 header {
@@ -49,8 +48,6 @@ header {
 
 .span-titulo {
     color: var(--cor4);
-
-
     text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -63,10 +60,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: #ffffff;
-
 }
-
-
 
 .livros {
     margin-top: 50px;
@@ -88,7 +82,7 @@ h3 {
 }
 
 .containerbooks {
-    margin-top: 150px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     gap: 60px;
@@ -97,69 +91,155 @@ h3 {
     position: static;
     width: 100%;
     height: auto;
-
-}
-
-.book {
-    background: white;
-    color: black;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 200px;
-    display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.book:hover {
-    transform: scale(1.03);
 
-    box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.15);
-
-}
-
-.book a {
-    display: inline-block;
-    margin-top: auto 10px;
-    background-color: var(--cor6);
-    text-decoration: none;
-    padding: 8px 18px;
-    color: white;
-    font-weight: 500;
-    border-radius: 6px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.2s ease, scale 0.2s ease;
-}
-
-.book a:hover {
-    background-color: var(--cor5);
-    scale: 1.05;
-}
-
-.book img {
+.form-livros {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
     width: 100%;
-    max-width: 150px;
-    height: 200px;
-    object-fit: contain;
-    margin: 0 auto 25px auto;
+}
+
+.pesquisar {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--cor2);
+    border-radius: 8px;
+    overflow: hidden;
+
+}
+
+.pesquisar .livro {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    color: var(--cor6);
+}
+
+.pesquisar .livro::placeholder {
+    color: var(--cor3);
+}
+
+.buscar {
+
+    background-color: var(--cor1);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.buscar:hover {
+    background-color: var(--cor0);
+}
+
+
+.informações {
+    width: 100%;
+    border-collapse: collapse;
+
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.informações thead {
+    background-color: var(--cor1);
+    color: white;
+}
+
+.informações th,
+.informações td {
+    padding: 12px 15px;
+    border: 1px solid var(--cor2);
+    text-align: left;
+    vertical-align: top;
+
+}
+
+.informações th {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.informações tbody tr:nth-child(even) {
+    background-color: var(--cor4);
+
+}
+
+.informações tbody tr:hover {
+
+    transition: background-color 0.2s ease;
+}
+
+.informações img {
     display: block;
-
-}
-
-.book h4 {
-    margin-bottom: 10px;
-}
-
-.book p {
-    margin-bottom: 15px;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
+.solicitar {
+    background-color: var(--cor0);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+
+}
+
+.solicitar:hover {
+    background-color: var(--cor1);
+    transform: translateY(-2px);
+
+}
 
 
+.text-danger {
+    color: #dc3545;
+
+    font-weight: bold;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+
+div[style*="color: green"],
+div[style*="color: red"] {
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+div[style*="color: green"] {
+    background-color: #d4edda;
+
+    border-color: #c3e6cb;
+    color: #155724;
+
+}
+
+div[style*="color: red"] {
+    background-color: #f8d7da;
+
+    border-color: #f5c6cb;
+    color: #721c24;
+
+}
 
 
 
@@ -170,22 +250,19 @@ h3 {
         left: 50%;
     }
 
-    .book {
-        width: 180px;
+    .informações th,
+    .informações td {
+        padding: 10px 12px;
     }
-
-
 }
 
 @media (max-width: 768px) {
-
     .titulo {
         font-size: 15px;
     }
 
     main {
         padding: 30px 10px;
-
     }
 
     .livros h2 {
@@ -196,37 +273,58 @@ h3 {
         font-size: 1em;
     }
 
+
     .containerbooks {
-        gap: 20px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-direction: column;
+        gap: 30px;
+
     }
 
-    .book {
-        width: 160px;
-        padding: 10px;
+    .informações {
+        min-width: 700px;
+
     }
 
-    .book img {
-        max-width: 120px;
-        height: 180px;
+    .pesquisar {
+        flex-direction: column;
+        border: none;
+        max-width: 300px;
+    }
+
+    .pesquisar .livro {
+        border: 1px solid var(--cor2);
+        border-radius: 8px;
+        margin-bottom: 10px;
+    }
+
+    .buscar {
+        border-radius: 8px;
+        width: 100%;
+    }
+
+    .solicitar {
+        padding: 6px 10px;
+        font-size: 0.85em;
+    }
+
+    .informações img {
+        max-width: 60px;
+
     }
 }
 
 @media (max-width: 600px) {
-
-
     .titulo {
-
         top: 45%;
         left: 50%;
     }
-
 }
 
 @media (max-width: 480px) {
-
     main {
         padding: 20px 5px;
-
     }
 
     .livros h2 {
@@ -240,28 +338,4 @@ h3 {
     .containerbooks {
         gap: 15px;
     }
-
-    .book {
-        width: 140px;
-        padding: 8px;
-    }
-
-    .book img {
-        max-width: 100px;
-        height: 160px;
-    }
-
-    .book h4 {
-        font-size: 0.9em;
-    }
-
-    .book p {
-        font-size: 0.8em;
-    }
-
-    .book a {
-        padding: 6px 12px;
-        font-size: 0.8em;
-    }
-
 }

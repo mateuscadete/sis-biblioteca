@@ -17,7 +17,7 @@
             <li><a href="{{ route('contato.submit') }}">Contato</a></li>
         </ul>
 
-        <div class="navbar-right">
+        <div class="navbar-actions">
             <div class="search-container">
                 <form action="{{ route('buscar.pagina') }}" method="GET" class="search-form" role="search">
                     <label for="search-input" class="sr-only">Buscar página...</label>

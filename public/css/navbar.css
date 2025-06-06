@@ -18,10 +18,7 @@
     --cor4: #e9e0d1;
     --cor5: #68462b;
     --cor6: #382414;
-
-
 }
-
 
 * {
     font-family: 'Raleway', sans-serif;
@@ -101,7 +98,7 @@
     width: 100%;
 }
 
-.navbar-right {
+.navbar-actions {
     display: flex;
     align-items: center;
     gap: 25px;
@@ -139,7 +136,6 @@
     color: var(--cor6);
     pointer-events: none;
     z-index: 1;
-
 }
 
 .search-input:focus {
@@ -306,31 +302,21 @@
 
     .links {
         display: none;
-        /* Esconde por padrão */
         flex-direction: column;
-        /* Para empilhar os links */
         width: 100%;
         background-color: var(--cor4);
         padding: 0;
-        /* Começa com padding zero */
         overflow: hidden;
-        /* Esconde conteúdo extra quando max-height é 0 */
         max-height: 0;
-        /* A altura inicial é zero */
         transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
         order: 2;
-        /* Garante que os links apareçam depois do logo e menu */
         margin-top: 10px;
-        /* Espaço entre a navbar e o menu que desce */
     }
 
     .links.active {
         display: flex;
-        /* Mostra os links */
         max-height: 500px;
-        /* Um valor alto o suficiente para caber todos os links */
         padding: 20px 0;
-        /* Padding quando o menu está aberto */
         top: 100px;
     }
 
@@ -402,7 +388,7 @@
         padding: 8px 10px;
     }
 
-    .navbar-right {
+    .navbar-actions {
         gap: 10px;
     }
 
