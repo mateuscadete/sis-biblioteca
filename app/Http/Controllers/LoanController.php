@@ -6,6 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Livro;
 use App\Models\Loan;
 use Illuminate\Http\Request;
+use App\Models\User;
 
 // Define o controller responsável pelas operações de empréstimo e devolução de livros
 class LoanController extends Controller
@@ -16,6 +17,12 @@ class LoanController extends Controller
         // Busca o livro pelo ID enviado na requisição.
         // Se não for encontrado, lança uma exceção (404).
         $livro = Livro::findOrFail($request->livro_id);
+
+        // Inicializa a contagem de empréstimos atrasados
+        $overdueLoansCount = 0;
+
+        // Inicializa como uma coleção vazia
+        $adminOverdueUsers = collect(); 
 
         // Verifica se o livro está fora de estoque (quantidade menor que 1)
         if ($livro->qtde < 1) {
@@ -109,6 +116,17 @@ class LoanController extends Controller
 
         $emprestimos = $query->get();
 
-        return view('emprestimos.index', compact('emprestimos'));
+        // Lógica para verificar empréstimos atrasados
+        $overdueLoansCount = $user->loans()->whereNull('return_date')->where('loan_date', '<', now()->subDays(7))->count();
+
+        // Para admin, contar todos os usuários com empréstimos atrasados
+        $adminOverdueUsers = null;
+        if ($user->is_admin) {
+            $adminOverdueUsers = User::whereHas('loans', function ($query) {
+                $query->whereNull('return_date')->where('loan_date', '<', now()->subDays(7));
+            })->get();
+        }
+
+    return view('emprestimos.index', compact('emprestimos', 'overdueLoansCount', 'adminOverdueUsers'));
     }
 }
