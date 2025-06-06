@@ -22,7 +22,7 @@ class LoanController extends Controller
         $overdueLoansCount = 0;
 
         // Inicializa como uma coleção vazia
-        $adminOverdueUsers = collect(); 
+        $adminOverdueUsers = collect();
 
         // Verifica se o livro está fora de estoque (quantidade menor que 1)
         if ($livro->qtde < 1) {
@@ -72,12 +72,23 @@ class LoanController extends Controller
     {
         $user = Auth::user();
         $search = $request->input('search');
+        $status = $request->input('status');
 
         $query = Loan::with('livro', 'user')->whereNull('return_date');
 
         // Restringe para usuários comuns (não-admin)
         if (!$user->is_admin) {
             $query->where('user_id', $user->id);
+        }
+
+        if ($status) {
+            if ($status == 'atrasados') {
+                $query->where('loan_date', '<', now()->subDays(7))->whereNull('return_date');
+            } elseif ($status == 'devolvidos') {
+                $query->whereNotNull('return_date');
+            } elseif ($status == 'pendentes') {
+                $query->whereNull('return_date')->where('loan_date', '>=', now()->subDays(7));
+            }
         }
 
         if ($search) {
@@ -119,14 +130,15 @@ class LoanController extends Controller
         // Lógica para verificar empréstimos atrasados
         $overdueLoansCount = $user->loans()->whereNull('return_date')->where('loan_date', '<', now()->subDays(7))->count();
 
-        // Para admin, contar todos os usuários com empréstimos atrasados
-        $adminOverdueUsers = null;
+        // Se o usuário for admin, busca todos os usuários com empréstimos atrasados
         if ($user->is_admin) {
             $adminOverdueUsers = User::whereHas('loans', function ($query) {
                 $query->whereNull('return_date')->where('loan_date', '<', now()->subDays(7));
             })->get();
+        } else {
+            $overdueLoansCount = $user->loans()->whereNull('return_date')->where('loan_date', '<', now()->subDays(7))->count();
         }
 
-    return view('emprestimos.index', compact('emprestimos', 'overdueLoansCount', 'adminOverdueUsers'));
+        return view('emprestimos.index', compact('emprestimos', 'overdueLoansCount', 'adminOverdueUsers'));
     }
 }

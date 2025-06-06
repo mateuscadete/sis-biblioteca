@@ -17,9 +17,14 @@
         @endif
 
         <form method="GET" action="{{ route('emprestimos.index') }}" class="mb-3">
+            <select name="status" onchange="this.form.submit()">
+                <option value="">Todos</option>
+                <option value="atrasados" {{ request('status') == 'atrasados' ? 'selected' : '' }}>Atrasados</option>
+                <option value="pendentes" {{ request('status') == 'pendentes' ? 'selected' : '' }}>Pendentes</option>
+            </select>
             <div class="input-group">
-                <input type="text" name="search" class="form-control" placeholder="Buscar por título, autor, status, etc."
-                    value="{{ request('search') }}">
+                <input type="text" name="search" class="form-control"
+                    placeholder="Buscar por título, autor, editora, etc." value="{{ request('search') }}">
                 <button type="submit" class="btn btn-outline-secondary">Buscar</button>
                 <a href="{{ route('emprestimos.index') }}" class="btn btn-outline-danger">Limpar</a>
             </div>
@@ -49,10 +54,12 @@
                     @endphp
                     <tr>
                         <td>
-                            @if ($livro && $livro->capa)
-                                <img src="{{ asset('storage/' . $livro->capa) }}" alt="Capa" width="60">
+
+                            @if ($livro->imagem)
+                                <img src="{{ asset('storage/' . $livro->imagem) }}" alt="Imagem do livro"
+                                    style="max-width: 80px;">
                             @else
-                                <span class="text-muted">Sem capa</span>
+                                <span>Sem imagem</span>
                             @endif
                         </td>
                         <td>{{ $livro->titulo ?? 'N/A' }}</td>
@@ -60,7 +67,7 @@
                         <td>{{ $livro->editora ?? 'N/A' }}</td>
                         <td>{{ $livro->genero ?? 'N/A' }}</td>
                         <td>{{ $livro->edicao ?? 'N/A' }}</td>
-                        <td>{{ $livro->paginas ?? 'N/A' }}</td>
+                        <td>{{ $livro->num_paginas ?? 'N/A' }}</td>
                         <td>{{ $livro->isbn ?? 'N/A' }}</td>
                         <td>{{ $livro->data ?? 'N/A' }}</td>
                         <td>{{ $livro->descricao ?? 'N/A' }}</td>

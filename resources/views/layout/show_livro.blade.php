@@ -56,7 +56,7 @@
                     <td>{{ $livro->edicao }}</td>
                     <td>{{ $livro->num_paginas }}</td>
                     <td>{{ $livro->isbn }}</td>
-                    <td>{{ \Carbon\Carbon::parse($livro->data)->format('d/m/Y') }}</td>
+                    <td>{{ Carbon\Carbon::parse($livro->data)->format('d/m/Y') }}</td>
                     <td>{{ $livro->descricao }}</td>
                     <td>
                         <form action="{{ route('livros.destroy', $livro->id) }}" method="POST" style="display:inline-block">
