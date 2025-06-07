@@ -119,10 +119,15 @@ Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
 ## ✉️ Contato
 
-Caso queira entrar em contato:
+Caso queira entrar em contato com os desenvolvedores do projeto:
 
-* **Email:** [mateus_cadete@outlook.com](mailto:mateus_cadete@outlook.com)
-* **GitHub:** [mateuscadete](https://github.com/mateuscadete)
-* **GitHub:** [JoelQuia](https://github.com/JoelQuia)
-* **GitHub:** [Gabriel5454](https://github.com/Gabriel5454)
+- 👤 **Mateus Cadete**  
+  [![GitHub](https://img.shields.io/badge/GitHub-mateuscadete-181717?style=flat-square&logo=github)](https://github.com/mateuscadete)  
+  📧 mateus_cadete@outlook.com
+
+- 👤 **Joel Quia**  
+  [![GitHub](https://img.shields.io/badge/GitHub-JoelQuia-181717?style=flat-square&logo=github)](https://github.com/JoelQuia)
+
+- 👤 **Gabriel**  
+  [![GitHub](https://img.shields.io/badge/GitHub-Gabriel5454-181717?style=flat-square&logo=github)](https://github.com/Gabriel5454)
 ```
