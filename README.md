@@ -1,6 +1,6 @@
 # 📖 Sistema para Bibliotecas
 
-![GitHub license](https://img.shields.io/github/license/mateuscadete/sistema-bibliotecas?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/mateuscadete/sis_biblioteca?style=flat-square)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mateuscadete/sis_biblioteca?style=flat-square)
 ![GitHub repo size](https://img.shields.io/github/repo-size/mateuscadete/sis_biblioteca?style=flat-square)
 
