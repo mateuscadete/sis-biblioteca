@@ -1,9 +1,8 @@
-````markdown
 # 📖 Sistema para Bibliotecas
 
-![GitHub license](https://img.shields.io/github/license/seu-usuario/seu-repositorio?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/seu-usuario/seu-repositorio?style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/seu-usuario/seu-repositorio?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/mateuscadete/sistema-bibliotecas?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/mateuscadete/sistema-bibliotecas?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/mateuscadete/sistema-bibliotecas?style=flat-square)
 
 Este repositório contém o projeto de **Trabalho de Conclusão de Curso (TCC)** desenvolvido na **Etec Zona Leste** no 1º semestre de 2025.
 
@@ -13,14 +12,12 @@ O sistema digital para bibliotecas facilita o **empréstimo** e a **devolução 
 
 ## 🛠️ Tecnologias Utilizadas
 
-<div align="left">
-  <img src="https://img.shields.io/badge/Laravel-F72C1F?style=for-the-badge&logo=laravel&logoColor=white" />
-  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
-  <img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white" />
-  <img src="https://img.shields.io/badge/Jetstream-2F855A?style=for-the-badge&logo=laravel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
-</div>
+![Laravel](https://img.shields.io/badge/Laravel-F72C1F?style=for-the-badge&logo=laravel&logoColor=white)
+![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white)
+![Jetstream](https://img.shields.io/badge/Jetstream-2F855A?style=for-the-badge&logo=laravel&logoColor=white)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white)
 
 ---
 
@@ -28,9 +25,9 @@ O sistema digital para bibliotecas facilita o **empréstimo** e a **devolução 
 
 ### ✅ Pré-requisitos
 
-- PHP 8.x instalado
-- Composer
-- Node.js e npm
+- PHP 8.x instalado  
+- Composer  
+- Node.js e npm  
 - MySQL (ou outro compatível)
 
 ---
@@ -39,8 +36,8 @@ O sistema digital para bibliotecas facilita o **empréstimo** e a **devolução 
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/seu-repositorio.git
-cd seu-repositorio
+git clone https://github.com/mateuscadete/sistema-bibliotecas.git
+cd sistema-bibliotecas
 
 # Instale as dependências PHP
 composer install
@@ -122,7 +119,7 @@ Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
 Caso queira entrar em contato:
 
-* **Email:** [mateus_cadete@outlook.com](mailto:mateus_cadete@outlook.com)
+* **Email:** [mateus\_cadete@outlook.com](mailto:mateus_cadete@outlook.com)
 * **GitHub:** [@mateuscadete](https://github.com/mateuscadete)
 
----
+```
