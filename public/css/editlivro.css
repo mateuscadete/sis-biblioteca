@@ -58,7 +58,6 @@ body {
 }
 
 .title h2 {
-
     font-weight: bold;
     font-size: 27px;
     position: relative;
@@ -82,9 +81,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
 
 }
-
-
-
 
 .form_label {
     font-size: 15px;

@@ -186,8 +186,9 @@ h3 {
 }
 
 
-.excluir
 .editar {
+    position:relative;
+    margin-top: 50px;
     background-color: var(--cor0);
     color: white;
     padding: 8px 12px;
@@ -196,14 +197,29 @@ h3 {
     cursor: pointer;
     font-size: 0.9em;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    white-space: nowrap;
-
+    text-decoration: none;
 }
 
-.solicitar:hover {
-    background-color: var(--cor1);
-    transform: translateY(-2px);
+.excluir{
+    background-color: red;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+}
 
+.editar:hover {
+    background-color: var(--cor2);
+    transform: translateY(-2px);
+}
+
+.excluir:hover{
+    background-color: rgb(245, 66, 66) ;
+    transform: translateY(-2px);
 }
 
 

@@ -14,9 +14,9 @@
 @include('includes.navbar')
 
 
-    <div class="container mt-4">
+    <div class="mensagem">
         @if(session('success'))
-        <div class="alert alert-success">
+        <div class="sucesso">
             {{ session('success') }}
         </div>
         @endif
