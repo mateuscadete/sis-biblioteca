@@ -14,8 +14,13 @@
 
 
 <body>
+<<<<<<< HEAD
 @include('includes.navbar')
     <form class="form" action="{{ route('livro.submit') }}" method="POST" enctype="multipart/form-data">
+=======
+
+    <form action="{{ route('livro.submit') }}" method="POST" enctype="multipart/form-data">
+>>>>>>> adb6349790e2d5cc5e63562d204f3e9d6bb8f3d3
 
         @csrf
         <div class="title">
