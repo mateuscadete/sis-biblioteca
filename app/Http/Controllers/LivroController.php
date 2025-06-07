@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Livro; // Certifique-se de que você tem um modelo Livro
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class LivroController extends Controller
 {
@@ -96,7 +96,7 @@ class LivroController extends Controller
         if ($request->hasFile('imagem')) {
             // Apaga a imagem antiga se existir
             if ($livro->imagem) {
-                \Storage::delete('public/' . $livro->imagem);
+                Storage::delete('public/' . $livro->imagem);
             }
             // Armazena a nova imagem
             $validated['imagem'] = $request->file('imagem')->store('livros', 'public');

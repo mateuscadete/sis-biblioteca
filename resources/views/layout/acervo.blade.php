@@ -64,6 +64,7 @@
                             <th>ISBN</th>
                             <th>Data</th>
                             <th>Descrição</th>
+                            <th>Quantidade disponível</th>
                             <th>Ação</th>
                         </tr>
                     </thead>
@@ -88,6 +89,7 @@
                             <td>{{ $livro->isbn }}</td>
                             <td>{{ \Carbon\Carbon::parse($livro->data)->format('d/m/Y') }}</td>
                             <td>{{ $livro->descricao }}</td>
+                            <td>{{ $livro->qtde }}</td>
                             <td>
                                 @if($livro->qtde > 0)
                                 <form action="{{ url( '/emprestimos') }}" method="POST">
