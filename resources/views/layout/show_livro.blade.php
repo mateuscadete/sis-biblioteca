@@ -20,9 +20,14 @@
             {{ session('success') }}
         </div>
         @endif
+        </div>
+
+        <section class="livros">
 
         <h2>Lista de Livros</h2>
         <h3>Aqui estão os livros cadastrados!</h3>
+
+        <div class="containerbooks">
 
         <table class="informações">
             <thead>
@@ -59,7 +64,7 @@
                     <td>{{ $livro->num_paginas }}</td>
                     <td>{{ $livro->isbn }}</td>
                     <td>{{ Carbon\Carbon::parse($livro->data)->format('d/m/Y') }}</td>
-                    <td>{{ $livro->descricao }}</td>
+                    <td class="descrição">{{ $livro->descricao }}</td>
                     <td>
                         <form action="{{ route('livros.destroy', $livro->id) }}" method="POST" style="display:inline-block">
                             @csrf
@@ -72,7 +77,10 @@
                 @endforeach
             </tbody>
         </table>
-    </div>
+        </div>
+
+        </section>
+  
 
     @include('includes.footer')
 </body>

@@ -102,43 +102,6 @@ h3 {
     width: 100%;
 }
 
-.pesquisar {
-    display: flex;
-    width: 100%;
-    max-width: 500px;
-    border: 1px solid var(--cor2);
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.pesquisar .livro {
-    flex-grow: 1;
-    padding: 12px 15px;
-    border: none;
-    font-size: 1em;
-    outline: none;
-    color: var(--cor6);
-}
-
-.pesquisar .livro::placeholder {
-    color: var(--cor3);
-}
-
-.buscar {
-
-    background-color: var(--cor1);
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease;
-}
-
-.buscar:hover {
-    background-color: var(--cor0);
-}
-
 
 .informações {
     width: 100%;
@@ -223,39 +186,18 @@ h3 {
 }
 
 
-.text-danger {
+.mensagem {
     color: #dc3545;
-
     font-weight: bold;
     font-size: 0.9em;
     white-space: nowrap;
 }
 
-
-div[style*="color: green"],
-div[style*="color: red"] {
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
+.descrição{
+    width: 200px;
 }
 
-div[style*="color: green"] {
-    background-color: #d4edda;
 
-    border-color: #c3e6cb;
-    color: #155724;
-
-}
-
-div[style*="color: red"] {
-    background-color: #f8d7da;
-
-    border-color: #f5c6cb;
-    color: #721c24;
-
-}
 
 
 
