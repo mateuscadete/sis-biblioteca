@@ -1,96 +1,128 @@
+````markdown
 # 📖 Sistema para Bibliotecas
 
-Este repositório contém as versões do Trabalho de Conclusão de Curso desenvolvido na Etec Zona Leste no 1º semestre de 2025. O projeto é um sistema para gerenciamento de bibliotecas.
+![GitHub license](https://img.shields.io/github/license/seu-usuario/seu-repositorio?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/seu-usuario/seu-repositorio?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/seu-usuario/seu-repositorio?style=flat-square)
 
-Este sistema digital para bibliotecas facilita o empréstimo e a devolução de livros, melhora a organização do acervo e envia notificações automáticas aos usuários. O objetivo é agilizar o atendimento e reduzir o trabalho manual dos funcionários, tornando o acesso aos livros mais rápido e eficiente para alunos, professores e equipe.
+Este repositório contém o projeto de **Trabalho de Conclusão de Curso (TCC)** desenvolvido na **Etec Zona Leste** no 1º semestre de 2025.
+
+O sistema digital para bibliotecas facilita o **empréstimo** e a **devolução de livros**, melhora a organização do acervo e envia **notificações automáticas** aos usuários. O objetivo é agilizar o atendimento e reduzir o trabalho manual dos funcionários, tornando o acesso aos livros mais rápido e eficiente para alunos, professores e equipe.
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+<div align="left">
+  <img src="https://img.shields.io/badge/Laravel-F72C1F?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white" />
+  <img src="https://img.shields.io/badge/MySQL-00758F?style=for-the-badge&logo=mysql&logoColor=white" />
+  <img src="https://img.shields.io/badge/Jetstream-2F855A?style=for-the-badge&logo=laravel&logoColor=white" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+  <img src="https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&logo=vite&logoColor=white" />
+</div>
+
+---
 
 ## 🚀 Como rodar o projeto localmente
 
-### Pré-requisitos
+### ✅ Pré-requisitos
 
-* PHP 8.x instalado
-* Composer instalado
-* Node.js e npm instalados
-* Banco de dados MySQL (ou outro compatível configurado)
-
----
-
-### Passos para configurar
-
-1. Clone o repositório:
-
-   ```bash
-   git clone https://github.com/seu-usuario/seu-repositorio.git
-   cd seu-repositorio
-   ```
-
-2. Instale as dependências PHP:
-
-   ```bash
-   composer install
-   ```
-
-3. Copie o arquivo de configuração do ambiente:
-
-   ```bash
-   copy .env.example .env
-   ```
-
-4. Gere a chave da aplicação Laravel:
-
-   ```bash
-   php artisan key:generate
-   ```
-
-5. Configure as variáveis do arquivo `.env` (como conexão com banco de dados)
-
-6. Execute as migrations para criar as tabelas no banco:
-
-   ```bash
-   php artisan migrate
-   ```
-
-7. Instale o Laravel Jetstream (caso ainda não esteja instalado):
-
-   ```bash
-   composer require laravel/jetstream
-   ```
-
-8. Instale as dependências do frontend:
-
-   ```bash
-   npm install
-   ```
-
-9. Compile os assets:
-
-   ```bash
-   npm run build
-   ```
-
-10. Crie o link simbólico para a pasta de armazenamento (upload de arquivos):
-
-    ```bash
-    php artisan storage:link
-    ```
-
-11. Inicie o servidor local:
-
-    ```bash
-    php artisan serve
-    ```
-
-12. Acesse o sistema pelo navegador em [http://localhost:8000](http://localhost:8000)
+- PHP 8.x instalado
+- Composer
+- Node.js e npm
+- MySQL (ou outro compatível)
 
 ---
 
-## 📋 Observações
+### 📦 Passos para configurar
 
-* Lembre-se de configurar corretamente o banco de dados no arquivo `.env`.
-* Para rodar testes (se houver), utilize:
+```bash
+# Clone o repositório
+git clone https://github.com/seu-usuario/seu-repositorio.git
+cd seu-repositorio
 
-  ```bash
-  php artisan test
-  ```
+# Instale as dependências PHP
+composer install
+
+# Copie o arquivo de configuração de ambiente
+cp .env.example .env
+
+# Gere a chave da aplicação Laravel
+php artisan key:generate
+````
+
+1. Configure o banco de dados e outras variáveis no arquivo `.env`.
+
+```bash
+# Execute as migrations
+php artisan migrate
+
+# Instale Laravel Jetstream (caso necessário)
+composer require laravel/jetstream
+
+# Instale dependências do frontend
+npm install
+
+# Compile os assets com Vite
+npm run build
+
+# Crie o link simbólico para armazenamento
+php artisan storage:link
+
+# Inicie o servidor local
+php artisan serve
+```
+
+Acesse o sistema: [http://localhost:8000](http://localhost:8000)
+
+---
+
+## 💡 Funcionalidades
+
+* ✅ Login e cadastro com autenticação
+* ✅ Diferenciação entre usuários comuns e administradores
+* ✅ Cadastro, edição e remoção de livros (admin)
+* ✅ Registro de empréstimos e devoluções
+* ✅ Notificações automáticas por e-mail para livros atrasados
+* ✅ Upload de imagem para os livros
+
+---
+
+## 🧪 Testes
+
+Para executar os testes (se houver):
+
+```bash
+php artisan test
+```
+
+---
+
+## 🤝 Contribuição
+
+Contribuições são bem-vindas!
+
+1. Faça um fork
+2. Crie uma branch: `git checkout -b minha-feature`
+3. Commit: `git commit -m 'Minha nova feature'`
+4. Push: `git push origin minha-feature`
+5. Crie um Pull Request
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob os termos da licença MIT.
+Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+---
+
+## ✉️ Contato
+
+Caso queira entrar em contato:
+
+* **Email:** [mateus_cadete@outlook.com](mailto:mateus_cadete@outlook.com)
+* **GitHub:** [@mateuscadete](https://github.com/mateuscadete)
 
 ---
