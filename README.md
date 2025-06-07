@@ -123,5 +123,6 @@ Caso queira entrar em contato:
 
 * **Email:** [mateus_cadete@outlook.com](mailto:mateus_cadete@outlook.com)
 * **GitHub:** [mateuscadete](https://github.com/mateuscadete)
-
+* **GitHub:** [JoelQuia](https://github.com/JoelQuia)
+* **GitHub:** [Gabriel5454](https://github.com/Gabriel5454)
 ```
