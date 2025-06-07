@@ -1,8 +1,8 @@
 # 📖 Sistema para Bibliotecas
 
-![GitHub license](https://img.shields.io/github/license/mateuscadete/sis_biblioteca?style=flat-square)
-![GitHub last commit](https://img.shields.io/github/last-commit/mateuscadete/sis_biblioteca?style=flat-square)
-![GitHub repo size](https://img.shields.io/github/repo-size/mateuscadete/sis_biblioteca?style=flat-square)
+![GitHub license](https://img.shields.io/github/license/mateuscadete/sis-biblioteca?style=flat-square)
+![GitHub last commit](https://img.shields.io/github/last-commit/mateuscadete/sis-biblioteca?style=flat-square)
+![GitHub repo size](https://img.shields.io/github/repo-size/mateuscadete/sis-biblioteca?style=flat-square)
 
 Este repositório contém o projeto de **Trabalho de Conclusão de Curso (TCC)** desenvolvido na **Etec Zona Leste** no 1º semestre de 2025.
 
@@ -36,7 +36,7 @@ O sistema digital para bibliotecas facilita o **empréstimo** e a **devolução 
 
 ```bash
 # Clone o repositório
-git clone https://github.com/mateuscadete/sistema-bibliotecas.git
+git clone https://github.com/mateuscadete/sis-biblioteca.git
 cd sistema-bibliotecas
 
 # Instale as dependências PHP
@@ -81,7 +81,7 @@ Acesse o sistema: [http://localhost:8000](http://localhost:8000)
 * ✅ Diferenciação entre usuários comuns e administradores
 * ✅ Cadastro, edição e remoção de livros (admin)
 * ✅ Registro de empréstimos e devoluções
-* ✅ Notificações automáticas por e-mail para livros atrasados
+* ✅ Notificações automáticas para livros atrasados
 * ✅ Upload de imagem para os livros
 
 ---
@@ -119,7 +119,7 @@ Veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
 
 Caso queira entrar em contato:
 
-* **Email:** [mateus\_cadete@outlook.com](mailto:mateus_cadete@outlook.com)
-* **GitHub:** [@mateuscadete](https://github.com/mateuscadete)
+* **Email:** [mateus_cadete@outlook.com](mailto:mateus_cadete@outlook.com)
+* **GitHub:** [mateuscadete](https://github.com/mateuscadete)
 
 ```
