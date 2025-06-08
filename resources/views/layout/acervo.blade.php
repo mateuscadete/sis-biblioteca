@@ -88,7 +88,7 @@
                             <td>{{ $livro->num_paginas }}</td>
                             <td>{{ $livro->isbn }}</td>
                             <td>{{ \Carbon\Carbon::parse($livro->data)->format('d/m/Y') }}</td>
-                            <td>{{ $livro->descricao }}</td>
+                            <td class="descrição">{{ $livro->descricao }}</td>
                             <td>{{ $livro->qtde }}</td>
                             <td>
                                 @if($livro->qtde > 0)
@@ -98,7 +98,7 @@
                                     <button type="submit" class="solicitar">Solicitar</button>
                                 </form>
                                 @else
-                                <span class="text-danger">Fora de estoque</span>
+                                <span class="status">Fora de estoque</span>
                                 @endif
 
                             </td>
@@ -106,13 +106,13 @@
                         @endforeach
 
                         @if (session('success'))
-                        <div style="color: green; padding: 10px;">
+                        <div class="sucesso">
                             {{ session('success') }}
                         </div>
                         @endif
 
                         @if (session('error'))
-                        <div style="color: red; padding: 10px;">
+                        <div class="erro">
                             {{ session('error') }}
                         </div>
                         @endif

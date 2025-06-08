@@ -185,10 +185,10 @@
                     e o empréstimo também ficou bem mais rápido."
                 </p>
                 <div class="user">
-                    <img src="#" />
+                    <img src="{{url('imagens/felipe.jpeg')}}" />
                     <div class="info">
-                        <span class="role">Professor</span>
-                        <strong>João</strong>
+                        <span class="role">Aluno</span>
+                        <strong>Química</strong>
                     </div>
                 </div>
             </div>

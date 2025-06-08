@@ -302,22 +302,22 @@
 
     .links {
         display: none;
-        flex-direction: column;
         width: 100%;
         background-color: var(--cor4);
         padding: 0;
         overflow: hidden;
         max-height: 0;
         transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-        order: 2;
+        order: 1;
         margin-top: 10px;
+        font-size: 10px;
     }
 
     .links.active {
         display: flex;
         max-height: 500px;
         padding: 20px 0;
-        top: 100px;
+
     }
 
 
@@ -328,7 +328,7 @@
     }
 
     .links a {
-        display: block;
+        display: flex;
         padding: 10px 0;
     }
 
@@ -339,7 +339,7 @@
 
     .menu-toggle {
         display: flex;
-        margin-left: 20px;
+
         order: 3;
     }
 
@@ -351,6 +351,10 @@
 @media (max-width: 768px) {
     .navbar-logo {
         font-size: 1em;
+    }
+
+    .links {
+        flex-direction: column;
     }
 
     .navbar-img {

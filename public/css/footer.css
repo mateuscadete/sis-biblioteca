@@ -60,7 +60,7 @@ footer {
     flex: 1;
     min-width: 200px;
     max-width: 280px;
-    margin: 0 15px 40px 15px;
+    margin: 0 10px 20px 10px;
 }
 
 .footer-section:first-child {
@@ -103,7 +103,6 @@ footer {
     color: var(--cor4);
     text-decoration: none;
     display: inline-block;
-
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -132,8 +131,7 @@ footer {
 .footer-bottom {
     width: 100%;
     text-align: center;
-    margin-top: 30px;
-    padding-top: 20px;
+
 }
 
 hr {
