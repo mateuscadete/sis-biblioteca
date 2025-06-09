@@ -7,73 +7,7 @@
     <title>Assistente de IA - Biblioteca</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
-    <style>
-        .chat-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            background-color: #f9f9f9;
-        }
-
-        .chat-messages {
-            height: 400px;
-            overflow-y: auto;
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #eee;
-            border-radius: 4px;
-            background-color: white;
-        }
-
-        .message {
-            margin-bottom: 10px;
-            padding: 8px 12px;
-            border-radius: 4px;
-        }
-
-        .user-message {
-            background-color: #e3f2fd;
-            text-align: right;
-        }
-
-        .ai-message {
-            background-color: #f5f5f5;
-            text-align: left;
-        }
-
-        #chat-form {
-            display: flex;
-            gap: 10px;
-        }
-
-        #user-input {
-            flex-grow: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
-
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        .loading {
-            display: none;
-            text-align: center;
-            color: #666;
-        }
-    </style>
+    <link rel="stylesheet" href="{{ asset('css/ia.css') }}">
 </head>
 
 <body>
