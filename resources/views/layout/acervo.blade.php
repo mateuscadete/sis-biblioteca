@@ -72,25 +72,24 @@
                     <tbody>
                         @foreach($livros as $livro)
                         <tr>
-                            <td>
+                            <td data-label="Capa"> {{-- Adicione data-label aqui --}}
                                 @if ($livro->imagem)
-                                <img src="{{ asset('storage/' . $livro->imagem) }}" alt="Imagem do livro"
-                                    style="max-width: 80px;">
+                                <img src="{{ asset('storage/' . $livro->imagem) }}" alt="Imagem do livro" style="max-width: 80px;">
                                 @else
                                 <span>Sem imagem</span>
                                 @endif
                             </td>
-                            <td>{{ $livro->titulo }}</td>
-                            <td>{{ $livro->autor }}</td>
-                            <td>{{ $livro->editora }}</td>
-                            <td>{{ $livro->genero }}</td>
-                            <td>{{ $livro->edicao }}</td>
-                            <td>{{ $livro->num_paginas }}</td>
-                            <td>{{ $livro->isbn }}</td>
-                            <td>{{ \Carbon\Carbon::parse($livro->data)->format('d/m/Y') }}</td>
-                            <td>{{ $livro->descricao }}</td>
-                            <td>{{ $livro->qtde }}</td>
-                            <td>
+                            <td data-label="Título">{{ $livro->titulo }}</td> {{-- E aqui --}}
+                            <td data-label="Autor">{{ $livro->autor }}</td>
+                            <td data-label="Editora">{{ $livro->editora }}</td>
+                            <td data-label="Gênero">{{ $livro->genero }}</td>
+                            <td data-label="Edição">{{ $livro->edicao }}</td>
+                            <td data-label="Páginas">{{ $livro->num_paginas }}</td>
+                            <td data-label="ISBN">{{ $livro->isbn }}</td>
+                            <td data-label="Data">{{ \Carbon\Carbon::parse($livro->data)->format('d/m/Y') }}</td>
+                            <td data-label="Descrição">{{ $livro->descricao }}</td>
+                            <td data-label="Quantidade disponível">{{ $livro->qtde }}</td>
+                            <td data-label="Ação">
                                 @if($livro->qtde > 0)
                                 <form action="{{ url( '/emprestimos') }}" method="POST">
                                     @csrf
@@ -100,7 +99,6 @@
                                 @else
                                 <span class="status">Fora de estoque</span>
                                 @endif
-
                             </td>
                         </tr>
                         @endforeach

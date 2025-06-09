@@ -12,10 +12,10 @@
         @include('includes.navbar')
 
         @if(session('success'))
-    <script>
-        alert("{{ session('success') }}");
-    </script>
-@endif
+        <script>
+            alert("{{ session('success') }}");
+        </script>
+        @endif
 
     </header>
 
@@ -71,17 +71,17 @@
 
 
     <script>
-  document.getElementById('btn-cadastrar').addEventListener('click', function(event) {
-    event.preventDefault(); // cancela o comportamento padrão do link
-    
-    document.body.style.transition = "opacity 0.5s";
-    document.body.style.opacity = 0;
+        document.getElementById('btn-cadastrar').addEventListener('click', function(event) {
+            event.preventDefault(); // cancela o comportamento padrão do link
 
-    setTimeout(() => {
-      window.location.href = this.href;  // navega para login após animação
-    }, 500); // tempo da animação (500ms)
-  });
-</script>
+            document.body.style.transition = "opacity 0.5s";
+            document.body.style.opacity = 0;
+
+            setTimeout(() => {
+                window.location.href = this.href; // navega para login após animação
+            }, 500); // tempo da animação (500ms)
+        });
+    </script>
 
 
 </body>
