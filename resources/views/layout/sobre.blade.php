@@ -69,6 +69,46 @@
                 </div>
             </div>
         </section>
+
+        <div class="criadores-container">
+    <h2 class="titulocriador">Criadores :</h2>
+    <div class="criadores">
+      <div class="criador">
+        <div class="icone">
+            <a href="https://github.com/JoelQuia" target="_blank">
+        <img src="imagens/joel.jpg" alt="Joel"></a>
+        </div>
+        <h3>Joel Quia</h3>
+        <p>Desenvolvedor front-end e designer</p>
+      </div>
+      <div class="criador">
+        <div class="icone">
+            <a href="https://github.com/mateuscadete" target="_blank">
+          <img src="imagens/mateus.jpg" alt="Mateus"></a>
+        </div>
+        <h3>Mateus Cadete</h3>
+        <p>Manager</p>
+      </div>
+      <div class="criador">
+        <div class="icone">
+            <a href="https://github.com/Gabriel5454"target="_blank">
+        <img src="imagens/gabriel.png" alt="Gabrie"></a>
+    
+        </div>
+        <h3>Gabriel Martins</h3>
+        <p>Desenvolvedor back-end</p>
+      </div>
+      <div class="criador">
+        <div class="icone">
+            <a href="https://github.com/Nxgueira"target="_blank">
+            <img src="imagens/vitor.jpg" alt="Vitor">
+            </a>
+        </div>
+        <h3>Victor Nogueira</h3>
+        <p>Tester</p>
+      </div>
+    </div>
+  </div>
     </main>
 
     @include('includes.footer')

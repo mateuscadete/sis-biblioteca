@@ -38,6 +38,7 @@
 
     <main>
 
+    <center>
         <section class="livros">
 
             <h2>Lista de Livros</h2>
@@ -122,6 +123,7 @@
 
             </div>
         </section>
+    </center>
     </main>
 
 
