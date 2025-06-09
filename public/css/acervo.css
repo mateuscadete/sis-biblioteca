@@ -139,7 +139,6 @@ h3 {
     background-color: var(--cor0);
 }
 
-
 .informações {
     width: 100%;
     border-collapse: collapse;
@@ -160,27 +159,19 @@ h3 {
     vertical-align: top;
 }
 
-.descrição {
-    height: 40px;
-    margin-top: 10px;
-    width: 200px;
-}
-
 .informações th {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.9em;
 }
 
-.informações tbody td:nth-child(10) {
-    width: 200px;
-}
 
 .informações tbody tr:nth-child(even) {
     background-color: var(--cor4);
 }
 
 .informações tbody tr:hover {
+
     transition: background-color 0.2s ease;
 }
 
@@ -190,7 +181,6 @@ h3 {
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 
 .solicitar {
     background-color: var(--cor0);
@@ -202,13 +192,11 @@ h3 {
     font-size: 0.9em;
     transition: background-color 0.3s ease, transform 0.2s ease;
     white-space: nowrap;
-
 }
 
 .solicitar:hover {
     background-color: var(--cor1);
     transform: translateY(-2px);
-
 }
 
 .status {
@@ -255,6 +243,18 @@ h3 {
 }
 
 
+.informações td:nth-child(10),
+.informações th:nth-child(10) {
+    /* Apply to both td and th */
+    width: 25%;
+    /* Adjust as needed, the image suggests it's quite wide */
+    max-width: 350px;
+    /* Increased max-width to give it more room */
+    word-wrap: break-word;
+    white-space: normal;
+}
+
+
 
 @media (max-width: 1024px) {
     .titulo {
@@ -266,6 +266,14 @@ h3 {
     .informações th,
     .informações td {
         padding: 10px 12px;
+    }
+
+    .informações td:nth-child(10) {
+        width: 30%;
+    }
+
+    .informações th:nth-child(10) {
+        width: 30%;
     }
 }
 

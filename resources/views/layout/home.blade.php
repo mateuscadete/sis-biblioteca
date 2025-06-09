@@ -188,6 +188,7 @@
                     <img src="{{url('imagens/felipe.jpeg')}}" />
                     <div class="info">
                         <span class="role">Aluno</span>
+                        <strong>Felipe Gabriel</strong>
                         <strong>Química</strong>
                     </div>
                 </div>

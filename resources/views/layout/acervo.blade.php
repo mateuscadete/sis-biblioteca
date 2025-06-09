@@ -88,7 +88,7 @@
                             <td>{{ $livro->num_paginas }}</td>
                             <td>{{ $livro->isbn }}</td>
                             <td>{{ \Carbon\Carbon::parse($livro->data)->format('d/m/Y') }}</td>
-                            <td class="descrição">{{ $livro->descricao }}</td>
+                            <td>{{ $livro->descricao }}</td>
                             <td>{{ $livro->qtde }}</td>
                             <td>
                                 @if($livro->qtde > 0)
