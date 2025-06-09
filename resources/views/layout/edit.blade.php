@@ -22,7 +22,7 @@
     </div>
     @endif
 
-    <form action="{{ route('livros.update', $livro->id) }}" method="POST">
+   <form action="{{ route('livros.update', $livro->id) }}" method="POST" enctype="multipart/form-data" class="form">
         @csrf
         @method('PUT')
 
@@ -131,9 +131,12 @@
 
 
         </div>
-
-        <button type="submit" class="salvar">Salvar</button>
-        <a href="{{ route('layout.show') }}"><button type="button" class="cancelar">Cancelar</button></a>
+<div class="botoes-container">
+    <button type="submit" class="salvar">Salvar</button>
+    <a href="{{ route('layout.show') }}">
+        <button type="button" class="cancelar">Cancelar</button>
+    </a>
+</div>
     </form>
 
 </body>
