@@ -7,18 +7,15 @@
     <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
 
 
-    
+
 </head>
-
-
-
 
 
 
 <body>
     <header>
         @include('includes.navbar')
-   
+
     </header>
     <div class="container">
 
@@ -60,7 +57,7 @@
 
                 <!-- Botão de envio -->
 
-                <button type="submit"  class="cadastrar">Cadastrar</button>
+                <button type="submit" class="cadastrar">Cadastrar</button>
 
 
             </form>
@@ -80,17 +77,19 @@
 
 
     <script>
-  document.getElementById('btn-login').addEventListener('click', function(event) {
-    event.preventDefault(); // cancela o comportamento padrão do link
-    
-    document.body.style.transition = "opacity 0.5s";
-    document.body.style.opacity = 0;
+        document.getElementById('btn-login').addEventListener('click', function(event) {
+            event.preventDefault();
 
-    setTimeout(() => {
-      window.location.href = this.href;  // navega para login após animação
-    }, 500); // tempo da animação (500ms)
-  });
-</script>
+            document.body.style.transition = "opacity 0.5s";
+            document.body.style.opacity = 0;
+
+            setTimeout(() => {
+                window.location.href = this.href;
+            }, 300);
+        });
+    </script>
+
+
 
 </body>
 

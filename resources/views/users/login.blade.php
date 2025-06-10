@@ -11,7 +11,7 @@
     <header>
         @include('includes.navbar')
 
-  
+
 
     </header>
 
@@ -20,7 +20,7 @@
         <div class="left">
             <h1>Bem-Vindo<br>De Volta</h1>
             <p>Ainda não possui uma conta?</p>
-            <a href="{{ route('user.cadastro') }}" class="cadastrar" id="btn-cadastrar">cadastrar</a>
+            <a href="{{ route('user.cadastro') }}" class="cadastrar" id="btn-cadastrar">Cadastrar</a>
         </div>
 
         <div class="right">

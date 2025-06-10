@@ -10,6 +10,11 @@
     --cor6: #382414;
 }
 
+.icon-button {
+    position: relative;
+    top: 12px;
+}
+
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
@@ -17,11 +22,6 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-}
-
-.icon-button {
-    position: relative;
-    top: 12px;
 }
 
 .container {
