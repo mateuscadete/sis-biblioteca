@@ -18,7 +18,7 @@
 <body>
     <header>
         @include('includes.navbar')
-        
+   
     </header>
     <div class="container">
 

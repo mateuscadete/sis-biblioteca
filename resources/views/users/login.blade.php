@@ -11,11 +11,7 @@
     <header>
         @include('includes.navbar')
 
-        @if(session('success'))
-        <script>
-            alert("{{ session('success') }}");
-        </script>
-        @endif
+  
 
     </header>
 
