@@ -215,11 +215,11 @@
         <div class="map">
 
             <div class="card-text">
- <div id="map-container" style="height: 400px; width: 100%;">
-    <div id="map" style="height: 100%; width: 100%;"></div>
-                    <h2>Conheça nossa biblioteca</h2>
+                 <h2>Conheça nossa biblioteca</h2>
                 <p>Localização</p>
-
+       <div id="map-container" style="height: 150px; width: 100%;">
+        <div id="map" style="height: 100%; width: 100%;"></div>
+                 
 </div>
 
 

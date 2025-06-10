@@ -31,7 +31,7 @@
                 <h2>Uma biblioteca com um melhor serviço</h2>
             </div>
             <div class="text-block">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
+                <p>O sistema facilita para os usuários encontrarem obras facilmente, fazerem empréstimos de forma independente e receberem alertas sobre os prazos, incentivando um uso mais consciente e eficiente do acervo.</p>
             </div>
         </section>
 
@@ -41,10 +41,10 @@
             </div>
             <div class="objective-paragraphs">
                 <div class="text-block">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
+                    <p>Nosso sistema foi feito pra deixar o atendimento mais ágil e prático, facilitando o gerenciamento do acervo e ajudando a manter tudo mais organizado na hora de pegar ou devolver livros. Com a tecnologia, a gente oferece uma experiência bem mais moderna pra quem frequenta a biblioteca.      </p>
                 </div>
                 <div class="text-block">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc maximus, nulla ut commodo sagittis, sapien dui mattis dui, non pulvinar lorem felis nec erat</p>
+                    <p>Biblioteca digital torna mais fácil acessar o conhecimento de um jeito bem prático. Com recursos modernos, queremos criar um espaço onde alunos, professores e funcionários possam interagir e aprender juntos, de forma simples e bacana.</p>
                 </div>
             </div>
         </section>
