@@ -38,7 +38,7 @@
 
     <main>
 
-    <center>
+
         <section class="livros">
 
             <h2>Lista de Livros</h2>
@@ -52,21 +52,33 @@
                     </div>
                 </form>
 
+                @if (session('success'))
+                <div class="message-box success">
+                    {{ session('success') }}
+                </div>
+                @endif
+
+                @if (session('error'))
+                <div class="message-box error">
+                    {{ session('error') }}
+                </div>
+                @endif
+
                 <table class="informações">
                     <thead>
                         <tr>
-                            <th>Capa</th>
-                            <th>Título</th>
-                            <th>Autor</th>
-                            <th>Editora</th>
-                            <th>Gênero</th>
-                            <th>Edição</th>
-                            <th>Páginas</th>
-                            <th>ISBN</th>
-                            <th>Data</th>
-                            <th>Descrição</th>
-                            <th>Quantidade disponível</th>
-                            <th>Ação</th>
+                            <th scope="col">Capa</th>
+                            <th scope="col">Título</th>
+                            <th scope="col">Autor</th>
+                            <th scope="col">Editora</th>
+                            <th scope="col">Gênero</th>
+                            <th scope="col">Edição</th>
+                            <th scope="col">Páginas</th>
+                            <th scope="col">ISBN</th>
+                            <th scope="col">Data</th>
+                            <th scope="col">Descrição</th>
+                            <th scope="col">Quantidade disponível</th>
+                            <th scope="col">Ação</th>
                         </tr>
                     </thead>
 
@@ -104,17 +116,7 @@
                         </tr>
                         @endforeach
 
-                        @if (session('success'))
-                        <div class="sucesso">
-                            {{ session('success') }}
-                        </div>
-                        @endif
 
-                        @if (session('error'))
-                        <div class="erro">
-                            {{ session('error') }}
-                        </div>
-                        @endif
                     </tbody>
                 </table>
 
@@ -123,7 +125,7 @@
 
             </div>
         </section>
-    </center>
+
     </main>
 
 

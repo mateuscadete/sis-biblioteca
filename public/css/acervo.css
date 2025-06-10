@@ -60,6 +60,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: #ffffff;
+    flex-grow: 1;
 }
 
 .livros {
@@ -89,9 +90,7 @@ h3 {
     justify-content: center;
     width: 100%;
     flex-direction: column;
-
 }
-
 
 .form-livros {
     display: flex;
@@ -123,7 +122,6 @@ h3 {
 }
 
 .buscar {
-
     background-color: var(--cor1);
     color: white;
     padding: 12px 20px;
@@ -139,10 +137,11 @@ h3 {
 
 .informações {
     width: 120%;
-    justify-content: center;
+    margin-left: -9%;
     border-collapse: collapse;
     margin-bottom: 30px;
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: scroll;
 }
 
 .informações thead {
@@ -150,14 +149,17 @@ h3 {
     color: white;
 }
 
+.informações tr {
+    border-bottom: 1px solid #d1d1d161;
+
+}
+
 .informações th,
 .informações td {
     padding: 12px 15px;
     border: 1px solid var(--cor2);
     text-align: left;
-    justify-content: center;
     vertical-align: top;
-
 }
 
 .informações th {
@@ -165,25 +167,16 @@ h3 {
     text-transform: uppercase;
     font-size: 0.9em;
     text-align: center;
-    justify-content: center;
-    vertical-align: center;
+    vertical-align: middle;
 }
 
 .informações tbody tr:nth-child(even) {
     background-color: whitesmoke;
 }
 
-.informações td:nth-child(10) {
-    width: 25%;
-    word-wrap: break-word;
-    white-space: normal;
+.informações tbody tH:nth-child(10) {
+    width: 20%;
 }
-
-
-
-
-
-
 
 
 .informações img {
@@ -217,8 +210,8 @@ h3 {
     white-space: nowrap;
 }
 
-.sucesso,
-.erro {
+.message-box {
+
     padding: 15px;
     margin: 20px 0;
     border-radius: 5px;
@@ -226,176 +219,81 @@ h3 {
     font-weight: bold;
 }
 
-.sucesso {
+.success {
     background-color: #d4edda;
     border-color: #c3e6cb;
     color: #155724;
 }
 
-.sucesso,
-.erro {
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 5px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.sucesso {
-    background-color: #d4edda;
-    border-color: #c3e6cb;
-    color: #155724;
-}
-
-.erro {
+.error {
     background-color: #f8d7da;
     border-color: #f5c6cb;
     color: #721c24;
 }
 
+@media(max-width:1400px) {
 
-
-@media (max-width: 1024px) {
-    .titulo {
-        font-size: 25px;
-        top: 40%;
-        left: 50%;
+    .containerbooks {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-direction: column;
+        gap: 30px;
     }
 
-    .informações th,
-    .informações td {
-        padding: 10px 12px;
-    }
+    .informações {
+        width: 100%;
+        margin-left: 0;
 
+    }
 
 }
 
-/* Dentro da sua media query para telas menores, por exemplo, @media (max-width: 768px) */
-@media (max-width: 768px) {
-    /* ... (seu CSS existente para 768px) ... */
-
+@media (max-width: 800px) {
     .informações {
-        border: none;
-        /* Remove a borda da tabela */
-        min-width: unset;
-        /* Remove o min-width para permitir que a tabela se ajuste */
+        width: 100%;
+        left: 0;
+        border: 3px solid var(--cor0);
+    }
+
+    .informações caption {
+        font-size: 1.3rem;
     }
 
     .informações thead {
-        display: none;
-        /* Esconde o cabeçalho da tabela em telas pequenas */
-    }
-
-    .informações,
-    .informações tbody,
-    .informações tr,
-    .informações td {
-        display: block;
-        /* Faz com que todos sejam elementos de bloco */
-        width: 100%;
-        /* Ocupa a largura total disponível */
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
     }
 
     .informações tr {
-        margin-bottom: 1em;
-        /* Espaçamento entre as "linhas" verticais */
-        border: 1px solid var(--cor2);
-        /* Adiciona uma borda para separar as "linhas" */
-        border-radius: 8px;
-        /* Cantos arredondados */
-        padding: 10px;
-        /* Preenchimento interno */
-        box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
-        /* Sombra para destaque */
+        display: block;
+        padding: 0;
+        border-radius: 8px
     }
 
     .informações td {
-        border: none;
-        /* Remove as bordas das células individuais */
-        position: relative;
-        /* Para posicionar o pseudo-elemento */
-        padding-left: 50%;
-        /* Espaço para o rótulo da coluna */
+        display: block;
+        font-size: 1rem;
+        padding: 0.5em 1em;
         text-align: right;
-        /* Alinha o conteúdo à direita */
-        margin-bottom: 5px;
-        /* Espaçamento entre as células dentro de uma "linha" */
     }
+
+
 
     .informações td::before {
         content: attr(data-label);
-        /* Usa o atributo data-label como conteúdo */
-        position: absolute;
-        left: 0;
-        width: 45%;
-        /* Largura para o rótulo */
-        padding-right: 10px;
-        /* Espaçamento entre o rótulo e o valor */
-        text-align: left;
-        /* Alinha o rótulo à esquerda */
-        font-weight: bold;
-        color: var(--cor6);
+        float: left;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.9rem;
     }
 
-    /* Ajustes específicos para a coluna de imagem */
-    .informações td:first-child {
-        /* A primeira coluna (Capa) */
-        text-align: center;
-        /* Centraliza a imagem */
-        padding-left: 0;
-        /* Remove padding extra para imagem */
-    }
-
-    .informações td:first-child::before {
-        content: '';
-        /* Remove o rótulo para a imagem, ou adicione se quiser um */
-    }
-
-    /* Ajuste para a coluna de Ação */
     .informações td:last-child {
-        /* A última coluna (Ação) */
-        text-align: center;
-        /* Centraliza o botão */
-        padding-left: 0;
-        /* Remove padding extra */
-        display: flex;
-        /* Para centralizar melhor o botão dentro */
-        justify-content: center;
-        align-items: center;
-    }
-
-    .informações td:last-child::before {
-        content: '';
-        /* Remove o rótulo para a Ação, ou adicione se quiser um */
-    }
-
-    .solicitar {
-        width: 80%;
-        /* Botão ocupa mais largura */
-    }
-}
-
-@media (max-width: 600px) {
-    .titulo {
-        top: 45%;
-        left: 50%;
-    }
-}
-
-@media (max-width: 480px) {
-    main {
-        padding: 20px 5px;
-    }
-
-    .livros h2 {
-        font-size: 1.5em;
-    }
-
-    .livros h3 {
-        font-size: 0.9em;
-    }
-
-    .containerbooks {
-        gap: 15px;
+        border-bottom: 0;
     }
 }
