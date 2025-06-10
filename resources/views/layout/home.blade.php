@@ -15,14 +15,9 @@
                 .catch(err => console.log('Erro ao registrar o SW:', err));
         }
     </script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
 
-
-    @if(session('success'))
-    <script>
-        alert("{{ session('success') }}");
-    </script>
-    @endif
-
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 </head>
 
@@ -220,8 +215,14 @@
         <div class="map">
 
             <div class="card-text">
-                <h2>Conheça nossa biblioteca</h2>
+ <div id="map-container" style="height: 400px; width: 100%;">
+    <div id="map" style="height: 100%; width: 100%;"></div>
+                    <h2>Conheça nossa biblioteca</h2>
                 <p>Localização</p>
+
+</div>
+
+
             </div>
         </div>
         <a href="https://oglobo.globo.com/cultura/livros/ " target="_blank">
@@ -235,11 +236,29 @@
                 </div>
             </div>
         </a>
+        
     </section>
 
 
 
 
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var map = L.map('map').setView([-23.556831106, -46.653830718], 16);
+
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        var marker = L.marker([-23.522973001296343, -46.47583217434977]).addTo(map);
+        marker.bindPopup("Biblioteca Etec Zona Leste.").openPopup();
+
+        map.on('click', function (e) {
+            alert("Você clicou no mapa em " + e.latlng);
+        });
+    });
+</script>
 
 
 
