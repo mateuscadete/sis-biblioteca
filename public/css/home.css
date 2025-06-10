@@ -162,7 +162,7 @@ h3 {
 
 .container .card .conteudo a {
     display: inline-block;
-    margin-top: 12px;
+    margin-top: 20px;
     background-color: var(--cor0);
     text-decoration: none;
     padding: 10px 20px;
@@ -495,7 +495,7 @@ h3 {
     }
 
     .container .card:hover .conteudo {
-        top: 100px;
+        top: 150px;
         padding: 0 15px;
     }
 
@@ -536,7 +536,7 @@ h3 {
     }
 
     .container .card:hover {
-        height: 400px;
+        height: 380px;
     }
 
     .container .card .caixaImg {
@@ -554,7 +554,7 @@ h3 {
     }
 
     .container .card:hover .conteudo {
-        top: 110px;
+        top: 140px;
     }
 
     .containerbooks {
@@ -593,6 +593,10 @@ h3 {
         font-size: 20px;
         top: 45%;
         left: 50%;
+    }
+
+    .container .card:hover {
+        height: 380px;
     }
 
 }

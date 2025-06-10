@@ -18,6 +18,11 @@
     --cor6: #382414;
 }
 
+.icon-button {
+    position: relative;
+    top: 12px;
+}
+
 body {
     margin: 0;
     font-family: 'raleway', sans-serif;

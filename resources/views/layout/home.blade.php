@@ -55,7 +55,7 @@
                     </div>
                     <div class="conteudo">
                         <h2>Contabilidade</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quod excepturi neque illum consectetur. Quasi maxime obcaecati, non culpa tempora modi</p>
+                        <p>Veja livros sobre a área que envolve a gestão e análise financeira de empresas e pessoas físicas, desde a abertura de um negócio até o seu fechamento.</p>
                         <a href="#">Acessar Livros</a>
                     </div>
 
@@ -67,7 +67,7 @@
                     </div>
                     <div class="conteudo">
                         <h2>Tecnologia</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos magni quo ad. Omnis quibusdam consequatur quod adipisci reprehenderit? Quis in aliquam dicta nobis </p>
+                        <p>Explore o ramo que desenvolve e gerencia sistemas de informação, utilizando ferramentas e técnicas computacionais para criar soluções tecnológicas. </p>
                         <a href="#">Acessar Livros</a>
 
                     </div>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="conteudo">
                         <h2>Ciências Naturais</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum reiciendis culpa officiis ratione itaque quae corrupti maiores laborum quasi!</p>
+                        <p>Conheça o mundo físico e natural, buscando entender como o universo e o mundo ao nosso redor funcionam.</p>
                         <a href="#">Acessar Livros</a>
                     </div>
 

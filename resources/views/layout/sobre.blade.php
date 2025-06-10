@@ -76,7 +76,7 @@
       <div class="criador">
         <div class="icone">
             <a href="https://github.com/JoelQuia" target="_blank">
-        <img src="imagens/joel.jpg" alt="Joel"></a>
+        <img src="{{url('imagens/joel.jpg')}}" alt="Joel"></a>
         </div>
         <h3>Joel Quia</h3>
         <p>Desenvolvedor front-end e designer</p>
@@ -84,7 +84,7 @@
       <div class="criador">
         <div class="icone">
             <a href="https://github.com/mateuscadete" target="_blank">
-          <img src="imagens/mateus.jpg" alt="Mateus"></a>
+          <img src="{{url('imagens/cadete.jpg')}}" alt="Mateus"></a>
         </div>
         <h3>Mateus Cadete</h3>
         <p>Manager</p>
@@ -92,7 +92,7 @@
       <div class="criador">
         <div class="icone">
             <a href="https://github.com/Gabriel5454"target="_blank">
-        <img src="imagens/gabriel.png" alt="Gabrie"></a>
+        <img src="{{url('imagens/gabriel.png')}}" alt="Gabriel"></a>
     
         </div>
         <h3>Gabriel Martins</h3>
@@ -101,7 +101,7 @@
       <div class="criador">
         <div class="icone">
             <a href="https://github.com/Nxgueira"target="_blank">
-            <img src="imagens/vitor.jpg" alt="Vitor">
+            <img src="{{url('imagens/vitor.jpg')}}" alt="Vitor">
             </a>
         </div>
         <h3>Victor Nogueira</h3>

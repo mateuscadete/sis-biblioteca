@@ -15,6 +15,7 @@
             <li><a href="{{ route('layout.acervo') }}">Nosso Acervo</a></li>
             <li><a href="{{ route('layout.sobre') }}">Sobre</a></li>
             <li><a href="{{ route('contato.submit') }}">Contato</a></li>
+            <li><a href="{{route('dashboard')}}" >Cadastrar Livros</a> </li>
         </ul>
 
         <div class="navbar-actions">
