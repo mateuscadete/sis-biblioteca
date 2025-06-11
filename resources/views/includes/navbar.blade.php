@@ -18,7 +18,7 @@
         </div>
 
         <ul class="links" id="navbar-links">
-            <li><a href="{{ route('user.index') }}">Home</a></li>
+
             <li><a href="{{ route('layout.acervo') }}">Nosso Acervo</a></li>
             <li><a href="{{ route('layout.sobre') }}">Sobre</a></li>
             <li><a href="{{ route('contato.submit') }}">Contato</a></li>
