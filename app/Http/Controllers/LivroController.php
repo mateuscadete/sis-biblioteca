@@ -141,4 +141,6 @@ class LivroController extends Controller
 
         return view('layout.acervo', compact('livros'));
     }
+    
+    
 }

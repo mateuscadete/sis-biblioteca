@@ -127,9 +127,8 @@
 
             </div>
         </section>
-
+ 
     </main>
-
 
     @include('includes.footer')
 

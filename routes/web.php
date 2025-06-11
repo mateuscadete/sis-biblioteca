@@ -70,6 +70,8 @@ Route::middleware('auth')->group(function () {
     // Aponta para o método 'returnBook' do LoanController
     // Nome da rota: 'emprestimos.return'
     Route::post('/emprestimos/{id}/devolver', [LoanController::class, 'returnBook'])->name('emprestimos.return');
+
+    
 });
 
 // Rota para a página de acervo
@@ -92,10 +94,12 @@ Route::post('/livros/{id}/emprestar', [App\Http\Controllers\LoanController::clas
 // Rota para filtrar livros e acervo
 Route::get('/acervo-layout', [LivroController::class, 'filtro'])->name('layout.acervo');
 
+
+
 /// Rota para a página de IA
 Route::get('/assistente-ia', function () {
     return view('layout.ia');
-})->name('assistente.ia');
+})->middleware('auth')->name('assistente.ia');
 
 // Rota para a API de chat com IA
 Route::post('/api/ai-chat', [IAController::class, 'chat'])->middleware('auth')->name('ai.chat');

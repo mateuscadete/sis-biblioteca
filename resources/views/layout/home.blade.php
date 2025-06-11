@@ -51,7 +51,7 @@
                     <div class="conteudo">
                         <h2>Contabilidade</h2>
                         <p>Veja livros sobre a área que envolve a gestão e análise financeira de empresas e pessoas físicas, desde a abertura de um negócio até o seu fechamento.</p>
-                        <a href="#">Acessar Livros</a>
+                        <a href="{{ route('layout.acervo') }}?busca=Contabilidade">Acessar livros </a>
                     </div>
 
                 </div>
@@ -63,7 +63,8 @@
                     <div class="conteudo">
                         <h2>Tecnologia</h2>
                         <p>Explore o ramo que desenvolve e gerencia sistemas de informação, utilizando ferramentas e técnicas computacionais para criar soluções tecnológicas. </p>
-                        <a href="#">Acessar Livros</a>
+                 <a href="{{ route('layout.acervo') }}?busca=Tecnologia">Acessar livros </a>
+
 
                     </div>
 
@@ -76,7 +77,7 @@
                     <div class="conteudo">
                         <h2>Ciências Naturais</h2>
                         <p>Conheça o mundo físico e natural, buscando entender como o universo e o mundo ao nosso redor funcionam.</p>
-                        <a href="#">Acessar Livros</a>
+                         <a href="{{ route('layout.acervo') }}?busca=Ciências Naturais">Acessar livros </a>
                     </div>
 
 
