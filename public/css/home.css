@@ -201,7 +201,7 @@ h3 {
 
 .carousel-button {
     position: relative;
-    top: 50%;
+    top: 40%;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -229,11 +229,11 @@ h3 {
 }
 
 .prev {
-    margin-left: -50px;
+    margin-left: -60px;
 }
 
 .next {
-    margin-right: -50px;
+    margin-right: -60px;
 }
 
 .livros {

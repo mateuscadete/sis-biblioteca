@@ -12,7 +12,7 @@
 
 
 
-<body>
+<body style="background-image: url('{{ asset('imagens/cadstro.jpg') }}'); object-fit: cover;">
     <header>
         @include('includes.navbar')
 

@@ -245,6 +245,7 @@
 .logado .sair,
 .logado .logar,
 .logado .cadastrar {
+    font-weight: 700;
     background: none;
     border: none;
     color: var(--cor6);
@@ -262,6 +263,8 @@
 .logado .logar:hover,
 .logado .cadastrar:hover {
     background-color: var(--cor4);
+    transform: translateY(-2px);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 .menu-toggle {

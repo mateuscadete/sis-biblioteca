@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="{{ asset('css/editlivro.css') }}">
 </head>
 
-<body>
+<body style="background-image: url('{{ asset('imagens/editarlivro.jpg') }}'); object-fit: cover;">
 
 
 
@@ -22,7 +22,7 @@
     </div>
     @endif
 
-   <form action="{{ route('livros.update', $livro->id) }}" method="POST" enctype="multipart/form-data" class="form">
+    <form action="{{ route('livros.update', $livro->id) }}" method="POST" enctype="multipart/form-data" class="form">
         @csrf
         @method('PUT')
 
@@ -82,7 +82,7 @@
             <div class="input_box">
                 <label for="imagem" class="form_label">Imagem da capa:</label>
                 <div class="input_field">
-                <input class="form-control" type="file" name="imagem" id="imagem" accept="image/*">
+                    <input class="form-control" type="file" name="imagem" id="imagem" accept="image/*">
                 </div>
 
             </div>
@@ -131,12 +131,12 @@
 
 
         </div>
-<div class="botoes-container">
-    <button type="submit" class="salvar">Salvar</button>
-    <a href="{{ route('layout.show') }}">
-        <button type="button" class="cancelar">Cancelar</button>
-    </a>
-</div>
+        <div class="botoes-container">
+            <button type="submit" class="salvar">Salvar</button>
+            <a href="{{ route('layout.show') }}">
+                <button type="button" class="cancelar">Cancelar</button>
+            </a>
+        </div>
     </form>
 
 </body>
