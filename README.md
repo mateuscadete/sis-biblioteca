@@ -130,7 +130,9 @@ Caso queira entrar em contato com os desenvolvedores do projeto:
 
 - 👤 **Joel Quia**  
   [![GitHub](https://img.shields.io/badge/GitHub-JoelQuia-181717?style=flat-square&logo=github)](https://github.com/JoelQuia)
+  📧 oliver.joel2020@gmail.com
 
 - 👤 **Gabriel**  
   [![GitHub](https://img.shields.io/badge/GitHub-Gabriel5454-181717?style=flat-square&logo=github)](https://github.com/Gabriel5454)
+  📧 11gabriel110211@gmail.com
 ```
