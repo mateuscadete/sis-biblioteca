@@ -1,66 +1,143 @@
-   @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-   .chat-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #fdf5e6; 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --cor0: #33605a;
+    --cor1: #1a3d39;
+    --cor2: #91a398;
+    --cor3: #7d9987;
+    --cor4: #e9e0d1;
+    --cor5: #68462b;
+    --cor6: #382414;
 }
 
-        .chat-messages {
-            height: 400px;
-            overflow-y: auto;
-            margin-bottom: 20px;
-            padding: 10px;
-            border: 1px solid #eee;
-            border-radius: 4px;
-            background-color:white;
-        }
+body {
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--cor6);
 
-        .message {
-            margin-bottom: 10px;
-            padding: 8px 12px;
-            border-radius: 4px;
-        }
+}
 
-        .user-message {
-            background-color: #e3f2fd;
-            text-align: right;
-        }
+.chat-container {
+    background-color: var(--cor1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
-        .ai-message {
-            background-color: #f5f5f5;
-            text-align: left;
-        }
+.chat-container h1 {
+    text-align: center;
+    color: var(--cor4);
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.3em;
+}
 
-        #chat-form {
-            display: flex;
-            gap: 10px;
-        }
+.chat-container p {
+    text-align: center;
+    color: var(--cor4);
+    margin-bottom: 20px;
+    font-size: 0.95em;
+}
 
-        #user-input {
-            flex-grow: 1;
-            padding: 10px;
-            border: 1px solid #ddd;
-            border-radius: 4px;
-        }
+.chat-messages {
+    flex-grow: 1;
+    border: 1px solid var(--cor3);
+    border-radius: 10px;
+    padding: 15px;
+    height: 400px;
+    overflow-y: auto;
+    background-color: var(--cor2);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
 
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-        }
+.message {
+    padding: 10px 15px;
+    border-radius: 8px;
+    max-width: 80%;
+    word-wrap: break-word;
+    line-height: 1.5;
+    font-size: 0.9em;
+}
 
-        button:hover {
-            background-color: #45a049;
-        }
+.user-message {
+    align-self: flex-end;
+    background-color: var(--cor0);
+    color: white;
+    border-bottom-right-radius: 2px;
+}
 
-        .loading {
-            display: none;
-            text-align: center;
-            color: #666;
-        }
+.ai-message {
+    align-self: flex-start;
+    background-color: var(--cor4);
+    color: var(--cor1);
+    border-bottom-left-radius: 2px;
+}
+
+.loading {
+    text-align: center;
+    color: var(--cor5);
+    font-style: italic;
+    margin-top: 10px;
+    display: none;
+}
+
+#chat-form {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#user-input {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: 1px solid var(--cor3);
+    border-radius: 8px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    color: var(--cor6);
+}
+
+#user-input::placeholder {
+    color: var(--cor3);
+}
+
+#user-input:focus {
+    outline: none;
+    border-color: var(--cor0);
+    box-shadow: 0 0 0 3px rgba(51, 96, 90, 0.2);
+}
+
+#chat-form button {
+    padding: 12px 25px;
+    background-color: var(--cor6);
+    color: var(--cor4);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#chat-form button:hover {
+    background-color: var(--cor4);
+    transform: translateY(-2px);
+    color: var(--cor0);
+}
+
+#chat-form button:active {
+    background-color: var(--cor6);
+    transform: translateY(0);
+}

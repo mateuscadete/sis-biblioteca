@@ -5,14 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assistente de IA - Biblioteca</title>
+    <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('css/ia.css') }}">
 </head>
 
 <body>
+    @include('includes.navbar')
+
+
     <div class="chat-container">
-        <h2>Assistente de IA da Biblioteca</h2>
+        <h1>Assistente de IA da Plataforma EastBooks</h1>
         <p>Pergunte sobre livros, autores ou qualquer dúvida relacionada à nossa biblioteca.</p>
 
         <div class="chat-messages" id="chat-messages">
@@ -30,6 +34,8 @@
         </form>
 
     </div>
+
+    @include('includes.footer')
 
     <script>
         document.getElementById('chat-form').addEventListener('submit', function(e) {
