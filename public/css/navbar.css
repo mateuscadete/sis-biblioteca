@@ -309,7 +309,7 @@
         flex-direction: column;
         width: 100%;
         order: 2;
-        background-color: var(--cor4);
+        background-color: #FAF2E5;
         padding: 0;
         max-height: 0;
         overflow: hidden;

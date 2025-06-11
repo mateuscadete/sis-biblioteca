@@ -43,49 +43,126 @@
 
             <h2>Assunto</h2>
             <h3>Acesse livros para os seus estudos </h3>
-
-            <div class="container">
-
-                <div class="card">
-                    <div class="caixaImg">
-                        <img src="{{url('imagens/contabilidade.jpg') }}">
-                    </div>
-                    <div class="conteudo">
-                        <h2>Contabilidade</h2>
-                        <p>Veja livros sobre a área que envolve a gestão e análise financeira de empresas e pessoas físicas, desde a abertura de um negócio até o seu fechamento.</p>
-                        <a href="{{ route('layout.acervo') }}?busca=Contabilidade">Acessar livros </a>
-                    </div>
-
-                </div>
-
-                <div class="card">
-                    <div class="caixaImg">
-                        <img src="{{url('imagens/tecnologia.jpg')}}">
-                    </div>
-                    <div class="conteudo">
-                        <h2>Tecnologia</h2>
-                        <p>Explore o ramo que desenvolve e gerencia sistemas de informação, utilizando ferramentas e técnicas computacionais para criar soluções tecnológicas. </p>
-                 <a href="{{ route('layout.acervo') }}?busca=Tecnologia">Acessar livros </a>
-
-
-                    </div>
-
-                </div>
-
-                <div class="card">
-                    <div class="caixaImg">
-                        <img src="{{ url('imagens/natureza.jpg')}}">
-                    </div>
-                    <div class="conteudo">
-                        <h2>Ciências Naturais</h2>
-                        <p>Conheça o mundo físico e natural, buscando entender como o universo e o mundo ao nosso redor funcionam.</p>
-                         <a href="{{ route('layout.acervo') }}?busca=Ciências Naturais">Acessar livros </a>
-                    </div>
-
-
-                </div>
-
+            <div class="carousel-button">
+                <button id="prevBtn" class="button prev">&#10094;</button> <button id="nextBtn" class="button next">&#10095;</button>
             </div>
+
+            <div class="cards-carousel">
+                <div class="container" id="conjunto-1">
+
+                    <div class="card">
+                        <div class="caixaImg">
+                            <img src="{{url('imagens/contabilidade.jpg') }}">
+                        </div>
+                        <div class="conteudo">
+                            <h2>Contabilidade</h2>
+                            <p>Veja livros sobre a área que envolve a gestão e análise financeira de empresas e pessoas físicas, desde a abertura de um negócio até o seu fechamento.</p>
+                            <a href="{{ route('layout.acervo') }}?busca=Contabilidade">Acessar livros </a>
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="caixaImg">
+                            <img src="{{url('imagens/tecnologia.jpg')}}">
+                        </div>
+                        <div class="conteudo">
+                            <h2>Tecnologia</h2>
+                            <p>Explore o ramo que desenvolve e gerencia sistemas de informação, utilizando ferramentas e técnicas computacionais para criar soluções tecnológicas. </p>
+                            <a href="{{ route('layout.acervo') }}?busca=Tecnologia">Acessar livros </a>
+
+
+                        </div>
+
+                    </div>
+
+                    <div class="card">
+                        <div class="caixaImg">
+                            <img src="{{ url('imagens/natureza.jpg')}}">
+                        </div>
+                        <div class="conteudo">
+                            <h2>Ciências Naturais</h2>
+                            <p>Conheça o mundo físico e natural, buscando entender como o universo e o mundo ao nosso redor funcionam.</p>
+                            <a href="{{ route('layout.acervo') }}?busca=Ciências Naturais">Acessar livros </a>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+                <div class="container hidden" id="conjunto-2">
+                    <div class="card">
+                        <div class="caixaImg">
+                            <img src="{{ url('imagens/historia.jpg') }}">
+                        </div>
+                        <div class="conteudo">
+                            <h2>História</h2>
+                            <p>Descubra eventos passados, civilizações antigas e a evolução da humanidade através dos séculos.</p>
+                            <a href="{{ route('layout.acervo') }}?busca=História">Acessar livros </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="caixaImg">
+                            <img src="{{ url('imagens/arte.jpg') }}">
+                        </div>
+                        <div class="conteudo">
+                            <h2>Arte</h2>
+                            <p>Explore as diversas formas de expressão artística, desde a pintura e escultura até a música e o teatro.</p>
+                            <a href="{{ route('layout.acervo') }}?busca=Arte">Acessar livros </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="caixaImg">
+                            <img src="{{ url('imagens/saude.jpg') }}">
+                        </div>
+                        <div class="conteudo">
+                            <h2>Saúde</h2>
+                            <p>Aprenda sobre bem-estar, nutrição, medicina e os cuidados essenciais para uma vida saudável.</p>
+                            <a href="{{ route('layout.acervo') }}?busca=Saúde">Acessar livros </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container hidden" id="conjunto-3">
+                    <div class="card">
+                        <div class="caixaImg">
+                            <img src="{{ url('imagens/literatura.jpg') }}">
+                        </div>
+                        <div class="conteudo">
+                            <h2>Literatura</h2>
+                            <p>Mergulhe em histórias cativantes, poesias e obras que moldaram a cultura e o pensamento humano.</p>
+                            <a href="{{ route('layout.acervo') }}?busca=Literatura">Acessar livros </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="caixaImg">
+                            <img src="{{ url('imagens/linguagens.jpg') }}">
+                        </div>
+                        <div class="conteudo">
+                            <h2>Linguagens</h2>
+                            <p>Aprofunde-se no estudo de idiomas, gramática, comunicação e a diversidade das línguas.</p>
+                            <a href="{{ route('layout.acervo') }}?busca=Linguagens">Acessar livros </a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="caixaImg">
+                            <img src="{{ url('imagens/psicologia.jpg') }}">
+                        </div>
+                        <div class="conteudo">
+                            <h2>Psicologia</h2>
+                            <p>Entenda o comportamento humano, a mente e os processos cognitivos que nos definem.</p>
+                            <a href="{{ route('layout.acervo') }}?busca=Psicologia">Acessar livros </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
         </section>
 
         <section class="livros">
@@ -273,7 +350,47 @@
 
     @include('includes.footer')
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const containers = document.querySelectorAll('.container');
+            const prevBtn = document.getElementById('prevBtn');
+            const nextBtn = document.getElementById('nextBtn');
+            let currentIndex = 0;
 
+            function showContainer(index) {
+                if (index < 0) {
+                    index = containers.length - 1;
+                } else if (index >= containers.length) {
+                    index = 0;
+                }
+
+                containers.forEach(container => {
+                    container.classList.remove('active');
+                    container.classList.add('hidden');
+                });
+
+                containers[index].classList.remove('hidden');
+                void containers[index].offsetWidth;
+                containers[index].classList.add('active');
+
+
+                currentIndex = index;
+            }
+
+
+            nextBtn.addEventListener('click', function() {
+                showContainer(currentIndex + 1);
+            });
+
+
+            prevBtn.addEventListener('click', function() {
+                showContainer(currentIndex - 1);
+            });
+
+
+            showContainer(currentIndex);
+        });
+    </script>
 
 </body>
 

@@ -81,7 +81,7 @@ h3 {
     justify-content: center;
     gap: 150px 100px;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 10px;
     left: auto;
     width: 100%;
 }
@@ -175,6 +175,65 @@ h3 {
 .container .card .conteudo a:hover {
     background-color: var(--cor3);
     scale: 1.05;
+}
+
+
+.cards-carousel {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+
+}
+
+
+
+
+.container.active {
+    opacity: 1;
+    transform: scale(1);
+    position: static;
+    pointer-events: auto;
+}
+
+.container.hidden {
+    display: none
+}
+
+.carousel-button {
+    position: relative;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(-50%);
+    pointer-events: none;
+    z-index: 10;
+
+}
+
+.button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50%;
+    font-size: 2em;
+    line-height: 1;
+    transition: background-color 0.3s ease;
+    pointer-events: auto;
+}
+
+.button:hover {
+    background-color: var(--cor0);
+}
+
+.prev {
+    margin-left: -50px;
+}
+
+.next {
+    margin-right: -50px;
 }
 
 .livros {
@@ -372,8 +431,6 @@ h3 {
     color: #333;
 }
 
-
-
 .adicionais {
     display: flex;
     flex-wrap: wrap;
@@ -383,7 +440,6 @@ h3 {
     max-width: 1200px;
     margin: 60px auto 20px auto;
 }
-
 
 .map,
 .noticias {
@@ -463,15 +519,43 @@ h3 {
     display: block;
 }
 
+@media (max-width:1300px) {
+    .container {
+        gap: 20px;
+    }
 
+    .prev {
+        margin-left: 10px;
+    }
 
+    .next {
+        margin-right: 10px;
+    }
 
+    .button {
+        font-size: 1.5em;
+        padding: 10px 15px;
+    }
+}
 
+@media (max-width:1150px) {
+    .container {
+        gap: 5px;
+    }
 
+    .prev {
+        margin-left: 0px;
+    }
 
+    .next {
+        margin-right: 0px;
+    }
 
-
-
+    .button {
+        font-size: 1.5em;
+        padding: 10px 15px;
+    }
+}
 
 
 @media (max-width: 1024px) {
@@ -498,6 +582,19 @@ h3 {
     .container .card:hover .conteudo {
         top: 150px;
         padding: 0 15px;
+    }
+
+    .prev {
+        margin-left: 10px;
+    }
+
+    .next {
+        margin-right: 10px;
+    }
+
+    .button {
+        font-size: 1.5em;
+        padding: 10px 15px;
     }
 
     .book {
