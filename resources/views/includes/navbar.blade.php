@@ -1,5 +1,6 @@
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="{{ url('css/navbar.css') }}">
 </head>
@@ -10,12 +11,18 @@
             <img src="{{ asset('imagens/logo.png') }}" class="navbar-img">
         </a>
 
+        <div class="menu-toggle" id="mobile-menu">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+
         <ul class="links" id="navbar-links">
             <li><a href="{{ route('user.index') }}">Home</a></li>
             <li><a href="{{ route('layout.acervo') }}">Nosso Acervo</a></li>
             <li><a href="{{ route('layout.sobre') }}">Sobre</a></li>
             <li><a href="{{ route('contato.submit') }}">Contato</a></li>
-            <li><a href="{{route('dashboard')}}" >Cadastrar Livros</a> </li>
+            <li><a href="{{route('dashboard')}}">Cadastrar Livros</a> </li>
         </ul>
 
         <div class="navbar-actions">
@@ -51,7 +58,7 @@
                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
                         </svg>
                     </button>
-                   
+
                     <div class="logado" id="user-dropdown-content">
                         @auth
                         @if (!Auth::user()->is_admin)
@@ -59,7 +66,7 @@
                         @else
                         <span class="user-logado">Olá, {{ Auth::user()->name }}</span>
                         @endif
-                        
+
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <button type="submit" class="sair">Sair</button>
@@ -73,14 +80,7 @@
                 </div>
             </div>
         </div>
-
-        <div class="menu-toggle" id="mobile-menu">
-            <div class="line"></div>
-            <div class="line"></div>
-            <div class="line"></div>
-        </div>
     </nav>
-
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -88,14 +88,12 @@
             const navbarLinks = document.getElementById('navbar-links');
             const navbarActions = document.querySelector('.navbar-actions');
 
-            if (mobileMenu && navbarLinks && navbarActions) {
+            if (mobileMenu && navbarLinks) {
                 mobileMenu.addEventListener('click', function() {
                     mobileMenu.classList.toggle('active');
                     navbarLinks.classList.toggle('active');
-                    navbarActions.classList.toggle('active');
                 });
             }
-
 
             const userMenuButton = document.getElementById('user-menu-button');
             const userDropdownContent = document.getElementById('user-dropdown-content');
@@ -109,7 +107,6 @@
                     userMenuButton.setAttribute('aria-expanded', !isExpanded);
                 });
 
-
                 document.addEventListener('click', function(event) {
                     if (!userMenuButton.contains(event.target) && !userDropdownContent.contains(event.target)) {
                         if (userDropdownContent.classList.contains('show')) {
@@ -121,6 +118,4 @@
             }
         });
     </script>
-
-
 </body>
