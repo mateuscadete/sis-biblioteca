@@ -15,15 +15,16 @@
 <body>
     @include('includes.navbar')
     <header>
-        <img src="{{url('imagens/sobre3.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
+        <img src="{{ asset('imagens/sobre3.jpg') }}" alt="Sobre a EastBooks" style="width: 100%; height: 100vh; object-fit: cover;">
 
+
+        @guest
+        @endguest
 
         <div class="titulo">
-            <h1>Conheça um pouco<br> sobre a iniciativa<br>da <span>EastBooks</span></h1>
+            <h1>Conheça um pouco<br> sobre a iniciativa<br>da <span class="logotipo">EastBooks</span></h1>
         </div>
-
     </header>
-
     <main>
 
         <h1>O que a EastBooks oferece?</h1>

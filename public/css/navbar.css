@@ -57,14 +57,14 @@
     width: auto;
 }
 
-
 .links {
     list-style: none;
     display: flex;
     gap: 25px;
     margin: 0 30px;
     font-size: 18px;
-
+    flex-grow: 1;
+    justify-content: center;
 }
 
 .links a {
@@ -74,13 +74,11 @@
     padding: 8px 0;
     transition: color 0.3s ease, transform 0.2s ease;
     position: relative;
-
 }
 
 .links a:hover {
     color: var(--cor5);
     transform: translateY(-2px);
-
 }
 
 .links a::after {
@@ -256,7 +254,6 @@
 .logado .logar:hover,
 .logado .cadastrar:hover {
     background-color: var(--cor4);
-
 }
 
 .menu-toggle {
@@ -268,6 +265,7 @@
     cursor: pointer;
     z-index: 1001;
     position: relative;
+    margin-left: auto;
 }
 
 .menu-toggle .line {
@@ -290,75 +288,67 @@
     transform: translateY(-8px) rotate(-45deg);
 }
 
-
-
 @media (max-width: 992px) {
-
-
     .navbar {
-        top: 0;
+        flex-wrap: wrap;
+        justify-content: space-between;
         padding: 10px 15px;
     }
 
+
     .links {
         display: none;
+        flex-direction: column;
         width: 100%;
+        order: 2;
         background-color: var(--cor4);
         padding: 0;
-        overflow: hidden;
         max-height: 0;
-        transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
-        order: 1;
-        margin-top: 10px;
-        font-size: 10px;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, padding 0.5s ease-in-out;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        justify-content: flex-start;
+        margin: 0;
     }
 
     .links.active {
         display: flex;
         max-height: 500px;
-        padding: 20px 0;
-
-    }
-
-
-    .links li {
-        margin: 10px 0;
-        width: 100%;
-        text-align: center;
-    }
-
-    .links a {
-        display: flex;
         padding: 10px 0;
     }
 
-    .navbar-right {
-        order: 1;
-        margin-left: auto;
-    }
-
-    .menu-toggle {
-        display: flex;
-
-        order: 3;
+    .links li {
+        width: 100%;
+        margin: 0;
     }
 
     .links a {
+        display: block;
+        padding: 12px 20px;
         font-size: 1.2em;
-    }
-}
-
-@media (max-width: 768px) {
-    .navbar-logo {
-        font-size: 1em;
+        border-bottom: 1px solid var(--cor2);
+        text-align: center;
     }
 
-    .links {
-        flex-direction: column;
+    .links li:last-child a {
+        border-bottom: none;
     }
 
-    .navbar-img {
-        height: 35px;
+    .links a::after {
+        display: none;
+    }
+
+    .navbar-actions {
+        width: auto;
+        order: 1;
+        flex-grow: 1;
+        justify-content: flex-end;
+        gap: 15px;
+        position: relative;
+    }
+
+    .search-container {
+        width: auto;
     }
 
     .search-input {
@@ -376,15 +366,57 @@
         height: 18px;
     }
 
-    .icon-button {
-        width: 45px;
-        height: 45px;
+    .icones {
+        margin-bottom: 2px;
+        position: relative;
     }
 
-    .icon-button svg {
-        width: 24px;
-        height: 24px;
+    .user-conta .logado {
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1001;
+        border-radius: 8px;
+        right: 0;
+        top: calc(100% + 10px);
+        padding: 10px 0;
+        box-sizing: border-box;
+        border-top: none;
+        margin-top: 0;
     }
+
+    .menu-toggle {
+        display: flex;
+        order: 3;
+        margin-left: 15px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-logo {
+        font-size: 1em;
+    }
+
+    .navbar-img {
+        height: 35px;
+    }
+
+    .search-input {
+        width: 120px;
+        padding: 7px 10px 7px 32px;
+    }
+
+    .search-input:focus {
+        width: 160px;
+    }
+
+    .search-container svg {
+        width: 16px;
+        height: 16px;
+    }
+
+
 }
 
 @media (max-width: 480px) {
@@ -393,37 +425,36 @@
     }
 
     .navbar-actions {
-        gap: 10px;
+        gap: 8px;
     }
 
     .search-input {
-        width: 100px;
-        padding: 6px 8px 6px 30px;
+        width: 80px;
+        padding: 6px 8px 6px 28px;
     }
 
     .search-input:focus {
-        width: 150px;
+        width: 120px;
     }
 
     .search-container svg {
-        left: 3px;
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
     }
 
     .icon-button {
-        width: 38px;
-        height: 38px;
+        width: 35px;
+        height: 35px;
     }
 
     .icon-button svg {
-        width: 20px;
-        height: 20px;
+        width: 18px;
+        height: 18px;
     }
 
     .menu-toggle {
         width: 25px;
         height: 18px;
-        margin-left: 15px;
+        margin-left: 10px;
     }
 }

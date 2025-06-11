@@ -21,21 +21,17 @@
 <body>
     @include('includes.navbar')
     <header>
+        <img src="{{ asset('imagens/acervo1.jpg') }}" alt="Acervo da Biblioteca" style="width: 100%; height: 100vh; object-fit: cover;">
 
-        <img src="{{url('imagens/acervo1.jpg')}}" style="object-fit: cover; width: 100%; height: 100%; ">
 
         @guest
         @endguest
+
         <div class="titulo">
             <h1><span class="span-titulo">Explore</span> o Acervo<br>da Nossa <span
                     class="span-titulo">Biblioteca</span></h1>
-
         </div>
-
-
-
     </header>
-
     <main>
 
 
