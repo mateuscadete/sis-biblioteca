@@ -19,12 +19,14 @@
 
 
         <div class="titulo">
-            <h1>Conheça um pouco<br> sobre a iniciativa<br>da plataforma</h1>
+            <h1>Conheça um pouco<br> sobre a iniciativa<br>da <span>EastBooks</span></h1>
         </div>
 
     </header>
 
     <main>
+
+        <h1>O que a EastBooks oferece?</h1>
 
         <section class="main-section top-content">
             <div class="text-block">
@@ -41,7 +43,7 @@
             </div>
             <div class="objective-paragraphs">
                 <div class="text-block">
-                    <p>Nosso sistema foi feito pra deixar o atendimento mais ágil e prático, facilitando o gerenciamento do acervo e ajudando a manter tudo mais organizado na hora de pegar ou devolver livros. Com a tecnologia, a gente oferece uma experiência bem mais moderna pra quem frequenta a biblioteca.      </p>
+                    <p>Nosso sistema foi feito pra deixar o atendimento mais ágil e prático, facilitando o gerenciamento do acervo e ajudando a manter tudo mais organizado na hora de pegar ou devolver livros. Com a tecnologia, a gente oferece uma experiência bem mais moderna pra quem frequenta a biblioteca. </p>
                 </div>
                 <div class="text-block">
                     <p>Biblioteca digital torna mais fácil acessar o conhecimento de um jeito bem prático. Com recursos modernos, queremos criar um espaço onde alunos, professores e funcionários possam interagir e aprender juntos, de forma simples e bacana.</p>
@@ -71,44 +73,44 @@
         </section>
 
         <div class="criadores-container">
-    <h2 class="titulocriador">Criadores :</h2>
-    <div class="criadores">
-      <div class="criador">
-        <div class="icone">
-            <a href="https://github.com/JoelQuia" target="_blank">
-        <img src="{{url('imagens/joel.jpg')}}" alt="Joel"></a>
+            <h2 class="titulocriador">Criadores :</h2>
+            <div class="criadores">
+                <div class="criador">
+                    <div class="icone">
+                        <a href="https://github.com/JoelQuia" target="_blank">
+                            <img src="{{url('imagens/joel.jpg')}}" alt="Joel"></a>
+                    </div>
+                    <h3>Joel Quia</h3>
+                    <p>Desenvolvedor front-end</p>
+                </div>
+                <div class="criador">
+                    <div class="icone">
+                        <a href="https://github.com/mateuscadete" target="_blank">
+                            <img src="{{url('imagens/cadete.jpg')}}" alt="Mateus"></a>
+                    </div>
+                    <h3>Mateus Cadete</h3>
+                    <p>Manager e Desenvolvedor back-end</p>
+                </div>
+                <div class="criador">
+                    <div class="icone">
+                        <a href="https://github.com/Gabriel5454" target="_blank">
+                            <img src="{{url('imagens/gabriel.png')}}" alt="Gabriel"></a>
+
+                    </div>
+                    <h3>Gabriel Martins</h3>
+                    <p>Desenvolvedor back-end</p>
+                </div>
+                <div class="criador">
+                    <div class="icone">
+                        <a href="https://github.com/Nxgueira" target="_blank">
+                            <img src="{{url('imagens/vitor.jpg')}}" alt="Vitor">
+                        </a>
+                    </div>
+                    <h3>Victor Nogueira</h3>
+                    <p>Tester</p>
+                </div>
+            </div>
         </div>
-        <h3>Joel Quia</h3>
-        <p>Desenvolvedor front-end e designer</p>
-      </div>
-      <div class="criador">
-        <div class="icone">
-            <a href="https://github.com/mateuscadete" target="_blank">
-          <img src="{{url('imagens/cadete.jpg')}}" alt="Mateus"></a>
-        </div>
-        <h3>Mateus Cadete</h3>
-        <p>Manager</p>
-      </div>
-      <div class="criador">
-        <div class="icone">
-            <a href="https://github.com/Gabriel5454"target="_blank">
-        <img src="{{url('imagens/gabriel.png')}}" alt="Gabriel"></a>
-    
-        </div>
-        <h3>Gabriel Martins</h3>
-        <p>Desenvolvedor back-end</p>
-      </div>
-      <div class="criador">
-        <div class="icone">
-            <a href="https://github.com/Nxgueira"target="_blank">
-            <img src="{{url('imagens/vitor.jpg')}}" alt="Vitor">
-            </a>
-        </div>
-        <h3>Victor Nogueira</h3>
-        <p>Tester</p>
-      </div>
-    </div>
-  </div>
     </main>
 
     @include('includes.footer')

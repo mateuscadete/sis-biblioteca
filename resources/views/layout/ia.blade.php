@@ -13,10 +13,20 @@
 
 <body>
     @include('includes.navbar')
+    <header>
+        <img src="{{ asset('imagens/ia.jpg') }}" alt="IA" style="width: 100%; height: 100vh; object-fit: cover;">
 
+
+        @guest
+        @endguest
+
+        <div class="titulo">
+            <h1>A Inteligência Artificial<br> também está presente em <br>nossa Biblioteca</h1>
+        </div>
+    </header>
 
     <div class="chat-container">
-        <h1>Assistente de IA da Plataforma EastBooks</h1>
+        <h2>Assistente de IA da Plataforma EastBooks</h2>
         <p>Pergunte sobre livros, autores ou qualquer dúvida relacionada à nossa biblioteca.</p>
 
         <div class="chat-messages" id="chat-messages">

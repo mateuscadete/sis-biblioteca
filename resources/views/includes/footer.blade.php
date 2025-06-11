@@ -12,7 +12,7 @@
         <h2>Uma Plataforma Para Sua Biblioteca</h2>
         <p>Acesse Nossa Rede e Repositório</p>
         <div class="icones">
-            
+
             <a href="https://www.instagram.com" target="_blank" aria-label="Link para o Instagram">
                 <img src="{{ asset('imagens/instagram.svg') }}" alt="Instagram">
             </a>
@@ -25,7 +25,7 @@
     <div class="footer-section">
         <h3>CONTAS</h3>
         <ul>
-        <li><a href="{{ route('dashboard') }}">Administrador</a></li>
+            <li><a href="{{ route('dashboard') }}">Administrador</a></li>
             <li><a href="{{ route('user.login') }}">Login</a></li>
             <li><a href="{{ route('user.cadastro') }}">Cadastrar</a></li>
         </ul>
@@ -34,7 +34,7 @@
     <div class="footer-section">
         <h3>BIBLIOTECA</h3>
         <ul>
-            <li><a href="#">Etec</a></li>
+            <li><a href="https://www.instagram.com/eteczonalesteoficial/">Etec</a></li>
             <li><a href="{{ route('layout.acervo') }}">Livros</a></li>
             <li><a href="{{route('layout.sobre')}}">Sobre</a></li>
         </ul>

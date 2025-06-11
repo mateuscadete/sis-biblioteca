@@ -48,7 +48,10 @@ header {
     max-width: 600px;
 }
 
-
+span {
+    color: var(--cor1);
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 
 main {
@@ -63,7 +66,16 @@ main {
 
 }
 
+main h1 {
+    font-size: 2.9em;
+    color: var(--cor6);
+    margin-bottom: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+
 .main-section {
+    margin-top: 30px;
     width: 100%;
     max-width: 1200px;
 
@@ -236,6 +248,12 @@ main {
     align-items: center;
     margin: 0 auto 10px;
     overflow: hidden;
+    border-color: var(--cor5);
+}
+
+.icone:hover {
+    scale: 1.05;
+    transition: background-color 0.3s ease;
 }
 
 .icone img {
@@ -244,6 +262,7 @@ main {
     object-fit: cover;
     border-radius: 50%;
 }
+
 
 
 

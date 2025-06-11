@@ -423,7 +423,7 @@ h3 {
 
 .card-text h3 {
     font-size: 1.1em;
-    margin-bottom: 5px;
+    margin-bottom: 15px;
     font-weight: 500;
     opacity: 0.8;
     color: white;
@@ -436,7 +436,8 @@ h3 {
 
 .noticias {
     background-color: var(--cor1);
-    max-width: 450px;
+    height: 300px;
+    max-width: 430px;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -707,14 +708,15 @@ h3 {
     .feedback p {
         font-size: 0.9em;
     }
- .text-content {
-  max-width: 300px;
-  padding: 20px;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  text-align: left;
-}   
+
+    .text-content {
+        max-width: 300px;
+        padding: 20px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
 
 
 }
