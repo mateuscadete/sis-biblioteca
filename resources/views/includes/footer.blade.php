@@ -10,11 +10,10 @@
     <div class="footer-section about-us">
         <img src="{{ asset('imagens/logo.png') }}" alt="Logo da Biblioteca Etec Zona Leste" class="logo">
         <h2>Uma Plataforma Para Sua Biblioteca</h2>
-        <p>Acesse Nossa Rede e Repositório</p>
+        <p>Acesse Nosso Repositório</p>
         <div class="icones">
 
-            <a href="https://www.instagram.com" target="_blank" aria-label="Link para o Instagram">
-                <img src="{{ asset('imagens/instagram.svg') }}" alt="Instagram">
+
             </a>
             <a href="https://github.com/mateuscadete/sis_biblioteca" target="_blank" aria-label="Link para o GitHub">
                 <img src="{{ asset('imagens/git.svg') }}" alt="GitHub">
@@ -43,7 +42,7 @@
     <div class="footer-section">
         <h3>AJUDA</h3>
         <ul>
-            <li><a href="">Minha Conta</a></li>
+            <li><a href="#user-menu-button">Minha Conta</a></li>
             <li><a href="{{route('contato.submit')}}">Contato</a></li>
             <li><a href="{{route('assistente.ia')}}">ChatBot</a></li>
         </ul>

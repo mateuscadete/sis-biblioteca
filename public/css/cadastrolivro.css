@@ -24,9 +24,7 @@ body {
     min-height: 100vh;
     background-color: whitesmoke;
     flex-direction: column;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
 }
 
 .navbar {

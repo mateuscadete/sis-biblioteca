@@ -7,7 +7,7 @@
     <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
 </head>
 
-<body style="background-image: url('{{ asset('imagens/login.jpg') }}'); object-fit: cover;">
+<body>
     <header>
         @include('includes.navbar')
 

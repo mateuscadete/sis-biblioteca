@@ -10,7 +10,7 @@
 
 <body style="background-image: url('{{ asset('imagens/editarlivro.jpg') }}'); object-fit: cover;">
 
-
+    @include('includes.navbar')
 
     @if ($errors->any())
     <div style="color: red;">

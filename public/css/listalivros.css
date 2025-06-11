@@ -60,6 +60,7 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: #ffffff;
+    flex-grow: 1;
 }
 
 .livros {
@@ -87,13 +88,9 @@ h3 {
     flex-wrap: wrap;
     gap: 60px;
     justify-content: center;
-    left: auto;
-    position: static;
     width: 100%;
-    height: auto;
     flex-direction: column;
 }
-
 
 .form-livros {
     display: flex;
@@ -102,13 +99,49 @@ h3 {
     width: 100%;
 }
 
+.pesquisar {
+    display: flex;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid var(--cor2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.pesquisar .livro {
+    flex-grow: 1;
+    padding: 12px 15px;
+    border: none;
+    font-size: 1em;
+    outline: none;
+    color: var(--cor6);
+}
+
+.pesquisar .livro::placeholder {
+    color: var(--cor3);
+}
+
+.buscar {
+    background-color: var(--cor1);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.buscar:hover {
+    background-color: var(--cor0);
+}
 
 .informações {
-    width: 100%;
+    width: 120%;
+    margin-left: -9%;
     border-collapse: collapse;
-
     margin-bottom: 30px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.1);
+    overflow-x: scroll;
 }
 
 .informações thead {
@@ -116,30 +149,34 @@ h3 {
     color: white;
 }
 
+.informações tr {
+    border-bottom: 1px solid #d1d1d161;
+
+}
+
 .informações th,
 .informações td {
     padding: 12px 15px;
-    border: 1px solid var(--cor2);
-    text-align: left;
-    vertical-align: top;
 
+    vertical-align: top;
 }
 
 .informações th {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 0.9em;
+    text-align: center;
+    vertical-align: middle;
 }
 
 .informações tbody tr:nth-child(even) {
-    background-color: var(--cor4);
-
+    background-color: whitesmoke;
 }
 
-.informações tbody tr:hover {
-
-    transition: background-color 0.2s ease;
+.informações tbody th:nth-child(10) {
+    width: 20%;
 }
+
 
 .informações img {
     display: block;
@@ -148,10 +185,7 @@ h3 {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-
-.editar {
-    position:relative;
-    margin-top: 50px;
+.solicitar {
     background-color: var(--cor0);
     color: white;
     padding: 8px 12px;
@@ -160,11 +194,44 @@ h3 {
     cursor: pointer;
     font-size: 0.9em;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    text-decoration: none;
+    white-space: nowrap;
 }
 
-.excluir{
-    background-color: red;
+.solicitar:hover {
+    background-color: var(--cor1);
+    transform: translateY(-2px);
+}
+
+.status {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.message-box {
+
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.error {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+.excluir {
+    background-color: #dc3545;
     color: white;
     padding: 8px 12px;
     border: none;
@@ -173,127 +240,114 @@ h3 {
     font-size: 0.9em;
     transition: background-color 0.3s ease, transform 0.2s ease;
     white-space: nowrap;
+    margin-right: 5px;
+}
+
+.excluir:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+
+.editar {
+    background-color: var(--cor0);
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    white-space: nowrap;
+    display: inline-block;
+    margin-top: 5px;
+
 }
 
 .editar:hover {
-    background-color: var(--cor2);
+    background-color: var(--cor1);
+
     transform: translateY(-2px);
 }
 
-.excluir:hover{
-    background-color: rgb(245, 66, 66) ;
-    transform: translateY(-2px);
+.informações td:last-child {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+    flex-wrap: wrap;
+
 }
 
+@media (max-width: 800px) {}
 
-.mensagem {
-    color: #dc3545;
-    font-weight: bold;
-    font-size: 0.9em;
-    white-space: nowrap;
-}
-
-.descrição{
-    width: 200px;
-}
-
-
-
-
-
-@media (max-width: 1024px) {
-    .titulo {
-        font-size: 25px;
-        top: 40%;
-        left: 50%;
-    }
-
-    .informações th,
-    .informações td {
-        padding: 10px 12px;
-    }
-}
-
-@media (max-width: 768px) {
-    .titulo {
-        font-size: 15px;
-    }
-
-    main {
-        padding: 30px 10px;
-    }
-
-    .livros h2 {
-        font-size: 1.8em;
-    }
-
-    .livros h3 {
-        font-size: 1em;
-    }
-
+@media(max-width:1400px) {
 
     .containerbooks {
         overflow-x: auto;
         -webkit-overflow-scrolling: touch;
         flex-direction: column;
         gap: 30px;
-
     }
 
     .informações {
-        min-width: 700px;
-
-    }
-
-    .pesquisar {
-        flex-direction: column;
-        border: none;
-        max-width: 300px;
-    }
-
-    .pesquisar .livro {
-        border: 1px solid var(--cor2);
-        border-radius: 8px;
-        margin-bottom: 10px;
-    }
-
-    .buscar {
-        border-radius: 8px;
         width: 100%;
-    }
-
-    .solicitar {
-        padding: 6px 10px;
-        font-size: 0.85em;
-    }
-
-    .informações img {
-        max-width: 60px;
+        margin-left: 0;
 
     }
+
 }
 
-@media (max-width: 600px) {
-    .titulo {
-        top: 45%;
-        left: 50%;
-    }
-}
-
-@media (max-width: 480px) {
-    main {
-        padding: 20px 5px;
+@media (max-width: 800px) {
+    .informações {
+        width: 100%;
+        left: 0;
+        border: 3px solid var(--cor0);
     }
 
-    .livros h2 {
-        font-size: 1.5em;
+    .informações caption {
+        font-size: 1.3rem;
     }
 
-    .livros h3 {
-        font-size: 0.9em;
+    .informações thead {
+        clip: rect(0 0 0 0);
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        border: 0;
     }
 
-    .containerbooks {
-        gap: 15px;
+    .informações tr {
+        display: block;
+        padding: 0;
+        border-radius: 8px
+    }
+
+    .informações td {
+        display: block;
+        font-size: 1rem;
+        padding: 0.5em 1em;
+        text-align: right;
+    }
+
+    .informações td::before {
+        content: attr(data-label);
+        float: left;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 0.9rem;
+    }
+
+    .informações td:last-child {
+        border-bottom: 0;
+    }
+
+    .informações td:last-child {
+        justify-content: flex-end;
     }
 }
