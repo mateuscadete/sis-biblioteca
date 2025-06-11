@@ -135,4 +135,3 @@ Caso queira entrar em contato com os desenvolvedores do projeto:
 - 👤 **Gabriel**  
   [![GitHub](https://img.shields.io/badge/GitHub-Gabriel5454-181717?style=flat-square&logo=github)](https://github.com/Gabriel5454)
   📧 11gabriel110211@gmail.com
-```
