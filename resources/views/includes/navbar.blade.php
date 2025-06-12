@@ -22,7 +22,12 @@
             <li><a href="{{ route('layout.acervo') }}">Nosso Acervo</a></li>
             <li><a href="{{ route('layout.sobre') }}">Sobre</a></li>
             <li><a href="{{ route('contato.submit') }}">Contato</a></li>
+            @auth
+            @if (Auth::user() ->is_admin)
             <li><a href="{{route('dashboard')}}">Cadastrar Livros</a> </li>
+            <li><a href="{{route('layout.show')}}">Editar Livros</a> </li>
+            @endif
+            @endauth
         </ul>
 
         <div class="navbar-actions">
@@ -61,7 +66,7 @@
 
                     <div class="logado" id="user-dropdown-content">
                         @auth
-                        @if (!Auth::user()->is_admin)
+                        @if (!Auth::user() ->is_admin)
                         <span class="user-logado">Olá, {{ Auth::user()->name }}</span>
                         @else
                         <span class="user-logado">Olá, {{ Auth::user()->name }}</span>

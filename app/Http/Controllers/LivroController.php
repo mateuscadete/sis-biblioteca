@@ -53,7 +53,9 @@ class LivroController extends Controller
         return redirect()->route('layout.show')->with('success', 'Livro cadastrado com sucesso!');
     }
     public function index()
-    {
+    {    if (!auth()->check() || !auth()->user()->is_admin) {
+        return redirect()->route('/user.index')->with('error', 'Você não tem permissão para acessar essa página.');
+    }
         return view("dashboard");
     }
 

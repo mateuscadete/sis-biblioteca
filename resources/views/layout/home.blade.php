@@ -23,6 +23,11 @@
 
 <body>
     @include('includes.navbar')
+    @if (session('error'))
+    <div class="alert alert-danger">
+        {{ session('error') }}
+    </div>
+@endif
 
     <header>
         <img src="{{ asset('imagens/biblioteca1.jpg') }}" alt="Logo da Biblioteca Etec Zona Leste" style="width: 100%; height: 100vh; object-fit: cover;">

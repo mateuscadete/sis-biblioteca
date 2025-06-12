@@ -14,8 +14,8 @@ class BuscaController extends Controller
         $rotas = [
             'home' => route('user.index'),
             'cadastrar livro' => route('dashboard'),
-            'livros' => route('layout.show'),
-            'ver livros adm' => route('layout.show'),
+            'livros' => route('layout.acervo'),
+            'show' => route('layout.show'),
             'cadastrar' => route('user.cadastro'),
             'logar' => route('user.login'),
             'sobre' => route('layout.sobre'),
