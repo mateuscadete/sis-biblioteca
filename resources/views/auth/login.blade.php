@@ -7,7 +7,7 @@
     @vite('resources/css/app.css') <!-- Certifique-se de usar Vite corretamente -->
 </head>
 
-<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+<body class="bg-gray-100 collumn items-center justify-center ">
     @include('includes.navbar')
 
 

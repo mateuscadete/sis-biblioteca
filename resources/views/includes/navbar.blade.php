@@ -24,12 +24,7 @@
             <li><a href="{{ route('layout.sobre') }}">Sobre</a></li>
             <li><a href="{{ route('contato.submit') }}">Contato</a></li>
 
-            @auth
-            @if (Auth::user() ->is_admin)
-            <li><a href="{{route('dashboard')}}">Cadastrar Livros</a> </li>
-            <li><a href="{{route('layout.show')}}">Editar Livros</a> </li>
-            @endif
-            @endauth
+       
         </ul>
 
         <div class="navbar-actions">
@@ -91,9 +86,12 @@
                 </button>
                 <div class="logado" id="user-dropdown-content">
 
-                        <a href="{{ route('dashboard') }}" class="logar">Cadastrar Livro</a>
-                        <a href="{{ route('layout.show') }}" class="cadastrar">livros Cadastrados</a>
-                        
+                @auth
+            @if (Auth::user() ->is_admin)
+            <li><a href="{{route('dashboard')}}">Cadastrar Livros</a> </li>
+            <li><a href="{{route('layout.show')}}">Editar Livros</a> </li>
+            @endif
+            @endauth
                         
                 </div>
                     </div>
