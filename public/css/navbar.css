@@ -126,7 +126,7 @@
     width: 180px;
     padding: 10px 15px 10px 40px;
     border-radius: 9999px;
-    border: solid 1px var(--cor2);
+    border: solid 1px var(--cor5);
     background-color: white;
     transition: all .3s ease-in-out;
     outline: none;
@@ -243,8 +243,8 @@
 }
 
 .logado .sair,
-.logado .logar,
-.logado .cadastrar {
+.logado .linklogin,
+.logado .linkcadastro {
     font-weight: 700;
     background: none;
     border: none;
@@ -260,8 +260,8 @@
 }
 
 .logado .sair:hover,
-.logado .logar:hover,
-.logado .cadastrar:hover {
+.logado .linklogin:hover,
+.logado .linkcadastro:hover {
     background-color: var(--cor4);
     transform: translateY(-2px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);

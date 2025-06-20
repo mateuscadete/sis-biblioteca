@@ -4,34 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Login</title>
-    @vite('resources/css/app.css') <!-- Certifique-se de usar Vite corretamente -->
+    <link rel="stylesheet" href="{{ asset('css/loginadm.css') }}">
+    <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
 </head>
 
-<body class="bg-gray-100 collumn items-center justify-center ">
-    @include('includes.navbar')
+<body>
+    <header>
+        @include('includes.navbar')
+    </header>
 
+    <div class="container">
 
-    <div class="flex w-full max-w-4xl bg-white rounded-lg shadow-lg overflow-hidden">
-        <!-- Coluna da esquerda (boas-vindas) -->
-        <div class="w-1/2 bg-custom-green text-white flex flex-col items-center justify-center p-10">
-            <h2 class="text-3xl font-bold mb-4 text-center">Bem-Vindo<br>De Volta</h2>
+        <div class="left">
+            <h1>Bem-Vindo<br>De Volta</h1>
+            <p>Entre Como Administrador</p>
 
 
         </div>
 
-        <!-- Coluna da direita (formulário de login) -->
-        <div class="w-1/2 p-10">
-            <h2 class="text-2xl font-bold text-green-900 mb-6">Login</h2>
+        {{-- ... other HTML ... --}}
+
+        <div class="right">
+            <h2>Login<br> Administrador</h2>
 
             @if (session('status'))
-            <div class="mb-4 text-green-600 text-sm">
+            <div class="alert alert-success">
                 {{ session('status') }}
             </div>
             @endif
 
             @if ($errors->any())
-            <div class="mb-4 text-red-600 text-sm">
-                <ul class="list-disc list-inside">
+            <div class="alert alert-danger">
+                <ul>
                     @foreach ($errors->all() as $error)
                     <li>{{ $error }}</li>
                     @endforeach
@@ -42,37 +46,33 @@
             <form method="POST" action="{{ route('login') }}">
                 @csrf
 
-                <div class="mb-4">
-                    <label for="email" class="block text-sm font-medium text-gray-700">E-mail</label>
-                    <input
-                        id="email"
-                        name="email"
-                        type="email"
-                        placeholder="Insira seu e-mail"
-                        autocomplete="email"
-                        required
-                        class="mt-1 block w-full rounded-md border border-green-900 focus:ring-green-900 focus:border-green-900">
-                </div>
+                <label for="email">E-mail</label>
+                <br>
+                <input class="email" id="email"
+                    name="email"
+                    type="email"
+                    placeholder="Insira seu e-mail"
+                    autocomplete="email"
+                    required>
 
-                <div class="mb-4">
-                    <label for="password" class="block text-sm font-medium text-gray-700">Senha</label>
-                    <input
-                        id="password"
-                        name="password"
-                        type="password"
-                        placeholder="Digite sua senha"
-                        autocomplete="current-password"
-                        required
-                        class="mt-1 block w-full rounded-md border border-green-900 focus:ring-green-900 focus:border-green-900">
-                </div>
 
-                <button
-                    type="submit"
-                    class="mt-4 w-full bg-custom-green text-white py-2 px-4 rounded hover:bg-custom-green-hover transition">
+                <label for="password">Senha</label>
+                <br>
+                <input class="senha"
+                    id="password"
+                    name="password"
+                    type="password"
+                    placeholder="Digite sua senha"
+                    autocomplete="current-password"
+                    required>
+
+                <button type="submit" class="logar">
                     Entrar
                 </button>
             </form>
         </div>
+
+        {{-- ... rest of HTML ... --}}
     </div>
 </body>
 
