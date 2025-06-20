@@ -50,13 +50,13 @@
 
 
                 <div class="user-conta">
-                    <button class="icon-button" aria-label="Acessar Minha Conta" aria-haspopup="true" aria-expanded="false" id="user-menu-button">
+                    <button class="icon-button user-menu-button" aria-label="Acessar Minha Conta" aria-haspopup="true" aria-expanded="false">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
                             <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
                         </svg>
                     </button>
 
-                    <div class="logado" id="user-dropdown-content">
+                    <div class=" logado user-dropdown-content">
                         @auth
                         @if (!Auth::user() ->is_admin)
                         <span class="user-logado">Olá, {{ Auth::user()->name }}</span>
@@ -76,25 +76,27 @@
                     </div>
                 </div>
 
+                @auth
+                @if (Auth::user() ->is_admin)
                 <div class="user-conta">
-                    <button class="icon-button" aria-label="Acessar Área do Admin" aria-haspopup="true" aria-expanded="false" id="user-menu-button">
+                    <button class="icon-button user-menu-button" aria-label="Acessar Área do Admin" aria-haspopup="true" aria-expanded="false" id="user-menu-button">
 
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-book-half" viewBox="0 0 16 16">
                             <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
                         </svg>
 
                     </button>
-                    <div class="logado" id="user-dropdown-content">
+                    <div class="logado user-dropdown-content">
 
-                        @auth
-                        @if (Auth::user() ->is_admin)
-                        <li><a href="{{route('dashboard')}}">Cadastrar Livros</a> </li>
-                        <li><a href="{{route('layout.show')}}">Editar Livros</a> </li>
-                        @endif
-                        @endauth
+
+                        <a href="{{route('dashboard')}} " class="admin">Cadastrar Livros</a>
+                        <a href="{{route('layout.show')}}" class="admin">Editar Livros</a>
+
 
                     </div>
                 </div>
+                @endif
+                @endauth
             </div>
         </div>
     </nav>
@@ -112,27 +114,35 @@
                 });
             }
 
-            const userMenuButton = document.getElementById('user-menu-button');
-            const userDropdownContent = document.getElementById('user-dropdown-content');
+            document.querySelectorAll('.user-menu-button').forEach(button => {
+                const dropdownContent = button.nextElementSibling; // Assume que o dropdown é o próximo irmão
 
-            if (userMenuButton && userDropdownContent) {
-                userMenuButton.addEventListener('click', function(event) {
-                    event.stopPropagation();
-                    userDropdownContent.classList.toggle('show');
+                if (dropdownContent && dropdownContent.classList.contains('user-dropdown-content')) {
+                    button.addEventListener('click', function(event) {
+                        event.stopPropagation();
+                        // Fechar todos os outros dropdowns abertos, se necessário
+                        document.querySelectorAll('.user-dropdown-content.show').forEach(openDropdown => {
+                            if (openDropdown !== dropdownContent) {
+                                openDropdown.classList.remove('show');
+                                openDropdown.previousElementSibling.setAttribute('aria-expanded', 'false');
+                            }
+                        });
 
-                    const isExpanded = userMenuButton.getAttribute('aria-expanded') === 'true';
-                    userMenuButton.setAttribute('aria-expanded', !isExpanded);
-                });
+                        dropdownContent.classList.toggle('show');
+                        const isExpanded = button.getAttribute('aria-expanded') === 'true';
+                        button.setAttribute('aria-expanded', !isExpanded);
+                    });
 
-                document.addEventListener('click', function(event) {
-                    if (!userMenuButton.contains(event.target) && !userDropdownContent.contains(event.target)) {
-                        if (userDropdownContent.classList.contains('show')) {
-                            userDropdownContent.classList.remove('show');
-                            userMenuButton.setAttribute('aria-expanded', 'false');
+                    document.addEventListener('click', function(event) {
+                        if (!button.contains(event.target) && !dropdownContent.contains(event.target)) {
+                            if (dropdownContent.classList.contains('show')) {
+                                dropdownContent.classList.remove('show');
+                                button.setAttribute('aria-expanded', 'false');
+                            }
                         }
-                    }
-                });
-            }
+                    });
+                }
+            });
         });
     </script>
 </body>

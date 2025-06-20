@@ -261,10 +261,26 @@
 
 .logado .sair:hover,
 .logado .linklogin:hover,
-.logado .linkcadastro:hover {
+.logado .linkcadastro:hover,
+.logado .admin:hover {
     background-color: var(--cor4);
     transform: translateY(-2px);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.logado .admin {
+    font-weight: 700;
+    background: none;
+    border: none;
+    color: var(--cor6);
+    padding: 8px 15px;
+    text-align: left;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    width: 100%;
+    font-size: 1em;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .menu-toggle {
