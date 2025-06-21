@@ -256,45 +256,43 @@ h3 {
 }
 
 .containerbooks {
-    margin-top: 100px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 60px;
-    justify-content: center;
-    left: auto;
-    position: static;
+    margin: 50px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 35px;
+    justify-items: center;
+    align-items: start;
     width: 100%;
-    height: auto;
-
+    max-width: 1000px;
 }
 
-.book {
+
+.livro {
     background: white;
     color: black;
-    padding: 15px;
+    padding: 25px;
     border-radius: 5px;
     box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 200px;
+    height: 450px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.book:hover {
+.livro:hover {
     transform: scale(1.03);
-
     box-shadow: 4px 8px 10px rgba(0, 0, 0, 0.15);
-
 }
 
-.book a {
+.livro a {
     display: inline-block;
-    margin-top: auto 10px;
+    margin-top: auto;
     background-color: var(--cor6);
     text-decoration: none;
-    padding: 8px 18px;
+    padding: 8px 10px;
     color: white;
     font-weight: 500;
     border-radius: 6px;
@@ -302,27 +300,50 @@ h3 {
     transition: background-color 0.2s ease, scale 0.2s ease;
 }
 
-.book a:hover {
+.livro a:hover {
     background-color: var(--cor5);
     scale: 1.05;
 }
 
-.book img {
+.livro img {
     width: 100%;
     max-width: 150px;
     height: 200px;
     object-fit: contain;
     margin: 0 auto 25px auto;
     display: block;
-
 }
 
-.book h4 {
-    margin-bottom: 10px;
-}
-
-.book p {
+.livro h4 {
     margin-bottom: 15px;
+}
+
+.livro p {
+    margin-bottom: 15px;
+}
+
+.livro.hidden {
+    display: none;
+
+}
+
+.btn-mostrar-mais {
+    background-color: var(--cor6);
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 50px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-mostrar-mais:hover {
+    background-color: var(--cor5);
+    transform: translateY(-2px);
+
 }
 
 .containerfeed {
@@ -331,8 +352,7 @@ h3 {
     box-sizing: border-box;
     position: static;
     background-color: var(--cor4);
-    margin-top: 150px;
-
+    margin-top: 80px;
     text-align: center;
 }
 
@@ -593,13 +613,10 @@ h3 {
     }
 
     .button {
-        font-size: 1.5em;
-        padding: 10px 15px;
+        font-size: 1.2em;
+        padding: 5px 10px;
     }
 
-    .book {
-        width: 180px;
-    }
 
     .containerfeed {
         padding: 30px 15px 250px;
@@ -611,8 +628,6 @@ h3 {
 }
 
 @media (max-width: 768px) {
-
-
 
     .assuntos h2,
     .livros h2 {
@@ -659,12 +674,12 @@ h3 {
         gap: 20px;
     }
 
-    .book {
-        width: 160px;
+    .livro {
+        height: 385px;
         padding: 10px;
     }
 
-    .book img {
+    .livro img {
         max-width: 120px;
         height: 180px;
     }
@@ -685,8 +700,6 @@ h3 {
 }
 
 @media (max-width: 600px) {
-
-
     .titulo {
         font-size: 20px;
         top: 45%;
@@ -702,7 +715,6 @@ h3 {
 @media (max-width: 480px) {
     main {
         padding: 20px 5px;
-
     }
 
     .assuntos h2,
@@ -769,25 +781,25 @@ h3 {
         gap: 15px;
     }
 
-    .book {
-        width: 140px;
+    .livro {
+        width: 180px;
         padding: 8px;
     }
 
-    .book img {
+    .livro img {
         max-width: 100px;
         height: 160px;
     }
 
-    .book h4 {
+    .livro h4 {
         font-size: 0.9em;
     }
 
-    .book p {
+    .livro p {
         font-size: 0.8em;
     }
 
-    .book a {
+    .livro a {
         padding: 6px 12px;
         font-size: 0.8em;
     }

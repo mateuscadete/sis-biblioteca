@@ -20,7 +20,7 @@
         @endguest
 
         <div class="titulo">
-            <h1>A Inteligência Artificial<br> em <br>nossa Biblioteca</h1>
+            <h1>A Inteligência Artificial em <br>nossa Biblioteca</h1>
         </div>
     </header>
 

@@ -27,7 +27,7 @@
     <div class="alert alert-danger">
         {{ session('error') }}
     </div>
-@endif
+    @endif
 
     <header>
         <img src="{{ asset('imagens/biblioteca1.jpg') }}" alt="Logo da Biblioteca Etec Zona Leste" style="width: 100%; height: 100vh; object-fit: cover;">
@@ -171,66 +171,112 @@
         </section>
 
         <section class="livros">
-
             <h2>Livros mais buscados</h2>
             <h3>Explore nossa biblioteca</h3>
 
-
             <div class="containerbooks">
-                <div class="book">
-                    <img src="https://m.media-amazon.com/images/I/316Rn0ogOBL._SY445_SX342_.jpg"
-                        alt="Livro 1">
+                <div class="livro">
+                    <img src="https://m.media-amazon.com/images/I/316Rn0ogOBL._SY445_SX342_.jpg" alt="Livro 1">
                     <h4>PHP&MySql: Desenvolvimento Web no lado do servidor</h4>
                     <p>Autor: Jon Duckett</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
-
                 </div>
-                <div class="book">
+                <div class="livro">
                     <img src="https://www.jurua.com.br/images/prod/s/22/22246.jpg?ts=20201205" alt="Livro 2">
                     <h4>Contabilidade Geral:Noções do Sistema Contábil</h4>
-                    <p>Autor: Anélio Berti</p>
+                    <p>Autor: Anelio Berti</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
-
                 </div>
-                <div class="book">
-                    <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788502618350.170.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000"
-                        alt="Livro 3">
+                <div class="livro">
+                    <img src="https://www.editoradodireito.com.br/media/catalog/product/9/7/9788502618350.170.png?optimize=low&bg-color=255,255,255&fit=bounds&height=1000&width=700&canvas=700:1000" alt="Livro 3">
                     <h4>Administração da Produção</h4>
                     <p>Autor: Petrônio Martins & Fernando Laugeni</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
-
                 </div>
 
-                <div class="book">
-                    <img src="https://m.media-amazon.com/images/I/419GCs0Mw7L._SY445_SX342_.jpg"
-                        alt="Livro 4">
+                <div class="livro">
+                    <img src="https://m.media-amazon.com/images/I/419GCs0Mw7L._SY445_SX342_.jpg" alt="Livro 4">
                     <h4>Quimica Essencial Para Leigos</h4>
                     <p>Autor: John T. Moore</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
-
                 </div>
-
-                <div class="book">
-                    <img src="https://static.dinamize.com.br/dinamizeszmsdg3x/uploads/2024/06/livro-biblia-marketing-digital.png"
-                        alt="Livro 3">
+                <div class="livro">
+                    <img src="https://static.dinamize.com.br/dinamizeszmsdg3x/uploads/2024/06/livro-biblia-marketing-digital.png" alt="Livro 5">
                     <h4>A Bíblia do Marketing Digital</h4>
                     <p>Autor: Cláudio Torres</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
-
                 </div>
-
-                <div class="book">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg"
-                        alt="Livro 6">
+                <div class="livro">
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
                     <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
                     <p>Autor: Rosivaldo Toscano</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
-
+                </div>
+                <div class="livro">
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
+                    <p>Autor: Rosivaldo Toscano</p>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
+                </div>
+                <div class="livro">
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
+                    <p>Autor: Rosivaldo Toscano</p>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
 
 
 
+                <div class="livro hidden">
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
+                    <p>Autor: Rosivaldo Toscano</p>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
+                </div>
+                <div class="livro hidden">
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
+                    <p>Autor: Rosivaldo Toscano</p>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
+                </div>
+                <div class="livro hidden">
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
+                    <p>Autor: Rosivaldo Toscano</p>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
+                </div>
+                <div class="livro hidden">
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
+                    <p>Autor: Rosivaldo Toscano</p>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
+                </div>
+                <div class="livro hidden">
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
+                    <p>Autor: Rosivaldo Toscano</p>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
+                </div>
+                <div class="livro hidden">
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
+                    <p>Autor: Rosivaldo Toscano</p>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
+                </div>
+                <div class="livro hidden">
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
+                    <p>Autor: Rosivaldo Toscano</p>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
+                </div>
+                <div class="livro hidden">
+                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
+                    <p>Autor: Rosivaldo Toscano</p>
+                    <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
+                </div>
             </div>
+            <button id="toggleLivrosBtn" class="btn-mostrar-mais">Mostrar Mais Livros</button>
         </section>
     </main>
 
@@ -394,6 +440,29 @@
 
 
             showContainer(currentIndex);
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const toggleLivrosBtn = document.getElementById('toggleLivrosBtn');
+            const livrosParaAlternar = document.querySelectorAll('.livro.hidden');
+            let livrosExtrasVisiveis = false;
+
+            toggleLivrosBtn.addEventListener('click', function() {
+                if (!livrosExtrasVisiveis) {
+                    livrosParaAlternar.forEach(function(livro) {
+                        livro.classList.remove('hidden');
+                    });
+                    toggleLivrosBtn.textContent = 'Mostrar Menos Livros';
+                    livrosExtrasVisiveis = true;
+                } else {
+                    livrosParaAlternar.forEach(function(livro) {
+                        livro.classList.add('hidden');
+                    });
+                    toggleLivrosBtn.textContent = 'Mostrar Mais Livros';
+                    livrosExtrasVisiveis = false;
+                }
+            });
         });
     </script>
 
