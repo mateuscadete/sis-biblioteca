@@ -24,7 +24,7 @@
     <div class="footer-section">
         <h3>CONTAS</h3>
         <ul>
-            <li><a href="{{ route('dashboard') }}">Administrador</a></li>
+            <li><a href="{{ route('login') }}">Administrador</a></li>
             <li><a href="{{ route('user.login') }}">Login</a></li>
             <li><a href="{{ route('user.cadastro') }}">Cadastrar</a></li>
         </ul>
@@ -42,7 +42,7 @@
     <div class="footer-section">
         <h3>AJUDA</h3>
         <ul>
-            <li><a href="#user-menu-button">Minha Conta</a></li>
+
             <li><a href="{{route('contato.submit')}}">Contato</a></li>
             <li><a href="{{route('assistente.ia')}}">ChatBot</a></li>
         </ul>

@@ -7,21 +7,20 @@
     <title>Assistente de IA - Biblioteca</title>
     <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('css/ia.css') }}">
 </head>
 
 <body>
     @include('includes.navbar')
     <header>
-        <img src="{{ asset('imagens/ia.jpg') }}" alt="IA" style="width: 100%; height: 100vh; object-fit: cover;">
+        <img src="{{ asset('imagens/ia1.png') }}" alt="IA" style="width: 100%; height: 100vh; object-fit: cover;">
 
 
         @guest
         @endguest
 
         <div class="titulo">
-            <h1>A Inteligência Artificial<br> também está presente em <br>nossa Biblioteca</h1>
+            <h1>A Inteligência Artificial<br> em <br>nossa Biblioteca</h1>
         </div>
     </header>
 

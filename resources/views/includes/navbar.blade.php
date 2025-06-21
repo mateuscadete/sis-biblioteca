@@ -115,12 +115,11 @@
             }
 
             document.querySelectorAll('.user-menu-button').forEach(button => {
-                const dropdownContent = button.nextElementSibling; // Assume que o dropdown é o próximo irmão
-
+                const dropdownContent = button.nextElementSibling;
                 if (dropdownContent && dropdownContent.classList.contains('user-dropdown-content')) {
                     button.addEventListener('click', function(event) {
                         event.stopPropagation();
-                        // Fechar todos os outros dropdowns abertos, se necessário
+
                         document.querySelectorAll('.user-dropdown-content.show').forEach(openDropdown => {
                             if (openDropdown !== dropdownContent) {
                                 openDropdown.classList.remove('show');
