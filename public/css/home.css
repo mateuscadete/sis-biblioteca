@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-    --cor0: rgb(51, 96, 90);
-    --cor1: rgb(26, 61, 57);
+    --cor0: #33605a;
+    --cor1: #1a3d39;
     --cor2: #91a398;
     --cor3: #7d9987;
     --cor4: #e9e0d1;

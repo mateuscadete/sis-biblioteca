@@ -213,66 +213,66 @@
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
                 <div class="livro">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
-                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
-                    <p>Autor: Rosivaldo Toscano</p>
+                    <img src="https://m.media-amazon.com/images/I/51J-eKbtRZL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>Mundo Animal: Animais Brasileiros</h4>
+                    <p>Autor: Camelot Editora</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
                 <div class="livro">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
-                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
-                    <p>Autor: Rosivaldo Toscano</p>
+                    <img src="https://m.media-amazon.com/images/I/418VLwcUXsL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>O Pequeno Príncipe</h4>
+                    <p>Autor: Antoine de Saint-Exupéry</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
 
 
 
                 <div class="livro hidden">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
-                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
-                    <p>Autor: Rosivaldo Toscano</p>
+                    <img src="https://m.media-amazon.com/images/I/41PssLHOO-L._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>História da Guerra do Peloponeso</h4>
+                    <p>Autor: Tucídides </p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
                 <div class="livro hidden">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
-                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
-                    <p>Autor: Rosivaldo Toscano</p>
+                    <img src="https://m.media-amazon.com/images/I/81WzW3xJb5L._SY466_.jpg" alt="Livro 6">
+                    <h4>Os segredos da mente milionária</h4>
+                    <p>Autor: T. Harv Eker </p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
                 <div class="livro hidden">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
-                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
-                    <p>Autor: Rosivaldo Toscano</p>
+                    <img src="https://m.media-amazon.com/images/I/41htlT5B29S._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>A psicologia financeira: lições sobre fortuna, ganância e felicidade</h4>
+                    <p>Autor: Morgan Housel</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
                 <div class="livro hidden">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
-                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
-                    <p>Autor: Rosivaldo Toscano</p>
+                    <img src="https://m.media-amazon.com/images/I/41P9R02i5kL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>Aprendendo Git</h4>
+                    <p>Autor: Anna Skoulikari </p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
                 <div class="livro hidden">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
-                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
-                    <p>Autor: Rosivaldo Toscano</p>
+                    <img src="https://m.media-amazon.com/images/I/51rIoCqlvFL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>Goethe - A Metamorfose das Plantas</h4>
+                    <p>Autor: Johann Wolfgang von Goethe</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
                 <div class="livro hidden">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
-                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
-                    <p>Autor: Rosivaldo Toscano</p>
+                    <img src="https://m.media-amazon.com/images/I/51U0zji18TL._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>Os Criadores De Coincidências</h4>
+                    <p>Autor: Yoav Blum</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
                 <div class="livro hidden">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
-                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
-                    <p>Autor: Rosivaldo Toscano</p>
+                    <img src="https://m.media-amazon.com/images/I/4143HhfEU4L._SY445_SX342_.jpg" alt="Livro 6">
+                    <h4>Inteligência emocional</h4>
+                    <p>Autor: Daniel Goleman</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
                 <div class="livro hidden">
-                    <img src="https://m.media-amazon.com/images/I/41mCNNXbSdL._SY445_SX342_.jpg" alt="Livro 6">
-                    <h4>O Cérebro Que Julga: Neurociência Para Juristas</h4>
-                    <p>Autor: Rosivaldo Toscano</p>
+                    <img src="https://m.media-amazon.com/images/I/61qI7wxgWnL._SY466_.jpg" alt="Livro 6">
+                    <h4>O Grande Livro do Excel - Intermediário e Avançado</h4>
+                    <p>Autor: Robério Gonçalves</p>
                     <a href="{{route('layout.acervo')}}">Consultar Acervo</a>
                 </div>
             </div>
