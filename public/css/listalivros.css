@@ -280,7 +280,8 @@ h3 {
     .informações tr {
         display: block;
         padding: 0;
-        border-radius: 8px
+        border-radius: 8px;
+        margin-bottom: 20px;
     }
 
     .informações td {

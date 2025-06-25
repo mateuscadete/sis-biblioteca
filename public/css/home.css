@@ -761,7 +761,7 @@ h3 {
     }
 
     .container .card:hover .conteudo {
-        top: 100px;
+        top: 160px;
     }
 
     .container .card .conteudo h2 {
@@ -827,5 +827,34 @@ h3 {
         text-align: left;
     }
 
+    .button {
+        font-size: 1.2em;
+        padding: 5x 8px;
+    }
+
+    .next {
+        margin-right: 4px;
+
+    }
+
+    .prev {
+        margin-left: 4px;
+    }
+
+    @media (max-width: 400px) {
+
+        .button {
+            font-size: 1em;
+            padding: 6px 8px;
+        }
+
+        .next {
+            margin-right: 0px;
+        }
+
+        .prev {
+            margin-left: 0px;
+        }
+    }
 
 }

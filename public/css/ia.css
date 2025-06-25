@@ -137,6 +137,7 @@ header {
     font-family: 'Raleway', sans-serif;
     font-size: 1em;
     color: var(--cor6);
+    display: flex;
 }
 
 #user-input::placeholder {
@@ -150,6 +151,7 @@ header {
 }
 
 #chat-form button {
+    display: flex;
     padding: 12px 25px;
     background-color: var(--cor6);
     color: var(--cor4);
@@ -188,5 +190,26 @@ header {
         font-size: 25px;
         top: 45%;
         left: 50%;
+    }
+
+    @media (max-width: 400px) {
+        .chat-container {
+            width: 95%;
+            padding: 20px;
+        }
+
+        .chat-messages {
+            height: 300px;
+        }
+
+        #user-input {
+            font-size: 0.9em;
+        }
+
+        #chat-form button {
+            padding: 11px 15px;
+
+
+        }
     }
 }
