@@ -100,7 +100,7 @@ Route::get('/acervo-layout', [LivroController::class, 'filtro'])->name('layout.a
 /// Rota para a página de IA
 Route::get('/assistente-ia', function () {
     return view('layout.ia');
-})->middleware(RedirectIfNotUsuario::class)->name('assistente.ia');    
+})->middleware(RedirectIfNotUsuario::class)->name('assistente.ia'); 
 
 
 // Rota para a API de chat com IA
