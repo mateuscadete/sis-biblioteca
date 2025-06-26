@@ -24,7 +24,7 @@
     <div class="alert alert-danger">
         {{ session('error') }}
     </div>
-@endif
+    @endif
     <header>
         <img src="{{ asset('imagens/acervo1.jpg') }}" alt="Acervo da Biblioteca" style="width: 100%; height: 100vh; object-fit: cover;">
 
@@ -39,10 +39,7 @@
     </header>
     <main>
 
-
         <section class="livros">
-
-
 
             <h2>Lista de Livros</h2>
             <h3>Procure os livros de acordo a sua classificação</h3>
@@ -128,7 +125,7 @@
 
             </div>
         </section>
- 
+
     </main>
 
     @include('includes.footer')

@@ -7,8 +7,7 @@
     <link rel="icon" href="{{ asset('imagens/logo.png') }}" type="image/x-icon">
     <title>Meus Empréstimos</title>
     <link rel="manifest" href="{{ asset('manifest.json') }}">
-    <link rel="stylesheet" href="{{ asset('css/emprestimo.css') }}"> {{-- ESTE É O NOVO CSS --}}
-
+    <link rel="stylesheet" href="{{ asset('css/emprestimo.css') }}">
     <script>
         if ('serviceWorker' in navigator) {
             navigator.serviceWorker.register('/sw.js')

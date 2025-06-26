@@ -19,30 +19,34 @@
         @guest
         @endguest
 
+
         <div class="titulo">
             <h1>A Inteligência Artificial em <br>nossa Biblioteca</h1>
         </div>
     </header>
 
-    <div class="chat-container">
-        <h2>Assistente de IA da Plataforma EastBooks</h2>
-        <p>Pergunte sobre livros, autores ou qualquer dúvida relacionada à nossa biblioteca.</p>
+    <main>
 
-        <div class="chat-messages" id="chat-messages">
-            <!-- Mensagens serão exibidas aqui -->
+        <div class="chat-container">
+            <h2>Assistente de IA da Plataforma EastBooks</h2>
+            <p>Pergunte sobre livros, autores ou qualquer dúvida relacionada à nossa biblioteca.</p>
+
+            <div class="chat-messages" id="chat-messages">
+                <!-- Mensagens serão exibidas aqui -->
+            </div>
+
+            <div class="loading" id="loading">
+                <p>Processando sua pergunta...</p>
+            </div>
+
+            <form id="chat-form">
+                @csrf
+                <input type="text" id="user-input" placeholder="Digite sua pergunta..." required>
+                <button type="submit">Enviar</button>
+            </form>
+
         </div>
-
-        <div class="loading" id="loading">
-            <p>Processando sua pergunta...</p>
-        </div>
-
-        <form id="chat-form">
-            @csrf
-            <input type="text" id="user-input" placeholder="Digite sua pergunta..." required>
-            <button type="submit">Enviar</button>
-        </form>
-
-    </div>
+    </main>
 
     @include('includes.footer')
 

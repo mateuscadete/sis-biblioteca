@@ -17,26 +17,7 @@ body {
     flex-direction: column;
 }
 
-.titulo {
-    font-size: 30px;
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    text-align: center;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-    width: 80%;
-    max-width: 600px;
-}
-
-.span-titulo {
-    color: var(--cor4);
-    text-shadow: 0 10px 10px rgba(0, 0, 0, 0.5);
-}
-
 main {
-    margin-top: 0;
     width: 100%;
     padding: 40px 20px;
     box-sizing: border-box;
@@ -48,7 +29,7 @@ main {
 }
 
 .livros {
-    margin-top: 50px;
+
     width: 100%;
     max-width: 1200px;
     text-align: center;
@@ -259,7 +240,7 @@ h3 {
     .informações {
         width: 100%;
         left: 0;
-        border: 3px solid var(--cor0);
+        border: 5px solid var(--cor0);
     }
 
     .informações caption {
@@ -280,7 +261,7 @@ h3 {
     .informações tr {
         display: block;
         padding: 0;
-        border-radius: 8px;
+        border-radius: 5px;
         margin-bottom: 20px;
     }
 
@@ -297,6 +278,18 @@ h3 {
         font-weight: 700;
         text-transform: uppercase;
         font-size: 0.9rem;
+    }
+
+    .informações td[data-label="Capa"] {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .informações img {
+        margin: 0;
+        max-width: 60px;
+        height: auto;
     }
 
     .informações td:last-child {

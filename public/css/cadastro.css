@@ -3,8 +3,8 @@
 :root {
     --cor0: rgb(51, 96, 90);
     --cor1: rgb(26, 61, 57);
-    --cor2: #91a398;
-    --cor3: #7d9987;
+    --cor2: rgb(145, 163, 152);
+    --cor3: rgb(125, 153, 135);
     --cor4: #e9e0d1;
     --cor5: #68462b;
     --cor6: #382414;
@@ -19,11 +19,9 @@ body {
     margin: 0;
     font-family: 'raleway', sans-serif;
     display: flex;
-    background-color: #f5f5f5;
+    background: linear-gradient(90deg, rgba(51, 96, 90, 1) 20%, rgba(145, 163, 152, 1) 55%);
     flex-direction: column;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
 }
 
 .container {

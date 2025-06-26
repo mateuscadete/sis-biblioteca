@@ -90,7 +90,7 @@
 
 
                         <a href="{{route('dashboard')}} " class="admin">Cadastrar Livros</a>
-                        <a href="{{route('layout.show')}}" class="admin">Editar Livros</a>
+                        <a href="{{route('layout.show')}}" class="admin">Lista De Livros</a>
 
 
                     </div>
