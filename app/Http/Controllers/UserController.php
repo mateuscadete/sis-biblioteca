@@ -18,10 +18,10 @@ class UserController extends Controller
     
         return view('layout.home', compact('user'));
     }
-    public function login()
-    {
-        return view('users.login');
-    }
+public function login()
+{
+    return view('users.login');
+}
 
     public function sobre()
     {
@@ -90,24 +90,17 @@ class UserController extends Controller
 
     // Processa a tentativa de login
     public function logar(LoginRequest $request)
-    {
-        // Validação dos dados enviados
-        $request->validate([
-            'email' => 'required|email',
-            'password' => 'required|min:6',
-        ]);
+{
+    $credentials = $request->only('email', 'password');
 
-        // Tentativa de login do usuário
-        if (Auth::attempt($request->only('email', 'password'))) {
-            // Login bem-sucedido, redireciona para a página inicial (home)
-            return redirect()->route('user.index')->with('success', 'Usuário logado com sucesso!'); // Certifique-se de ter a rota 'home' definida
-        }
-
-        // Se o login falhar, retorna com um erro
-        return back()->withErrors([
-            'email' => 'Credenciais inválidas.',
-        ]);
+    if (Auth::guard('usuario')->attempt($credentials)) {
+        return redirect()->route('user.index')->with('success', 'Usuário logado com sucesso!');
     }
+
+    return back()->withErrors([
+        'email' => 'Credenciais inválidas.',
+    ]);
+}
 
     public function acervo()
     {
