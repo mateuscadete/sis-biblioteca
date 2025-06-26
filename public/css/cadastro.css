@@ -19,7 +19,7 @@ body {
     margin: 0;
     font-family: 'raleway', sans-serif;
     display: flex;
-    background: linear-gradient(90deg, rgba(51, 96, 90, 1) 20%, rgba(145, 163, 152, 1) 55%);
+  
     flex-direction: column;
 
 }
