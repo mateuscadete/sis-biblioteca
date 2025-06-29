@@ -136,7 +136,7 @@ h3 {
 }
 
 .informações {
-    width: 120%;
+    width: 110%;
     margin-left: -9%;
     border-collapse: collapse;
     margin-bottom: 30px;
@@ -230,6 +230,20 @@ h3 {
     background-color: #f8d7da;
     border-color: #f5c6cb;
     color: #721c24;
+}
+
+@media (max-width: 1550px) {
+    .containerbooks {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .informações {
+        width: 110%;
+        margin-left: 0;
+    }
 }
 
 @media(max-width:1400px) {

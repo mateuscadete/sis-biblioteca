@@ -218,6 +218,20 @@ h3 {
 
 }
 
+@media (max-width: 1500px) {
+    .containerbooks {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .informações {
+        width: 110%;
+        margin-left: 0;
+    }
+}
+
 
 
 @media(max-width:1400px) {
