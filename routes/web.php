@@ -54,7 +54,7 @@ Route::get('editar-livro/{livro}', [LivroController::class, 'edit'])->name('layo
 Route::put('/livros/{livro}', [LivroController::class, 'update'])->name('livros.update');
 
 // Agrupa as rotas que precisam de autenticação do usuário para serem acessadas
-Route::middleware('auth')->group(function () {
+Route::middleware(RedirectIfNotUsuario::class)->group(function () {
     
     // Rota GET para listar todos os empréstimos
     // Aponta para o método 'index' do LoanController
